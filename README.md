@@ -32,4 +32,4 @@
 
 ## ⭐ 感谢支持
 
-[![操，图挂了……](https://raw.fastgit.org/ermaozi/get_subscribe/main/mail/project_info.svg)](https://github.com/ermaozi/get_subscribe)
+[![操，图挂了……](https://starchart.cc/ermaozi/get_subscribe.svg)](https://github.com/ermaozi/get_subscribe)
