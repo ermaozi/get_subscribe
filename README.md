@@ -15,9 +15,9 @@
 
 手机用户无法访问上方短链接时可以用下面的长链接
 
-- clash订阅链接：`https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml`
+- clash订阅链接：`https://raw.fastgit.org/ermaozi/get_subscribe/main/subscribe/clash.yml`
 
-- v2ray订阅链接：`https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt`
+- v2ray订阅链接：`https://raw.fastgit.org/ermaozi/get_subscribe/main/subscribe/v2ray.txt`
 
 ## 📧 更新推送
 
@@ -32,4 +32,4 @@
 
 ## ⭐ 感谢支持
 
-[![操，图挂了……](https://raw.githubusercontent.com/ermaozi/get_subscribe/main/mail/project_info.svg)](https://github.com/ermaozi/get_subscribe)
+[![操，图挂了……](https://raw.fastgit.org/ermaozi/get_subscribe/main/mail/project_info.svg)](https://github.com/ermaozi/get_subscribe)
