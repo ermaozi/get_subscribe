@@ -30,12 +30,6 @@
 
 [https://www.ermao.net/posts/vpn](https://www.ermao.net/posts/vpn)
 
-| 链接 | 价位 | 备注 |
-|----|----|----|
-|[m.ssone.io](https://hello-ssone.com/register?aff=aBHsE1pF)|10元 100G/月|正常访问|
-|[https://www.efcloud.bio](https://www.efcloud.bio/#/register?code=kbbSUTvm)|	9 元 350G/月|正常访问|
-|[https://www.fccloud.cc](https://www.fccloud.cc/#/register?code=AYsN4z5L)|	10 元 150G/月|正常访问|
-|[https://ss.vgsseven.com](https://ss.vgsseven.com/#/register?code=rm5I5qDA)| 9.8元 60G/月 |正常访问, 暂时无法注册|
 
 ## ⭐ 感谢支持
 
