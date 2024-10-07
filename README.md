@@ -21,7 +21,7 @@
 
 ## 📘 客户端使用方法
 
-- 📱 [Android](https://www.ermao.net/skill/clashforandroid/)
+- 📱 [Android](https://www.ermao.net/article/eh8f4n86/)
 - 🖥 [Windows](https://www.ermao.net/uncategorized/clash-for-windows/)
 
 ## 💸 付费订阅
