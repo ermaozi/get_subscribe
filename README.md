@@ -21,9 +21,9 @@
 
 低峰期可以看视频，高峰期可能会有点卡顿。
 
-![alt text](images/免费机场/image.png)
+![alt text](https://www.ermao.net/assets/image-St_c8wNW.png)
 
-![alt text](images/免费机场/image-1.png)
+![alt text](https://www.ermao.net/assets/image-1-D1lHRY7Y.png)
 
 ## 📘 客户端使用方法
 
