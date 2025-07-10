@@ -1,5 +1,5 @@
 # 创建者：v2rayse.com 自动创建
-# 创建时间：2025-07-09 08:00:00
+# 创建时间：2025-07-10 08:00:00
 # 节点类型：ss, vmess, trojan
 ---
 mixed-port: 7890
@@ -48,143 +48,97 @@ tun:
   - "1.1.1.1"
   - "1.0.0.1"
 proxies:
-- name: "🇬🇧_GB_英国->🇺🇸_US_美国"
+- name: "🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知"
   type: "ss"
-  server: "85.210.120.237"
-  port: 443
-  cipher: "chacha20-ietf-poly1305"
-  password: "Bog0ELmMM9DSxDdQ"
-- name: "🇪🇸_ES_西班牙"
-  type: "ss"
-  server: "uk.opensocks.site"
-  port: 8388
-  cipher: "chacha20-ietf-poly1305"
-  password: "MjJhY"
+  server: "156.146.40.194"
+  port: 989
+  cipher: "aes-256-cfb"
+  password: "f8f7aCzcPKbsF8p3"
 - name: "🇨🇳_CN_中国->🇨🇦_CA_加拿大"
   type: "vmess"
   server: "111.26.109.79"
   port: 30835
+  sni: ""
   uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
   cipher: "auto"
   network: "ws"
+  skip-cert-verify: true
   ws-opts:
     path: "/oooo"
   alterId: 2
-- name: "🇨🇳_CN_中国"
-  type: "vmess"
-  server: "111.26.109.79"
-  port: 30829
-  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
-  cipher: "auto"
-  network: "ws"
-  ws-opts:
-    path: "/oooo"
-  alterId: 2
-- name: "🇨🇳_CN_中国->🇺🇸_US_美国"
-  type: "vmess"
-  server: "v25.heduian.link"
-  port: 30825
-  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
-  cipher: "auto"
-  network: "ws"
-  ws-opts:
-    path: "/oooo"
-    headers:
-      host: "v25.heduian.link"
-  alterId: 2
-- name: "未知"
+- name: "🇲🇩_MD_摩尔多瓦"
   type: "ss"
-  server: "23.177.185.63"
-  port: 49454
-  cipher: "chacha20-ietf-poly1305"
-  password: "WrYfzlAsqV4kKOJRPF2WHR"
-- name: "🇺🇸_US_美国_1"
+  server: "91.132.94.200"
+  port: 989
+  cipher: "aes-256-cfb"
+  password: "f8f7aCzcPKbsF8p3"
+- name: "🇺🇸_US_美国_2"
   type: "trojan"
-  server: "172.67.220.32"
+  server: "104.21.6.179"
   port: 443
   udp: true
-  sni: "eEEfGty6.999836.XYz"
-  password: "ffcf7ec1-3e09-4821-b3d9-b426a107b73b"
+  sni: "ZZzzzZZ.890601.XYZ"
+  password: "6757b7d6-fa32-4708-b5d1-30e3cf928b51"
   network: "ws"
   ws-opts:
-    path: "/XmTzATQPJv9RO3xr1D40NK"
-    headers:
-      host: "eeefgty6.999836.xyz"
+    path: "/l96MZ8se5Kl2p8BiMhP42l"
 proxy-groups:
 - name: "🚀 节点选择"
   type: "select"
   proxies:
   - "♻️ 自动选择"
   - "DIRECT"
-  - "🇬🇧_GB_英国->🇺🇸_US_美国"
-  - "🇪🇸_ES_西班牙"
+  - "🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知"
   - "🇨🇳_CN_中国->🇨🇦_CA_加拿大"
-  - "🇨🇳_CN_中国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "未知"
-  - "🇺🇸_US_美国_1"
+  - "🇲🇩_MD_摩尔多瓦"
+  - "🇺🇸_US_美国_2"
 - name: "♻️ 自动选择"
   type: "url-test"
   url: "http://www.gstatic.com/generate_204"
   interval: 300
   tolerance: 50
   proxies:
-  - "🇬🇧_GB_英国->🇺🇸_US_美国"
-  - "🇪🇸_ES_西班牙"
+  - "🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知"
   - "🇨🇳_CN_中国->🇨🇦_CA_加拿大"
-  - "🇨🇳_CN_中国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "未知"
-  - "🇺🇸_US_美国_1"
+  - "🇲🇩_MD_摩尔多瓦"
+  - "🇺🇸_US_美国_2"
 - name: "🌍 国外媒体"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "♻️ 自动选择"
   - "🎯 全球直连"
-  - "🇬🇧_GB_英国->🇺🇸_US_美国"
-  - "🇪🇸_ES_西班牙"
+  - "🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知"
   - "🇨🇳_CN_中国->🇨🇦_CA_加拿大"
-  - "🇨🇳_CN_中国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "未知"
-  - "🇺🇸_US_美国_1"
+  - "🇲🇩_MD_摩尔多瓦"
+  - "🇺🇸_US_美国_2"
 - name: "📲 电报信息"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "🎯 全球直连"
-  - "🇬🇧_GB_英国->🇺🇸_US_美国"
-  - "🇪🇸_ES_西班牙"
+  - "🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知"
   - "🇨🇳_CN_中国->🇨🇦_CA_加拿大"
-  - "🇨🇳_CN_中国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "未知"
-  - "🇺🇸_US_美国_1"
+  - "🇲🇩_MD_摩尔多瓦"
+  - "🇺🇸_US_美国_2"
 - name: "Ⓜ️ 微软服务"
   type: "select"
   proxies:
   - "🎯 全球直连"
   - "🚀 节点选择"
-  - "🇬🇧_GB_英国->🇺🇸_US_美国"
-  - "🇪🇸_ES_西班牙"
+  - "🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知"
   - "🇨🇳_CN_中国->🇨🇦_CA_加拿大"
-  - "🇨🇳_CN_中国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "未知"
-  - "🇺🇸_US_美国_1"
+  - "🇲🇩_MD_摩尔多瓦"
+  - "🇺🇸_US_美国_2"
 - name: "🍎 苹果服务"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "🎯 全球直连"
-  - "🇬🇧_GB_英国->🇺🇸_US_美国"
-  - "🇪🇸_ES_西班牙"
+  - "🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知"
   - "🇨🇳_CN_中国->🇨🇦_CA_加拿大"
-  - "🇨🇳_CN_中国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "未知"
-  - "🇺🇸_US_美国_1"
+  - "🇲🇩_MD_摩尔多瓦"
+  - "🇺🇸_US_美国_2"
 - name: "🎯 全球直连"
   type: "select"
   proxies:
@@ -207,13 +161,10 @@ proxy-groups:
   - "🚀 节点选择"
   - "🎯 全球直连"
   - "♻️ 自动选择"
-  - "🇬🇧_GB_英国->🇺🇸_US_美国"
-  - "🇪🇸_ES_西班牙"
+  - "🇸🇰_SK_斯洛伐克->🏳️_unKnow_未知"
   - "🇨🇳_CN_中国->🇨🇦_CA_加拿大"
-  - "🇨🇳_CN_中国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "未知"
-  - "🇺🇸_US_美国_1"
+  - "🇲🇩_MD_摩尔多瓦"
+  - "🇺🇸_US_美国_2"
 rule-providers:
   Apple:
     type: "http"
