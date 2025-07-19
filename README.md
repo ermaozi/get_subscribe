@@ -1,4 +1,7 @@
+```
 # ⏰ 免费机场 免费梯子 翻墙VPN
+
+[![Repo map](https://img.shields.io/badge/repo%20map-view-blue)](https://repomap.com/{owner}/{repo})
 
 ## ⚠️ 注意
 
@@ -38,4 +41,4 @@
 ![alt text](https://www.ermao.net/assets/image-St_c8wNW.png)
 
 ![alt text](https://www.ermao.net/assets/image-1-D1lHRY7Y.png)
-
+```
