@@ -1,6 +1,6 @@
 # 创建者：v2rayse.com 自动创建
-# 创建时间：2025-08-28 08:00:00
-# 节点类型：vmess
+# 创建时间：2025-08-29 08:00:00
+# 节点类型：vmess, trojan
 ---
 mixed-port: 7890
 allow-lan: false
@@ -48,79 +48,143 @@ tun:
   - "1.1.1.1"
   - "1.0.0.1"
 proxies:
-- name: "🇨🇳_CN_中国->🇺🇸_US_美国"
+- name: "🇳🇱_NL_荷兰"
   type: "vmess"
-  server: "v29.heduian.link"
-  port: 30829
-  sni: ""
-  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
+  server: "188.164.248.224"
+  port: 8880
+  uuid: "64076cae-b5ba-32c8-a316-fa782f0a553b"
   cipher: "auto"
   network: "ws"
-  skip-cert-verify: true
   ws-opts:
-    path: "/oooo"
+    path: "/dabai&Telegram🇨🇳@WangCai2/?ed=2560"
     headers:
-      host: "ocbc.com"
-  alterId: 2
-- name: "🇨🇳_CN_中国->🇺🇸_US_美国_1"
+      host: "TG.WangCai2.s4.db-link02.top"
+  alterId: 0
+- name: "🇩🇰_DK_丹麦->🇺🇸_US_美国"
+  type: "trojan"
+  server: "csgo.com"
+  port: 8443
+  udp: true
+  sni: "cdn-node-oss-99.paofu.de"
+  password: "62e4250a-fe02-40cc-ad32-c847389956cd"
+  network: "ws"
+  ws-opts:
+    path: "/profile/telegram@ssrsub"
+    headers:
+      host: "cdn-node-oss-99.paofu.de"
+- name: "🇧🇬_BG_保加利亚"
   type: "vmess"
-  server: "v24.heduian.link"
-  port: 30824
-  sni: ""
-  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
+  server: "185.176.26.224"
+  port: 8880
+  uuid: "64076cae-b5ba-32c8-a316-fa782f0a553b"
   cipher: "auto"
   network: "ws"
-  skip-cert-verify: true
   ws-opts:
-    path: "/oooo"
+    path: "/dabai&Telegram🇨🇳@WangCai2/?ed=2560"
     headers:
-      host: "v24.heduian.link"
-  alterId: 2
+      host: "TG.WangCai2.s4.db-link02.top"
+  alterId: 0
+- name: "🇩🇰_DK_丹麦->🇺🇸_US_美国_1"
+  type: "trojan"
+  server: "pubg.ac"
+  port: 8443
+  udp: true
+  sni: "cdn-node-oss-99.paofu.de"
+  password: "62e4250a-fe02-40cc-ad32-c847389956cd"
+  network: "ws"
+  ws-opts:
+    path: "/profile/telegram@ssrsub"
+    headers:
+      host: "cdn-node-oss-99.paofu.de"
+- name: "🇺🇸_US_美国"
+  type: "trojan"
+  server: "gerxyz.bm04.xyz"
+  port: 2053
+  udp: true
+  sni: "gerxyz.bm04.xyz"
+  password: "94cf288d-f764-4ce9-a547-a7228144f056"
+  network: "grpc"
+  grpc-opts:
+    grpc-service-name: "qwrqwtuotoiadsfhgjkzxnbcmakgkajhged=2048"
+- name: "🇳🇱_NL_荷兰->🇺🇸_US_美国"
+  type: "vmess"
+  server: "45.136.245.177"
+  port: 22102
+  uuid: "c8631767-f45c-4f48-bf19-5405e6d18679"
+  cipher: "auto"
+  network: "ws"
+  ws-opts:
+    path: "/"
+  alterId: 0
 proxy-groups:
 - name: "🚀 节点选择"
   type: "select"
   proxies:
   - "♻️ 自动选择"
   - "DIRECT"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国_1"
+  - "🇳🇱_NL_荷兰"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国"
+  - "🇧🇬_BG_保加利亚"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国_1"
+  - "🇺🇸_US_美国"
+  - "🇳🇱_NL_荷兰->🇺🇸_US_美国"
 - name: "♻️ 自动选择"
   type: "url-test"
   url: "http://www.gstatic.com/generate_204"
   interval: 300
   tolerance: 50
   proxies:
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国_1"
+  - "🇳🇱_NL_荷兰"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国"
+  - "🇧🇬_BG_保加利亚"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国_1"
+  - "🇺🇸_US_美国"
+  - "🇳🇱_NL_荷兰->🇺🇸_US_美国"
 - name: "🌍 国外媒体"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "♻️ 自动选择"
   - "🎯 全球直连"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国_1"
+  - "🇳🇱_NL_荷兰"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国"
+  - "🇧🇬_BG_保加利亚"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国_1"
+  - "🇺🇸_US_美国"
+  - "🇳🇱_NL_荷兰->🇺🇸_US_美国"
 - name: "📲 电报信息"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "🎯 全球直连"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国_1"
+  - "🇳🇱_NL_荷兰"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国"
+  - "🇧🇬_BG_保加利亚"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国_1"
+  - "🇺🇸_US_美国"
+  - "🇳🇱_NL_荷兰->🇺🇸_US_美国"
 - name: "Ⓜ️ 微软服务"
   type: "select"
   proxies:
   - "🎯 全球直连"
   - "🚀 节点选择"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国_1"
+  - "🇳🇱_NL_荷兰"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国"
+  - "🇧🇬_BG_保加利亚"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国_1"
+  - "🇺🇸_US_美国"
+  - "🇳🇱_NL_荷兰->🇺🇸_US_美国"
 - name: "🍎 苹果服务"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "🎯 全球直连"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国_1"
+  - "🇳🇱_NL_荷兰"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国"
+  - "🇧🇬_BG_保加利亚"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国_1"
+  - "🇺🇸_US_美国"
+  - "🇳🇱_NL_荷兰->🇺🇸_US_美国"
 - name: "🎯 全球直连"
   type: "select"
   proxies:
@@ -143,8 +207,12 @@ proxy-groups:
   - "🚀 节点选择"
   - "🎯 全球直连"
   - "♻️ 自动选择"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国_1"
+  - "🇳🇱_NL_荷兰"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国"
+  - "🇧🇬_BG_保加利亚"
+  - "🇩🇰_DK_丹麦->🇺🇸_US_美国_1"
+  - "🇺🇸_US_美国"
+  - "🇳🇱_NL_荷兰->🇺🇸_US_美国"
 rule-providers:
   Apple:
     type: "http"
