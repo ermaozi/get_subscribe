@@ -1,0 +1,237 @@
+# 创建者：v2rayse.com 自动创建
+# 创建时间：2025-09-01 08:00:00
+# 节点类型：vmess, ss
+---
+mixed-port: 7890
+allow-lan: false
+mode: "rule"
+log-level: "info"
+external-controller: "127.0.0.1:9999"
+dns:
+  enable: true
+  listen: "0.0.0.0:53"
+  ipv6: false
+  default-nameserver:
+  - "223.5.5.5"
+  - "114.114.114.114"
+  nameserver:
+  - "223.5.5.5"
+  - "114.114.114.114"
+  - "119.29.29.29"
+  - "180.76.76.76"
+  enhanced-mode: "fake-ip"
+  fake-ip-range: "198.18.0.1/16"
+  fake-ip-filter:
+  - "*.lan"
+  - "*.localdomain"
+  - "*.example"
+  - "*.invalid"
+  - "*.localhost"
+  - "*.test"
+  - "*.local"
+  - "*.home.arpa"
+  - "router.asus.com"
+  - "localhost.sec.qq.com"
+  - "localhost.ptlogin2.qq.com"
+  - "+.msftconnecttest.com"
+tun:
+  enable: true
+  auto-route: true
+  auto-detect-interface: true
+  dns-hijack:
+  - "114.114.114.114"
+  - "180.76.76.76"
+  - "119.29.29.29"
+  - "223.5.5.5"
+  - "8.8.8.8"
+  - "8.8.4.4"
+  - "1.1.1.1"
+  - "1.0.0.1"
+proxies:
+- name: "🇨🇳_CN_中国"
+  type: "vmess"
+  server: "v5.heduian.link"
+  port: 30805
+  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
+  cipher: "auto"
+  network: "ws"
+  ws-opts:
+    path: "/oooo"
+    headers:
+      host: "ocbc.com"
+  alterId: 2
+- name: "🇬🇧_GB_英国"
+  type: "ss"
+  server: "195.35.113.79"
+  port: 443
+  cipher: "chacha20-ietf-poly1305"
+  password: "1112935345BtgV5PDHVww"
+proxy-groups:
+- name: "🚀 节点选择"
+  type: "select"
+  proxies:
+  - "♻️ 自动选择"
+  - "DIRECT"
+  - "🇨🇳_CN_中国"
+  - "🇬🇧_GB_英国"
+- name: "♻️ 自动选择"
+  type: "url-test"
+  url: "http://www.gstatic.com/generate_204"
+  interval: 300
+  tolerance: 50
+  proxies:
+  - "🇨🇳_CN_中国"
+  - "🇬🇧_GB_英国"
+- name: "🌍 国外媒体"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "♻️ 自动选择"
+  - "🎯 全球直连"
+  - "🇨🇳_CN_中国"
+  - "🇬🇧_GB_英国"
+- name: "📲 电报信息"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "🇨🇳_CN_中国"
+  - "🇬🇧_GB_英国"
+- name: "Ⓜ️ 微软服务"
+  type: "select"
+  proxies:
+  - "🎯 全球直连"
+  - "🚀 节点选择"
+  - "🇨🇳_CN_中国"
+  - "🇬🇧_GB_英国"
+- name: "🍎 苹果服务"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "🇨🇳_CN_中国"
+  - "🇬🇧_GB_英国"
+- name: "🎯 全球直连"
+  type: "select"
+  proxies:
+  - "DIRECT"
+  - "🚀 节点选择"
+  - "♻️ 自动选择"
+- name: "🛑 全球拦截"
+  type: "select"
+  proxies:
+  - "REJECT"
+  - "DIRECT"
+- name: "🍃 应用净化"
+  type: "select"
+  proxies:
+  - "REJECT"
+  - "DIRECT"
+- name: "🐟 漏网之鱼"
+  type: "select"
+  proxies:
+  - "🚀 节点选择"
+  - "🎯 全球直连"
+  - "♻️ 自动选择"
+  - "🇨🇳_CN_中国"
+  - "🇬🇧_GB_英国"
+rule-providers:
+  Apple:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Apple.list"
+  Telegram:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Telegram.list"
+  ProxyLite:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ProxyLite.list"
+  ChinaDomain:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ChinaDomain.list"
+  ChinaCompanyIp:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ChinaCompanyIp.list"
+  ProxyMedia:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/ProxyMedia.list"
+  LocalAreaNetwork:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/LocalAreaNetwork.list"
+  Microsoft:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/Microsoft.list"
+  GoogleCN:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/GoogleCN.list"
+  BanAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/BanAD.list"
+  BanProgramAD:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/BanProgramAD.list"
+  SteamCN:
+    type: "http"
+    behavior: "classical"
+    url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list"
+    format: "text"
+    interval: 3600
+    path: "./Clash/SteamCN.list"
+rules:
+- "RULE-SET,LocalAreaNetwork,🎯 全球直连"
+- "RULE-SET,BanAD,🛑 全球拦截"
+- "RULE-SET,BanProgramAD,🍃 应用净化"
+- "RULE-SET,GoogleCN,🎯 全球直连"
+- "RULE-SET,SteamCN,🎯 全球直连"
+- "RULE-SET,Microsoft,Ⓜ️ 微软服务"
+- "RULE-SET,Apple,🍎 苹果服务"
+- "RULE-SET,ProxyMedia,🌍 国外媒体"
+- "RULE-SET,Telegram,📲 电报信息"
+- "RULE-SET,ProxyLite,🚀 节点选择"
+- "RULE-SET,ChinaDomain,🎯 全球直连"
+- "RULE-SET,ChinaCompanyIp,🎯 全球直连"
+- "GEOIP,CN,🎯 全球直连"
+- "MATCH,🐟 漏网之鱼"
