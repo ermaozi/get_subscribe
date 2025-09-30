@@ -1,6 +1,6 @@
 # 创建者：v2rayse.com 自动创建
-# 创建时间：2025-09-29 08:00:00
-# 节点类型：vmess
+# 创建时间：2025-09-30 08:00:00
+# 节点类型：ss, vmess
 ---
 mixed-port: 7890
 allow-lan: false
@@ -48,73 +48,99 @@ tun:
   - "1.1.1.1"
   - "1.0.0.1"
 proxies:
-- name: "🇨🇳_CN_中国->🇺🇸_US_美国"
-  type: "vmess"
-  server: "v29.heduian.link"
-  port: 30829
-  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
-  cipher: "auto"
-  network: "ws"
-  ws-opts:
-    path: "/oooo"
-    headers:
-      host: "v29.heduian.link"
-  alterId: 2
 - name: "🇺🇸_US_美国"
+  type: "ss"
+  server: "38.54.57.90"
+  port: 989
+  cipher: "aes-256-cfb"
+  password: "f8f7aCzcPKbsF8p3"
+- name: "🇺🇸_US_美国_1"
   type: "vmess"
-  server: "216.132.112.116"
-  port: 30475
+  server: "94.131.111.195"
+  port: 444
   sni: ""
-  uuid: "defa10be-f618-4b64-c815-049d2eacbd3f"
+  uuid: "8bbd9d8c-481b-49b6-8029-e4648f2ea31d"
   cipher: "auto"
   network: "tcp"
   fingerprint: ""
   alterId: 0
+- name: "🇨🇳_CN_中国->🏳️_unKnow_未知"
+  type: "vmess"
+  server: "v8.heduian.link"
+  port: 30808
+  sni: ""
+  uuid: "cbb3f877-d1fb-344c-87a9-d153bffd5484"
+  cipher: "auto"
+  network: "ws"
+  skip-cert-verify: true
+  ws-opts:
+    path: "/oooo"
+    headers:
+      host: "v8.heduian.link"
+  alterId: 2
+- name: "🇺🇸_US_美国_2"
+  type: "ss"
+  server: "104.192.226.106"
+  port: 989
+  cipher: "aes-256-cfb"
+  password: "f8f7aCzcPKbsF8p3"
 proxy-groups:
 - name: "🚀 节点选择"
   type: "select"
   proxies:
   - "♻️ 自动选择"
   - "DIRECT"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
   - "🇺🇸_US_美国"
+  - "🇺🇸_US_美国_1"
+  - "🇨🇳_CN_中国->🏳️_unKnow_未知"
+  - "🇺🇸_US_美国_2"
 - name: "♻️ 自动选择"
   type: "url-test"
   url: "http://www.gstatic.com/generate_204"
   interval: 300
   tolerance: 50
   proxies:
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
   - "🇺🇸_US_美国"
+  - "🇺🇸_US_美国_1"
+  - "🇨🇳_CN_中国->🏳️_unKnow_未知"
+  - "🇺🇸_US_美国_2"
 - name: "🌍 国外媒体"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "♻️ 自动选择"
   - "🎯 全球直连"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
   - "🇺🇸_US_美国"
+  - "🇺🇸_US_美国_1"
+  - "🇨🇳_CN_中国->🏳️_unKnow_未知"
+  - "🇺🇸_US_美国_2"
 - name: "📲 电报信息"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "🎯 全球直连"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
   - "🇺🇸_US_美国"
+  - "🇺🇸_US_美国_1"
+  - "🇨🇳_CN_中国->🏳️_unKnow_未知"
+  - "🇺🇸_US_美国_2"
 - name: "Ⓜ️ 微软服务"
   type: "select"
   proxies:
   - "🎯 全球直连"
   - "🚀 节点选择"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
   - "🇺🇸_US_美国"
+  - "🇺🇸_US_美国_1"
+  - "🇨🇳_CN_中国->🏳️_unKnow_未知"
+  - "🇺🇸_US_美国_2"
 - name: "🍎 苹果服务"
   type: "select"
   proxies:
   - "🚀 节点选择"
   - "🎯 全球直连"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
   - "🇺🇸_US_美国"
+  - "🇺🇸_US_美国_1"
+  - "🇨🇳_CN_中国->🏳️_unKnow_未知"
+  - "🇺🇸_US_美国_2"
 - name: "🎯 全球直连"
   type: "select"
   proxies:
@@ -137,8 +163,10 @@ proxy-groups:
   - "🚀 节点选择"
   - "🎯 全球直连"
   - "♻️ 自动选择"
-  - "🇨🇳_CN_中国->🇺🇸_US_美国"
   - "🇺🇸_US_美国"
+  - "🇺🇸_US_美国_1"
+  - "🇨🇳_CN_中国->🏳️_unKnow_未知"
+  - "🇺🇸_US_美国_2"
 rule-providers:
   Apple:
     type: "http"
