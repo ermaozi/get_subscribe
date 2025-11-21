@@ -59,7 +59,7 @@ def get_subscribe_url():
                 f.write(v2ray_req.text)
     clash_list = re.findall(r">clash -&gt; (.*?)</span>", summary)
     # 获取clash订阅链接
-    if any(clash_list):
+    if any(clash_list) and not clash_list[-1].startswith("订阅地址生成失败"):
         clash_url = clash_list[-1].replace('amp;', '')
         clash_req = requests.request("GET", clash_url, verify=False)
         clash_code = clash_req.status_code
