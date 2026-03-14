@@ -1,41 +1,37 @@
-# ⏰ 免费机场 免费梯子 翻墙VPN
+# 🚀 蓝盘云 (LanPanYun)｜Hy2 暴力协议，全线超低延迟
 
-## ⚠️ 注意
+全线采用最新 **Hysteria 2 (Hy2)** 协议，针对各种网络环境极致优化，延迟更低、吞吐更强，无视高峰期带宽干扰。
 
-- 链接来自网络，仅作学习使用
-- 使用页面所提供的任意资源时，请务必遵守当地法律
+### 🎁 新手专属福利
+* **注册即领 50G 流量**（有效期一个月）
+* **先测速再上车**，好用再订阅
 
-## 🚀 每12小时更新一次
+---
 
-- clash订阅链接
-  ```
-  https://git.io/emzclash
-  ```
+### 💰 订阅套餐 (性价比天花板)
 
-- v2ray订阅链接
-  ```
-  https://git.io/emzv2ray
-  ```
+| 等级 | 月付 | 季付 | 半年付 | 年付 (最省) |
+| :--- | :--- | :--- | :--- | :--- |
+| **入门版** | **¥3** | ¥8 | ¥15 | **¥28** |
+| **标准版** | ¥7 | ¥20 | ¥38 | ¥70 |
+| **旗舰版** | ¥15 | ¥40 | ¥75 | ¥140 |
 
-## 📘 客户端使用方法
+### 💎 王者系列补包 (流量永不过期)
+* **至尊星耀**：¥10 / 100G 流量包
+* **最强王者**：¥20 / 220G 流量包
+* **荣耀王者**：¥35 / 400G 流量包
+* *(同时提供流量重置包：¥10起/次)*
 
-- 📱 [Android](https://www.ermao.net/article/eh8f4n86/)
-- 🖥 [Windows](https://www.ermao.net/article/0gematwc/)
-- 🍎 [iOS](https://www.ermao.net/article/z747kgjd/)
+---
 
-## 💸 付费订阅
+### 🔗 官方访问地址
+* **永久域名**：https://lanpanyun.top
+* **备用地址**：https://cloud.lanpanyun.shop
+* **备用地址**：https://cloud.lanpanyun.cc
 
-我搜罗的一些比较便宜好用的机场，觉得免费订阅不好使的朋友们可以在这里面找找。
+---
 
-[https://www.ermao.net/posts/vpn](https://www.ermao.net/posts/vpn)
-
-[https://www.pyjichang.com](https://www.pyjichang.com)
-
-## 📷 使用截图
-
-低峰期可以看视频，高峰期可能会有点卡顿。
-
-![alt text](https://www.ermao.net/assets/image-St_c8wNW.png)
-
-![alt text](https://www.ermao.net/assets/image-1-D1lHRY7Y.png)
-
+### 🌟 为什么选择蓝盘云？
+1. **极致白菜价**：年付均价低至 **¥2.3/月**，一瓶水的钱用一年。
+2. **协议领先**：全线 Hy2 协议，针对大带宽、高延迟线路有奇效。
+3. **多端支持**：完美适配 Clash, Sing-box, V2Ray, Shadowrocket 等主流客户端。
