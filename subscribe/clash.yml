@@ -24,6 +24,35 @@ dns:
       - https://1.1.1.1/dns-query#🚀 节点选择
       - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
+  - name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
+    type: trojan
+    server: oplosgru-c.catcat321.com
+    port: 20004
+    password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: 🇺🇸_US_美国
+    type: ss
+    server: 23.185.200.135
+    port: 57841
+    cipher: aes-128-gcm
+    password: xo6k84l7b00n2hJp
+    skip-cert-verify: true
+    udp: true
+  - name: 🇩🇪_DE_德国
+    type: hysteria
+    server: 5.83.129.90
+    port: 54177
+    auth_str: dongtaiwang.com
+    up: "11"
+    down: "55"
+    sni: bing.com
+    skip-cert-verify: true
+    alpn:
+      - h3
+    udp: true
   - name: 🇺🇸_US_美国->🇫🇷_FR_法国
     type: vless
     server: paul.ns.cloudflare.com
@@ -39,40 +68,69 @@ proxies:
         Host: ziro.skin
     skip-cert-verify: true
     udp: true
-  - name: 🇮🇹_IT_意大利
-    type: ss
-    server: 62.76.234.75
-    port: 10901
-    cipher: aes-256-gcm
-    password: d1fa2f4b98a38bc8
-    skip-cert-verify: true
-    udp: true
-  - name: 🇺🇸_US_美国
-    type: ss
-    server: 23.185.200.135
-    port: 57841
-    cipher: aes-128-gcm
-    password: xo6k84l7b00n2hJp
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
-    type: trojan
-    server: oplosgru-c.catcat321.com
-    port: 20088
-    password: 41c406e2-12b5-41f2-a329-d0621052d675
-    sni: hk.catxstar.com
-    skip-cert-verify: true
-    tls: true
-    udp: true
-  - name: 🇨🇳_CN_中国
+  - name: 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
     type: vless
-    server: 120.227.1.43
-    port: 12528
-    uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
-    tls: false
+    server: 170.168.97.5
+    port: 8443
+    uuid: c6f220ed-41f2-21ba-438c-80f05ebbf92a
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 🇷🇺_RU_俄罗斯
+    type: vless
+    server: 45.155.52.231
+    port: 443
+    uuid: 219f9fec-8983-4f6f-af8c-31bd0c6dbf19
+    servername: ru2.skydrgn-online.online
+    tls: true
+    client-fingerprint: chrome
+    reality-opts:
+      public-key: 6p0aVCkOgd-xaxqSMANYABL6O4Tdbftnxjiy5qcmISQ
+      short-id: 0b
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
+    type: vless
+    server: 170.168.97.3
+    port: 8443
+    uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: firefox
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
     skip-cert-verify: true
     udp: true
   - name: 🇺🇸_US_美国_1
+    type: vmess
+    server: guanwang.awsno.com
+    port: 443
+    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国
+    type: trojan
+    server: hkdcrtc-e.catcat321.com
+    port: 20041
+    password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
+    sni: de.catxstar.com
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: 🇺🇸_US_美国_2
     type: vless
     server: 88.218.44.4
     port: 993
@@ -83,6 +141,100 @@ proxies:
     client-fingerprint: chrome
     reality-opts:
       public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: "@DeltaKroneckerGithub_3909"
+    type: vless
+    server: 89.23.103.121
+    port: 443
+    uuid: 7596b721-f311-4194-96e6-b7b407cd6083
+    servername: www.debian.org
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: qY222OdlPFi9DvfoHZNgp0UHLubudtKLLF_KMuDy-Ho
+      short-id: 9795f83547c168d3
+    skip-cert-verify: true
+    udp: true
+  - name: 🇺🇸_US_美国_3
+    type: vless
+    server: 88.218.44.4
+    port: 8443
+    uuid: 7c74b0e4-f132-5583-4692-622a7d6b71a4
+    network: grpc
+    servername: download.nvidia.com
+    tls: true
+    client-fingerprint: chrome
+    grpc-opts:
+      grpc-service-name: TunService
+    reality-opts:
+      public-key: EG3y7UktGRlzSZZ2oXT_YaO2gVP4ca3Xe6AQ0u9A5DQ
+    skip-cert-verify: true
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+    type: trojan
+    server: oplosgru-c.catcat321.com
+    port: 20068
+    password: 41c406e2-12b5-41f2-a329-d0621052d675
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本_1
+    type: trojan
+    server: hkdcrtc-e.catcat321.com
+    port: 20129
+    password: 41c406e2-12b5-41f2-a329-d0621052d675
+    sni: hk.catxstar.com
+    skip-cert-verify: true
+    tls: false
+    udp: true
+  - name: 🇨🇳_CN_中国
+    type: vless
+    server: 120.227.1.43
+    port: 12528
+    uuid: f0169b08-43fd-4dc3-8195-18f6ad2fe39d
+    tls: false
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇮_FI_芬兰
+    type: hysteria2
+    server: musicclips.videolinks.ru
+    port: 8443
+    password: 22j0d00lev7mq0yv
+    sni: musicclips.videolinks.ru
+    skip-cert-verify: true
+    obfs: salamander
+    obfs-password: 8zzng75tz4tf82pj
+    udp: true
+  - name: 🇳🇱_NL_荷兰
+    type: hysteria2
+    server: 5.129.235.85
+    port: 443
+    password: gf1:gfhysteria2024
+    sni: www.linux.com
+    skip-cert-verify: true
+    udp: true
+  - name: 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2
+    type: vless
+    server: 170.168.97.3
+    port: 993
+    uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
+    servername: download.nvidia.com
+    tls: true
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    reality-opts:
+      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
+    skip-cert-verify: true
+    udp: true
+  - name: 🇮🇳_IN_印度
+    type: hysteria2
+    server: ln4.xiaoliyu.cyou
+    port: 4433
+    password: 18cf8030-1ceb-4b7d-8c0c-c036413c144e
+    sni: ln4.xiaoliyu.cyou
     skip-cert-verify: true
     udp: true
   - name: 🇨🇳_CN_中国->🇵🇱_PL_波兰
@@ -100,160 +252,14 @@ proxies:
         Host: ov186.ochmaybrooooo.online
     skip-cert-verify: true
     udp: true
-  - name: 🇮🇷_IR_伊朗->🇩🇪_DE_德国
-    type: vless
-    server: 217.60.193.1
-    port: 443
-    uuid: 5c192fd7-ef98-4112-a20c-129108fcd7e9
-    servername: ddc-akn.astralweb.tech
-    tls: true
-    client-fingerprint: firefox
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+  - name: 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
     type: trojan
     server: oplosgru-c.catcat321.com
-    port: 20068
-    password: 41c406e2-12b5-41f2-a329-d0621052d675
-    sni: hk.catxstar.com
-    skip-cert-verify: true
-    tls: false
-    udp: true
-  - name: 🇭🇰_HK_中国香港->🇩🇪_DE_德国
-    type: trojan
-    server: hkdcrtc-e.catcat321.com
-    port: 20041
-    password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6
-    sni: de.catxstar.com
-    skip-cert-verify: true
-    tls: false
-    udp: true
-  - name: 🇺🇸_US_美国_2
-    type: vmess
-    server: guanwang.awsno.com
-    port: 443
-    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-    alterId: 0
-    cipher: auto
-    tls: true
-    skip-cert-verify: true
-    udp: true
-  - name: 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
-    type: vless
-    server: 170.168.97.3
-    port: 993
-    uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
-    servername: download.nvidia.com
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: firefox
-    reality-opts:
-      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰_HK_中国香港->🇮🇳_IN_印度
-    type: trojan
-    server: oplosgru-c.catcat321.com
-    port: 20034
+    port: 20088
     password: 41c406e2-12b5-41f2-a329-d0621052d675
     sni: hk.catxstar.com
     skip-cert-verify: true
     tls: true
-    udp: true
-  - name: 🇩🇪_DE_德国
-    type: hysteria
-    server: 5.83.129.90
-    port: 54177
-    auth_str: dongtaiwang.com
-    up: "11"
-    down: "55"
-    sni: bing.com
-    skip-cert-verify: true
-    alpn:
-      - h3
-    udp: true
-  - name: 🇨🇳_CN_中国->🇯🇵_JP_日本
-    type: vmess
-    server: v6.hdacd.com
-    port: 30806
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇮🇷_IR_伊朗->🇩🇪_DE_德国_1
-    type: vless
-    server: parsiran.amirrezamydamane.info
-    port: 42951
-    uuid: 954e582b-339e-482f-91ca-62a021469766
-    encryption: mlkem768x25519plus.native.0rtt.hr_B27q0XLj8gjJlo_IFJOwOV8R8R3h6IK5EjNw7Exk
-    tls: true
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
-    type: vmess
-    server: v4.hdacd.com
-    port: 30804
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇫🇮_FI_芬兰
-    type: hysteria2
-    server: musicclips.videolinks.ru
-    port: 8443
-    password: 22j0d00lev7mq0yv
-    sni: musicclips.videolinks.ru
-    skip-cert-verify: true
-    obfs: salamander
-    obfs-password: 8zzng75tz4tf82pj
-    udp: true
-  - name: 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
-    type: vless
-    server: 170.168.97.3
-    port: 8443
-    uuid: e6d41d6f-d58a-7650-bba4-d7f0dde3ba4d
-    network: grpc
-    servername: download.nvidia.com
-    tls: true
-    client-fingerprint: firefox
-    grpc-opts:
-      grpc-service-name: TunService
-    reality-opts:
-      public-key: D2SXHZRRYM0WcFChGWd57XB-U73aIsGfMpe2-Gq5XSs
-    skip-cert-verify: true
-    udp: true
-  - name: 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-    type: trojan
-    server: hkdcrtc-e.catcat321.com
-    port: 20129
-    password: 41c406e2-12b5-41f2-a329-d0621052d675
-    sni: hk.catxstar.com
-    skip-cert-verify: true
-    tls: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇫🇷_FR_法国
-    type: vmess
-    server: v35.hdacd.com
-    port: 30835
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
-    udp: true
-  - name: 🇨🇳_CN_中国->🇩🇪_DE_德国
-    type: vmess
-    server: v33.hdacd.com
-    port: 30833
-    uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-    alterId: 2
-    cipher: auto
-    tls: false
-    skip-cert-verify: true
     udp: true
 proxy-groups:
   - name: 🚀 节点选择
@@ -261,53 +267,51 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
       - 🇺🇸_US_美国
-      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
-      - 🇨🇳_CN_中国
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
+      - 🇷🇺_RU_俄罗斯
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
       - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
-      - 🇭🇰_HK_中国香港->🇮🇳_IN_印度
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - "@DeltaKroneckerGithub_3909"
+      - 🇺🇸_US_美国_3
+      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国
       - 🇫🇮_FI_芬兰
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇩🇪_DE_德国
+      - 🇳🇱_NL_荷兰
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2
+      - 🇮🇳_IN_印度
+      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
   - name: ♻️ 自动选择
     type: url-test
     proxies:
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
       - 🇺🇸_US_美国
-      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
-      - 🇨🇳_CN_中国
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
+      - 🇷🇺_RU_俄罗斯
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
       - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
-      - 🇭🇰_HK_中国香港->🇮🇳_IN_印度
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - "@DeltaKroneckerGithub_3909"
+      - 🇺🇸_US_美国_3
+      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国
       - 🇫🇮_FI_芬兰
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇩🇪_DE_德国
+      - 🇳🇱_NL_荷兰
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2
+      - 🇮🇳_IN_印度
+      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
@@ -317,109 +321,105 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
       - 🇺🇸_US_美国
-      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
-      - 🇨🇳_CN_中国
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
+      - 🇷🇺_RU_俄罗斯
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
       - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
-      - 🇭🇰_HK_中国香港->🇮🇳_IN_印度
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - "@DeltaKroneckerGithub_3909"
+      - 🇺🇸_US_美国_3
+      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国
       - 🇫🇮_FI_芬兰
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇩🇪_DE_德国
+      - 🇳🇱_NL_荷兰
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2
+      - 🇮🇳_IN_印度
+      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
       - 🇺🇸_US_美国
-      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
-      - 🇨🇳_CN_中国
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
+      - 🇷🇺_RU_俄罗斯
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
       - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
-      - 🇭🇰_HK_中国香港->🇮🇳_IN_印度
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - "@DeltaKroneckerGithub_3909"
+      - 🇺🇸_US_美国_3
+      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国
       - 🇫🇮_FI_芬兰
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇩🇪_DE_德国
+      - 🇳🇱_NL_荷兰
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2
+      - 🇮🇳_IN_印度
+      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
       - 🇺🇸_US_美国
-      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
-      - 🇨🇳_CN_中国
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
+      - 🇷🇺_RU_俄罗斯
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
       - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
-      - 🇭🇰_HK_中国香港->🇮🇳_IN_印度
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - "@DeltaKroneckerGithub_3909"
+      - 🇺🇸_US_美国_3
+      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国
       - 🇫🇮_FI_芬兰
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇩🇪_DE_德国
+      - 🇳🇱_NL_荷兰
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2
+      - 🇮🇳_IN_印度
+      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
       - 🇺🇸_US_美国
-      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
-      - 🇨🇳_CN_中国
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
+      - 🇷🇺_RU_俄罗斯
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
       - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
-      - 🇭🇰_HK_中国香港->🇮🇳_IN_印度
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - "@DeltaKroneckerGithub_3909"
+      - 🇺🇸_US_美国_3
+      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国
       - 🇫🇮_FI_芬兰
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇩🇪_DE_德国
+      - 🇳🇱_NL_荷兰
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2
+      - 🇮🇳_IN_印度
+      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -447,28 +447,27 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸_US_美国->🇫🇷_FR_法国
-      - 🇮🇹_IT_意大利
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
       - 🇺🇸_US_美国
-      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
-      - 🇨🇳_CN_中国
+      - 🇩🇪_DE_德国
+      - 🇺🇸_US_美国->🇫🇷_FR_法国
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
+      - 🇷🇺_RU_俄罗斯
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
       - 🇺🇸_US_美国_1
-      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国
-      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
       - 🇭🇰_HK_中国香港->🇩🇪_DE_德国
       - 🇺🇸_US_美国_2
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其
-      - 🇭🇰_HK_中国香港->🇮🇳_IN_印度
-      - 🇩🇪_DE_德国
-      - 🇨🇳_CN_中国->🇯🇵_JP_日本
-      - 🇮🇷_IR_伊朗->🇩🇪_DE_德国_1
-      - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+      - "@DeltaKroneckerGithub_3909"
+      - 🇺🇸_US_美国_3
+      - 🇭🇰_HK_中国香港->🇲🇴_MO_中国澳门
+      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本_1
+      - 🇨🇳_CN_中国
       - 🇫🇮_FI_芬兰
-      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_1
-      - 🇭🇰_HK_中国香港->🇯🇵_JP_日本
-      - 🇨🇳_CN_中国->🇫🇷_FR_法国
-      - 🇨🇳_CN_中国->🇩🇪_DE_德国
+      - 🇳🇱_NL_荷兰
+      - 🇫🇮_FI_芬兰->🇹🇷_TR_土耳其_2
+      - 🇮🇳_IN_印度
+      - 🇨🇳_CN_中国->🇵🇱_PL_波兰
+      - 🇭🇰_HK_中国香港->🇰🇷_KR_韩国
 rule-providers:
   LocalAreaNetwork:
     type: http
