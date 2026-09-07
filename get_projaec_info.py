@@ -1,4 +1,5 @@
 import argparse
+import os
 import re
 
 import matplotlib.pyplot as plt
@@ -19,11 +20,12 @@ def get_project_info(user, project, name, item, date_key, token=""):
         })
     data_list = []
     page = 0
-    date_pat = re.compile("\d{4}-\d{2}-\d{2}")
+    date_pat = re.compile(r"\d{4}-\d{2}-\d{2}")
     while True:
         page += 1
-        url = f"https://api.github.com/repos/{user}/{project}/{item}?page={page}"
-        req = requests.get(url, headers=header)
+        url = f"https://api.github.com/repos/{user}/{project}/{item}?page={page}&per_page=100"
+        req = requests.get(url, headers=header, timeout=30)
+        req.raise_for_status()
         datas = req.json()
         if not datas:
             break
@@ -31,7 +33,7 @@ def get_project_info(user, project, name, item, date_key, token=""):
 
     date_dic = {}
 
-    start_date = min(data_list)
+    start_date = min(data_list) if data_list else date.today().isoformat()
     end_date = date.today()
     for date_str in data_list:
         if not date_dic.get(date_str):
@@ -92,6 +94,7 @@ def create_svg(project, datas, save_path, theme=""):
     ax.grid(True, linestyle='-.')
 
     plt.savefig(save_path)
+    plt.close(fig)
 
 
 def main(user, project, save_path, theme="", token=""):
@@ -108,6 +111,6 @@ if __name__ == "__main__":
     parser.add_argument("--project", type=str)
     parser.add_argument("--save_path", type=str)
     parser.add_argument("--theme", type=str, default="")
-    parser.add_argument("--token", type=str, default="")
+    parser.add_argument("--token", type=str, default=os.environ.get("GH_TOKEN", ""))
     args = parser.parse_args()
     main(args.user, args.project, args.save_path, args.theme, args.token)

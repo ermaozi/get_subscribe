@@ -3,11 +3,16 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 2 * * 1'
+permissions:
+  contents: write
+concurrency:
+  group: repository-updates
+  cancel-in-progress: false
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: 删除提交记录
       run: |
         git config --global user.name "ermaozi" 

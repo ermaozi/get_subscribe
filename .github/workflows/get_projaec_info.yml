@@ -3,36 +3,40 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '0 */12 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: repository-updates
+  cancel-in-progress: false
+env:
+  TZ: Asia/Shanghai
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
     - name: 迁出代码
-      uses: actions/checkout@v2
+      uses: actions/checkout@v7
     - name: 安装Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v7
       with:
-        python-version: '3.11.6'
-    - name: 加载缓存
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/run_in_Actions/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
-    - name: 设置时区
-      run: sudo timedatectl set-timezone 'Asia/Shanghai'
+        python-version: '3.12'
+        cache: pip
+        cache-dependency-path: requirements.txt
     - name: 安装依赖
       run: |
-        pip install -r requirements.txt
+        python -m pip install -r requirements.txt
     - name: 执行任务
+      env:
+        GH_TOKEN: ${{ github.token }}
       run: |
-        python get_projaec_info.py --user ermaozi --project get_subscribe --save_path mail/project_info.svg --theme dark --token ${{ secrets.TOKEN }}
+        python get_projaec_info.py --user ermaozi --project get_subscribe --save_path mail/project_info.svg --theme dark
     - name: 提交更改
       run: |
          git config core.ignorecase false
          git config --local user.email "admin@ermao.net"
          git config --local user.name "ermaozi"
-         git add .
+         git add mail/project_info.svg
+         git diff --cached --quiet && exit 0
          git commit -m "更新项目信息"
          git push
