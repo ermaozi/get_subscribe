@@ -32,14 +32,6 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
-  type: ss
-  server: 121.46.230.138
-  port: 65443
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-  skip-cert-verify: true
-  udp: true
 - name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
   type: vless
   server: jp.sofast.live
@@ -1003,34 +995,23 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
-- name: 🇳🇱 荷兰 | NLD
-  server: 143.47.183.48
-  port: 62145
+- name: 🇬🇪 GE_39
+  server: html.bandfig.ir
+  port: 443
   type: vless
-  uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a
-  tls: false
-  network: tcp
+  uuid: a21625aa-e346-4faa-86d7-639fd9f96eb9
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  servername: html.bandfig.ir
+  client-fingerprint: chrome
+  network: xhttp
+  xhttp-opts:
+    path: /ad
+    host: html.bandfig.ir
+    mode: auto
   udp: true
-- name: 🇳🇱 荷兰 | NLD 2
-  server: 152.70.51.87
-  port: 45819
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Z8Zd769iHmU/lrmBfcd3MQG7UUHT+isXNZ6kyBcEQe0=
-  udp: true
-- name: 🇳🇱 荷兰 | NLD 4
-  server: 134.98.137.196
-  port: 45819
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: K+/ERLJni8xTb+fO9R9gNA6T2kGPRkRa1OwPEeG7aqM=
-  udp: true
-- name: 🇸🇬 新加坡 | SGP 2
-  server: 161.118.227.189
-  port: 56927
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: extxh5RckS0Xlu+Ls5o7N1PFSk09fa0VNvpohK31QRI=
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
@@ -1038,7 +1019,6 @@ proxy-groups:
   - ermao.net | ♻️ 自动选择
   - DIRECT
   - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1165,15 +1145,11 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 4
-  - 🇸🇬 新加坡 | SGP 2
+  - 🇬🇪 GE_39
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1300,10 +1276,7 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 4
-  - 🇸🇬 新加坡 | SGP 2
+  - 🇬🇪 GE_39
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1314,7 +1287,6 @@ proxy-groups:
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1441,17 +1413,13 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 4
-  - 🇸🇬 新加坡 | SGP 2
+  - 🇬🇪 GE_39
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1578,17 +1546,13 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 4
-  - 🇸🇬 新加坡 | SGP 2
+  - 🇬🇪 GE_39
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
   - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1715,17 +1679,13 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 4
-  - 🇸🇬 新加坡 | SGP 2
+  - 🇬🇪 GE_39
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1852,10 +1812,7 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 4
-  - 🇸🇬 新加坡 | SGP 2
+  - 🇬🇪 GE_39
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1884,7 +1841,6 @@ proxy-groups:
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
   - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -2011,10 +1967,7 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 4
-  - 🇸🇬 新加坡 | SGP 2
+  - 🇬🇪 GE_39
 rule-providers:
   LocalAreaNetwork:
     type: http
