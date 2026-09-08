@@ -170,6 +170,26 @@ def _merge_clash(sources):
                 [renamed.get(member, member) for member in members] + [p["name"] for p in proxies]
             ))
     config["proxies"] = proxies
+    # 仅给前两个选择组加入站点标识，同时保持规则和组间引用一致。
+    groups = config.get("proxy-groups", [])
+    branded = {}
+    used_names = {p["name"] for p in proxies} | {g["name"] for g in groups}
+    for group in [g for g in groups if g.get("type") in {"select", "url-test"}][:2]:
+        old = group["name"]
+        if "ermao.net" in old:
+            continue
+        name = f"ermao.net | {old}"
+        while name in used_names:
+            name += " ·"
+        branded[old] = name
+        used_names.add(name)
+        group["name"] = name
+    for group in groups:
+        if "proxies" in group:
+            group["proxies"] = [branded.get(name, name) for name in group["proxies"]]
+    if "rules" in config:
+        config["rules"] = [",".join(branded.get(part, part) for part in rule.split(","))
+                           for rule in config["rules"]]
     return yaml.safe_dump(config, allow_unicode=True, sort_keys=False)
 
 

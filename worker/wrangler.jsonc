@@ -1,0 +1,29 @@
+{
+  "name": "sub",
+  "main": "sub.mjs",
+  "account_id": "b0021b5742f923f992a9e15ad797de45",
+  "compatibility_date": "2026-06-03",
+  "workers_dev": true,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "*.ermao.net/sub/*",
+      "zone_name": "ermao.net"
+    }
+  ],
+  "triggers": {
+    "crons": [
+      "0 * * * *"
+    ]
+  },
+  "r2_buckets": [
+    {
+      "binding": "SUBSCRIBE_BUCKET",
+      "bucket_name": "ermao-net"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 0.1
+  }
+}

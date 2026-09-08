@@ -55,14 +55,16 @@ class SubscriptionTests(unittest.TestCase):
                 os.chdir(previous)
 
     def test_merge_deduplicates_and_keeps_groups_resolvable(self):
-        first = CLASH + 'proxy-groups:\n - {name: select, type: select, proxies: [test, DIRECT]}\nrules: ["MATCH,select"]\n'
+        first = CLASH + 'proxy-groups:\n - {name: select, type: select, proxies: [test, DIRECT, auto]}\n - {name: auto, type: url-test, proxies: [test]}\nrules: ["MATCH,select"]\n'
         duplicate = CLASH.replace('name: test', 'name: another')
         collision = CLASH.replace('example.com', 'other.example')
         data = yaml.safe_load(main._merge_clash([('original', first), ('NoMoreWalls', duplicate), ('ProxyPool', collision)]))
         names = [p['name'] for p in data['proxies']]
         self.assertEqual(names, ['test', 'ProxyPool | test'])
-        self.assertEqual(data['proxy-groups'][0]['proxies'], ['test', 'DIRECT', 'ProxyPool | test'])
-        self.assertEqual(data['rules'], ['MATCH,select'])
+        self.assertEqual(data['proxy-groups'][0]['proxies'], ['test', 'DIRECT', 'ermao.net | auto', 'ProxyPool | test'])
+        self.assertEqual(data['proxy-groups'][0]['name'], 'ermao.net | select')
+        self.assertEqual(data['proxy-groups'][1]['name'], 'ermao.net | auto')
+        self.assertEqual(data['rules'], ['MATCH,ermao.net | select'])
 
     def test_direct_sources_work_when_rss_fails(self):
         session = Mock()

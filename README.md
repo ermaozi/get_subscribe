@@ -68,5 +68,11 @@ https://www.ermao.net/sub/v2ray/ermao.net
 - `subscribe/unreachable/`：TCP 连接或 DNS 解析失败的节点。
 - `subscribe/untested/`：UDP/QUIC 协议、无法解析地址或非公网地址，不判定为不可用。
 
-`subscribe/health.json` 保存检测时间和分类数量。
+在线分类订阅（将链接中的 `clash` 换成 `v2ray` 可获取对应格式）：
+
+- [TCP 可连接](https://www.ermao.net/sub/reachable/clash/ermao.net)
+- [连接失败](https://www.ermao.net/sub/unreachable/clash/ermao.net)
+- [未检测](https://www.ermao.net/sub/untested/clash/ermao.net)
+
+[检测报告](https://www.ermao.net/sub/health.json)保存检测时间和分类数量。
 这不是代理认证、出口访问或速度测试；可连接不等于代理可用，失败也可能是运行机器的网络限制。
