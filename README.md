@@ -54,11 +54,6 @@ https://www.ermao.net/sub/v2ray/ermao.net
 
 [https://www.ermao.net/posts/vpn](https://www.ermao.net/posts/vpn)
 
-## 订阅来源
-
-长风分享、[NoMoreWalls](https://github.com/peasoft/NoMoreWalls) 和
-[ProxyPool](https://github.com/snakem982/proxypool)。
-
 ## 连通性分类
 
 每次自动采集后保留 `subscribe/` 下的完整订阅，
