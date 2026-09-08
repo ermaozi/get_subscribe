@@ -24,26 +24,27 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: 🇭🇰_HK_中国香港
-  type: vmess
-  server: 143.14.189.125
-  port: 21316
-  uuid: 116f6ecd-275e-4b50-921d-780e78a526cb
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: pull.free.video.10010.com
-  udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
   type: vless
   server: us22.sofast.live
   port: 58011
   uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  type: ss
+  server: 121.46.230.138
+  port: 65443
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  type: vless
+  server: jp.sofast.live
+  port: 52683
+  uuid: 5aaa5259-f924-4682-a4a3-149d472a9dcc
   tls: false
   skip-cert-verify: true
   udp: true
@@ -1031,12 +1032,13 @@ proxies:
   cipher: 2022-blake3-chacha20-poly1305
   password: extxh5RckS0Xlu+Ls5o7N1PFSk09fa0VNvpohK31QRI=
 proxy-groups:
-- name: 🚀 节点选择
+- name: ermao.net | 🚀 节点选择
   type: select
   proxies:
-  - ♻️ 自动选择
+  - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇭🇰_HK_中国香港
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1167,10 +1169,11 @@ proxy-groups:
   - 🇳🇱 荷兰 | NLD 2
   - 🇳🇱 荷兰 | NLD 4
   - 🇸🇬 新加坡 | SGP 2
-- name: ♻️ 自动选择
+- name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇭🇰_HK_中国香港
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1307,10 +1310,11 @@ proxy-groups:
 - name: 🌍 国外媒体
   type: select
   proxies:
-  - 🚀 节点选择
-  - ♻️ 自动选择
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇭🇰_HK_中国香港
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1444,9 +1448,10 @@ proxy-groups:
 - name: 📲 电报信息
   type: select
   proxies:
-  - 🚀 节点选择
+  - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇭🇰_HK_中国香港
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1581,8 +1586,9 @@ proxy-groups:
   type: select
   proxies:
   - 🎯 全球直连
-  - 🚀 节点选择
-  - 🇭🇰_HK_中国香港
+  - ermao.net | 🚀 节点选择
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1716,9 +1722,10 @@ proxy-groups:
 - name: 🍎 苹果服务
   type: select
   proxies:
-  - 🚀 节点选择
+  - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇭🇰_HK_中国香港
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -1853,8 +1860,8 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-  - 🚀 节点选择
-  - ♻️ 自动选择
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
 - name: 🛑 全球拦截
   type: select
   proxies:
@@ -1873,10 +1880,11 @@ proxy-groups:
 - name: 🐟 漏网之鱼
   type: select
   proxies:
-  - 🚀 节点选择
+  - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - ♻️ 自动选择
-  - 🇭🇰_HK_中国香港
+  - ermao.net | ♻️ 自动选择
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
   - 🇨🇳_CN_中国->🇺🇸_US_美国_2
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
@@ -2096,7 +2104,7 @@ rules:
 - RULE-SET,Apple,🍎 苹果服务
 - RULE-SET,ProxyMedia,🌍 国外媒体
 - RULE-SET,Telegram,📲 电报信息
-- RULE-SET,ProxyLite,🚀 节点选择
+- RULE-SET,ProxyLite,ermao.net | 🚀 节点选择
 - RULE-SET,ChinaDomain,🎯 全球直连
 - RULE-SET,ChinaCompanyIp,🎯 全球直连
 - GEOIP,CN,🎯 全球直连

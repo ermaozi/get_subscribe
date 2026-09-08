@@ -24,6 +24,80 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
+- name: 🇲🇾_MY_马来西亚
+  type: ss
+  server: 118.107.222.231
+  port: 65443
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+  skip-cert-verify: true
+  udp: true
+- name: 🇳🇱_NL_荷兰->🇲🇩_MD_摩尔多瓦
+  type: vless
+  server: 31.59.150.174
+  port: 9443
+  uuid: 92089155-6602-4122-86d4-fe6de20e8c4d
+  servername: hotcoals.aeternavpn.space
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: firefox
+  reality-opts:
+    public-key: RWu6ktBE4DFbUz_prmz-5KuolLhO53ehh19mNxhP-wI
+    short-id: a1b2c3d4
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国
+  type: ss
+  server: 121.46.230.233
+  port: 65443
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+  skip-cert-verify: true
+  udp: true
+- name: 🇩🇪_DE_德国
+  type: vless
+  server: 176.96.138.122
+  port: 443
+  uuid: b229d38c-35ec-4a0b-9c86-8fceba243d6c
+  servername: plucky-xenon.cdn.cachefleet.com
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: qq
+  reality-opts:
+    public-key: O_YZOJVON0LE1U01hAtNUOVRy7z6fkBUXbMtpCGoGEg
+  skip-cert-verify: true
+  udp: true
+- name: 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  type: vmess
+  server: v35.hdacd.com
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+  type: ss
+  server: 121.46.230.137
+  port: 65443
+  cipher: aes-256-cfb
+  password: 7eadc6dbe2ae
+  skip-cert-verify: true
+  udp: true
+- name: 🇩🇪_DE_德国_1
+  type: vless
+  server: 2.59.134.226
+  port: 443
+  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
+  servername: rich-falcon.cdn.cachefleet.com
+  tls: true
+  flow: xtls-rprx-vision
+  client-fingerprint: qq
+  reality-opts:
+    public-key: 1sSmdw90uTiGuitDvp_q8zcXTcHXKQS3IVjA7T1UNiY
+  skip-cert-verify: true
+  udp: true
 - name: 🇯🇵_JP_日本->🇩🇪_DE_德国
   type: vmess
   server: v33.hdacd.com
@@ -34,89 +108,41 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇨🇳_CN_中国
-  type: vmess
-  server: 112.132.215.108
-  port: 50002
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
 - name: 🇭🇰_HK_中国香港->🇺🇸_US_美国
   type: vmess
-  server: v29.hdacd.com
-  port: 30829
+  server: v24.hdacd.com
+  port: 30824
   uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
   alterId: 2
   cipher: auto
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇵🇱_PL_波兰
+- name: 🇺🇸_US_美国->🇯🇵_JP_日本
   type: vless
-  server: pl4.moritech.net
+  server: freshjuniper.download
   port: 443
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  tls: true
-  flow: xtls-rprx-vision
-  skip-cert-verify: true
-  udp: true
-- name: 🇫🇷_FR_法国
-  type: ss
-  server: 95.170.13.47
-  port: 65443
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-  skip-cert-verify: true
-  udp: true
-- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  type: vmess
-  server: v4.hdacd.com
-  port: 30804
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 🇩🇪_DE_德国
-  type: vless
-  server: 188.220.67.245
-  port: 2087
-  uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
-  network: ws
-  tls: false
-  client-fingerprint: chrome
-  ws-opts:
-    path: /8f2690e2d016
-  skip-cert-verify: true
-  udp: true
-- name: 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-  type: vmess
-  server: v36.hdacd.com
-  port: 30836
-  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
-  alterId: 2
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 🇺🇸_US_美国
-  type: vless
-  server: 172.66.0.236
-  port: 2083
-  uuid: 44eae030-290b-4083-8102-6f8bab05701b
-  network: ws
-  servername: cfvvv-ev1.pages.dev
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  servername: localhost
   tls: true
   client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: cfvvv-ev1.pages.dev
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
   skip-cert-verify: true
+  udp: true
+- name: 🇯🇵_JP_日本
+  type: vmess
+  server: 38.47.121.14
+  port: 49432
+  uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
+  alterId: 0
+  cipher: none
+  tls: false
+  skip-cert-verify: true
+  network: http
+  http-opts:
+    path:
+    - /
   udp: true
 - name: 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
   type: vless
@@ -130,33 +156,19 @@ proxies:
     path: /4bc027a44532
   skip-cert-verify: true
   udp: true
-- name: 🇨🇳_CN_中国->🇯🇵_JP_日本
-  type: ss
-  server: 121.46.230.137
-  port: 65443
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-  skip-cert-verify: true
-  udp: true
-- name: 🇨🇳_CN_中国_1
-  type: vmess
-  server: 150.242.244.116
-  port: 2648
-  uuid: aeff933f-0ae6-4465-85bf-12f1394f35af
-  alterId: 0
-  cipher: auto
+- name: 🇩🇪_DE_德国_3
+  type: vless
+  server: 188.220.67.245
+  port: 2087
+  uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee
+  network: ws
   tls: false
+  client-fingerprint: chrome
+  ws-opts:
+    path: /8f2690e2d016
   skip-cert-verify: true
   udp: true
-- name: 🇨🇳_CN_中国->🇰🇷_KR_韩国
-  type: ss
-  server: 121.46.230.138
-  port: 65443
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-  skip-cert-verify: true
-  udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_3
   type: ss
   server: 121.46.230.232
   port: 65443
@@ -164,63 +176,27 @@ proxies:
   password: 7eadc6dbe2ae
   skip-cert-verify: true
   udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  type: ss
-  server: 121.46.230.233
-  port: 65443
-  cipher: aes-256-cfb
-  password: 7eadc6dbe2ae
-  skip-cert-verify: true
-  udp: true
-- name: 🇺🇸_US_美国->🇫🇷_FR_法国
-  type: vless
-  server: ziro.skin
-  port: 443
-  uuid: f028a8c0-6763-4558-aee3-2563db9d7825
-  network: ws
-  servername: ziro.skin
-  tls: true
-  client-fingerprint: qq
-  ws-opts:
-    path: /xxvclws
-  skip-cert-verify: true
-  udp: true
-- name: 🇩🇪_DE_德国_2
-  type: vless
-  server: 2.59.134.226
-  port: 443
-  uuid: 88281d02-b387-4fe3-918e-26ed331e6d08
-  servername: rich-falcon.cdn.cachefleet.com
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  reality-opts:
-    public-key: 1sSmdw90uTiGuitDvp_q8zcXTcHXKQS3IVjA7T1UNiY
-  skip-cert-verify: true
-  udp: true
-- name: 🇩🇪_DE_德国_3
-  type: vless
-  server: 176.96.138.122
-  port: 443
-  uuid: b229d38c-35ec-4a0b-9c86-8fceba243d6c
-  servername: plucky-xenon.cdn.cachefleet.com
-  tls: true
-  flow: xtls-rprx-vision
-  client-fingerprint: qq
-  reality-opts:
-    public-key: O_YZOJVON0LE1U01hAtNUOVRy7z6fkBUXbMtpCGoGEg
-  skip-cert-verify: true
-  udp: true
-- name: 🇩🇪_DE_德国_4
-  type: vless
-  server: 163.8.195.241
-  port: 2087
-  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
-  network: ws
+- name: 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  type: vmess
+  server: v29.hdacd.com
+  port: 30829
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
   tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇹🇼_TW_中国台湾->🇫🇮_FI_芬兰
+  type: vless
+  server: brightharbor.download
+  port: 443
+  uuid: 6429d27e-a7d4-4e04-ae57-e88243fbbfe3
+  servername: localhost
+  tls: true
+  flow: xtls-rprx-vision
   client-fingerprint: chrome
-  ws-opts:
-    path: /29c8fed7ca22
+  reality-opts:
+    public-key: F2VfBr2UmjDTErB_oruvW5aIvzH_xGfM2AW5_w-DF0I
   skip-cert-verify: true
   udp: true
 - cipher: aes-256-cfb
@@ -1929,30 +1905,27 @@ proxies:
   skip-cert-verify: true
   udp: true
 proxy-groups:
-- name: 🚀 节点选择
+- name: ermao.net | 🚀 节点选择
   type: select
   proxies:
-  - ♻️ 自动选择
+  - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇯🇵_JP_日本->🇩🇪_DE_德国
-  - 🇨🇳_CN_中国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇵🇱_PL_波兰
-  - 🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇩🇪_DE_德国
-  - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-  - 🇺🇸_US_美国
-  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国->🇯🇵_JP_日本
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  - 🇲🇾_MY_马来西亚
+  - 🇳🇱_NL_荷兰->🇲🇩_MD_摩尔多瓦
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇩🇪_DE_德国_2
+  - 🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇩🇪_DE_德国_1
+  - 🇯🇵_JP_日本->🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - 🇯🇵_JP_日本
+  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
   - 🇩🇪_DE_德国_3
-  - 🇩🇪_DE_德国_4
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇹🇼_TW_中国台湾->🇫🇮_FI_芬兰
   - 'tg频道:@ripaojiedian #1'
   - 🇭🇰 香港|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -2121,28 +2094,25 @@ proxy-groups:
   - 🇺🇸 美国 | USA 17
   - 🇾🇪 YE_219
   - 🇾🇪 YE_220
-- name: ♻️ 自动选择
+- name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇯🇵_JP_日本->🇩🇪_DE_德国
-  - 🇨🇳_CN_中国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇵🇱_PL_波兰
-  - 🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇩🇪_DE_德国
-  - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-  - 🇺🇸_US_美国
-  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国->🇯🇵_JP_日本
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  - 🇲🇾_MY_马来西亚
+  - 🇳🇱_NL_荷兰->🇲🇩_MD_摩尔多瓦
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇩🇪_DE_德国_2
+  - 🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇩🇪_DE_德国_1
+  - 🇯🇵_JP_日本->🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - 🇯🇵_JP_日本
+  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
   - 🇩🇪_DE_德国_3
-  - 🇩🇪_DE_德国_4
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇹🇼_TW_中国台湾->🇫🇮_FI_芬兰
   - 'tg频道:@ripaojiedian #1'
   - 🇭🇰 香港|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -2317,28 +2287,25 @@ proxy-groups:
 - name: 🌍 国外媒体
   type: select
   proxies:
-  - 🚀 节点选择
-  - ♻️ 自动选择
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇯🇵_JP_日本->🇩🇪_DE_德国
-  - 🇨🇳_CN_中国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇵🇱_PL_波兰
-  - 🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇩🇪_DE_德国
-  - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-  - 🇺🇸_US_美国
-  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国->🇯🇵_JP_日本
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  - 🇲🇾_MY_马来西亚
+  - 🇳🇱_NL_荷兰->🇲🇩_MD_摩尔多瓦
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇩🇪_DE_德国_2
+  - 🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇩🇪_DE_德国_1
+  - 🇯🇵_JP_日本->🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - 🇯🇵_JP_日本
+  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
   - 🇩🇪_DE_德国_3
-  - 🇩🇪_DE_德国_4
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇹🇼_TW_中国台湾->🇫🇮_FI_芬兰
   - 'tg频道:@ripaojiedian #1'
   - 🇭🇰 香港|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -2510,27 +2477,24 @@ proxy-groups:
 - name: 📲 电报信息
   type: select
   proxies:
-  - 🚀 节点选择
+  - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇯🇵_JP_日本->🇩🇪_DE_德国
-  - 🇨🇳_CN_中国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇵🇱_PL_波兰
-  - 🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇩🇪_DE_德国
-  - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-  - 🇺🇸_US_美国
-  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国->🇯🇵_JP_日本
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  - 🇲🇾_MY_马来西亚
+  - 🇳🇱_NL_荷兰->🇲🇩_MD_摩尔多瓦
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇩🇪_DE_德国_2
+  - 🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇩🇪_DE_德国_1
+  - 🇯🇵_JP_日本->🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - 🇯🇵_JP_日本
+  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
   - 🇩🇪_DE_德国_3
-  - 🇩🇪_DE_德国_4
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇹🇼_TW_中国台湾->🇫🇮_FI_芬兰
   - 'tg频道:@ripaojiedian #1'
   - 🇭🇰 香港|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -2703,26 +2667,23 @@ proxy-groups:
   type: select
   proxies:
   - 🎯 全球直连
-  - 🚀 节点选择
-  - 🇯🇵_JP_日本->🇩🇪_DE_德国
-  - 🇨🇳_CN_中国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇵🇱_PL_波兰
-  - 🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇩🇪_DE_德国
-  - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-  - 🇺🇸_US_美国
-  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国->🇯🇵_JP_日本
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  - ermao.net | 🚀 节点选择
+  - 🇲🇾_MY_马来西亚
+  - 🇳🇱_NL_荷兰->🇲🇩_MD_摩尔多瓦
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇩🇪_DE_德国_2
+  - 🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇩🇪_DE_德国_1
+  - 🇯🇵_JP_日本->🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - 🇯🇵_JP_日本
+  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
   - 🇩🇪_DE_德国_3
-  - 🇩🇪_DE_德国_4
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇹🇼_TW_中国台湾->🇫🇮_FI_芬兰
   - 'tg频道:@ripaojiedian #1'
   - 🇭🇰 香港|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -2894,27 +2855,24 @@ proxy-groups:
 - name: 🍎 苹果服务
   type: select
   proxies:
-  - 🚀 节点选择
+  - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇯🇵_JP_日本->🇩🇪_DE_德国
-  - 🇨🇳_CN_中国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇵🇱_PL_波兰
-  - 🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇩🇪_DE_德国
-  - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-  - 🇺🇸_US_美国
-  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国->🇯🇵_JP_日本
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  - 🇲🇾_MY_马来西亚
+  - 🇳🇱_NL_荷兰->🇲🇩_MD_摩尔多瓦
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇩🇪_DE_德国_2
+  - 🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇩🇪_DE_德国_1
+  - 🇯🇵_JP_日本->🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - 🇯🇵_JP_日本
+  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
   - 🇩🇪_DE_德国_3
-  - 🇩🇪_DE_德国_4
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇹🇼_TW_中国台湾->🇫🇮_FI_芬兰
   - 'tg频道:@ripaojiedian #1'
   - 🇭🇰 香港|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -3087,8 +3045,8 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-  - 🚀 节点选择
-  - ♻️ 自动选择
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
 - name: 🛑 全球拦截
   type: select
   proxies:
@@ -3107,28 +3065,25 @@ proxy-groups:
 - name: 🐟 漏网之鱼
   type: select
   proxies:
-  - 🚀 节点选择
+  - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - ♻️ 自动选择
-  - 🇯🇵_JP_日本->🇩🇪_DE_德国
-  - 🇨🇳_CN_中国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
-  - 🇵🇱_PL_波兰
-  - 🇫🇷_FR_法国
-  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
-  - 🇩🇪_DE_德国
-  - 🇭🇰_HK_中国香港->🇬🇧_GB_英国
-  - 🇺🇸_US_美国
-  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国->🇯🇵_JP_日本
-  - 🇨🇳_CN_中国_1
-  - 🇨🇳_CN_中国->🇰🇷_KR_韩国
+  - ermao.net | ♻️ 自动选择
+  - 🇲🇾_MY_马来西亚
+  - 🇳🇱_NL_荷兰->🇲🇩_MD_摩尔多瓦
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇩🇪_DE_德国_2
+  - 🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇩🇪_DE_德国_1
+  - 🇯🇵_JP_日本->🇩🇪_DE_德国
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇯🇵_JP_日本
+  - 🇯🇵_JP_日本
+  - 🇵🇱_PL_波兰->🇳🇱_NL_荷兰
   - 🇩🇪_DE_德国_3
-  - 🇩🇪_DE_德国_4
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_3
+  - 🇭🇰_HK_中国香港->🇺🇸_US_美国_1
+  - 🇹🇼_TW_中国台湾->🇫🇮_FI_芬兰
   - 'tg频道:@ripaojiedian #1'
   - 🇭🇰 香港|@ripaojiedian
   - 美国3|@ripaojiedian
@@ -3386,7 +3341,7 @@ rules:
 - RULE-SET,Apple,🍎 苹果服务
 - RULE-SET,ProxyMedia,🌍 国外媒体
 - RULE-SET,Telegram,📲 电报信息
-- RULE-SET,ProxyLite,🚀 节点选择
+- RULE-SET,ProxyLite,ermao.net | 🚀 节点选择
 - RULE-SET,ChinaDomain,🎯 全球直连
 - RULE-SET,ChinaCompanyIp,🎯 全球直连
 - GEOIP,CN,🎯 全球直连
