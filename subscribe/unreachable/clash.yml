@@ -24,13 +24,12 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+- name: 🇨🇳_CN_中国
   type: vless
   server: us22.sofast.live
   port: 58011
   uuid: 0afc6426-606c-48e7-bd70-3c424a416842
   tls: false
-  client-fingerprint: chrome
   skip-cert-verify: true
   udp: true
 - cipher: aes-256-gcm
@@ -107,6 +106,14 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
+- name: 🇦🇫AF_1|2.7MB/s
+  password: ultra@kWZdAzt_IH593eGLRjdxnBZ0
+  port: 10009
+  server: z-jp2.1card.cc
+  skip-cert-verify: true
+  sni: www.cloudflare.com
+  type: trojan
+  udp: true
 - name: RO_speednode_0011
   port: 9002
   server: 84.239.49.218
@@ -880,6 +887,12 @@ proxies:
   tls: true
   type: http
   udp: true
+- name: SI_speednode_0129
+  port: 1080
+  server: 45.144.54.40
+  tls: false
+  type: socks5
+  udp: true
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
   name: US_speednode_0130
@@ -970,26 +983,13 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
-- name: 🇧🇬 保加利亚 | BGR
-  server: 193.239.160.134
-  port: 443
-  type: trojan
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.calmlunch.com
-  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1001,6 +1001,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
+  - 🇦🇫AF_1|2.7MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1107,17 +1108,17 @@ proxy-groups:
   - RO_speednode_0125
   - RO_speednode_0127
   - RO_speednode_0128
+  - SI_speednode_0129
   - US_speednode_0130
   - US_speednode_0132
   - US_speednode_0135
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇧🇬 保加利亚 | BGR
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1129,6 +1130,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
+  - 🇦🇫AF_1|2.7MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1235,13 +1237,13 @@ proxy-groups:
   - RO_speednode_0125
   - RO_speednode_0127
   - RO_speednode_0128
+  - SI_speednode_0129
   - US_speednode_0130
   - US_speednode_0132
   - US_speednode_0135
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇧🇬 保加利亚 | BGR
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1251,7 +1253,7 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1263,6 +1265,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
+  - 🇦🇫AF_1|2.7MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1369,19 +1372,19 @@ proxy-groups:
   - RO_speednode_0125
   - RO_speednode_0127
   - RO_speednode_0128
+  - SI_speednode_0129
   - US_speednode_0130
   - US_speednode_0132
   - US_speednode_0135
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇧🇬 保加利亚 | BGR
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1393,6 +1396,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
+  - 🇦🇫AF_1|2.7MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1499,19 +1503,19 @@ proxy-groups:
   - RO_speednode_0125
   - RO_speednode_0127
   - RO_speednode_0128
+  - SI_speednode_0129
   - US_speednode_0130
   - US_speednode_0132
   - US_speednode_0135
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇧🇬 保加利亚 | BGR
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1523,6 +1527,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
+  - 🇦🇫AF_1|2.7MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1629,19 +1634,19 @@ proxy-groups:
   - RO_speednode_0125
   - RO_speednode_0127
   - RO_speednode_0128
+  - SI_speednode_0129
   - US_speednode_0130
   - US_speednode_0132
   - US_speednode_0135
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇧🇬 保加利亚 | BGR
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1653,6 +1658,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
+  - 🇦🇫AF_1|2.7MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1759,13 +1765,13 @@ proxy-groups:
   - RO_speednode_0125
   - RO_speednode_0127
   - RO_speednode_0128
+  - SI_speednode_0129
   - US_speednode_0130
   - US_speednode_0132
   - US_speednode_0135
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇧🇬 保加利亚 | BGR
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1793,7 +1799,7 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1805,6 +1811,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
+  - 🇦🇫AF_1|2.7MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1911,13 +1918,13 @@ proxy-groups:
   - RO_speednode_0125
   - RO_speednode_0127
   - RO_speednode_0128
+  - SI_speednode_0129
   - US_speednode_0130
   - US_speednode_0132
   - US_speednode_0135
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇧🇬 保加利亚 | BGR
 rule-providers:
   LocalAreaNetwork:
     type: http
