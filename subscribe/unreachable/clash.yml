@@ -26,17 +26,17 @@ dns:
 proxies:
 - name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
-  server: us22.sofast.live
-  port: 58011
-  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
   tls: false
   skip-cert-verify: true
   udp: true
 - name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
   type: vless
-  server: jp.sofast.live
-  port: 52683
-  uuid: 399b6b23-cc40-4831-a494-61948e2df133
+  server: us22.sofast.live
+  port: 58011
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
   tls: false
   skip-cert-verify: true
   udp: true
@@ -114,12 +114,24 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
-- name: 🇰🇷KR_1|1.3MB/s
-  port: 443
-  server: fan.572609.xyz
-  skip-cert-verify: true
-  tls: true
-  type: http
+- encryption: none
+  name: 🇫🇷FR_1|4.7MB/s
+  network: tcp
+  port: '22222'
+  server: 15.237.145.224
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  xudp: true
+- encryption: none
+  name: 🇫🇷FR_4|2.2MB/s
+  network: tcp
+  port: '22223'
+  server: 15.236.172.122
+  type: vless
+  udp: true
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  xudp: true
 - name: RO_speednode_0011
   port: 9002
   server: 84.239.49.218
@@ -989,66 +1001,39 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
-- name: 🇩🇪 德国 | DEU
-  server: n2kbjd29ox.jynp.ir
-  port: 443
+- name: 🇫🇷 法国 | FRA 10
+  server: 15.236.172.122
+  port: 22223
   type: vless
-  uuid: 8df2e661-6f46-471b-9133-7fc13a0daa35
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  tls: false
+  network: tcp
+  udp: true
+- name: 🇬🇧 英国 | GBR
+  server: uniteddkingdomm-sgood.wopd.butnorwa.butter.whooisthebest.ir
+  port: 9000
+  type: vless
+  uuid: b33e4571-de3f-4249-b246-b2acf3db2f36
   tls: true
-  flow: xtls-rprx-vision
   reality-opts:
-    public-key: jDoORbrtDrvAlFSo19CJbc99C4ev8SAo1MwczSUt9no
-    short-id: 91e6
-  servername: web.eitaa.com
+    public-key: Du5pk4KuMNA1sRcSpmuoLuC0HmxDBmFljFNfUzqxKiM
+    short-id: cd0a1986719e44c8
+  servername: sheets.google.com
   client-fingerprint: chrome
   network: tcp
   udp: true
-- name: 🇩🇪 德国 | DEU 7
-  server: 171.22.129.56
-  port: 2053
+- name: 🇳🇱 荷兰 | NLD
+  server: netherland-sgood.wopd.butnorwa.butter.whooisthebest.ir
+  port: 9000
   type: vless
-  uuid: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: AKUQO-fKsD19FFBxNq5XTFCRXWDZfes4zJjRINY1KUI
-    short-id: beff3ff061a64cfd
-  servername: fi-one.quiet-rogue.site
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-- name: 🇩🇪 德国 | DEU 8
-  server: 130.61.44.31
-  port: 59924
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: Yk5PLyXvF64766eFYkDf4MD3gweRKHqC+XwVhKUamNY=
-- name: 🇳🇱 荷兰 | NLD 2
-  server: 89.125.147.199
-  port: 443
-  type: vless
-  uuid: c037d90b-83ec-422f-b547-c77575392f6f
+  uuid: b33e4571-de3f-4249-b246-b2acf3db2f36
   tls: true
   reality-opts:
-    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
-    short-id: f6c7c139b9c938db
-  servername: maps.apple.com
-  client-fingerprint: firefox
+    public-key: Du5pk4KuMNA1sRcSpmuoLuC0HmxDBmFljFNfUzqxKiM
+    short-id: cd0a1986719e44c8
+  servername: sheets.google.com
+  client-fingerprint: chrome
   network: tcp
-  udp: true
-- name: 🇷🇺 俄罗斯 | RUS
-  server: 195.58.48.137
-  port: 30111
-  type: ss
-  cipher: aes-256-gcm
-  password: 8ad9d72a5571df86
-  udp: true
-- name: 🇷🇺 俄罗斯 | RUS 2
-  server: 195.133.5.102
-  port: 3011
-  type: ss
-  cipher: aes-256-gcm
-  password: 895b4b796a357570
   udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -1069,7 +1054,8 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.3MB/s
+  - 🇫🇷FR_1|4.7MB/s
+  - 🇫🇷FR_4|2.2MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1183,12 +1169,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 8
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷 法国 | FRA 10
+  - 🇬🇧 英国 | GBR
+  - 🇳🇱 荷兰 | NLD
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
@@ -1205,7 +1188,8 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.3MB/s
+  - 🇫🇷FR_1|4.7MB/s
+  - 🇫🇷FR_4|2.2MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1319,12 +1303,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 8
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷 法国 | FRA 10
+  - 🇬🇧 英国 | GBR
+  - 🇳🇱 荷兰 | NLD
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1347,7 +1328,8 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.3MB/s
+  - 🇫🇷FR_1|4.7MB/s
+  - 🇫🇷FR_4|2.2MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1461,12 +1443,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 8
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷 法国 | FRA 10
+  - 🇬🇧 英国 | GBR
+  - 🇳🇱 荷兰 | NLD
 - name: 📲 电报信息
   type: select
   proxies:
@@ -1485,7 +1464,8 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.3MB/s
+  - 🇫🇷FR_1|4.7MB/s
+  - 🇫🇷FR_4|2.2MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1599,12 +1579,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 8
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷 法国 | FRA 10
+  - 🇬🇧 英国 | GBR
+  - 🇳🇱 荷兰 | NLD
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
@@ -1623,7 +1600,8 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.3MB/s
+  - 🇫🇷FR_1|4.7MB/s
+  - 🇫🇷FR_4|2.2MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1737,12 +1715,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 8
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷 法国 | FRA 10
+  - 🇬🇧 英国 | GBR
+  - 🇳🇱 荷兰 | NLD
 - name: 🍎 苹果服务
   type: select
   proxies:
@@ -1761,7 +1736,8 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.3MB/s
+  - 🇫🇷FR_1|4.7MB/s
+  - 🇫🇷FR_4|2.2MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1875,12 +1851,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 8
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷 法国 | FRA 10
+  - 🇬🇧 英国 | GBR
+  - 🇳🇱 荷兰 | NLD
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1921,7 +1894,8 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.3MB/s
+  - 🇫🇷FR_1|4.7MB/s
+  - 🇫🇷FR_4|2.2MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -2035,12 +2009,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 8
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇫🇷 法国 | FRA 10
+  - 🇬🇧 英国 | GBR
+  - 🇳🇱 荷兰 | NLD
 rule-providers:
   LocalAreaNetwork:
     type: http
