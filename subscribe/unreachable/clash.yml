@@ -26,26 +26,33 @@ dns:
 proxies:
 - name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  type: vless
   server: us22.sofast.live
   port: 58011
   uuid: 0afc6426-606c-48e7-bd70-3c424a416842
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇷🇺_RU_俄罗斯->🇫🇷_FR_法国
-  type: vless
-  server: 62.109.5.156
-  port: 443
-  uuid: b1b3e430-ff52-44b8-b95d-27fa580fbc4f
-  network: grpc
-  servername: id.vk.com
-  tls: true
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: vless-grpc-reality
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+- name: 🇯🇵_JP_日本
+  type: vmess
+  server: 38.47.121.14
+  port: 49432
+  uuid: ce94f204-ffa6-4fa8-a1dc-ecfccfd463cb
+  alterId: 0
+  cipher: none
+  tls: false
   skip-cert-verify: true
+  network: http
+  http-opts:
+    path:
+    - /
   udp: true
 - cipher: aes-256-gcm
   name: 香港2|@ripaojiedian
@@ -121,22 +128,10 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: update
-  name: 🇰🇷KR_1|1.2MB/s
-  network: grpc
-  port: 10048
-  reality-opts:
-    public-key: wOu-BMrXvk9KX23JZrlpUlF4SMjDcejm0vNECdhy5xE
-    short-id: 686c0ef0
-  server: kr3-r.link-t7.com
-  servername: s0.awsstatic.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7134DB35-F254-4468-BA00-D9C099CF5AF7
+- name: 🇧🇷BR_1|1.3MB/s
+  port: 1028
+  server: 179.191.39.221
+  type: http
 - name: RO_speednode_0011
   port: 9002
   server: 84.239.49.218
@@ -1006,66 +1001,6 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
-- name: 🇦🇹 奥地利 | AUT
-  server: 50.7.184.188
-  port: 443
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  tls: true
-  flow: xtls-rprx-vision
-  servername: austria-dedic.failspace.top
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-- name: 🇦🇹 奥地利 | AUT 2
-  server: austria-dedic.failspace.top
-  port: 443
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  tls: true
-  alpn:
-  - h2
-  flow: xtls-rprx-vision
-  servername: austria-dedic.failspace.top
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-- name: 🇫🇷 法国 | FRA 4
-  server: 15.237.218.241
-  port: 443
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: 🇫🇷 法国 | FRA 15
-  server: 62.109.5.156
-  port: 443
-  type: vless
-  uuid: b1b3e430-ff52-44b8-b95d-27fa580fbc4f
-  tls: true
-  reality-opts:
-    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
-  servername: id.vk.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: vless-grpc-reality
-  udp: true
-- name: 🇺🇸 美国 | USA 15
-  server: 31.25.88.21
-  port: 14239
-  type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  tls: true
-  servername: cdn8848.776676.xyz
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /pages?ed=2560
-    headers:
-      Host: cdn8848.776676.xyz
-  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
@@ -1073,7 +1008,8 @@ proxy-groups:
   - ermao.net | ♻️ 自动选择
   - DIRECT
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇷🇺_RU_俄罗斯->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇯🇵_JP_日本
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1085,7 +1021,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.2MB/s
+  - 🇧🇷BR_1|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1199,16 +1135,12 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT 2
-  - 🇫🇷 法国 | FRA 4
-  - 🇫🇷 法国 | FRA 15
-  - 🇺🇸 美国 | USA 15
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇷🇺_RU_俄罗斯->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇯🇵_JP_日本
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1220,7 +1152,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.2MB/s
+  - 🇧🇷BR_1|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1334,11 +1266,6 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT 2
-  - 🇫🇷 法国 | FRA 4
-  - 🇫🇷 法国 | FRA 15
-  - 🇺🇸 美国 | USA 15
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1349,7 +1276,8 @@ proxy-groups:
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇷🇺_RU_俄罗斯->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇯🇵_JP_日本
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1361,7 +1289,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.2MB/s
+  - 🇧🇷BR_1|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1475,18 +1403,14 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT 2
-  - 🇫🇷 法国 | FRA 4
-  - 🇫🇷 法国 | FRA 15
-  - 🇺🇸 美国 | USA 15
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇷🇺_RU_俄罗斯->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇯🇵_JP_日本
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1498,7 +1422,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.2MB/s
+  - 🇧🇷BR_1|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1612,18 +1536,14 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT 2
-  - 🇫🇷 法国 | FRA 4
-  - 🇫🇷 法国 | FRA 15
-  - 🇺🇸 美国 | USA 15
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇷🇺_RU_俄罗斯->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇯🇵_JP_日本
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1635,7 +1555,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.2MB/s
+  - 🇧🇷BR_1|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1749,18 +1669,14 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT 2
-  - 🇫🇷 法国 | FRA 4
-  - 🇫🇷 法国 | FRA 15
-  - 🇺🇸 美国 | USA 15
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇷🇺_RU_俄罗斯->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇯🇵_JP_日本
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1772,7 +1688,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.2MB/s
+  - 🇧🇷BR_1|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1886,11 +1802,6 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT 2
-  - 🇫🇷 法国 | FRA 4
-  - 🇫🇷 法国 | FRA 15
-  - 🇺🇸 美国 | USA 15
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1919,7 +1830,8 @@ proxy-groups:
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇷🇺_RU_俄罗斯->🇫🇷_FR_法国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇯🇵_JP_日本
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1931,7 +1843,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇰🇷KR_1|1.2MB/s
+  - 🇧🇷BR_1|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -2045,11 +1957,6 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇦🇹 奥地利 | AUT
-  - 🇦🇹 奥地利 | AUT 2
-  - 🇫🇷 法国 | FRA 4
-  - 🇫🇷 法国 | FRA 15
-  - 🇺🇸 美国 | USA 15
 rule-providers:
   LocalAreaNetwork:
     type: http

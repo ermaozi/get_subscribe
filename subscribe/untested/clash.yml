@@ -24,17 +24,21 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: 🇩🇪_DE_德国
-  type: hysteria
-  server: 5.83.129.153
-  port: 20088
-  auth_str: dongtaiwang.com
-  up: '10'
-  down: '50'
-  sni: apple.com
+- name: 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  type: hysteria2
+  server: 31.76.71.252
+  port: 443
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  sni: gta.internet-card.sbs
   skip-cert-verify: true
-  alpn:
-  - h3
+  udp: true
+- name: 🇩🇪_DE_德国_1
+  type: hysteria2
+  server: dg2.mangshe.xyz
+  port: 2056
+  password: 41f0d6d3-4a45-4635-8225-2abd2284189b
+  sni: dg2.mangshe.xyz
+  skip-cert-verify: true
   udp: true
 - name: 🇷🇺_RU_俄罗斯
   type: hysteria2
@@ -50,22 +54,6 @@ proxies:
   port: 20562
   password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
   sni: www.microsoft.com
-  skip-cert-verify: true
-  udp: true
-- name: 🇮🇳_IN_印度
-  type: hysteria2
-  server: vpn-in-001.fastervpn.world
-  port: 443
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-in-001.fastervpn.world
-  skip-cert-verify: true
-  udp: true
-- name: 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
-  type: hysteria2
-  server: 31.76.71.252
-  port: 443
-  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
-  sni: gta.internet-card.sbs
   skip-cert-verify: true
   udp: true
 - alterId: 0
@@ -182,27 +170,11 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: 新加坡
-  password: 19f72087-4591-4d72-930b-2697078ec2be
-  port: 1933
-  server: sg1.xiaoliyu.cyou
-  skip-cert-verify: true
-  sni: sg1.xiaoliyu.cyou
-  tls: false
-  type: hysteria2
 - name: 咕
   password: 1beb216e3f60aea9555dae60d219a5ca
   port: 50160
   server: 152-69-231-175.liao.kdns.fr
   sni: 152-69-231-175.liao.kdns.fr
-  tls: false
-  type: hysteria2
-- name: 荷兰
-  password: 252bb78f404ff43efa42808e98cc4ae9
-  port: 443
-  server: 45.88.14.120
-  skip-cert-verify: true
-  sni: cloud.mail.ru
   tls: false
   type: hysteria2
 - name: '日本 #2'
@@ -211,14 +183,6 @@ proxies:
   server: 138.2.8.249
   skip-cert-verify: true
   sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: 波兰
-  password: 8674df07-56b3-43ea-b687-aef2b1a20137
-  port: 443
-  server: 31.76.22.210
-  skip-cert-verify: true
-  sni: crt.ultimagamest.com
   tls: false
   type: hysteria2
 - name: 咕咕
@@ -385,16 +349,6 @@ proxies:
   sni: musicclips.videolinks.ru
   tls: false
   type: hysteria2
-- name: 🏀46@oneclickvpnkeys
-  obfs: salamander
-  obfs-password: 5c8f1a3e7b2d9046c1f8a5e3b7d04f2a
-  password: 1851679956395a09f6afc10eb3f3751b
-  port: 443
-  server: 80.91.65.89
-  skip-cert-verify: true
-  sni: 80.91.65.89
-  tls: false
-  type: hysteria2
 - name: 🏀95@oneclickvpnkeys
   password: 31329f25
   port: 4443
@@ -402,7 +356,7 @@ proxies:
   skip-cert-verify: true
   tls: false
   type: hysteria2
-- name: 🇨🇭172102 | ⚡️Telegram = t.me/S...
+- name: ⚙️35@oneclickvpnkeys
   obfs: salamander
   obfs-password: c13f29db6a638ad2b211b9ce2669ef27
   password: 3a702d4d1de4949005d8431220e040fb
@@ -456,6 +410,14 @@ proxies:
   server: 31.76.80.69
   skip-cert-verify: false
   sni: fiproxy1.lockdwn.com
+  tls: false
+  type: hysteria2
+- name: ⚙️84@oneclickvpnkeys
+  password: 84a506ca5aca505696a454d828420b3f
+  port: 50160
+  server: 140.238.213.114
+  skip-cert-verify: true
+  sni: www.bing.com
   tls: false
   type: hysteria2
 - name: ✅  @vistav2ray  👈👈کانال ما ✅
@@ -518,7 +480,7 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: 🇩🇪172107 | ⚡️Telegram = t.me/S...
+- name: ⚙️40@oneclickvpnkeys
   password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
   port: 8443
   server: 162.249.126.2
@@ -540,12 +502,33 @@ proxies:
   sni: hys34.wba-pn.ru
   tls: false
   type: hysteria2
+- name: 🇮🇳172660 | ⚡️Telegram = t.me/S...
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 13.207.151.141
+  sni: vpn-in-001.fastervpn.world
+  tls: false
+  type: hysteria2
 - name: '@V2ray_confiig #1'
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
   server: 15.223.122.197
   skip-cert-verify: true
   sni: t.me
+  tls: false
+  type: hysteria2
+- name: 🇮🇳172666 | ⚡️Telegram = t.me/S...
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: 35.154.58.87
+  sni: vpn-in-001.fastervpn.world
+  tls: false
+  type: hysteria2
+- name: ⚙️90@oneclickvpnkeys
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
+  port: 443
+  server: vpn-us-003.fastervpn.world
+  skip-cert-verify: true
   tls: false
   type: hysteria2
 - name: ⚙️29@oneclickvpnkeys
@@ -562,6 +545,14 @@ proxies:
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   port: 8443
   server: 85.204.107.170
+  skip-cert-verify: true
+  sni: hopp-romania-new.roxa.org
+  tls: false
+  type: hysteria2
+- name: ⚙️81@oneclickvpnkeys
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  port: 8080
+  server: 85.204.107.181
   skip-cert-verify: true
   sni: hopp-romania-new.roxa.org
   tls: false
@@ -828,14 +819,24 @@ proxies:
   sni: nl1.sferavpn.pro
   tls: false
   type: hysteria2
-- name: '@filembad'
+- name: '[ 🇩🇪 ] | @Cfox_SerVer #2'
   obfs: salamander
   obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
   password: cd74c0a406664a5bc0bac098220a2468
   port: 443
   server: 2.27.59.206
-  skip-cert-verify: false
+  skip-cert-verify: true
   sni: de1.sferavpn.pro
+  tls: false
+  type: hysteria2
+- name: ⚙️70@oneclickvpnkeys
+  obfs: salamander
+  obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0
+  password: cd74c0a406664a5bc0bac098220a2468
+  port: 443
+  server: nl1.sferavpn.pro
+  skip-cert-verify: true
+  sni: nl1.sferavpn.pro
   tls: false
   type: hysteria2
 - name: 2🏀@oneclickvpnkeys
@@ -950,7 +951,7 @@ proxies:
   type: hysteria2
 - alpn:
   - h3
-  name: '@ICV2RAY'
+  name: -🇩🇪 @VConfing
   obfs: salamander
   obfs-password: fuw2k1ddrouwxr3u
   password: ijrixp6yh62ectfw
@@ -974,7 +975,7 @@ proxies:
   type: hysteria2
 - alpn:
   - h3
-  name: '@ICV2RAY #1'
+  name: -🇫🇷 @VConfing
   obfs: salamander
   obfs-password: fuw2k1ddrouwxr3u
   password: ijrixp6yh62ectfw
@@ -1162,14 +1163,6 @@ proxies:
   sni: bwdf2fnt.xn--e1aatfr8bwa.online
   tls: false
   type: hysteria2
-- name: 🇺🇸172152 | ⚡️Telegram = t.me/S...
-  password: user1
-  port: 443
-  server: 144.202.99.96
-  skip-cert-verify: true
-  sni: 144.202.99.96
-  tls: false
-  type: hysteria2
 - name: 🇩🇪@AZARBAYJAB1
   obfs: salamander
   obfs-password: fuw2k1ddrouwxr3u
@@ -1210,17 +1203,53 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
+- down: ''
+  fingerprint: ''
+  name: 🇺🇸US_5|1.3MB/s
+  obfs: ''
+  obfs-password: ''
+  password: mkL3AfdSZIpTWRB9TcWPn9vywPGN89MRHg3ToRDj
+  port: '443'
+  server: 31.76.71.252
+  skip-cert-verify: false
+  sni: gta.internet-card.sbs
+  type: hysteria2
+  up: ''
+- auth: HysTeria2026!Proxy
+  name: 🇭🇰HK_1|5.0MB/s
+  password: HysTeria2026!Proxy
+  port: 8443
+  server: mz.hkychina.com
+  sni: mz.hkychina.com
+  type: hysteria2
+  udp: true
+- name: 🇯🇵 日本 | JPN 2
+  server: mszz.mangshe.xyz
+  port: 20562
+  type: hysteria2
+  password: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
+  auth: 5d0a6445-a30d-4522-bb1f-94f1d3ad63be
+  sni: www.microsoft.com
+  skip-cert-verify: true
+- name: 🇺🇸 美国 | USA 4
+  server: starlink-ft.251313.xyz
+  port: 443
+  type: hysteria2
+  password: https://xship.best
+  auth: https://xship.best
+  sni: xship.top
+  skip-cert-verify: true
+  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇩🇪_DE_德国
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
   - 🇷🇺_RU_俄罗斯
   - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-  - 🇮🇳_IN_印度
-  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1234,11 +1263,8 @@ proxy-groups:
   - 日本
   - 芬兰
   - '日本 #1'
-  - 新加坡
   - 咕
-  - 荷兰
   - '日本 #2'
-  - 波兰
   - 咕咕
   - 法国
   - 澳大利亚
@@ -1259,26 +1285,30 @@ proxy-groups:
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - 阿联酋
   - '芬兰 #1'
-  - 🏀46@oneclickvpnkeys
   - 🏀95@oneclickvpnkeys
-  - 🇨🇭172102 | ⚡️Telegram = t.me/S...
+  - ⚙️35@oneclickvpnkeys
   - '[ 🇷🇺 ] | @Cfox_SerVer'
   - '@Begoo_VPN ²⁹⁰'
   - '@awlix_ir'
   - Telegram 🆔@cnetvpn 🇷🇺
   - ✨ @NOFiLTERING2 | ❤️ وصل شدی ج...
+  - ⚙️84@oneclickvpnkeys
   - ✅  @vistav2ray  👈👈کانال ما ✅
   - '✅  @vistav2ray  👈👈کانال ما ✅ #1'
   - '✅  @vistav2ray  👈👈کانال ما ✅ #2'
   - Telegram 🆔@Cnetvpn 🇺🇲
   - Telegram 🆔@cnetvpn 🇩🇪
   - '@V2ray_confiig'
-  - 🇩🇪172107 | ⚡️Telegram = t.me/S...
+  - ⚙️40@oneclickvpnkeys
   - 🏀25@oneclickvpnkeys
   - 🏀14@oneclickvpnkeys
+  - 🇮🇳172660 | ⚡️Telegram = t.me/S...
   - '@V2ray_confiig #1'
+  - 🇮🇳172666 | ⚡️Telegram = t.me/S...
+  - ⚙️90@oneclickvpnkeys
   - ⚙️29@oneclickvpnkeys
   - 🏀94@oneclickvpnkeys
+  - ⚙️81@oneclickvpnkeys
   - 🩵+@Azarakhsh_Proxy+🩷
   - '[ 🇩🇪 ] | @Cfox_SerVer #1'
   - '[ 🇩🇪 ] | @Cfox_SerVer'
@@ -1304,7 +1334,8 @@ proxy-groups:
   - '[ 🇷🇺 ] | @Cfox_SerVer #2'
   - '[ 🇷🇺 ] | @Cfox_SerVer #1'
   - '♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️55... #1'
-  - '@filembad'
+  - '[ 🇩🇪 ] | @Cfox_SerVer #2'
+  - ⚙️70@oneclickvpnkeys
   - 2🏀@oneclickvpnkeys
   - 🏀97@oneclickvpnkeys
   - 🏀100@oneclickvpnkeys
@@ -1315,9 +1346,9 @@ proxy-groups:
   - dc-udp-🇦🇷 Argentina-Buenos Air...
   - dc-udp-🇦🇹 Austria-Vienna
   - dc-udp-🇧🇷 Brazil-Fortaleza
-  - '@ICV2RAY'
+  - -🇩🇪 @VConfing
   - VCONFING
-  - '@ICV2RAY #1'
+  - -🇫🇷 @VConfing
   - -🇹🇷 @VConfing
   - 🏀33@oneclickvpnkeys
   - 🏀34@oneclickvpnkeys
@@ -1334,19 +1365,21 @@ proxy-groups:
   - 🇺🇸8@JKVPN
   - 🇺🇸9@JKVPN
   - '@fastkanfig کانال تلگرام'
-  - 🇺🇸172152 | ⚡️Telegram = t.me/S...
   - 🇩🇪@AZARBAYJAB1
   - 🇫🇷@AZARBAYJAB1
   - Telegram 🆔@cnetvpn 🇸🇪
   - Telegram 🆔@cnetvpn 🇫🇮
+  - 🇺🇸US_5|1.3MB/s
+  - 🇭🇰HK_1|5.0MB/s
+  - 🇯🇵 日本 | JPN 2
+  - 🇺🇸 美国 | USA 4
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇩🇪_DE_德国
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
   - 🇷🇺_RU_俄罗斯
   - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-  - 🇮🇳_IN_印度
-  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1360,11 +1393,8 @@ proxy-groups:
   - 日本
   - 芬兰
   - '日本 #1'
-  - 新加坡
   - 咕
-  - 荷兰
   - '日本 #2'
-  - 波兰
   - 咕咕
   - 法国
   - 澳大利亚
@@ -1385,26 +1415,30 @@ proxy-groups:
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - 阿联酋
   - '芬兰 #1'
-  - 🏀46@oneclickvpnkeys
   - 🏀95@oneclickvpnkeys
-  - 🇨🇭172102 | ⚡️Telegram = t.me/S...
+  - ⚙️35@oneclickvpnkeys
   - '[ 🇷🇺 ] | @Cfox_SerVer'
   - '@Begoo_VPN ²⁹⁰'
   - '@awlix_ir'
   - Telegram 🆔@cnetvpn 🇷🇺
   - ✨ @NOFiLTERING2 | ❤️ وصل شدی ج...
+  - ⚙️84@oneclickvpnkeys
   - ✅  @vistav2ray  👈👈کانال ما ✅
   - '✅  @vistav2ray  👈👈کانال ما ✅ #1'
   - '✅  @vistav2ray  👈👈کانال ما ✅ #2'
   - Telegram 🆔@Cnetvpn 🇺🇲
   - Telegram 🆔@cnetvpn 🇩🇪
   - '@V2ray_confiig'
-  - 🇩🇪172107 | ⚡️Telegram = t.me/S...
+  - ⚙️40@oneclickvpnkeys
   - 🏀25@oneclickvpnkeys
   - 🏀14@oneclickvpnkeys
+  - 🇮🇳172660 | ⚡️Telegram = t.me/S...
   - '@V2ray_confiig #1'
+  - 🇮🇳172666 | ⚡️Telegram = t.me/S...
+  - ⚙️90@oneclickvpnkeys
   - ⚙️29@oneclickvpnkeys
   - 🏀94@oneclickvpnkeys
+  - ⚙️81@oneclickvpnkeys
   - 🩵+@Azarakhsh_Proxy+🩷
   - '[ 🇩🇪 ] | @Cfox_SerVer #1'
   - '[ 🇩🇪 ] | @Cfox_SerVer'
@@ -1430,7 +1464,8 @@ proxy-groups:
   - '[ 🇷🇺 ] | @Cfox_SerVer #2'
   - '[ 🇷🇺 ] | @Cfox_SerVer #1'
   - '♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️55... #1'
-  - '@filembad'
+  - '[ 🇩🇪 ] | @Cfox_SerVer #2'
+  - ⚙️70@oneclickvpnkeys
   - 2🏀@oneclickvpnkeys
   - 🏀97@oneclickvpnkeys
   - 🏀100@oneclickvpnkeys
@@ -1441,9 +1476,9 @@ proxy-groups:
   - dc-udp-🇦🇷 Argentina-Buenos Air...
   - dc-udp-🇦🇹 Austria-Vienna
   - dc-udp-🇧🇷 Brazil-Fortaleza
-  - '@ICV2RAY'
+  - -🇩🇪 @VConfing
   - VCONFING
-  - '@ICV2RAY #1'
+  - -🇫🇷 @VConfing
   - -🇹🇷 @VConfing
   - 🏀33@oneclickvpnkeys
   - 🏀34@oneclickvpnkeys
@@ -1460,11 +1495,14 @@ proxy-groups:
   - 🇺🇸8@JKVPN
   - 🇺🇸9@JKVPN
   - '@fastkanfig کانال تلگرام'
-  - 🇺🇸172152 | ⚡️Telegram = t.me/S...
   - 🇩🇪@AZARBAYJAB1
   - 🇫🇷@AZARBAYJAB1
   - Telegram 🆔@cnetvpn 🇸🇪
   - Telegram 🆔@cnetvpn 🇫🇮
+  - 🇺🇸US_5|1.3MB/s
+  - 🇭🇰HK_1|5.0MB/s
+  - 🇯🇵 日本 | JPN 2
+  - 🇺🇸 美国 | USA 4
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1474,11 +1512,10 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
   - 🇷🇺_RU_俄罗斯
   - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-  - 🇮🇳_IN_印度
-  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1492,11 +1529,8 @@ proxy-groups:
   - 日本
   - 芬兰
   - '日本 #1'
-  - 新加坡
   - 咕
-  - 荷兰
   - '日本 #2'
-  - 波兰
   - 咕咕
   - 法国
   - 澳大利亚
@@ -1517,26 +1551,30 @@ proxy-groups:
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - 阿联酋
   - '芬兰 #1'
-  - 🏀46@oneclickvpnkeys
   - 🏀95@oneclickvpnkeys
-  - 🇨🇭172102 | ⚡️Telegram = t.me/S...
+  - ⚙️35@oneclickvpnkeys
   - '[ 🇷🇺 ] | @Cfox_SerVer'
   - '@Begoo_VPN ²⁹⁰'
   - '@awlix_ir'
   - Telegram 🆔@cnetvpn 🇷🇺
   - ✨ @NOFiLTERING2 | ❤️ وصل شدی ج...
+  - ⚙️84@oneclickvpnkeys
   - ✅  @vistav2ray  👈👈کانال ما ✅
   - '✅  @vistav2ray  👈👈کانال ما ✅ #1'
   - '✅  @vistav2ray  👈👈کانال ما ✅ #2'
   - Telegram 🆔@Cnetvpn 🇺🇲
   - Telegram 🆔@cnetvpn 🇩🇪
   - '@V2ray_confiig'
-  - 🇩🇪172107 | ⚡️Telegram = t.me/S...
+  - ⚙️40@oneclickvpnkeys
   - 🏀25@oneclickvpnkeys
   - 🏀14@oneclickvpnkeys
+  - 🇮🇳172660 | ⚡️Telegram = t.me/S...
   - '@V2ray_confiig #1'
+  - 🇮🇳172666 | ⚡️Telegram = t.me/S...
+  - ⚙️90@oneclickvpnkeys
   - ⚙️29@oneclickvpnkeys
   - 🏀94@oneclickvpnkeys
+  - ⚙️81@oneclickvpnkeys
   - 🩵+@Azarakhsh_Proxy+🩷
   - '[ 🇩🇪 ] | @Cfox_SerVer #1'
   - '[ 🇩🇪 ] | @Cfox_SerVer'
@@ -1562,7 +1600,8 @@ proxy-groups:
   - '[ 🇷🇺 ] | @Cfox_SerVer #2'
   - '[ 🇷🇺 ] | @Cfox_SerVer #1'
   - '♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️55... #1'
-  - '@filembad'
+  - '[ 🇩🇪 ] | @Cfox_SerVer #2'
+  - ⚙️70@oneclickvpnkeys
   - 2🏀@oneclickvpnkeys
   - 🏀97@oneclickvpnkeys
   - 🏀100@oneclickvpnkeys
@@ -1573,9 +1612,9 @@ proxy-groups:
   - dc-udp-🇦🇷 Argentina-Buenos Air...
   - dc-udp-🇦🇹 Austria-Vienna
   - dc-udp-🇧🇷 Brazil-Fortaleza
-  - '@ICV2RAY'
+  - -🇩🇪 @VConfing
   - VCONFING
-  - '@ICV2RAY #1'
+  - -🇫🇷 @VConfing
   - -🇹🇷 @VConfing
   - 🏀33@oneclickvpnkeys
   - 🏀34@oneclickvpnkeys
@@ -1592,21 +1631,23 @@ proxy-groups:
   - 🇺🇸8@JKVPN
   - 🇺🇸9@JKVPN
   - '@fastkanfig کانال تلگرام'
-  - 🇺🇸172152 | ⚡️Telegram = t.me/S...
   - 🇩🇪@AZARBAYJAB1
   - 🇫🇷@AZARBAYJAB1
   - Telegram 🆔@cnetvpn 🇸🇪
   - Telegram 🆔@cnetvpn 🇫🇮
+  - 🇺🇸US_5|1.3MB/s
+  - 🇭🇰HK_1|5.0MB/s
+  - 🇯🇵 日本 | JPN 2
+  - 🇺🇸 美国 | USA 4
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
   - 🇷🇺_RU_俄罗斯
   - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-  - 🇮🇳_IN_印度
-  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1620,11 +1661,8 @@ proxy-groups:
   - 日本
   - 芬兰
   - '日本 #1'
-  - 新加坡
   - 咕
-  - 荷兰
   - '日本 #2'
-  - 波兰
   - 咕咕
   - 法国
   - 澳大利亚
@@ -1645,26 +1683,30 @@ proxy-groups:
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - 阿联酋
   - '芬兰 #1'
-  - 🏀46@oneclickvpnkeys
   - 🏀95@oneclickvpnkeys
-  - 🇨🇭172102 | ⚡️Telegram = t.me/S...
+  - ⚙️35@oneclickvpnkeys
   - '[ 🇷🇺 ] | @Cfox_SerVer'
   - '@Begoo_VPN ²⁹⁰'
   - '@awlix_ir'
   - Telegram 🆔@cnetvpn 🇷🇺
   - ✨ @NOFiLTERING2 | ❤️ وصل شدی ج...
+  - ⚙️84@oneclickvpnkeys
   - ✅  @vistav2ray  👈👈کانال ما ✅
   - '✅  @vistav2ray  👈👈کانال ما ✅ #1'
   - '✅  @vistav2ray  👈👈کانال ما ✅ #2'
   - Telegram 🆔@Cnetvpn 🇺🇲
   - Telegram 🆔@cnetvpn 🇩🇪
   - '@V2ray_confiig'
-  - 🇩🇪172107 | ⚡️Telegram = t.me/S...
+  - ⚙️40@oneclickvpnkeys
   - 🏀25@oneclickvpnkeys
   - 🏀14@oneclickvpnkeys
+  - 🇮🇳172660 | ⚡️Telegram = t.me/S...
   - '@V2ray_confiig #1'
+  - 🇮🇳172666 | ⚡️Telegram = t.me/S...
+  - ⚙️90@oneclickvpnkeys
   - ⚙️29@oneclickvpnkeys
   - 🏀94@oneclickvpnkeys
+  - ⚙️81@oneclickvpnkeys
   - 🩵+@Azarakhsh_Proxy+🩷
   - '[ 🇩🇪 ] | @Cfox_SerVer #1'
   - '[ 🇩🇪 ] | @Cfox_SerVer'
@@ -1690,7 +1732,8 @@ proxy-groups:
   - '[ 🇷🇺 ] | @Cfox_SerVer #2'
   - '[ 🇷🇺 ] | @Cfox_SerVer #1'
   - '♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️55... #1'
-  - '@filembad'
+  - '[ 🇩🇪 ] | @Cfox_SerVer #2'
+  - ⚙️70@oneclickvpnkeys
   - 2🏀@oneclickvpnkeys
   - 🏀97@oneclickvpnkeys
   - 🏀100@oneclickvpnkeys
@@ -1701,9 +1744,9 @@ proxy-groups:
   - dc-udp-🇦🇷 Argentina-Buenos Air...
   - dc-udp-🇦🇹 Austria-Vienna
   - dc-udp-🇧🇷 Brazil-Fortaleza
-  - '@ICV2RAY'
+  - -🇩🇪 @VConfing
   - VCONFING
-  - '@ICV2RAY #1'
+  - -🇫🇷 @VConfing
   - -🇹🇷 @VConfing
   - 🏀33@oneclickvpnkeys
   - 🏀34@oneclickvpnkeys
@@ -1720,21 +1763,23 @@ proxy-groups:
   - 🇺🇸8@JKVPN
   - 🇺🇸9@JKVPN
   - '@fastkanfig کانال تلگرام'
-  - 🇺🇸172152 | ⚡️Telegram = t.me/S...
   - 🇩🇪@AZARBAYJAB1
   - 🇫🇷@AZARBAYJAB1
   - Telegram 🆔@cnetvpn 🇸🇪
   - Telegram 🆔@cnetvpn 🇫🇮
+  - 🇺🇸US_5|1.3MB/s
+  - 🇭🇰HK_1|5.0MB/s
+  - 🇯🇵 日本 | JPN 2
+  - 🇺🇸 美国 | USA 4
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇩🇪_DE_德国
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
   - 🇷🇺_RU_俄罗斯
   - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-  - 🇮🇳_IN_印度
-  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1748,11 +1793,8 @@ proxy-groups:
   - 日本
   - 芬兰
   - '日本 #1'
-  - 新加坡
   - 咕
-  - 荷兰
   - '日本 #2'
-  - 波兰
   - 咕咕
   - 法国
   - 澳大利亚
@@ -1773,26 +1815,30 @@ proxy-groups:
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - 阿联酋
   - '芬兰 #1'
-  - 🏀46@oneclickvpnkeys
   - 🏀95@oneclickvpnkeys
-  - 🇨🇭172102 | ⚡️Telegram = t.me/S...
+  - ⚙️35@oneclickvpnkeys
   - '[ 🇷🇺 ] | @Cfox_SerVer'
   - '@Begoo_VPN ²⁹⁰'
   - '@awlix_ir'
   - Telegram 🆔@cnetvpn 🇷🇺
   - ✨ @NOFiLTERING2 | ❤️ وصل شدی ج...
+  - ⚙️84@oneclickvpnkeys
   - ✅  @vistav2ray  👈👈کانال ما ✅
   - '✅  @vistav2ray  👈👈کانال ما ✅ #1'
   - '✅  @vistav2ray  👈👈کانال ما ✅ #2'
   - Telegram 🆔@Cnetvpn 🇺🇲
   - Telegram 🆔@cnetvpn 🇩🇪
   - '@V2ray_confiig'
-  - 🇩🇪172107 | ⚡️Telegram = t.me/S...
+  - ⚙️40@oneclickvpnkeys
   - 🏀25@oneclickvpnkeys
   - 🏀14@oneclickvpnkeys
+  - 🇮🇳172660 | ⚡️Telegram = t.me/S...
   - '@V2ray_confiig #1'
+  - 🇮🇳172666 | ⚡️Telegram = t.me/S...
+  - ⚙️90@oneclickvpnkeys
   - ⚙️29@oneclickvpnkeys
   - 🏀94@oneclickvpnkeys
+  - ⚙️81@oneclickvpnkeys
   - 🩵+@Azarakhsh_Proxy+🩷
   - '[ 🇩🇪 ] | @Cfox_SerVer #1'
   - '[ 🇩🇪 ] | @Cfox_SerVer'
@@ -1818,7 +1864,8 @@ proxy-groups:
   - '[ 🇷🇺 ] | @Cfox_SerVer #2'
   - '[ 🇷🇺 ] | @Cfox_SerVer #1'
   - '♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️55... #1'
-  - '@filembad'
+  - '[ 🇩🇪 ] | @Cfox_SerVer #2'
+  - ⚙️70@oneclickvpnkeys
   - 2🏀@oneclickvpnkeys
   - 🏀97@oneclickvpnkeys
   - 🏀100@oneclickvpnkeys
@@ -1829,9 +1876,9 @@ proxy-groups:
   - dc-udp-🇦🇷 Argentina-Buenos Air...
   - dc-udp-🇦🇹 Austria-Vienna
   - dc-udp-🇧🇷 Brazil-Fortaleza
-  - '@ICV2RAY'
+  - -🇩🇪 @VConfing
   - VCONFING
-  - '@ICV2RAY #1'
+  - -🇫🇷 @VConfing
   - -🇹🇷 @VConfing
   - 🏀33@oneclickvpnkeys
   - 🏀34@oneclickvpnkeys
@@ -1848,21 +1895,23 @@ proxy-groups:
   - 🇺🇸8@JKVPN
   - 🇺🇸9@JKVPN
   - '@fastkanfig کانال تلگرام'
-  - 🇺🇸172152 | ⚡️Telegram = t.me/S...
   - 🇩🇪@AZARBAYJAB1
   - 🇫🇷@AZARBAYJAB1
   - Telegram 🆔@cnetvpn 🇸🇪
   - Telegram 🆔@cnetvpn 🇫🇮
+  - 🇺🇸US_5|1.3MB/s
+  - 🇭🇰HK_1|5.0MB/s
+  - 🇯🇵 日本 | JPN 2
+  - 🇺🇸 美国 | USA 4
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪_DE_德国
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
   - 🇷🇺_RU_俄罗斯
   - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-  - 🇮🇳_IN_印度
-  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1876,11 +1925,8 @@ proxy-groups:
   - 日本
   - 芬兰
   - '日本 #1'
-  - 新加坡
   - 咕
-  - 荷兰
   - '日本 #2'
-  - 波兰
   - 咕咕
   - 法国
   - 澳大利亚
@@ -1901,26 +1947,30 @@ proxy-groups:
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - 阿联酋
   - '芬兰 #1'
-  - 🏀46@oneclickvpnkeys
   - 🏀95@oneclickvpnkeys
-  - 🇨🇭172102 | ⚡️Telegram = t.me/S...
+  - ⚙️35@oneclickvpnkeys
   - '[ 🇷🇺 ] | @Cfox_SerVer'
   - '@Begoo_VPN ²⁹⁰'
   - '@awlix_ir'
   - Telegram 🆔@cnetvpn 🇷🇺
   - ✨ @NOFiLTERING2 | ❤️ وصل شدی ج...
+  - ⚙️84@oneclickvpnkeys
   - ✅  @vistav2ray  👈👈کانال ما ✅
   - '✅  @vistav2ray  👈👈کانال ما ✅ #1'
   - '✅  @vistav2ray  👈👈کانال ما ✅ #2'
   - Telegram 🆔@Cnetvpn 🇺🇲
   - Telegram 🆔@cnetvpn 🇩🇪
   - '@V2ray_confiig'
-  - 🇩🇪172107 | ⚡️Telegram = t.me/S...
+  - ⚙️40@oneclickvpnkeys
   - 🏀25@oneclickvpnkeys
   - 🏀14@oneclickvpnkeys
+  - 🇮🇳172660 | ⚡️Telegram = t.me/S...
   - '@V2ray_confiig #1'
+  - 🇮🇳172666 | ⚡️Telegram = t.me/S...
+  - ⚙️90@oneclickvpnkeys
   - ⚙️29@oneclickvpnkeys
   - 🏀94@oneclickvpnkeys
+  - ⚙️81@oneclickvpnkeys
   - 🩵+@Azarakhsh_Proxy+🩷
   - '[ 🇩🇪 ] | @Cfox_SerVer #1'
   - '[ 🇩🇪 ] | @Cfox_SerVer'
@@ -1946,7 +1996,8 @@ proxy-groups:
   - '[ 🇷🇺 ] | @Cfox_SerVer #2'
   - '[ 🇷🇺 ] | @Cfox_SerVer #1'
   - '♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️55... #1'
-  - '@filembad'
+  - '[ 🇩🇪 ] | @Cfox_SerVer #2'
+  - ⚙️70@oneclickvpnkeys
   - 2🏀@oneclickvpnkeys
   - 🏀97@oneclickvpnkeys
   - 🏀100@oneclickvpnkeys
@@ -1957,9 +2008,9 @@ proxy-groups:
   - dc-udp-🇦🇷 Argentina-Buenos Air...
   - dc-udp-🇦🇹 Austria-Vienna
   - dc-udp-🇧🇷 Brazil-Fortaleza
-  - '@ICV2RAY'
+  - -🇩🇪 @VConfing
   - VCONFING
-  - '@ICV2RAY #1'
+  - -🇫🇷 @VConfing
   - -🇹🇷 @VConfing
   - 🏀33@oneclickvpnkeys
   - 🏀34@oneclickvpnkeys
@@ -1976,11 +2027,14 @@ proxy-groups:
   - 🇺🇸8@JKVPN
   - 🇺🇸9@JKVPN
   - '@fastkanfig کانال تلگرام'
-  - 🇺🇸172152 | ⚡️Telegram = t.me/S...
   - 🇩🇪@AZARBAYJAB1
   - 🇫🇷@AZARBAYJAB1
   - Telegram 🆔@cnetvpn 🇸🇪
   - Telegram 🆔@cnetvpn 🇫🇮
+  - 🇺🇸US_5|1.3MB/s
+  - 🇭🇰HK_1|5.0MB/s
+  - 🇯🇵 日本 | JPN 2
+  - 🇺🇸 美国 | USA 4
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -2008,11 +2062,10 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇩🇪_DE_德国
+  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
   - 🇷🇺_RU_俄罗斯
   - 🇯🇵_JP_日本->🇸🇬_SG_新加坡
-  - 🇮🇳_IN_印度
-  - 🇷🇺_RU_俄罗斯->🇩🇪_DE_德国
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -2026,11 +2079,8 @@ proxy-groups:
   - 日本
   - 芬兰
   - '日本 #1'
-  - 新加坡
   - 咕
-  - 荷兰
   - '日本 #2'
-  - 波兰
   - 咕咕
   - 法国
   - 澳大利亚
@@ -2051,26 +2101,30 @@ proxy-groups:
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - 阿联酋
   - '芬兰 #1'
-  - 🏀46@oneclickvpnkeys
   - 🏀95@oneclickvpnkeys
-  - 🇨🇭172102 | ⚡️Telegram = t.me/S...
+  - ⚙️35@oneclickvpnkeys
   - '[ 🇷🇺 ] | @Cfox_SerVer'
   - '@Begoo_VPN ²⁹⁰'
   - '@awlix_ir'
   - Telegram 🆔@cnetvpn 🇷🇺
   - ✨ @NOFiLTERING2 | ❤️ وصل شدی ج...
+  - ⚙️84@oneclickvpnkeys
   - ✅  @vistav2ray  👈👈کانال ما ✅
   - '✅  @vistav2ray  👈👈کانال ما ✅ #1'
   - '✅  @vistav2ray  👈👈کانال ما ✅ #2'
   - Telegram 🆔@Cnetvpn 🇺🇲
   - Telegram 🆔@cnetvpn 🇩🇪
   - '@V2ray_confiig'
-  - 🇩🇪172107 | ⚡️Telegram = t.me/S...
+  - ⚙️40@oneclickvpnkeys
   - 🏀25@oneclickvpnkeys
   - 🏀14@oneclickvpnkeys
+  - 🇮🇳172660 | ⚡️Telegram = t.me/S...
   - '@V2ray_confiig #1'
+  - 🇮🇳172666 | ⚡️Telegram = t.me/S...
+  - ⚙️90@oneclickvpnkeys
   - ⚙️29@oneclickvpnkeys
   - 🏀94@oneclickvpnkeys
+  - ⚙️81@oneclickvpnkeys
   - 🩵+@Azarakhsh_Proxy+🩷
   - '[ 🇩🇪 ] | @Cfox_SerVer #1'
   - '[ 🇩🇪 ] | @Cfox_SerVer'
@@ -2096,7 +2150,8 @@ proxy-groups:
   - '[ 🇷🇺 ] | @Cfox_SerVer #2'
   - '[ 🇷🇺 ] | @Cfox_SerVer #1'
   - '♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️55... #1'
-  - '@filembad'
+  - '[ 🇩🇪 ] | @Cfox_SerVer #2'
+  - ⚙️70@oneclickvpnkeys
   - 2🏀@oneclickvpnkeys
   - 🏀97@oneclickvpnkeys
   - 🏀100@oneclickvpnkeys
@@ -2107,9 +2162,9 @@ proxy-groups:
   - dc-udp-🇦🇷 Argentina-Buenos Air...
   - dc-udp-🇦🇹 Austria-Vienna
   - dc-udp-🇧🇷 Brazil-Fortaleza
-  - '@ICV2RAY'
+  - -🇩🇪 @VConfing
   - VCONFING
-  - '@ICV2RAY #1'
+  - -🇫🇷 @VConfing
   - -🇹🇷 @VConfing
   - 🏀33@oneclickvpnkeys
   - 🏀34@oneclickvpnkeys
@@ -2126,11 +2181,14 @@ proxy-groups:
   - 🇺🇸8@JKVPN
   - 🇺🇸9@JKVPN
   - '@fastkanfig کانال تلگرام'
-  - 🇺🇸172152 | ⚡️Telegram = t.me/S...
   - 🇩🇪@AZARBAYJAB1
   - 🇫🇷@AZARBAYJAB1
   - Telegram 🆔@cnetvpn 🇸🇪
   - Telegram 🆔@cnetvpn 🇫🇮
+  - 🇺🇸US_5|1.3MB/s
+  - 🇭🇰HK_1|5.0MB/s
+  - 🇯🇵 日本 | JPN 2
+  - 🇺🇸 美国 | USA 4
 rule-providers:
   LocalAreaNetwork:
     type: http
