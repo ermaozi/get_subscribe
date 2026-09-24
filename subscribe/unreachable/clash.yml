@@ -24,14 +24,6 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国
-  type: vless
-  server: us22.sofast.live
-  port: 58011
-  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
-  tls: false
-  skip-cert-verify: true
-  udp: true
 - cipher: aes-256-gcm
   name: 香港2|@ripaojiedian
   password: Butterfly123@qwe9527
@@ -106,21 +98,20 @@ proxies:
   port: 30001
   server: 36.33.35.105
   type: ss
-- client-fingerprint: edge
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇷🇺RU_1|3.6MB/s
-  network: tcp
-  port: '443'
-  reality-opts:
-    public-key: j4M7_0Tl0UdSe4zYziALrPp_4F-QiSkyrUnOS6saQ1g
-    short-id: a7162d100ab90645
-  server: ruffia2.thewalkingded.life
-  servername: ruffia2.thewalkingded.life
-  tls: true
+- encryption: none
+  http-opts:
+    headers:
+      Host:
+      - edgedl.me.gvt1.com
+    path:
+    - /@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs---@TurboConfigs--@TurboConfigs---@TurboConfigs---@TurboConfigs---
+  name: 🇩🇪DE_2|1.3MB/s
+  network: http
+  port: '21349'
+  server: 5.75.202.116
   type: vless
   udp: true
-  uuid: f495298f-2bdb-4fd8-9ac9-5dd33d1b482a
+  uuid: 2789c2ec-d860-4b75-a614-49e8ab65f7bc
   xudp: true
 - name: RO_speednode_0011
   port: 9002
@@ -991,13 +982,56 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
+- name: 🇩🇪 德国 | DEU 2
+  server: 2.26.252.61
+  port: 443
+  type: vless
+  uuid: 61da8f4b-6ab1-4ca7-bae0-1cec4f9be2f8
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: gMkxxxFo7F0gLBe93tRyfDKFSH0YlfTFPd7X-fHfJ1s
+    short-id: abcded1950c35dcc
+  servername: cdn.jsdelivr.net
+  client-fingerprint: safari
+  network: tcp
+  udp: true
+- name: 🇩🇪 德国 | DEU 5
+  server: 207.154.208.81
+  port: 11186
+  type: vless
+  uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
+  tls: false
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - www.amazonaws-china.com
+  udp: true
+- name: 🇺🇸 美国 | USA 18
+  server: 162.243.210.25
+  port: 11186
+  type: vless
+  uuid: fd4b654f-9ae2-42c5-977b-6aa54e8e9a83
+  tls: false
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - https://play-apps-features.googleusercontent.com
+  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1009,7 +1043,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇷🇺RU_1|3.6MB/s
+  - 🇩🇪DE_2|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1123,10 +1157,12 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 2
+  - 🇩🇪 德国 | DEU 5
+  - 🇺🇸 美国 | USA 18
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1138,7 +1174,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇷🇺RU_1|3.6MB/s
+  - 🇩🇪DE_2|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1252,6 +1288,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 2
+  - 🇩🇪 德国 | DEU 5
+  - 🇺🇸 美国 | USA 18
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1261,7 +1300,6 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1273,7 +1311,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇷🇺RU_1|3.6MB/s
+  - 🇩🇪DE_2|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1387,12 +1425,14 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 2
+  - 🇩🇪 德国 | DEU 5
+  - 🇺🇸 美国 | USA 18
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1404,7 +1444,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇷🇺RU_1|3.6MB/s
+  - 🇩🇪DE_2|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1518,12 +1558,14 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 2
+  - 🇩🇪 德国 | DEU 5
+  - 🇺🇸 美国 | USA 18
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1535,7 +1577,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇷🇺RU_1|3.6MB/s
+  - 🇩🇪DE_2|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1649,12 +1691,14 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 2
+  - 🇩🇪 德国 | DEU 5
+  - 🇺🇸 美国 | USA 18
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1666,7 +1710,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇷🇺RU_1|3.6MB/s
+  - 🇩🇪DE_2|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1780,6 +1824,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 2
+  - 🇩🇪 德国 | DEU 5
+  - 🇺🇸 美国 | USA 18
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1807,7 +1854,6 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1819,7 +1865,7 @@ proxy-groups:
   - 美国|@ripaojiedian
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
-  - 🇷🇺RU_1|3.6MB/s
+  - 🇩🇪DE_2|1.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1933,6 +1979,9 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 2
+  - 🇩🇪 德国 | DEU 5
+  - 🇺🇸 美国 | USA 18
 rule-providers:
   LocalAreaNetwork:
     type: http
