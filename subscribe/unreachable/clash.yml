@@ -26,76 +26,32 @@ dns:
 proxies:
 - name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
-  server: us22.sofast.live
-  port: 58011
-  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇫🇷_FR_法国
-  type: vless
-  server: 15.224.68.85
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 🇫🇷_FR_法国_1
-  type: vless
-  server: 13.39.231.13
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 🇫🇷_FR_法国_2
-  type: vless
-  server: 13.39.231.13
-  port: 22224
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 🇫🇷_FR_法国_3
-  type: vless
-  server: 15.224.68.85
-  port: 22223
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 🇫🇷_FR_法国_5
-  type: vless
-  server: 15.224.68.85
-  port: 22222
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: 🇨🇳CN_1|5.6MB/s
-  password: Og==
-  port: '1080'
-  server: 103.210.161.8
-  skip-cert-verify: true
-  type: socks5
-  username: Og==
-- name: 🇨🇳CN_2|2.9MB/s
-  password: T2c9PTpPZz09
-  port: '1080'
-  server: 103.210.161.8
-  skip-cert-verify: true
-  type: socks5
-  username: T2c9PTpPZz09
-- alterId: '0'
-  cipher: auto
-  name: 🇯🇵JP_2|3.5MB/s
-  network: ws
-  port: 81
-  server: 147.78.242.19
-  type: vmess
-  uuid: 357b37cc-d0d2-47ef-aa1a-0a668447999e
-  ws-opts:
-    path: /
+- cipher: aes-128-gcm
+  name: 🇭🇰 香港3|@ripaojiedian
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36602
+  server: gd2.bjnet2.com
+  type: ss
+- cipher: aes-128-gcm
+  name: 🇺🇸 美国2-IEPL-GPT
+  password: 17b70f72-fc4f-41a7-a32f-e0bbad7d1400
+  plugin: obfs
+  plugin-opts:
+    host: 3c183f1f4eae079d708e817ae656417a.baidu.com
+    mode: http
+  port: 36608
+  server: gd2.bjnet2.com
+  type: ss
 - name: RO_speednode_0011
   port: 9002
   server: 84.239.49.218
@@ -965,6 +921,26 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
+- name: 🇨🇭 瑞士 | CHE
+  server: 34.65.151.186
+  port: 443
+  type: vless
+  uuid: a18f08dc-76ae-453a-98f5-d41eab7e649b
+  tls: true
+  reality-opts:
+    public-key: f8aV8naD8NKt_mLKaOou0qUrIM1Ge25kJNxywpF3OB0
+    short-id: d016c76007f78038
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+- name: 🇷🇺 俄罗斯 | RUS 2
+  server: 46.29.163.78
+  port: 30210
+  type: ss
+  cipher: aes-256-gcm
+  password: 6b39ae3234dfd68b
+  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
@@ -972,14 +948,8 @@ proxy-groups:
   - ermao.net | ♻️ 自动选择
   - DIRECT
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇫🇷_FR_法国_1
-  - 🇫🇷_FR_法国_2
-  - 🇫🇷_FR_法国_3
-  - 🇫🇷_FR_法国_5
-  - 🇨🇳CN_1|5.6MB/s
-  - 🇨🇳CN_2|2.9MB/s
-  - 🇯🇵JP_2|3.5MB/s
+  - 🇭🇰 香港3|@ripaojiedian
+  - 🇺🇸 美国2-IEPL-GPT
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1093,18 +1063,14 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺 俄罗斯 | RUS 2
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇫🇷_FR_法国_1
-  - 🇫🇷_FR_法国_2
-  - 🇫🇷_FR_法国_3
-  - 🇫🇷_FR_法国_5
-  - 🇨🇳CN_1|5.6MB/s
-  - 🇨🇳CN_2|2.9MB/s
-  - 🇯🇵JP_2|3.5MB/s
+  - 🇭🇰 香港3|@ripaojiedian
+  - 🇺🇸 美国2-IEPL-GPT
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1218,6 +1184,8 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺 俄罗斯 | RUS 2
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1228,14 +1196,8 @@ proxy-groups:
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇫🇷_FR_法国_1
-  - 🇫🇷_FR_法国_2
-  - 🇫🇷_FR_法国_3
-  - 🇫🇷_FR_法国_5
-  - 🇨🇳CN_1|5.6MB/s
-  - 🇨🇳CN_2|2.9MB/s
-  - 🇯🇵JP_2|3.5MB/s
+  - 🇭🇰 香港3|@ripaojiedian
+  - 🇺🇸 美国2-IEPL-GPT
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1349,20 +1311,16 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺 俄罗斯 | RUS 2
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇫🇷_FR_法国_1
-  - 🇫🇷_FR_法国_2
-  - 🇫🇷_FR_法国_3
-  - 🇫🇷_FR_法国_5
-  - 🇨🇳CN_1|5.6MB/s
-  - 🇨🇳CN_2|2.9MB/s
-  - 🇯🇵JP_2|3.5MB/s
+  - 🇭🇰 香港3|@ripaojiedian
+  - 🇺🇸 美国2-IEPL-GPT
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1476,20 +1434,16 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺 俄罗斯 | RUS 2
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇫🇷_FR_法国_1
-  - 🇫🇷_FR_法国_2
-  - 🇫🇷_FR_法国_3
-  - 🇫🇷_FR_法国_5
-  - 🇨🇳CN_1|5.6MB/s
-  - 🇨🇳CN_2|2.9MB/s
-  - 🇯🇵JP_2|3.5MB/s
+  - 🇭🇰 香港3|@ripaojiedian
+  - 🇺🇸 美国2-IEPL-GPT
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1603,20 +1557,16 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺 俄罗斯 | RUS 2
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇫🇷_FR_法国_1
-  - 🇫🇷_FR_法国_2
-  - 🇫🇷_FR_法国_3
-  - 🇫🇷_FR_法国_5
-  - 🇨🇳CN_1|5.6MB/s
-  - 🇨🇳CN_2|2.9MB/s
-  - 🇯🇵JP_2|3.5MB/s
+  - 🇭🇰 香港3|@ripaojiedian
+  - 🇺🇸 美国2-IEPL-GPT
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1730,6 +1680,8 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺 俄罗斯 | RUS 2
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1758,14 +1710,8 @@ proxy-groups:
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇫🇷_FR_法国_1
-  - 🇫🇷_FR_法国_2
-  - 🇫🇷_FR_法国_3
-  - 🇫🇷_FR_法国_5
-  - 🇨🇳CN_1|5.6MB/s
-  - 🇨🇳CN_2|2.9MB/s
-  - 🇯🇵JP_2|3.5MB/s
+  - 🇭🇰 香港3|@ripaojiedian
+  - 🇺🇸 美国2-IEPL-GPT
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1879,6 +1825,8 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇨🇭 瑞士 | CHE
+  - 🇷🇺 俄罗斯 | RUS 2
 rule-providers:
   LocalAreaNetwork:
     type: http
