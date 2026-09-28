@@ -26,6 +26,14 @@ dns:
 proxies:
 - name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  type: vless
   server: us22.sofast.live
   port: 58011
   uuid: 0afc6426-606c-48e7-bd70-3c424a416842
@@ -34,18 +42,52 @@ proxies:
   udp: true
 - client-fingerprint: chrome
   encryption: none
-  name: 🇩🇪DE_2|1.1MB/s
+  flow: xtls-rprx-vision
+  name: 🇱🇹LT_1|1.9MB/s
   network: tcp
-  port: '20410'
+  port: '45977'
   reality-opts:
-    public-key: BErODvy5h6Cjw5zWfX_CZ5ODH9p1XbZwU-ZEHyVXEGI
-    short-id: e2ce3e050232978c
-  server: 109.94.164.85
-  servername: secureconnect-pa.mtls.clients6.google.com
+    public-key: 5JPUCm5vkIUyBfwcgnkWXJNIW4CaWgBzXgT61cvWVVA
+    short-id: f688ff32ece6b15f
+  server: 84.32.51.238
+  servername: lt-1.dzvn.space
   tls: true
   type: vless
   udp: true
-  uuid: c5cfb08f-e42d-4a08-94e1-4f591a2f7a6f
+  uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
+  xudp: true
+- cipher: aes-256-cfb
+  name: 🇯🇵JP_2|5.0MB/s
+  password: amazonskr05
+  port: 443
+  server: 18.179.37.17
+  type: ss
+- client-fingerprint: firefox
+  encryption: none
+  flow: xtls-rprx-vision
+  name: 🇸🇪SE_4|1.2MB/s
+  network: tcp
+  port: '443'
+  reality-opts:
+    public-key: Ze0irTcmNdt0iOioHey8zxm76PwVK9lIzVcTU5kIyx0
+    short-id: 95e51c18
+  server: app.goonars.com
+  servername: app.goonars.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 94877739-3af6-4fbb-85b6-ca6fe86c7696
+  xudp: true
+- encryption: none
+  grpc-opts:
+    grpc-service-name: vless
+  name: 🇹🇷TR_1|3.5MB/s
+  network: grpc
+  port: '3090'
+  server: 93.190.9.52
+  type: vless
+  udp: true
+  uuid: 52e8bce3-b255-486d-beb2-aa1b549c44b1
   xudp: true
 - name: RO_speednode_0011
   port: 9002
@@ -916,12 +958,67 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
+- name: 🇩🇪 德国 | DEU 7
+  server: 165.227.169.67
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  tls: false
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - firebaseinstallations.googleapis.com
+  udp: true
+- name: 🇩🇪 德国 | DEU 10
+  server: 91.98.109.64
+  port: 80
+  type: vless
+  uuid: a8721465-2ee4-4c06-90bc-18145e8f8ea2
+  tls: false
+  network: ws
+  ws-opts:
+    path: /
+  udp: true
+- name: 🇬🇧 英国 | GBR
+  server: 143.110.162.77
+  port: 443
+  type: vless
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+  tls: false
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - fr.khamenei.ir
+  udp: true
 - name: 🇬🇧 英国 | GBR 2
-  server: 144.24.224.133
-  port: 61312
-  type: ss
-  cipher: 2022-blake3-chacha20-poly1305
-  password: /Y28XsDfiP+fi4Refwdekr6F67d7EgGeA7F2lP+T31o=
+  server: 64.176.184.185
+  port: 443
+  type: trojan
+  password: Lz3NvQXwksB8
+  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇸🇪 瑞典 | SWE 2
+  server: 88.216.223.41
+  port: 443
+  type: vless
+  uuid: 94877739-3af6-4fbb-85b6-ca6fe86c7696
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: Ze0irTcmNdt0iOioHey8zxm76PwVK9lIzVcTU5kIyx0
+    short-id: 95e51c18
+  servername: app.goonars.com
+  client-fingerprint: firefox
+  network: tcp
   udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -930,7 +1027,11 @@ proxy-groups:
   - ermao.net | ♻️ 自动选择
   - DIRECT
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_2|1.1MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇱🇹LT_1|1.9MB/s
+  - 🇯🇵JP_2|5.0MB/s
+  - 🇸🇪SE_4|1.2MB/s
+  - 🇹🇷TR_1|3.5MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1044,12 +1145,20 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 7
+  - 🇩🇪 德国 | DEU 10
+  - 🇬🇧 英国 | GBR
   - 🇬🇧 英国 | GBR 2
+  - 🇸🇪 瑞典 | SWE 2
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_2|1.1MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇱🇹LT_1|1.9MB/s
+  - 🇯🇵JP_2|5.0MB/s
+  - 🇸🇪SE_4|1.2MB/s
+  - 🇹🇷TR_1|3.5MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1163,7 +1272,11 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 7
+  - 🇩🇪 德国 | DEU 10
+  - 🇬🇧 英国 | GBR
   - 🇬🇧 英国 | GBR 2
+  - 🇸🇪 瑞典 | SWE 2
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1174,7 +1287,11 @@ proxy-groups:
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_2|1.1MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇱🇹LT_1|1.9MB/s
+  - 🇯🇵JP_2|5.0MB/s
+  - 🇸🇪SE_4|1.2MB/s
+  - 🇹🇷TR_1|3.5MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1288,14 +1405,22 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 7
+  - 🇩🇪 德国 | DEU 10
+  - 🇬🇧 英国 | GBR
   - 🇬🇧 英国 | GBR 2
+  - 🇸🇪 瑞典 | SWE 2
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_2|1.1MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇱🇹LT_1|1.9MB/s
+  - 🇯🇵JP_2|5.0MB/s
+  - 🇸🇪SE_4|1.2MB/s
+  - 🇹🇷TR_1|3.5MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1409,14 +1534,22 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 7
+  - 🇩🇪 德国 | DEU 10
+  - 🇬🇧 英国 | GBR
   - 🇬🇧 英国 | GBR 2
+  - 🇸🇪 瑞典 | SWE 2
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_2|1.1MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇱🇹LT_1|1.9MB/s
+  - 🇯🇵JP_2|5.0MB/s
+  - 🇸🇪SE_4|1.2MB/s
+  - 🇹🇷TR_1|3.5MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1530,14 +1663,22 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 7
+  - 🇩🇪 德国 | DEU 10
+  - 🇬🇧 英国 | GBR
   - 🇬🇧 英国 | GBR 2
+  - 🇸🇪 瑞典 | SWE 2
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_2|1.1MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇱🇹LT_1|1.9MB/s
+  - 🇯🇵JP_2|5.0MB/s
+  - 🇸🇪SE_4|1.2MB/s
+  - 🇹🇷TR_1|3.5MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1651,7 +1792,11 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 7
+  - 🇩🇪 德国 | DEU 10
+  - 🇬🇧 英国 | GBR
   - 🇬🇧 英国 | GBR 2
+  - 🇸🇪 瑞典 | SWE 2
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1680,7 +1825,11 @@ proxy-groups:
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_2|1.1MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇱🇹LT_1|1.9MB/s
+  - 🇯🇵JP_2|5.0MB/s
+  - 🇸🇪SE_4|1.2MB/s
+  - 🇹🇷TR_1|3.5MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1794,7 +1943,11 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇩🇪 德国 | DEU 7
+  - 🇩🇪 德国 | DEU 10
+  - 🇬🇧 英国 | GBR
   - 🇬🇧 英国 | GBR 2
+  - 🇸🇪 瑞典 | SWE 2
 rule-providers:
   LocalAreaNetwork:
     type: http
