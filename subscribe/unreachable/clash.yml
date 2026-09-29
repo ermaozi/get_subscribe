@@ -21,10 +21,10 @@ dns:
   - https://doh.pub/dns-query
   nameserver-policy:
     geosite:geolocation-!cn:
-    - https://1.1.1.1/dns-query#🚀 节点选择
-    - https://8.8.8.8/dns-query#🚀 节点选择
+    - https://1.1.1.1/dns-query#рџљЂ иЉ‚з‚№йЂ‰ж‹©
+    - https://8.8.8.8/dns-query#рџљЂ иЉ‚з‚№йЂ‰ж‹©
 proxies:
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国
+- name: рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң
   type: vless
   server: jp.sofast.live
   port: 52683
@@ -32,7 +32,7 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+- name: рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң_1
   type: vless
   server: us22.sofast.live
   port: 58011
@@ -41,9 +41,36 @@ proxies:
   skip-cert-verify: true
   udp: true
 - client-fingerprint: chrome
+  name: 🇩🇪DE_2|2.8MB/s
+  network: ws
+  port: 443
+  server: 5.45.111.195
+  servername: shephe.dpdns.org
+  tls: true
+  type: vless
+  uuid: 9e3132b8-b595-444a-833a-2de44789f9d7
+  ws-opts:
+    headers:
+      Host: shephe.dpdns.org
+    path: /
+- client-fingerprint: random
+  flow: xtls-rprx-vision
+  name: 🇺🇸US_1|3.4MB/s
+  network: tcp
+  port: 443
+  reality-opts:
+    public-key: 8i7j9_b2KyQC8iR-jEMGl-d2whPkeKt36mutUkZr9ng
+    short-id: 3477a74403cf4af9
+  server: 154.64.235.117
+  servername: gateway.icloud.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 82C94E17-B27E-4356-82C1-2F9C79B0CF6D
+- client-fingerprint: chrome
   encryption: none
   flow: xtls-rprx-vision
-  name: 🇱🇹LT_1|1.9MB/s
+  name: 🇱🇹LT_1|2.4MB/s
   network: tcp
   port: '45977'
   reality-opts:
@@ -55,39 +82,6 @@ proxies:
   type: vless
   udp: true
   uuid: 25284368-40d5-4abe-9f56-54a07e88a7af
-  xudp: true
-- cipher: aes-256-cfb
-  name: 🇯🇵JP_2|5.0MB/s
-  password: amazonskr05
-  port: 443
-  server: 18.179.37.17
-  type: ss
-- client-fingerprint: firefox
-  encryption: none
-  flow: xtls-rprx-vision
-  name: 🇸🇪SE_4|1.2MB/s
-  network: tcp
-  port: '443'
-  reality-opts:
-    public-key: Ze0irTcmNdt0iOioHey8zxm76PwVK9lIzVcTU5kIyx0
-    short-id: 95e51c18
-  server: app.goonars.com
-  servername: app.goonars.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 94877739-3af6-4fbb-85b6-ca6fe86c7696
-  xudp: true
-- encryption: none
-  grpc-opts:
-    grpc-service-name: vless
-  name: 🇹🇷TR_1|3.5MB/s
-  network: grpc
-  port: '3090'
-  server: 93.190.9.52
-  type: vless
-  udp: true
-  uuid: 52e8bce3-b255-486d-beb2-aa1b549c44b1
   xudp: true
 - name: RO_speednode_0011
   port: 9002
@@ -958,80 +952,17 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
-- name: 🇩🇪 德国 | DEU 7
-  server: 165.227.169.67
-  port: 443
-  type: vless
-  uuid: 40992c2a-513e-4837-9594-23411fd42afd
-  tls: false
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - firebaseinstallations.googleapis.com
-  udp: true
-- name: 🇩🇪 德国 | DEU 10
-  server: 91.98.109.64
-  port: 80
-  type: vless
-  uuid: a8721465-2ee4-4c06-90bc-18145e8f8ea2
-  tls: false
-  network: ws
-  ws-opts:
-    path: /
-  udp: true
-- name: 🇬🇧 英国 | GBR
-  server: 143.110.162.77
-  port: 443
-  type: vless
-  uuid: 40992c2a-513e-4837-9594-23411fd42afd
-  tls: false
-  network: http
-  http-opts:
-    method: GET
-    path:
-    - /
-    headers:
-      Host:
-      - fr.khamenei.ir
-  udp: true
-- name: 🇬🇧 英国 | GBR 2
-  server: 64.176.184.185
-  port: 443
-  type: trojan
-  password: Lz3NvQXwksB8
-  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com
-  skip-cert-verify: true
-  udp: true
-- name: 🇸🇪 瑞典 | SWE 2
-  server: 88.216.223.41
-  port: 443
-  type: vless
-  uuid: 94877739-3af6-4fbb-85b6-ca6fe86c7696
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: Ze0irTcmNdt0iOioHey8zxm76PwVK9lIzVcTU5kIyx0
-    short-id: 95e51c18
-  servername: app.goonars.com
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
 proxy-groups:
-- name: ermao.net | 🚀 节点选择
+- name: ermao.net | рџљЂ иЉ‚з‚№йЂ‰ж‹©
   type: select
   proxies:
-  - ermao.net | ♻️ 自动选择
+  - ermao.net | в™»пёЏ и‡ҒеЉЁйЂ‰ж‹©
   - DIRECT
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇱🇹LT_1|1.9MB/s
-  - 🇯🇵JP_2|5.0MB/s
-  - 🇸🇪SE_4|1.2MB/s
-  - 🇹🇷TR_1|3.5MB/s
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң_1
+  - 🇩🇪DE_2|2.8MB/s
+  - 🇺🇸US_1|3.4MB/s
+  - 🇱🇹LT_1|2.4MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1145,20 +1076,14 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 10
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR 2
-  - 🇸🇪 瑞典 | SWE 2
-- name: ermao.net | ♻️ 自动选择
+- name: ermao.net | в™»пёЏ и‡ҒеЉЁйЂ‰ж‹©
   type: url-test
   proxies:
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇱🇹LT_1|1.9MB/s
-  - 🇯🇵JP_2|5.0MB/s
-  - 🇸🇪SE_4|1.2MB/s
-  - 🇹🇷TR_1|3.5MB/s
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң_1
+  - 🇩🇪DE_2|2.8MB/s
+  - 🇺🇸US_1|3.4MB/s
+  - 🇱🇹LT_1|2.4MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1272,26 +1197,20 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 10
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR 2
-  - 🇸🇪 瑞典 | SWE 2
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
-- name: 🌍 国外媒体
+- name: рџЊҚ е›Ңе¤–еҒ’дҢ“
   type: select
   proxies:
-  - ermao.net | 🚀 节点选择
-  - ermao.net | ♻️ 自动选择
-  - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇱🇹LT_1|1.9MB/s
-  - 🇯🇵JP_2|5.0MB/s
-  - 🇸🇪SE_4|1.2MB/s
-  - 🇹🇷TR_1|3.5MB/s
+  - ermao.net | рџљЂ иЉ‚з‚№йЂ‰ж‹©
+  - ermao.net | в™»пёЏ и‡ҒеЉЁйЂ‰ж‹©
+  - рџҺҮ е…Ёзђѓз›өиүһ
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң_1
+  - 🇩🇪DE_2|2.8MB/s
+  - 🇺🇸US_1|3.4MB/s
+  - 🇱🇹LT_1|2.4MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1405,22 +1324,16 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 10
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR 2
-  - 🇸🇪 瑞典 | SWE 2
-- name: 📲 电报信息
+- name: рџ“І з”µжЉӨдүҰжЃҮ
   type: select
   proxies:
-  - ermao.net | 🚀 节点选择
-  - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇱🇹LT_1|1.9MB/s
-  - 🇯🇵JP_2|5.0MB/s
-  - 🇸🇪SE_4|1.2MB/s
-  - 🇹🇷TR_1|3.5MB/s
+  - ermao.net | рџљЂ иЉ‚з‚№йЂ‰ж‹©
+  - рџҺҮ е…Ёзђѓз›өиүһ
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң_1
+  - 🇩🇪DE_2|2.8MB/s
+  - 🇺🇸US_1|3.4MB/s
+  - 🇱🇹LT_1|2.4MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1534,22 +1447,16 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 10
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR 2
-  - 🇸🇪 瑞典 | SWE 2
-- name: Ⓜ️ 微软服务
+- name: в“‚пёЏ ең®иҢҮжњҚеЉҰ
   type: select
   proxies:
-  - 🎯 全球直连
-  - ermao.net | 🚀 节点选择
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇱🇹LT_1|1.9MB/s
-  - 🇯🇵JP_2|5.0MB/s
-  - 🇸🇪SE_4|1.2MB/s
-  - 🇹🇷TR_1|3.5MB/s
+  - рџҺҮ е…Ёзђѓз›өиүһ
+  - ermao.net | рџљЂ иЉ‚з‚№йЂ‰ж‹©
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң_1
+  - 🇩🇪DE_2|2.8MB/s
+  - 🇺🇸US_1|3.4MB/s
+  - 🇱🇹LT_1|2.4MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1663,22 +1570,16 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 10
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR 2
-  - 🇸🇪 瑞典 | SWE 2
-- name: 🍎 苹果服务
+- name: рџҚҺ и‹№жһњжњҚеЉҰ
   type: select
   proxies:
-  - ermao.net | 🚀 节点选择
-  - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇱🇹LT_1|1.9MB/s
-  - 🇯🇵JP_2|5.0MB/s
-  - 🇸🇪SE_4|1.2MB/s
-  - 🇹🇷TR_1|3.5MB/s
+  - ermao.net | рџљЂ иЉ‚з‚№йЂ‰ж‹©
+  - рџҺҮ е…Ёзђѓз›өиүһ
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң_1
+  - 🇩🇪DE_2|2.8MB/s
+  - 🇺🇸US_1|3.4MB/s
+  - 🇱🇹LT_1|2.4MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1792,44 +1693,38 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 10
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR 2
-  - 🇸🇪 瑞典 | SWE 2
-- name: 🎯 全球直连
+- name: рџҺҮ е…Ёзђѓз›өиүһ
   type: select
   proxies:
   - DIRECT
-  - ermao.net | 🚀 节点选择
-  - ermao.net | ♻️ 自动选择
-- name: 🛑 全球拦截
+  - ermao.net | рџљЂ иЉ‚з‚№йЂ‰ж‹©
+  - ermao.net | в™»пёЏ и‡ҒеЉЁйЂ‰ж‹©
+- name: рџ›‘ е…Ёзђѓж‹¦ж€Ғ
   type: select
   proxies:
   - REJECT
   - DIRECT
-- name: 🍃 应用净化
+- name: рџҚѓ еғ”з”Ёе‡ЂеЊ–
   type: select
   proxies:
   - REJECT
   - DIRECT
-- name: 🆎 AdBlock
+- name: рџ†Һ AdBlock
   type: select
   proxies:
   - REJECT
   - DIRECT
-- name: 🐟 漏网之鱼
+- name: рџђџ жәЏзҢ‘д№‹й±ә
   type: select
   proxies:
-  - ermao.net | 🚀 节点选择
-  - 🎯 全球直连
-  - ermao.net | ♻️ 自动选择
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - 🇱🇹LT_1|1.9MB/s
-  - 🇯🇵JP_2|5.0MB/s
-  - 🇸🇪SE_4|1.2MB/s
-  - 🇹🇷TR_1|3.5MB/s
+  - ermao.net | рџљЂ иЉ‚з‚№йЂ‰ж‹©
+  - рџҺҮ е…Ёзђѓз›өиүһ
+  - ermao.net | в™»пёЏ и‡ҒеЉЁйЂ‰ж‹©
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң
+  - рџ‡Ёрџ‡і_CN_дё­е›Ң->рџ‡ғрџ‡ё_US_зңҺе›Ң_1
+  - 🇩🇪DE_2|2.8MB/s
+  - 🇺🇸US_1|3.4MB/s
+  - 🇱🇹LT_1|2.4MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1943,11 +1838,6 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
-  - 🇩🇪 德国 | DEU 7
-  - 🇩🇪 德国 | DEU 10
-  - 🇬🇧 英国 | GBR
-  - 🇬🇧 英国 | GBR 2
-  - 🇸🇪 瑞典 | SWE 2
 rule-providers:
   LocalAreaNetwork:
     type: http
@@ -2025,20 +1915,20 @@ rule-providers:
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
     path: ./rules/ChinaCompanyIp.yaml
 rules:
-- RULE-SET,LocalAreaNetwork,🎯 全球直连
-- RULE-SET,BanAD,🛑 全球拦截
-- RULE-SET,BanProgramAD,🍃 应用净化
-- RULE-SET,BanEasyList,🆎 AdBlock
-- RULE-SET,BanEasyListChina,🆎 AdBlock
-- RULE-SET,BanEasyPrivacy,🆎 AdBlock
-- RULE-SET,GoogleCN,🎯 全球直连
-- RULE-SET,SteamCN,🎯 全球直连
-- RULE-SET,Microsoft,Ⓜ️ 微软服务
-- RULE-SET,Apple,🍎 苹果服务
-- RULE-SET,ProxyMedia,🌍 国外媒体
-- RULE-SET,Telegram,📲 电报信息
-- RULE-SET,ProxyLite,ermao.net | 🚀 节点选择
-- RULE-SET,ChinaDomain,🎯 全球直连
-- RULE-SET,ChinaCompanyIp,🎯 全球直连
-- GEOIP,CN,🎯 全球直连
-- MATCH,🐟 漏网之鱼
+- RULE-SET,LocalAreaNetwork,рџҺҮ е…Ёзђѓз›өиүһ
+- RULE-SET,BanAD,рџ›‘ е…Ёзђѓж‹¦ж€Ғ
+- RULE-SET,BanProgramAD,рџҚѓ еғ”з”Ёе‡ЂеЊ–
+- RULE-SET,BanEasyList,рџ†Һ AdBlock
+- RULE-SET,BanEasyListChina,рџ†Һ AdBlock
+- RULE-SET,BanEasyPrivacy,рџ†Һ AdBlock
+- RULE-SET,GoogleCN,рџҺҮ е…Ёзђѓз›өиүһ
+- RULE-SET,SteamCN,рџҺҮ е…Ёзђѓз›өиүһ
+- RULE-SET,Microsoft,в“‚пёЏ ең®иҢҮжњҚеЉҰ
+- RULE-SET,Apple,рџҚҺ и‹№жһњжњҚеЉҰ
+- RULE-SET,ProxyMedia,рџЊҚ е›Ңе¤–еҒ’дҢ“
+- RULE-SET,Telegram,рџ“І з”µжЉӨдүҰжЃҮ
+- RULE-SET,ProxyLite,ermao.net | рџљЂ иЉ‚з‚№йЂ‰ж‹©
+- RULE-SET,ChinaDomain,рџҺҮ е…Ёзђѓз›өиүһ
+- RULE-SET,ChinaCompanyIp,рџҺҮ е…Ёзђѓз›өиүһ
+- GEOIP,CN,рџҺҮ е…Ёзђѓз›өиүһ
+- MATCH,рџђџ жәЏзҢ‘д№‹й±ә
