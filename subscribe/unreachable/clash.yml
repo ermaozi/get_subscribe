@@ -24,6 +24,16 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
+- name: 🇨🇳_CN_中国
+  type: vmess
+  server: 112.132.215.108
+  port: 50002
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
 - name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
   server: jp.sofast.live
@@ -32,12 +42,114 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇩🇪DE_5|3.6MB/s
-  port: 443
-  server: 217.154.160.160
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  type: vless
+  server: us22.sofast.live
+  port: 58011
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 香港2|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 12103
+  server: 7d0a2gz0-7a0c.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 香港3|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 10115
+  server: 7d0a2gz0-7a0c.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 香港4|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 12107
+  server: 7d0a2gz0-7a0c.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 香港5|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 12102
+  server: 7d0a2gz0-7a0c.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 日本2|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 10125
+  server: 63182sh8-4d7b.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 新加坡|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 10135
+  server: 7d0a2gz0-7a0c.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 美国|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 10155
+  server: 63182sh8-4d7b.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 美国2|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 12122
+  server: 63182sh8-4d7b.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 台湾|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 12142
+  server: 7d0a2gz0-7a0c.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 韩国|@ripaojiedian
+  network: tcp
+  password: AA885B42-133C-3828-FB69-E45105C06092
+  port: 11171
+  server: 63182sh8-4d7b.aws-agent.net
+  skip-cert-verify: true
+  sni: m.ctrip.com
+  type: trojan
+- name: 🇨🇳CN_1|1018KB/s
+  password: Og==
+  port: '1080'
+  server: 103.210.161.8
+  skip-cert-verify: true
+  type: socks5
+  username: Og==
+- name: 🇪🇸ES_1|2.5MB/s
+  port: 8443
+  server: 45.147.251.19
   skip-cert-verify: true
   tls: true
   type: http
+- name: 🇨🇳CN_2|2.3MB/s
+  password: Og
+  port: 1080
+  server: 103.210.161.8
+  type: socks5
+  udp: true
+  username: Og
 - name: RO_speednode_0011
   port: 9002
   server: 84.239.49.218
@@ -907,14 +1019,52 @@ proxies:
   type: vless
   udp: true
   uuid: ec31f6d7-c71a-413d-93aa-24296805a594
+- name: 🇷🇺 俄罗斯 | RUS 2
+  server: 113.30.154.60
+  port: 443
+  type: vless
+  uuid: ff2936d3-caa4-4b79-bb96-1475bd39ceda
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: sellflow.org
+  client-fingerprint: random
+  network: tcp
+  udp: true
+- name: 🇹🇷 土耳其 | TUR
+  server: 93.190.9.135
+  port: 3090
+  type: vless
+  uuid: 0436b522-fba1-4424-8881-808594916247
+  tls: false
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: vless
+  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_5|3.6MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 香港2|@ripaojiedian
+  - 香港3|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 美国|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 韩国|@ripaojiedian
+  - 🇨🇳CN_1|1018KB/s
+  - 🇪🇸ES_1|2.5MB/s
+  - 🇨🇳CN_2|2.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1028,11 +1178,27 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇹🇷 土耳其 | TUR
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_5|3.6MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 香港2|@ripaojiedian
+  - 香港3|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 美国|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 韩国|@ripaojiedian
+  - 🇨🇳CN_1|1018KB/s
+  - 🇪🇸ES_1|2.5MB/s
+  - 🇨🇳CN_2|2.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1146,6 +1312,8 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇹🇷 土耳其 | TUR
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1155,8 +1323,22 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_5|3.6MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 香港2|@ripaojiedian
+  - 香港3|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 美国|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 韩国|@ripaojiedian
+  - 🇨🇳CN_1|1018KB/s
+  - 🇪🇸ES_1|2.5MB/s
+  - 🇨🇳CN_2|2.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1270,13 +1452,29 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇹🇷 土耳其 | TUR
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_5|3.6MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 香港2|@ripaojiedian
+  - 香港3|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 美国|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 韩国|@ripaojiedian
+  - 🇨🇳CN_1|1018KB/s
+  - 🇪🇸ES_1|2.5MB/s
+  - 🇨🇳CN_2|2.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1390,13 +1588,29 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇹🇷 土耳其 | TUR
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_5|3.6MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 香港2|@ripaojiedian
+  - 香港3|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 美国|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 韩国|@ripaojiedian
+  - 🇨🇳CN_1|1018KB/s
+  - 🇪🇸ES_1|2.5MB/s
+  - 🇨🇳CN_2|2.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1510,13 +1724,29 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇹🇷 土耳其 | TUR
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_5|3.6MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 香港2|@ripaojiedian
+  - 香港3|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 美国|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 韩国|@ripaojiedian
+  - 🇨🇳CN_1|1018KB/s
+  - 🇪🇸ES_1|2.5MB/s
+  - 🇨🇳CN_2|2.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1630,6 +1860,8 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇹🇷 土耳其 | TUR
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1657,8 +1889,22 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
+  - 🇨🇳_CN_中国
   - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇩🇪DE_5|3.6MB/s
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 香港2|@ripaojiedian
+  - 香港3|@ripaojiedian
+  - 香港4|@ripaojiedian
+  - 香港5|@ripaojiedian
+  - 日本2|@ripaojiedian
+  - 新加坡|@ripaojiedian
+  - 美国|@ripaojiedian
+  - 美国2|@ripaojiedian
+  - 台湾|@ripaojiedian
+  - 韩国|@ripaojiedian
+  - 🇨🇳CN_1|1018KB/s
+  - 🇪🇸ES_1|2.5MB/s
+  - 🇨🇳CN_2|2.3MB/s
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1772,6 +2018,8 @@ proxy-groups:
   - US_speednode_0138
   - US_speednode_0139
   - US_speednode_0144
+  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇹🇷 土耳其 | TUR
 rule-providers:
   LocalAreaNetwork:
     type: http
