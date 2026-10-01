@@ -34,9 +34,9 @@ https://www.ermao.net/sub/v2ray/ermao.net
 
 ## 客户端使用教程
 
-- 📱 [Android](https://www.ermao.net/article/eh8f4n86/)
-- 🖥 [Windows](https://www.ermao.net/article/0gematwc/)
-- 🍎 [iOS](https://www.ermao.net/article/z747kgjd/)
+- 📱 [Android](https://blog.ermao.net/article/eh8f4n86/)
+- 🖥 [Windows](https://blog.ermao.net/article/0gematwc/)
+- 🍎 [iOS](https://blog.ermao.net/article/z747kgjd/)
 
 ## 常见问题（FAQ）
 
@@ -52,7 +52,7 @@ https://www.ermao.net/sub/v2ray/ermao.net
 
 我搜罗的一些比较便宜好用的机场，觉得免费订阅不好使的朋友们可以在这里面找找。
 
-[https://www.ermao.net/posts/vpn](https://www.ermao.net/posts/vpn)
+[https://blog.ermao.net/posts/vpn](https://blog.ermao.net/posts/vpn)
 
 ## 连通性分类
 
@@ -65,8 +65,8 @@ https://www.ermao.net/sub/v2ray/ermao.net
 
 在线分类订阅（将链接中的 `clash` 换成 `v2ray` 可获取对应格式）：
 
-- [TCP 可连接](https://www.ermao.net/sub/reachable/clash/ermao.net)
-- [连接失败](https://www.ermao.net/sub/unreachable/clash/ermao.net)
+- [TCP 可连接](https://blog.ermao.net/sub/reachable/clash/ermao.net)
+- [连接失败](https://blog.ermao.net/sub/unreachable/clash/ermao.net)
 - [未检测](https://www.ermao.net/sub/untested/clash/ermao.net)
 
 [检测报告](https://www.ermao.net/sub/health.json)保存检测时间和分类数量。
