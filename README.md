@@ -15,13 +15,13 @@
 - Clash 订阅链接
 
 ```
-https://www.ermao.net/sub/clash/ermao.net
+https://blog.ermao.net/sub/clash/ermao.net
 ```
 
 - V2Ray 订阅链接
 
 ```
-https://www.ermao.net/sub/v2ray/ermao.net
+https://blog.ermao.net/sub/v2ray/ermao.net
 ```
 
 ## 使用体验截图
