@@ -24,70 +24,60 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: 🇳🇱_NL_荷兰
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
-  server: no.gokonstantin.com
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇺🇸_US_美国->🇩🇪_DE_德国
+  type: vless
+  server: fzo5i.ir46.90k.hh.ov0.kdns.fr
   port: 443
-  uuid: 053682f4-c584-46df-ad81-069dec5f64f0
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   network: ws
-  servername: no.gokonstantin.com
+  servername: fzo5i.ir46.90k.hh.ov0.kdns.fr
   tls: true
   client-fingerprint: chrome
   ws-opts:
-    path: /cdnws
+    path: /glasspanel/guest000_0_5de14443985f/
     headers:
-      Host: no.gokonstantin.com
+      Host: fzo5i.ir46.90k.hh.ov0.kdns.fr
   skip-cert-verify: true
   udp: true
-- name: 🇨🇳_CN_中国
-  type: vmess
-  server: 112.132.215.108
-  port: 50002
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 0
-  cipher: auto
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  type: vless
+  server: us22.sofast.live
+  port: 58011
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
   tls: false
   skip-cert-verify: true
   udp: true
-- name: '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  port: 443
-  server: 31.77.109.35
-  tls: false
-  type: vless
-  uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910
-- name: 🇮🇩[www.v2nodes.com] vless-ID-1...
-  port: 31094
-  server: 43.255.156.166
-  tls: false
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-- cipher: chacha20-ietf-poly1305
-  name: '🏳[www.v2nodes.com] ss- #1'
-  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
-  port: 777
-  server: 45.149.114.171
-  type: ss
-- alpn:
-  - v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus--v2rayNplus
-  name: '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
+- name: '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
   network: ws
-  password: humanity
-  port: 8443
-  server: 212.227.144.37
-  skip-cert-verify: false
-  sni: www.calmlunch.com
-  type: trojan
+  port: 43233
+  server: cookie.wookshop.ir
+  tls: false
+  type: vless
+  uuid: 568bcbbc-7a90-4164-8b5d-1c0bbeccfa38
   ws-opts:
     headers:
-      Host: www.calmlunch.com
-    path: /assignment
-- name: 🇯🇵[www.v2nodes.com] trojan-JP-...
-  password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437
-  port: 8886
-  server: 45.32.52.173
-  skip-cert-verify: true
-  sni: 45.32.52.173
-  type: trojan
+      Host: cookie.wookshop.ir
+    path: /
+- cipher: aes-256-gcm
+  name: 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  password: owVdNnQcdPgthSyX
+  port: 8388
+  server: 216.128.168.190
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  port: 990
+  server: 185.213.23.63
+  type: ss
 - name: 香港2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -168,67 +158,6 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇬🇧GB_7|1.5MB/s
-  port: 11111
-  server: 157.180.24.140
-  type: socks5
-- name: 🇵🇪PE_1|3.2MB/s
-  port: 10101
-  server: 190.102.146.98
-  type: http
-- alterId: 0
-  cipher: auto
-  name: '🇭🇰 香港 | HKG #1'
-  network: ws
-  port: 443
-  server: 8.217.13.103
-  servername: qtkdr8jxe3wefxjm.v.3dns.vip
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
-  ws-opts:
-    headers:
-      Host: qtkdr8jxe3wefxjm.v.3dns.vip
-    path: /ws-vmess
-- name: 🇭🇰 香港 | HKG 4
-  password: 9sK2mP8xQ7vL3nZ6
-  port: 443
-  server: ac7548f3ebe045b39a90288ff1e97528.pnuqcnp.cn
-  skip-cert-verify: true
-  sni: ac7548f3ebe045b39a90288ff1e97528.lwdnxf.cn
-  type: anytls
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 13.124.41.194
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: '🇷🇺 俄罗斯 | RUS #1'
-  password: 4938e975724d0ed1
-  port: 10771
-  server: 194.87.196.13
-  type: ss
-  udp: true
-- cipher: aes-256-gcm
-  name: '🇷🇺 俄罗斯 | RUS #4'
-  password: 895b4b796a357570
-  port: 10771
-  server: 46.17.41.166
-  type: ss
-  udp: true
-- name: 🇺🇸 美国 | USA
-  password: 9sK2mP8xQ7vL3nZ6
-  port: 443
-  server: awefd2313fefarg23fr24.pnuqcnp.cn
-  skip-cert-verify: true
-  sni: images.ctfassets.net
-  type: anytls
-  udp: true
 - name: RO_speednode_0011
   port: 9002
   server: 84.239.49.218
@@ -1008,75 +937,16 @@ proxies:
   tls: false
   type: socks5
   udp: true
-- name: 🇩🇪 德国 | DEU
-  server: 64.188.115.219
-  port: 443
+- name: 🇳🇱 荷兰 | NLD 8
+  server: nl.alpheratzz.org
+  port: 8443
   type: vless
-  uuid: 1ef3cfdd-a0b7-4584-87b4-2b217d8a4581
+  uuid: 20ef7310-0b50-4943-98a6-3d0856b383b1
   tls: true
   flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 2tjr1gP8eecWi9xlKFB1SmPKOzRgDt40NBQcxhjaKCA
-    short-id: 270b5417f8ecb723
-  servername: www.swift.com
-  client-fingerprint: safari
-  network: tcp
-  udp: true
-- name: 🇯🇵 日本 | JPN
-  server: 202.182.113.69
-  port: 443
-  type: vless
-  uuid: 817be056-2afc-4358-9b8d-5dbe836251f3
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: hTweFDvbSucrGERtiiwDfoqD3vo_Z9cuaqboff3FTXQ
-  servername: googleapis.com
+  servername: vusr-6ac431f4.adhil.uk
   client-fingerprint: chrome
   network: tcp
-  udp: true
-- name: 🇰🇷 韩国 | KOR 3
-  server: 13.124.41.194
-  port: 443
-  type: vless
-  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 9y70yaeBADfbMlb5_6t6fJqmSozYmv5lhKFVl32bX3E
-    short-id: efce3016b5a0e616
-  servername: api2.bandicam.com
-  client-fingerprint: chrome
-  network: tcp
-  udp: true
-- name: 🇵🇱 波兰 | POL
-  server: 185.207.1.121
-  port: 51587
-  type: vless
-  uuid: 83fd1766-8d30-444e-a450-3ad597a26930
-  tls: true
-  servername: spb1.corpawave.com
-  client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /cdn
-    host: spb1.corpawave.com
-    mode: auto
-    x-padding-bytes: 100-1000
-  udp: true
-- name: 🇷🇺 俄罗斯 | RUS 2
-  server: 46.17.45.31
-  port: 10771
-  type: ss
-  cipher: aes-256-gcm
-  password: bdb313adf74c2ede
-  udp: true
-- name: 🇷🇺 俄罗斯 | RUS 3
-  server: 46.17.42.141
-  port: 10771
-  type: ss
-  cipher: aes-256-gcm
-  password: 6b39ae3234dfd68b
   udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -1084,13 +954,12 @@ proxy-groups:
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1101,14 +970,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇬🇧GB_7|1.5MB/s
-  - 🇵🇪PE_1|3.2MB/s
-  - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG 4
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - 🇺🇸 美国 | USA
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1216,22 +1077,16 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇩🇪 德国 | DEU
-  - 🇯🇵 日本 | JPN
-  - 🇰🇷 韩国 | KOR 3
-  - 🇵🇱 波兰 | POL
-  - 🇷🇺 俄罗斯 | RUS 2
-  - 🇷🇺 俄罗斯 | RUS 3
+  - 🇳🇱 荷兰 | NLD 8
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1242,14 +1097,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇬🇧GB_7|1.5MB/s
-  - 🇵🇪PE_1|3.2MB/s
-  - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG 4
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - 🇺🇸 美国 | USA
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1357,12 +1204,7 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇩🇪 德国 | DEU
-  - 🇯🇵 日本 | JPN
-  - 🇰🇷 韩国 | KOR 3
-  - 🇵🇱 波兰 | POL
-  - 🇷🇺 俄罗斯 | RUS 2
-  - 🇷🇺 俄罗斯 | RUS 3
+  - 🇳🇱 荷兰 | NLD 8
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1372,13 +1214,12 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1389,14 +1230,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇬🇧GB_7|1.5MB/s
-  - 🇵🇪PE_1|3.2MB/s
-  - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG 4
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - 🇺🇸 美国 | USA
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1504,24 +1337,18 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇩🇪 德国 | DEU
-  - 🇯🇵 日本 | JPN
-  - 🇰🇷 韩国 | KOR 3
-  - 🇵🇱 波兰 | POL
-  - 🇷🇺 俄罗斯 | RUS 2
-  - 🇷🇺 俄罗斯 | RUS 3
+  - 🇳🇱 荷兰 | NLD 8
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1532,14 +1359,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇬🇧GB_7|1.5MB/s
-  - 🇵🇪PE_1|3.2MB/s
-  - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG 4
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - 🇺🇸 美国 | USA
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1647,24 +1466,18 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇩🇪 德国 | DEU
-  - 🇯🇵 日本 | JPN
-  - 🇰🇷 韩国 | KOR 3
-  - 🇵🇱 波兰 | POL
-  - 🇷🇺 俄罗斯 | RUS 2
-  - 🇷🇺 俄罗斯 | RUS 3
+  - 🇳🇱 荷兰 | NLD 8
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1675,14 +1488,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇬🇧GB_7|1.5MB/s
-  - 🇵🇪PE_1|3.2MB/s
-  - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG 4
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - 🇺🇸 美国 | USA
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1790,24 +1595,18 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇩🇪 德国 | DEU
-  - 🇯🇵 日本 | JPN
-  - 🇰🇷 韩国 | KOR 3
-  - 🇵🇱 波兰 | POL
-  - 🇷🇺 俄罗斯 | RUS 2
-  - 🇷🇺 俄罗斯 | RUS 3
+  - 🇳🇱 荷兰 | NLD 8
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1818,14 +1617,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇬🇧GB_7|1.5MB/s
-  - 🇵🇪PE_1|3.2MB/s
-  - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG 4
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - 🇺🇸 美国 | USA
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1933,12 +1724,7 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇩🇪 德国 | DEU
-  - 🇯🇵 日本 | JPN
-  - 🇰🇷 韩国 | KOR 3
-  - 🇵🇱 波兰 | POL
-  - 🇷🇺 俄罗斯 | RUS 2
-  - 🇷🇺 俄罗斯 | RUS 3
+  - 🇳🇱 荷兰 | NLD 8
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1966,13 +1752,12 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇳🇱_NL_荷兰
-  - 🇨🇳_CN_中国
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #4'
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🏳[www.v2nodes.com] ss- #1'
-  - '🇫🇷[www.v2nodes.com] trojan-FR-... #2'
-  - 🇯🇵[www.v2nodes.com] trojan-JP-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🇹🇷[www.v2nodes.com] vless-TR-1... #1'
+  - 🇧🇷[www.v2nodes.com] ss-BR-1562...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1983,14 +1768,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇬🇧GB_7|1.5MB/s
-  - 🇵🇪PE_1|3.2MB/s
-  - '🇭🇰 香港 | HKG #1'
-  - 🇭🇰 香港 | HKG 4
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇷🇺 俄罗斯 | RUS #1'
-  - '🇷🇺 俄罗斯 | RUS #4'
-  - 🇺🇸 美国 | USA
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -2098,12 +1875,7 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇩🇪 德国 | DEU
-  - 🇯🇵 日本 | JPN
-  - 🇰🇷 韩国 | KOR 3
-  - 🇵🇱 波兰 | POL
-  - 🇷🇺 俄罗斯 | RUS 2
-  - 🇷🇺 俄罗斯 | RUS 3
+  - 🇳🇱 荷兰 | NLD 8
 rule-providers:
   LocalAreaNetwork:
     type: http
