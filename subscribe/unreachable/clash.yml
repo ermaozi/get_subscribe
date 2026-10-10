@@ -24,49 +24,28 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- encryption: none
-  name: 🇹🇷[www.v2nodes.com] vless-TR-1...
-  network: tcp
-  port: 9090
-  server: 78.135.77.214
-  tls: false
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
-  uuid: e688f2f5-ad67-4530-a3ad-8ea042171217
-  ws-opts:
-    headers:
-      Host: play.google.com
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  type: vless
+  server: us22.sofast.live
+  port: 58011
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+  tls: false
+  skip-cert-verify: true
+  udp: true
 - cipher: chacha20-ietf-poly1305
-  name: 🇮🇳[www.v2nodes.com] ss-IN-1587...
-  password: Jeoq8ujfkqZKKvACQhoqBQ1PA3uq4242
-  port: 777
-  server: 45.149.114.171
-  type: ss
-- cipher: aes-256-gcm
-  name: 🏳[www.v2nodes.com] ss-
-  password: itzvpn@321
+  name: '🏳[www.v2nodes.com] ss- #1'
+  password: tfAcRikawhNoZAhu
   port: 8388
-  server: 57.131.48.45
+  server: 139.84.247.164
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 52.78.216.116
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
-  port: 990
-  server: 185.213.23.63
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #3'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 13.212.141.33
-  type: ss
-  udp: true
 - name: 香港2|@ripaojiedian
   network: tcp
   password: AA885B42-133C-3828-FB69-E45105C06092
@@ -147,18 +126,6 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇭🇰HK_1|3.3MB/s
-  port: 5555
-  server: 49.0.245.175
-  skip-cert-verify: true
-  type: socks5
-- cipher: aes-256-gcm
-  name: '🇷🇺 俄罗斯 | RUS #1'
-  password: 895b4b796a357570
-  port: 50660
-  server: 46.17.41.166
-  type: ss
-  udp: true
 - name: RO_speednode_0011
   port: 9002
   server: 84.239.49.218
@@ -938,25 +905,15 @@ proxies:
   tls: false
   type: socks5
   udp: true
-- name: 🇷🇺 俄罗斯 | RUS
-  server: 46.17.42.141
-  port: 50660
-  type: ss
-  cipher: aes-256-gcm
-  password: 6b39ae3234dfd68b
-  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1587...
-  - 🏳[www.v2nodes.com] ss-
-  - '🇰🇷 韩国 | KOR #1'
-  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇸🇬 新加坡 | SGP #3'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🏳[www.v2nodes.com] ss- #1'
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -967,8 +924,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|3.3MB/s
-  - '🇷🇺 俄罗斯 | RUS #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1076,16 +1031,12 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇷🇺 俄罗斯 | RUS
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1587...
-  - 🏳[www.v2nodes.com] ss-
-  - '🇰🇷 韩国 | KOR #1'
-  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇸🇬 新加坡 | SGP #3'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🏳[www.v2nodes.com] ss- #1'
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1096,8 +1047,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|3.3MB/s
-  - '🇷🇺 俄罗斯 | RUS #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1205,7 +1154,6 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇷🇺 俄罗斯 | RUS
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1215,12 +1163,9 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1587...
-  - 🏳[www.v2nodes.com] ss-
-  - '🇰🇷 韩国 | KOR #1'
-  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇸🇬 新加坡 | SGP #3'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🏳[www.v2nodes.com] ss- #1'
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1231,8 +1176,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|3.3MB/s
-  - '🇷🇺 俄罗斯 | RUS #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1340,18 +1283,14 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇷🇺 俄罗斯 | RUS
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1587...
-  - 🏳[www.v2nodes.com] ss-
-  - '🇰🇷 韩国 | KOR #1'
-  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇸🇬 新加坡 | SGP #3'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🏳[www.v2nodes.com] ss- #1'
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1362,8 +1301,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|3.3MB/s
-  - '🇷🇺 俄罗斯 | RUS #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1471,18 +1408,14 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇷🇺 俄罗斯 | RUS
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1587...
-  - 🏳[www.v2nodes.com] ss-
-  - '🇰🇷 韩国 | KOR #1'
-  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇸🇬 新加坡 | SGP #3'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🏳[www.v2nodes.com] ss- #1'
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1493,8 +1426,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|3.3MB/s
-  - '🇷🇺 俄罗斯 | RUS #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1602,18 +1533,14 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇷🇺 俄罗斯 | RUS
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1587...
-  - 🏳[www.v2nodes.com] ss-
-  - '🇰🇷 韩国 | KOR #1'
-  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇸🇬 新加坡 | SGP #3'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🏳[www.v2nodes.com] ss- #1'
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1624,8 +1551,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|3.3MB/s
-  - '🇷🇺 俄罗斯 | RUS #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1733,7 +1658,6 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇷🇺 俄罗斯 | RUS
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1761,12 +1685,9 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇹🇷[www.v2nodes.com] vless-TR-1...
-  - 🇮🇳[www.v2nodes.com] ss-IN-1587...
-  - 🏳[www.v2nodes.com] ss-
-  - '🇰🇷 韩国 | KOR #1'
-  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
-  - '🇸🇬 新加坡 | SGP #3'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - '🏳[www.v2nodes.com] ss- #1'
   - 香港2|@ripaojiedian
   - 香港3|@ripaojiedian
   - 香港4|@ripaojiedian
@@ -1777,8 +1698,6 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|3.3MB/s
-  - '🇷🇺 俄罗斯 | RUS #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1886,7 +1805,6 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇷🇺 俄罗斯 | RUS
 rule-providers:
   LocalAreaNetwork:
     type: http
