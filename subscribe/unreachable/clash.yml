@@ -21,10 +21,10 @@ dns:
   - https://doh.pub/dns-query
   nameserver-policy:
     geosite:geolocation-!cn:
-    - https://1.1.1.1/dns-query#рҹҡҖ иҠӮзӮ№йҖүжӢ©
-    - https://8.8.8.8/dns-query#рҹҡҖ иҠӮзӮ№йҖүжӢ©
+    - https://1.1.1.1/dns-query#🚀 节点选择
+    - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: рҹҮЁрҹҮі_CN_дёӯеӣҪ->рҹҮәрҹҮё_US_зҫҺеӣҪ
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
   server: jp.sofast.live
   port: 52683
@@ -32,89 +32,60 @@ proxies:
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇦🇹[www.v2nodes.com] vless-AT-1...
-  network: tcp
-  port: 10443
-  server: 138.124.90.177
-  servername: 138.124.90.177
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  type: vless
+  server: us22.sofast.live
+  port: 58011
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
   tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇩🇪_DE_德国
   type: vless
-  uuid: 3a0e4040-67cc-43e0-a9fb-98e15ddb0526
-  ws-opts:
-    path: /
-- alpn:
-  - http/1.1
-  encryption: none
-  name: '🇪🇸[www.v2nodes.com] vless-ES-4... #2'
-  network: ws
-  port: 443
-  server: 31.57.190.49
-  servername: lucasjow.us.ci
-  tls: true
-  type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  ws-opts:
-    headers:
-      Host: lucasjow.us.ci
-    path: /cart/docs/www/proxyip=108.160.132.132fp=unsafe
-- alpn:
-  - http/1.1
-  client-fingerprint: unsafe
-  name: '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
-  network: ws
-  port: 443
-  server: 31.57.190.49
-  servername: lucasjow.us.ci
-  tls: true
-  type: vless
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  ws-opts:
-    headers:
-      Host: lucasjow.us.ci
-    path: /cart/docs/www/proxyip=108.160.132.132
-- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  network: ws
+  server: 77.221.157.213
   port: 14430
-  server: 193.188.21.253
-  servername: 193.188.21.253
+  uuid: 1d006ad5-1de1-4520-a5f4-875dae1b0a5d
+  network: ws
+  servername: 77.221.157.213
+  tls: false
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 77.221.157.213
+  skip-cert-verify: true
+  udp: true
+- name: 🇩🇪_DE_德国_1
+  type: vless
+  server: 77.221.157.213
+  port: 10443
+  uuid: 1d006ad5-1de1-4520-a5f4-875dae1b0a5d
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  port: 443
+  server: 93.89.220.37
   tls: false
   type: vless
-  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
-  ws-opts:
-    headers:
-      Host: 193.188.21.253
-    path: /vless
+  uuid: 185e2bb3-2934-48d0-bbd5-dd20d16e83ee
 - cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #1'
+  name: 🇨🇱[www.v2nodes.com] ss-CL-1564...
   password: xBStBEVqvGwHPocc
   port: 8388
   server: 64.176.2.21
   type: ss
-- cipher: aes-256-gcm
-  name: 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  password: GEdoeeqLZtkJRgSa
+- cipher: chacha20-ietf-poly1305
+  name: 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  port: 990
+  server: 185.213.23.63
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  password: tfAcRikawhNoZAhu
   port: 8388
-  server: 139.84.166.47
+  server: 139.84.247.164
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1598...
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 3.38.168.170
-  type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1598...
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 54.254.251.49
-  type: ss
-- name: 🇩🇪[www.v2nodes.com] trojan-DE-...
-  password: happybirthdaydaniel
-  port: 25267
-  server: de-bots4.h1cloud.net
-  skip-cert-verify: true
-  sni: t.me/FuckTheWall
-  type: trojan
 - alterId: 2
   cipher: auto
   name: 🇭🇰 香港|@ripaojiedian
@@ -229,9 +200,24 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: '🇩🇪 德国 | DEU #12'
-  network: ws
-  port: 14430
+- http-opts:
+    headers:
+      Host:
+      - aparat.com
+    method: GET
+    path:
+    - /
+  name: '🇩🇪 德国 | DEU #5'
+  network: http
+  port: 443
+  server: 167.71.48.226
+  tls: false
+  type: vless
+  udp: true
+  uuid: 40992c2a-513e-4837-9594-23411fd42afd
+- name: '🇩🇪 德国 | DEU #9'
+  network: tcp
+  port: 10443
   server: 77.221.157.213
   servername: 77.221.157.213
   tls: false
@@ -239,44 +225,59 @@ proxies:
   udp: true
   uuid: 1d006ad5-1de1-4520-a5f4-875dae1b0a5d
   ws-opts:
-    headers:
-      Host: 77.221.157.213
-    path: /vless
+    path: /
+- name: '🇮🇷 伊朗 | IRN #1'
+  network: xhttp
+  port: 6008
+  server: link.mrpgd.ir
+  servername: cafebazaar.ir
+  tls: false
+  type: vless
+  udp: true
+  uuid: e19f406e-0f0f-4abd-9861-a3d2d213b650
+  xhttp-opts:
+    host: cafebazaar.ir
+    mode: stream-up
+    path: /assets
 - cipher: chacha20-ietf-poly1305
-  name: '🇯🇵 日本 | JPN #1'
-  password: 1f24d145bf7c877f7e3140b7918eb9cd804b1576a96596f9
-  port: 443
-  server: 45.12.89.202
+  name: '🇺🇸 美国 | USA #3'
+  password: '123456'
+  port: 46006
+  server: 95.169.3.45
   type: ss
   udp: true
-- name: '🇸🇬 新加坡 | SGP #1'
+- client-fingerprint: random
+  name: '🇺🇸 美国 | USA #5'
   network: ws
-  port: 14430
-  server: 178.94.25.73
-  servername: 178.94.25.73
-  tls: false
+  port: 443
+  server: 144.34.171.49
+  servername: vpn.pokertool.site
+  tls: true
   type: vless
   udp: true
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
+  uuid: 9e8ad642-c786-489a-b9b1-22379821fce8
   ws-opts:
     headers:
-      Host: 178.94.25.73
-    path: /vless
-- name: '🇸🇬 新加坡 | SGP #5'
-  network: tcp
-  port: 10443
-  server: 178.94.25.73
-  servername: 178.94.25.73
-  tls: false
-  type: vless
-  udp: true
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
-  ws-opts:
-    path: /
+      Host: vpn.pokertool.site
+    path: /ws-70a22f9c78d4cfa9
 - cipher: chacha20-ietf-poly1305
-  name: '🇺🇸 美国 | USA #5'
+  name: '🇺🇸 美国 | USA #8'
   password: '123456'
-  port: 46010
+  port: 46007
+  server: 95.169.3.45
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🇺🇸 美国 | USA #15'
+  password: '123456'
+  port: 46009
+  server: 95.169.3.45
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🇺🇸 美国 | USA #16'
+  password: '123456'
+  port: 46005
   server: 95.169.3.45
   type: ss
   udp: true
@@ -1059,51 +1060,53 @@ proxies:
   tls: false
   type: socks5
   udp: true
-- name: 🇸🇬 新加坡 | SGP 5
-  server: 178.94.25.73
+- name: 🇩🇪 德国 | DEU
+  server: 77.221.157.213
+  port: 14430
+  type: vless
+  uuid: 1d006ad5-1de1-4520-a5f4-875dae1b0a5d
+  tls: false
+  servername: 77.221.157.213
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 77.221.157.213
+  udp: true
+- name: 🇩🇪 德国 | DEU 5
+  server: 77.221.157.213
   port: 10443
   type: vless
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
+  uuid: 1d006ad5-1de1-4520-a5f4-875dae1b0a5d
   tls: false
-  servername: 178.94.25.73
+  servername: 77.221.157.213
   network: tcp
   udp: true
-- name: 🇸🇬 新加坡 | SGP 7
-  server: 178.94.25.73
-  port: 10444
+- name: 🇹🇷 土耳其 | TUR
+  server: gutstspy1f43.dop15.com
+  port: 443
   type: vless
-  uuid: 2dacc738-5720-4824-b8bc-e3db57596ba7
+  uuid: 8fba314e-c821-4c82-bdb4-ad8c2ae9d9e7
   tls: true
   flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-    short-id: 8debcf36f1cc69ff
-  servername: video.yandex.ru
-  client-fingerprint: safari
+  servername: gutstspy1f43.dop15.com
+  client-fingerprint: chrome
   network: tcp
-- name: 🇺🇸 美国 | USA 5
-  server: 95.169.3.45
-  port: 46010
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 123456
   udp: true
 proxy-groups:
-- name: ermao.net | рҹҡҖ иҠӮзӮ№йҖүжӢ©
+- name: ermao.net | 🚀 节点选择
   type: select
   proxies:
-  - ermao.net | вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
+  - ermao.net | ♻️ 自动选择
   - DIRECT
-  - рҹҮЁрҹҮі_CN_дёӯеӣҪ->рҹҮәрҹҮё_US_зҫҺеӣҪ
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
-  - '🇪🇸[www.v2nodes.com] vless-ES-4... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] ss- #1'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - 🇰🇷[www.v2nodes.com] ss-KR-1598...
-  - 🇸🇬[www.v2nodes.com] ss-SG-1598...
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1117,11 +1120,14 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #12'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #5'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇮🇷 伊朗 | IRN #1'
+  - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #5'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #15'
+  - '🇺🇸 美国 | USA #16'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1229,22 +1235,20 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇸🇬 新加坡 | SGP 5
-  - 🇸🇬 新加坡 | SGP 7
-  - 🇺🇸 美国 | USA 5
-- name: ermao.net | вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU 5
+  - 🇹🇷 土耳其 | TUR
+- name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - рҹҮЁрҹҮі_CN_дёӯеӣҪ->рҹҮәрҹҮё_US_зҫҺеӣҪ
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
-  - '🇪🇸[www.v2nodes.com] vless-ES-4... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] ss- #1'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - 🇰🇷[www.v2nodes.com] ss-KR-1598...
-  - 🇸🇬[www.v2nodes.com] ss-SG-1598...
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1258,11 +1262,14 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #12'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #5'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇮🇷 伊朗 | IRN #1'
+  - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #5'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #15'
+  - '🇺🇸 美国 | USA #16'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1370,28 +1377,26 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇸🇬 新加坡 | SGP 5
-  - 🇸🇬 新加坡 | SGP 7
-  - 🇺🇸 美国 | USA 5
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU 5
+  - 🇹🇷 土耳其 | TUR
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
-- name: рҹҢҚ еӣҪеӨ–еӘ’дҪ“
+- name: 🌍 国外媒体
   type: select
   proxies:
-  - ermao.net | рҹҡҖ иҠӮзӮ№йҖүжӢ©
-  - ermao.net | вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
-  - рҹҺҜ е…Ёзҗғзӣҙиҝһ
-  - рҹҮЁрҹҮі_CN_дёӯеӣҪ->рҹҮәрҹҮё_US_зҫҺеӣҪ
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
-  - '🇪🇸[www.v2nodes.com] vless-ES-4... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] ss- #1'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - 🇰🇷[www.v2nodes.com] ss-KR-1598...
-  - 🇸🇬[www.v2nodes.com] ss-SG-1598...
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+  - 🎯 全球直连
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1405,11 +1410,14 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #12'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #5'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇮🇷 伊朗 | IRN #1'
+  - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #5'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #15'
+  - '🇺🇸 美国 | USA #16'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1517,24 +1525,22 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇸🇬 新加坡 | SGP 5
-  - 🇸🇬 新加坡 | SGP 7
-  - 🇺🇸 美国 | USA 5
-- name: рҹ“І з”өжҠҘдҝЎжҒҜ
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU 5
+  - 🇹🇷 土耳其 | TUR
+- name: 📲 电报信息
   type: select
   proxies:
-  - ermao.net | рҹҡҖ иҠӮзӮ№йҖүжӢ©
-  - рҹҺҜ е…Ёзҗғзӣҙиҝһ
-  - рҹҮЁрҹҮі_CN_дёӯеӣҪ->рҹҮәрҹҮё_US_зҫҺеӣҪ
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
-  - '🇪🇸[www.v2nodes.com] vless-ES-4... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] ss- #1'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - 🇰🇷[www.v2nodes.com] ss-KR-1598...
-  - 🇸🇬[www.v2nodes.com] ss-SG-1598...
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1548,11 +1554,14 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #12'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #5'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇮🇷 伊朗 | IRN #1'
+  - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #5'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #15'
+  - '🇺🇸 美国 | USA #16'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1660,24 +1669,22 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇸🇬 新加坡 | SGP 5
-  - 🇸🇬 新加坡 | SGP 7
-  - 🇺🇸 美国 | USA 5
-- name: в“ӮпёҸ еҫ®иҪҜжңҚеҠЎ
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU 5
+  - 🇹🇷 土耳其 | TUR
+- name: Ⓜ️ 微软服务
   type: select
   proxies:
-  - рҹҺҜ е…Ёзҗғзӣҙиҝһ
-  - ermao.net | рҹҡҖ иҠӮзӮ№йҖүжӢ©
-  - рҹҮЁрҹҮі_CN_дёӯеӣҪ->рҹҮәрҹҮё_US_зҫҺеӣҪ
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
-  - '🇪🇸[www.v2nodes.com] vless-ES-4... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] ss- #1'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - 🇰🇷[www.v2nodes.com] ss-KR-1598...
-  - 🇸🇬[www.v2nodes.com] ss-SG-1598...
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
+  - 🎯 全球直连
+  - ermao.net | 🚀 节点选择
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1691,11 +1698,14 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #12'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #5'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇮🇷 伊朗 | IRN #1'
+  - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #5'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #15'
+  - '🇺🇸 美国 | USA #16'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1803,24 +1813,22 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇸🇬 新加坡 | SGP 5
-  - 🇸🇬 新加坡 | SGP 7
-  - 🇺🇸 美国 | USA 5
-- name: рҹҚҺ иӢ№жһңжңҚеҠЎ
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU 5
+  - 🇹🇷 土耳其 | TUR
+- name: 🍎 苹果服务
   type: select
   proxies:
-  - ermao.net | рҹҡҖ иҠӮзӮ№йҖүжӢ©
-  - рҹҺҜ е…Ёзҗғзӣҙиҝһ
-  - рҹҮЁрҹҮі_CN_дёӯеӣҪ->рҹҮәрҹҮё_US_зҫҺеӣҪ
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
-  - '🇪🇸[www.v2nodes.com] vless-ES-4... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] ss- #1'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - 🇰🇷[www.v2nodes.com] ss-KR-1598...
-  - 🇸🇬[www.v2nodes.com] ss-SG-1598...
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1834,11 +1842,14 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #12'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #5'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇮🇷 伊朗 | IRN #1'
+  - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #5'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #15'
+  - '🇺🇸 美国 | USA #16'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1946,46 +1957,44 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇸🇬 新加坡 | SGP 5
-  - 🇸🇬 新加坡 | SGP 7
-  - 🇺🇸 美国 | USA 5
-- name: рҹҺҜ е…Ёзҗғзӣҙиҝһ
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU 5
+  - 🇹🇷 土耳其 | TUR
+- name: 🎯 全球直连
   type: select
   proxies:
   - DIRECT
-  - ermao.net | рҹҡҖ иҠӮзӮ№йҖүжӢ©
-  - ermao.net | вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
-- name: рҹӣ‘ е…ЁзҗғжӢҰжҲӘ
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+- name: 🛑 全球拦截
   type: select
   proxies:
   - REJECT
   - DIRECT
-- name: рҹҚғ еә”з”ЁеҮҖеҢ–
+- name: 🍃 应用净化
   type: select
   proxies:
   - REJECT
   - DIRECT
-- name: рҹҶҺ AdBlock
+- name: 🆎 AdBlock
   type: select
   proxies:
   - REJECT
   - DIRECT
-- name: рҹҗҹ жјҸзҪ‘д№Ӣйұј
+- name: 🐟 漏网之鱼
   type: select
   proxies:
-  - ermao.net | рҹҡҖ иҠӮзӮ№йҖүжӢ©
-  - рҹҺҜ е…Ёзҗғзӣҙиҝһ
-  - ermao.net | вҷ»пёҸ иҮӘеҠЁйҖүжӢ©
-  - рҹҮЁрҹҮі_CN_дёӯеӣҪ->рҹҮәрҹҮё_US_зҫҺеӣҪ
-  - 🇦🇹[www.v2nodes.com] vless-AT-1...
-  - '🇪🇸[www.v2nodes.com] vless-ES-4... #2'
-  - '🇪🇸[www.v2nodes.com] vless-ES-2... #1'
-  - '🇸🇪[www.v2nodes.com] vless-SE-1... #3'
-  - '🏳[www.v2nodes.com] ss- #1'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - 🇰🇷[www.v2nodes.com] ss-KR-1598...
-  - 🇸🇬[www.v2nodes.com] ss-SG-1598...
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - ermao.net | ♻️ 自动选择
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇩🇪_DE_德国
+  - 🇩🇪_DE_德国_1
+  - '🇪🇪[www.v2nodes.com] vless-EE-1... #2'
+  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
+  - 🇳🇴[www.v2nodes.com] ss-NO-1220...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1999,11 +2008,14 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #12'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇸🇬 新加坡 | SGP #1'
-  - '🇸🇬 新加坡 | SGP #5'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇮🇷 伊朗 | IRN #1'
+  - '🇺🇸 美国 | USA #3'
   - '🇺🇸 美国 | USA #5'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #15'
+  - '🇺🇸 美国 | USA #16'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -2111,9 +2123,9 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
-  - 🇸🇬 新加坡 | SGP 5
-  - 🇸🇬 新加坡 | SGP 7
-  - 🇺🇸 美国 | USA 5
+  - 🇩🇪 德国 | DEU
+  - 🇩🇪 德国 | DEU 5
+  - 🇹🇷 土耳其 | TUR
 rule-providers:
   LocalAreaNetwork:
     type: http
@@ -2191,20 +2203,20 @@ rule-providers:
     url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
     path: ./rules/ChinaCompanyIp.yaml
 rules:
-- RULE-SET,LocalAreaNetwork,рҹҺҜ е…Ёзҗғзӣҙиҝһ
-- RULE-SET,BanAD,рҹӣ‘ е…ЁзҗғжӢҰжҲӘ
-- RULE-SET,BanProgramAD,рҹҚғ еә”з”ЁеҮҖеҢ–
-- RULE-SET,BanEasyList,рҹҶҺ AdBlock
-- RULE-SET,BanEasyListChina,рҹҶҺ AdBlock
-- RULE-SET,BanEasyPrivacy,рҹҶҺ AdBlock
-- RULE-SET,GoogleCN,рҹҺҜ е…Ёзҗғзӣҙиҝһ
-- RULE-SET,SteamCN,рҹҺҜ е…Ёзҗғзӣҙиҝһ
-- RULE-SET,Microsoft,в“ӮпёҸ еҫ®иҪҜжңҚеҠЎ
-- RULE-SET,Apple,рҹҚҺ иӢ№жһңжңҚеҠЎ
-- RULE-SET,ProxyMedia,рҹҢҚ еӣҪеӨ–еӘ’дҪ“
-- RULE-SET,Telegram,рҹ“І з”өжҠҘдҝЎжҒҜ
-- RULE-SET,ProxyLite,ermao.net | рҹҡҖ иҠӮзӮ№йҖүжӢ©
-- RULE-SET,ChinaDomain,рҹҺҜ е…Ёзҗғзӣҙиҝһ
-- RULE-SET,ChinaCompanyIp,рҹҺҜ е…Ёзҗғзӣҙиҝһ
-- GEOIP,CN,рҹҺҜ е…Ёзҗғзӣҙиҝһ
-- MATCH,рҹҗҹ жјҸзҪ‘д№Ӣйұј
+- RULE-SET,LocalAreaNetwork,🎯 全球直连
+- RULE-SET,BanAD,🛑 全球拦截
+- RULE-SET,BanProgramAD,🍃 应用净化
+- RULE-SET,BanEasyList,🆎 AdBlock
+- RULE-SET,BanEasyListChina,🆎 AdBlock
+- RULE-SET,BanEasyPrivacy,🆎 AdBlock
+- RULE-SET,GoogleCN,🎯 全球直连
+- RULE-SET,SteamCN,🎯 全球直连
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- RULE-SET,Apple,🍎 苹果服务
+- RULE-SET,ProxyMedia,🌍 国外媒体
+- RULE-SET,Telegram,📲 电报信息
+- RULE-SET,ProxyLite,ermao.net | 🚀 节点选择
+- RULE-SET,ChinaDomain,🎯 全球直连
+- RULE-SET,ChinaCompanyIp,🎯 全球直连
+- GEOIP,CN,🎯 全球直连
+- MATCH,🐟 漏网之鱼
