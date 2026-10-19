@@ -24,62 +24,78 @@ dns:
     - https://1.1.1.1/dns-query#🚀 节点选择
     - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国
-  type: vless
-  server: us22.sofast.live
-  port: 58011
-  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+- name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+  type: vmess
+  server: v6.hdacd.com
+  port: 30806
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
   tls: false
   skip-cert-verify: true
   udp: true
-- name: 🇫🇷_FR_法国
-  type: vless
-  server: farancenew.mamadhpbot.ir
-  port: 8080
-  uuid: 732ec777-bf4a-4fee-835a-25d6a8b58563
-  network: ws
-  tls: false
-  ws-opts:
-    path: /real
-    headers:
-      Host: farancenew.mamadhpbot.ir
-  skip-cert-verify: true
-  udp: true
-- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  type: vless
-  server: jp.sofast.live
-  port: 52683
-  uuid: 399b6b23-cc40-4831-a494-61948e2df133
-  tls: false
-  skip-cert-verify: true
-  udp: true
-- name: '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  port: 35544
-  server: funagfrdfs.alixxplay.com
-  tls: false
-  type: vless
-  uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-- encryption: none
-  name: '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  network: tcp
-  port: 2053
-  server: test.keoplentuio.xyz
-  tls: false
-  type: vless
-  uuid: 9ef61079-6f7d-4911-9608-943da85d8e6f
-- cipher: aes-256-gcm
-  name: 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  password: GEdoeeqLZtkJRgSa
-  port: 8388
-  server: 139.84.166.47
-  type: ss
-- name: '🇳🇱[www.v2nodes.com] trojan-NL-... #11'
-  password: humanity
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: studiofeed
+  name: '🏳[www.v2nodes.com] vless- #7'
+  network: grpc
   port: 443
-  server: 92.42.99.143
-  type: trojan
+  server: 45.12.63.96
+  servername: studio.10media.top
+  tls: true
+  type: vless
+  uuid: 9cb8d71c-fe06-4402-a591-eaa1f173b890
+- encryption: none
+  name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  port: 22222
+  server: 35.181.38.194
+  tls: false
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+- alpn:
+  - http/1.1
+  client-fingerprint: chrome
+  name: '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  port: 443
+  server: 186.190.211.188
+  servername: 186.190.211.188
+  skip-cert-verify: true
+  tls: true
+  type: vless
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+- encryption: none
+  name: '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  network: tcp
+  port: 10086
+  server: 204.216.216.23
+  tls: false
+  type: vless
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
+- name: '🏳[www.v2nodes.com] vless- #38'
+  port: 443
+  server: 177.1.192.81
+  tls: false
+  type: vless
+  uuid: 5ac49a12-f275-44b4-b11d-26505f3f268e
+- name: '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  network: ws
+  port: 14430
+  server: 5.178.109.174
+  servername: 5.178.109.174
+  tls: false
+  type: vless
+  uuid: 80de563a-cac8-40ea-8cb0-4cb082dd92f9
   ws-opts:
-    path: '%2Fassignment'
+    headers:
+      Host: 5.178.109.174
+    path: /vless
+- name: '🇺🇸[www.v2nodes.com] trojan-US-... #1'
+  password: f0eb8c92ce8946aaba856569cff1a16b
+  port: 443
+  server: resources.findlocaljobnetworkandbuildcommunityconnections.com
+  skip-cert-verify: true
+  sni: resources.findlocaljobnetworkandbuildcommunityconnections.com
+  type: trojan
 - alterId: 2
   cipher: auto
   name: 🇭🇰 香港|@ripaojiedian
@@ -194,26 +210,10 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇩🇪 德国 | DEU
-  password: 5b4f91fa-e64f-4af0-a5c2-b27ac8b52939
-  port: 4430
-  server: gb2.xiaoliyu.cyou
-  skip-cert-verify: true
-  type: anytls
-- name: '🇫🇷 法国 | FRA #1'
-  network: tcp
-  port: 22224
-  server: 51.44.197.117
-  tls: false
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  ws-opts:
-    path: /
-- name: '🇫🇷 法国 | FRA #3'
+- name: '🇬🇧 英国 | GBR #1'
   network: tcp
   port: 22222
-  server: 51.44.197.117
+  server: 18.135.18.254
   tls: false
   type: vless
   udp: true
@@ -222,81 +222,19 @@ proxies:
     path: /
 - name: '🇬🇧 英国 | GBR #2'
   network: tcp
-  port: 22222
-  server: 13.135.33.165
-  tls: false
-  type: vless
-  udp: true
-  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
-  ws-opts:
-    path: /
-- name: '🇬🇧 英国 | GBR #3'
-  network: tcp
   port: 22224
-  server: 13.135.33.165
+  server: 18.135.18.254
   tls: false
   type: vless
   udp: true
   uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
   ws-opts:
     path: /
-- http-opts:
-    headers:
-      Host:
-      - play.googleapis.com
-    method: GET
-    path:
-    - /
-  name: '🇮🇪 爱尔兰 | IRL #1'
-  network: http
-  port: 443
-  server: 108.130.238.169
-  tls: false
-  type: vless
-  udp: true
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
 - client-fingerprint: chrome
-  name: '🇯🇵 日本 | JPN #1'
+  name: '🇻🇳 越南 | VNM #1'
   network: ws
   port: 443
-  server: 45.192.206.187
-  servername: snip.edgeoneai.cc.cd
-  tls: true
-  type: vless
-  udp: true
-  uuid: 495c7195-85b8-498a-bf20-2ea9ce9175b5
-  ws-opts:
-    headers:
-      Host: snip.edgeoneai.cc.cd
-    path: /fdip=sstp://vpn:vpn@public-vpn-200.opengw.net:443
-- http-opts:
-    headers:
-      Host:
-      - play.googleapis.com
-    method: GET
-    path:
-    - /
-  name: '🇰🇷 韩国 | KOR #1'
-  network: http
-  port: 443
-  server: 43.202.48.94
-  tls: false
-  type: vless
-  udp: true
-  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
-- name: '🇺🇸 美国 | USA #2'
-  password: 1f8dc24373d4add7767beac448e32397
-  port: 8443
-  server: 38.150.35.208
-  skip-cert-verify: true
-  sni: www.apple.com
-  type: trojan
-  udp: true
-- client-fingerprint: chrome
-  name: '🇺🇸 美国 | USA #11'
-  network: ws
-  port: 443
-  server: 179.255.99.75
+  server: 103.161.178.215
   servername: snip.edgeoneai.cc.cd
   tls: true
   type: vless
@@ -1085,19 +1023,36 @@ proxies:
   tls: false
   type: socks5
   udp: true
+- name: 🇬🇧 英国 | GBR 3
+  server: 18.135.18.254
+  port: 22222
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  tls: false
+  network: tcp
+  udp: true
+- name: 🇬🇧 英国 | GBR 4
+  server: 18.135.18.254
+  port: 22224
+  type: vless
+  uuid: e4514801-0d5a-42ba-869f-39bd605aef9e
+  tls: false
+  network: tcp
+  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #11'
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🏳[www.v2nodes.com] vless- #38'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1111,16 +1066,9 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇩🇪 德国 | DEU
-  - '🇫🇷 法国 | FRA #1'
-  - '🇫🇷 法国 | FRA #3'
+  - '🇬🇧 英国 | GBR #1'
   - '🇬🇧 英国 | GBR #2'
-  - '🇬🇧 英国 | GBR #3'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇺🇸 美国 | USA #2'
-  - '🇺🇸 美国 | USA #11'
+  - '🇻🇳 越南 | VNM #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1228,16 +1176,19 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
+  - 🇬🇧 英国 | GBR 3
+  - 🇬🇧 英国 | GBR 4
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #11'
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🏳[www.v2nodes.com] vless- #38'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1251,16 +1202,9 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇩🇪 德国 | DEU
-  - '🇫🇷 法国 | FRA #1'
-  - '🇫🇷 法国 | FRA #3'
+  - '🇬🇧 英国 | GBR #1'
   - '🇬🇧 英国 | GBR #2'
-  - '🇬🇧 英国 | GBR #3'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇺🇸 美国 | USA #2'
-  - '🇺🇸 美国 | USA #11'
+  - '🇻🇳 越南 | VNM #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1368,6 +1312,8 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
+  - 🇬🇧 英国 | GBR 3
+  - 🇬🇧 英国 | GBR 4
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -1377,13 +1323,14 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #11'
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🏳[www.v2nodes.com] vless- #38'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1397,16 +1344,9 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇩🇪 德国 | DEU
-  - '🇫🇷 法国 | FRA #1'
-  - '🇫🇷 法国 | FRA #3'
+  - '🇬🇧 英国 | GBR #1'
   - '🇬🇧 英国 | GBR #2'
-  - '🇬🇧 英国 | GBR #3'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇺🇸 美国 | USA #2'
-  - '🇺🇸 美国 | USA #11'
+  - '🇻🇳 越南 | VNM #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1514,18 +1454,21 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
+  - 🇬🇧 英国 | GBR 3
+  - 🇬🇧 英国 | GBR 4
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #11'
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🏳[www.v2nodes.com] vless- #38'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1539,16 +1482,9 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇩🇪 德国 | DEU
-  - '🇫🇷 法国 | FRA #1'
-  - '🇫🇷 法国 | FRA #3'
+  - '🇬🇧 英国 | GBR #1'
   - '🇬🇧 英国 | GBR #2'
-  - '🇬🇧 英国 | GBR #3'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇺🇸 美国 | USA #2'
-  - '🇺🇸 美国 | USA #11'
+  - '🇻🇳 越南 | VNM #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1656,18 +1592,21 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
+  - 🇬🇧 英国 | GBR 3
+  - 🇬🇧 英国 | GBR 4
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #11'
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🏳[www.v2nodes.com] vless- #38'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1681,16 +1620,9 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇩🇪 德国 | DEU
-  - '🇫🇷 法国 | FRA #1'
-  - '🇫🇷 法国 | FRA #3'
+  - '🇬🇧 英国 | GBR #1'
   - '🇬🇧 英国 | GBR #2'
-  - '🇬🇧 英国 | GBR #3'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇺🇸 美国 | USA #2'
-  - '🇺🇸 美国 | USA #11'
+  - '🇻🇳 越南 | VNM #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1798,18 +1730,21 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
+  - 🇬🇧 英国 | GBR 3
+  - 🇬🇧 英国 | GBR 4
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #11'
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🏳[www.v2nodes.com] vless- #38'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1823,16 +1758,9 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇩🇪 德国 | DEU
-  - '🇫🇷 法国 | FRA #1'
-  - '🇫🇷 法国 | FRA #3'
+  - '🇬🇧 英国 | GBR #1'
   - '🇬🇧 英国 | GBR #2'
-  - '🇬🇧 英国 | GBR #3'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇺🇸 美国 | USA #2'
-  - '🇺🇸 美国 | USA #11'
+  - '🇻🇳 越南 | VNM #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -1940,6 +1868,8 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
+  - 🇬🇧 英国 | GBR 3
+  - 🇬🇧 英国 | GBR 4
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1967,13 +1897,14 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇨🇳_CN_中国->🇺🇸_US_美国
-  - 🇫🇷_FR_法国
-  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #10'
-  - '🇹🇷[www.v2nodes.com] vless-TR-1... #3'
-  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
-  - '🇳🇱[www.v2nodes.com] trojan-NL-... #11'
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - '🏳[www.v2nodes.com] vless- #7'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - '🇬🇧[www.v2nodes.com] vless-GB-1... #6'
+  - '🇮🇹[www.v2nodes.com] vless-IT-1... #2'
+  - '🏳[www.v2nodes.com] vless- #38'
+  - '🇸🇪[www.v2nodes.com] vless-SE-1... #2'
+  - '🇺🇸[www.v2nodes.com] trojan-US-... #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -1987,16 +1918,9 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇩🇪 德国 | DEU
-  - '🇫🇷 法国 | FRA #1'
-  - '🇫🇷 法国 | FRA #3'
+  - '🇬🇧 英国 | GBR #1'
   - '🇬🇧 英国 | GBR #2'
-  - '🇬🇧 英国 | GBR #3'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇯🇵 日本 | JPN #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇺🇸 美国 | USA #2'
-  - '🇺🇸 美国 | USA #11'
+  - '🇻🇳 越南 | VNM #1'
   - RO_speednode_0011
   - RO_speednode_0012
   - RO_speednode_0013
@@ -2104,6 +2028,8 @@ proxy-groups:
   - RO_speednode_0127
   - RO_speednode_0128
   - SI_speednode_0129
+  - 🇬🇧 英国 | GBR 3
+  - 🇬🇧 英国 | GBR 4
 rule-providers:
   LocalAreaNetwork:
     type: http
