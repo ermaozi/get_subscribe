@@ -1,28 +1,41 @@
 mixed-port: 7890
 allow-lan: false
 mode: rule
-log-level: info
-ipv6: false
-external-controller: 127.0.0.1:9090
+log-level: warning
 dns:
   enable: true
   listen: 127.0.0.1:1053
   ipv6: false
+  prefer-h3: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - localhost
+  - +.localhost
+  - +.lan
+  - +.local
+  - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
   default-nameserver:
-  - 223.5.5.5
-  - 119.29.29.29
-  nameserver:
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
   proxy-server-nameserver:
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
   nameserver-policy:
-    geosite:geolocation-!cn:
-    - https://1.1.1.1/dns-query#🚀 节点选择
-    - https://8.8.8.8/dns-query#🚀 节点选择
+    geosite:cn:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  nameserver:
+  - https://1.1.1.1/dns-query
+  - https://1.0.0.1/dns-query
 proxies:
 - alterId: 0
   cipher: auto
@@ -156,23 +169,10 @@ proxies:
   sni: vk.com
   tls: false
   type: hysteria2
-- name: 🇵🇱201491 | ⚡️Telegram = t.me/S...
-  password: 10be1dad-9952-4c5e-aa30-db435f69b727
-  port: 4444
-  server: pl2.nexfile.net
-  tls: false
-  type: hysteria2
-- name: 🇫🇮201487 | ⚡️Telegram = t.me/S...
+- name: 🇪🇪201602 | ⚡️Telegram = t.me/S...
   password: 146d567c-6335-4e63-a8aa-7ec068642440
   port: 4443
-  server: 31.76.8.20
-  sni: nl1.obxodvpn.us
-  tls: false
-  type: hysteria2
-- name: 🇫🇮201470 | ⚡️Telegram = t.me/S...
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  port: 4443
-  server: fi1.obxodvpn.us
+  server: ee2.obxodvpn.us
   skip-cert-verify: false
   sni: nl1.obxodvpn.us
   tls: false
@@ -195,12 +195,6 @@ proxies:
   server: 109.104.153.124
   skip-cert-verify: false
   sni: srv-0e5387.frd21.ru
-  tls: false
-  type: hysteria2
-- name: 🇫🇮FI-🚀@VPNine1
-  password: 46c16b68-2553-4e5e-8176-f63d6bf6ec0c
-  port: 443
-  server: fl.solomon-planet.ru
   tls: false
   type: hysteria2
 - name: '@Begoo_VPN ²⁹⁰'
@@ -243,6 +237,14 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
+- name: '@v2ray_configs_pools 🌍 ⚡️'
+  password: Hc9_NX924RE_Mn948rgrwiub_m93V84nll
+  port: 9443
+  server: 5.254.51.108
+  skip-cert-verify: false
+  sni: keyhop-voxility-at.dynuddns.com
+  tls: false
+  type: hysteria2
 - name: 🩵+@Azarakhsh_Proxy+🩷
   obfs: salamander
   obfs-password: KevinZakarian
@@ -251,16 +253,6 @@ proxies:
   server: 179.61.132.96
   skip-cert-verify: true
   sni: 179.61.132.96
-  tls: false
-  type: hysteria2
-- name: '@FarazV2ray'
-  obfs: salamander
-  obfs-password: c1b4086fea89914496c7e10967a419216566
-  password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s
-  port: 443
-  server: 162.249.125.133
-  skip-cert-verify: false
-  sni: hy2-new.aspidnet.xyz
   tls: false
   type: hysteria2
 - name: Telegram@vpnjey
@@ -369,16 +361,6 @@ proxies:
   sni: api.kermanshahi.org
   tls: false
   type: hysteria2
-- name: 🇫🇷201543 | ⚡️Telegram = t.me/S...
-  obfs: salamander
-  obfs-password: 4klsymrb2lsncw50
-  password: bqkkvfp9zf051rsb
-  port: 31340
-  server: 136.244.114.108
-  skip-cert-verify: false
-  sni: wryyjy31.easyiran.org
-  tls: false
-  type: hysteria2
 - name: '@V2rayng_mar_ket #1'
   obfs: salamander
   obfs-password: ec66908dbc46e6920143d9b684adf277
@@ -387,16 +369,6 @@ proxies:
   server: 155.94.134.183
   skip-cert-verify: false
   sni: srv-3fc7c9.21freedom.net
-  tls: false
-  type: hysteria2
-- name: 🇳🇱201505 | ⚡️Telegram = t.me/S...
-  obfs: salamander
-  obfs-password: ypvL8T4HFIBLoH8q
-  password: capadm54312235
-  port: 443
-  server: 51.15.16.68
-  skip-cert-verify: true
-  sni: vpn.local
   tls: false
   type: hysteria2
 - name: '@vmess_ir'
@@ -491,33 +463,39 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
+- auth: 10be1dad-9952-4c5e-aa30-db435f69b727
+  name: '🇧🇾 BY_01 #1'
+  password: 10be1dad-9952-4c5e-aa30-db435f69b727
+  port: 4444
+  server: bl2.nexfile.net
+  skip-cert-verify: true
+  tls: false
+  type: hysteria2
+- auth: 10be1dad-9952-4c5e-aa30-db435f69b727
+  name: '🇩🇪 德国 | DEU #7'
+  password: 10be1dad-9952-4c5e-aa30-db435f69b727
+  port: 4444
+  server: 144.31.239.226
+  skip-cert-verify: true
+  sni: fl2.nexfile.net
+  tls: false
+  type: hysteria2
+- auth: 1953e43b-605c-4262-83eb-41a80646b801
+  name: '🇫🇷 法国 | FRA #2'
+  password: 1953e43b-605c-4262-83eb-41a80646b801
+  port: 443
+  server: 31.185.105.12
+  skip-cert-verify: true
+  sni: fr.song69.fun
+  tls: false
+  type: hysteria2
 - auth: 4b1be712-774c-4b65-8491-a3339e124a70
-  name: '🇫🇷 法国 | FRA #1'
+  name: '🇫🇷 法国 | FRA #3'
   password: 4b1be712-774c-4b65-8491-a3339e124a70
   port: 443
   server: fr2-cl3.happy-glonaris.top
   skip-cert-verify: true
   sni: fr2-cl3.happy-glonaris.top
-  tls: false
-  type: hysteria2
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 52.78.45.69
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
-  name: '🇸🇬 新加坡 | SGP #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 46.137.227.142
-  skip-cert-verify: true
-  sni: www.bing.com
   tls: false
   type: hysteria2
 - name: 🇧🇾 BY_01
@@ -527,7 +505,23 @@ proxies:
   password: 10be1dad-9952-4c5e-aa30-db435f69b727
   auth: 10be1dad-9952-4c5e-aa30-db435f69b727
   skip-cert-verify: true
-- name: 🇫🇷 法国 | FRA
+- name: 🇩🇪 德国 | DEU 7
+  server: 144.31.239.226
+  port: 4444
+  type: hysteria2
+  password: 10be1dad-9952-4c5e-aa30-db435f69b727
+  auth: 10be1dad-9952-4c5e-aa30-db435f69b727
+  sni: fl2.nexfile.net
+  skip-cert-verify: true
+- name: 🇫🇷 法国 | FRA 2
+  server: 31.185.105.12
+  port: 443
+  type: hysteria2
+  password: 1953e43b-605c-4262-83eb-41a80646b801
+  auth: 1953e43b-605c-4262-83eb-41a80646b801
+  sni: fr.song69.fun
+  skip-cert-verify: true
+- name: 🇫🇷 法国 | FRA 3
   server: fr2-cl3.happy-glonaris.top
   port: 443
   type: hysteria2
@@ -535,47 +529,6 @@ proxies:
   auth: 4b1be712-774c-4b65-8491-a3339e124a70
   sni: fr2-cl3.happy-glonaris.top
   skip-cert-verify: true
-- name: 🇯🇵 日本 | JPN
-  server: jap2.nexfile.net
-  port: 4444
-  type: hysteria2
-  password: 10be1dad-9952-4c5e-aa30-db435f69b727
-  auth: 10be1dad-9952-4c5e-aa30-db435f69b727
-  skip-cert-verify: true
-- name: 🇯🇵 日本 | JPN 2
-  server: 31.77.29.74
-  port: 4444
-  type: hysteria2
-  password: 10be1dad-9952-4c5e-aa30-db435f69b727
-  auth: 10be1dad-9952-4c5e-aa30-db435f69b727
-  sni: jap2.nexfile.net
-  skip-cert-verify: true
-- name: 🇰🇷 韩国 | KOR 2
-  server: 43.201.146.134
-  port: 443
-  type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  sni: www.bing.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 | USA 5
-  server: us01zl.poke-mon.xyz
-  port: 20000
-  type: hysteria2
-  password: 2b70632e-476c-44ee-bed6-c8e4d4f8fe9b
-  auth: 2b70632e-476c-44ee-bed6-c8e4d4f8fe9b
-  sni: bing.com
-  skip-cert-verify: true
-- name: 🇺🇸 美国 | USA 11
-  server: starlink-ft.251313.xyz
-  port: 443
-  type: hysteria2
-  password: https://xship.top
-  auth: https://xship.top
-  sni: xship.top
-  skip-cert-verify: true
-  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
@@ -596,18 +549,15 @@ proxy-groups:
   - 'github.com/*********-******/**... #1'
   - '@KAFING_2'
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇵🇱201491 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201487 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201470 | ⚡️Telegram = t.me/S...
+  - 🇪🇪201602 | ⚡️Telegram = t.me/S...
   - 🇳🇱201577 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket'
-  - 🇫🇮FI-🚀@VPNine1
   - '@Begoo_VPN ²⁹⁰'
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
   - Telegram 🆔@Cnetvpn 🇺🇲
+  - '@v2ray_configs_pools 🌍 ⚡️'
   - 🩵+@Azarakhsh_Proxy+🩷
-  - '@FarazV2ray'
   - Telegram@vpnjey
   - 'Telegram@vpnjey #1'
   - 'Telegram@vpnjey #2'
@@ -618,9 +568,7 @@ proxy-groups:
   - 'Telegram@vpnjey #7'
   - 🇳🇱 - NL - @FreeOnlineVPN
   - '@KAFING_2 #2'
-  - 🇫🇷201543 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket #1'
-  - 🇳🇱201505 | ⚡️Telegram = t.me/S...
   - '@vmess_ir'
   - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
   - 'Telegram 🆔@Cnetvpn 🇺🇲 #1'
@@ -630,16 +578,14 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #8'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇫🇷 法国 | FRA #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾 BY_01 #1'
+  - '🇩🇪 德国 | DEU #7'
+  - '🇫🇷 法国 | FRA #2'
+  - '🇫🇷 法国 | FRA #3'
   - 🇧🇾 BY_01
-  - 🇫🇷 法国 | FRA
-  - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
-  - 🇰🇷 韩国 | KOR 2
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA 11
+  - 🇩🇪 德国 | DEU 7
+  - 🇫🇷 法国 | FRA 2
+  - 🇫🇷 法国 | FRA 3
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
@@ -657,18 +603,15 @@ proxy-groups:
   - 'github.com/*********-******/**... #1'
   - '@KAFING_2'
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇵🇱201491 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201487 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201470 | ⚡️Telegram = t.me/S...
+  - 🇪🇪201602 | ⚡️Telegram = t.me/S...
   - 🇳🇱201577 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket'
-  - 🇫🇮FI-🚀@VPNine1
   - '@Begoo_VPN ²⁹⁰'
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
   - Telegram 🆔@Cnetvpn 🇺🇲
+  - '@v2ray_configs_pools 🌍 ⚡️'
   - 🩵+@Azarakhsh_Proxy+🩷
-  - '@FarazV2ray'
   - Telegram@vpnjey
   - 'Telegram@vpnjey #1'
   - 'Telegram@vpnjey #2'
@@ -679,9 +622,7 @@ proxy-groups:
   - 'Telegram@vpnjey #7'
   - 🇳🇱 - NL - @FreeOnlineVPN
   - '@KAFING_2 #2'
-  - 🇫🇷201543 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket #1'
-  - 🇳🇱201505 | ⚡️Telegram = t.me/S...
   - '@vmess_ir'
   - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
   - 'Telegram 🆔@Cnetvpn 🇺🇲 #1'
@@ -691,16 +632,14 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #8'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇫🇷 法国 | FRA #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾 BY_01 #1'
+  - '🇩🇪 德国 | DEU #7'
+  - '🇫🇷 法国 | FRA #2'
+  - '🇫🇷 法国 | FRA #3'
   - 🇧🇾 BY_01
-  - 🇫🇷 法国 | FRA
-  - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
-  - 🇰🇷 韩国 | KOR 2
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA 11
+  - 🇩🇪 德国 | DEU 7
+  - 🇫🇷 法国 | FRA 2
+  - 🇫🇷 法国 | FRA 3
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -724,18 +663,15 @@ proxy-groups:
   - 'github.com/*********-******/**... #1'
   - '@KAFING_2'
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇵🇱201491 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201487 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201470 | ⚡️Telegram = t.me/S...
+  - 🇪🇪201602 | ⚡️Telegram = t.me/S...
   - 🇳🇱201577 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket'
-  - 🇫🇮FI-🚀@VPNine1
   - '@Begoo_VPN ²⁹⁰'
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
   - Telegram 🆔@Cnetvpn 🇺🇲
+  - '@v2ray_configs_pools 🌍 ⚡️'
   - 🩵+@Azarakhsh_Proxy+🩷
-  - '@FarazV2ray'
   - Telegram@vpnjey
   - 'Telegram@vpnjey #1'
   - 'Telegram@vpnjey #2'
@@ -746,9 +682,7 @@ proxy-groups:
   - 'Telegram@vpnjey #7'
   - 🇳🇱 - NL - @FreeOnlineVPN
   - '@KAFING_2 #2'
-  - 🇫🇷201543 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket #1'
-  - 🇳🇱201505 | ⚡️Telegram = t.me/S...
   - '@vmess_ir'
   - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
   - 'Telegram 🆔@Cnetvpn 🇺🇲 #1'
@@ -758,16 +692,14 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #8'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇫🇷 法国 | FRA #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾 BY_01 #1'
+  - '🇩🇪 德国 | DEU #7'
+  - '🇫🇷 法国 | FRA #2'
+  - '🇫🇷 法国 | FRA #3'
   - 🇧🇾 BY_01
-  - 🇫🇷 法国 | FRA
-  - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
-  - 🇰🇷 韩国 | KOR 2
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA 11
+  - 🇩🇪 德国 | DEU 7
+  - 🇫🇷 法国 | FRA 2
+  - 🇫🇷 法国 | FRA 3
 - name: 📲 电报信息
   type: select
   proxies:
@@ -787,18 +719,15 @@ proxy-groups:
   - 'github.com/*********-******/**... #1'
   - '@KAFING_2'
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇵🇱201491 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201487 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201470 | ⚡️Telegram = t.me/S...
+  - 🇪🇪201602 | ⚡️Telegram = t.me/S...
   - 🇳🇱201577 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket'
-  - 🇫🇮FI-🚀@VPNine1
   - '@Begoo_VPN ²⁹⁰'
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
   - Telegram 🆔@Cnetvpn 🇺🇲
+  - '@v2ray_configs_pools 🌍 ⚡️'
   - 🩵+@Azarakhsh_Proxy+🩷
-  - '@FarazV2ray'
   - Telegram@vpnjey
   - 'Telegram@vpnjey #1'
   - 'Telegram@vpnjey #2'
@@ -809,9 +738,7 @@ proxy-groups:
   - 'Telegram@vpnjey #7'
   - 🇳🇱 - NL - @FreeOnlineVPN
   - '@KAFING_2 #2'
-  - 🇫🇷201543 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket #1'
-  - 🇳🇱201505 | ⚡️Telegram = t.me/S...
   - '@vmess_ir'
   - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
   - 'Telegram 🆔@Cnetvpn 🇺🇲 #1'
@@ -821,16 +748,14 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #8'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇫🇷 法国 | FRA #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾 BY_01 #1'
+  - '🇩🇪 德国 | DEU #7'
+  - '🇫🇷 法国 | FRA #2'
+  - '🇫🇷 法国 | FRA #3'
   - 🇧🇾 BY_01
-  - 🇫🇷 法国 | FRA
-  - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
-  - 🇰🇷 韩国 | KOR 2
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA 11
+  - 🇩🇪 德国 | DEU 7
+  - 🇫🇷 法国 | FRA 2
+  - 🇫🇷 法国 | FRA 3
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
@@ -850,18 +775,15 @@ proxy-groups:
   - 'github.com/*********-******/**... #1'
   - '@KAFING_2'
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇵🇱201491 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201487 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201470 | ⚡️Telegram = t.me/S...
+  - 🇪🇪201602 | ⚡️Telegram = t.me/S...
   - 🇳🇱201577 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket'
-  - 🇫🇮FI-🚀@VPNine1
   - '@Begoo_VPN ²⁹⁰'
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
   - Telegram 🆔@Cnetvpn 🇺🇲
+  - '@v2ray_configs_pools 🌍 ⚡️'
   - 🩵+@Azarakhsh_Proxy+🩷
-  - '@FarazV2ray'
   - Telegram@vpnjey
   - 'Telegram@vpnjey #1'
   - 'Telegram@vpnjey #2'
@@ -872,9 +794,7 @@ proxy-groups:
   - 'Telegram@vpnjey #7'
   - 🇳🇱 - NL - @FreeOnlineVPN
   - '@KAFING_2 #2'
-  - 🇫🇷201543 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket #1'
-  - 🇳🇱201505 | ⚡️Telegram = t.me/S...
   - '@vmess_ir'
   - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
   - 'Telegram 🆔@Cnetvpn 🇺🇲 #1'
@@ -884,16 +804,14 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #8'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇫🇷 法国 | FRA #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾 BY_01 #1'
+  - '🇩🇪 德国 | DEU #7'
+  - '🇫🇷 法国 | FRA #2'
+  - '🇫🇷 法国 | FRA #3'
   - 🇧🇾 BY_01
-  - 🇫🇷 法国 | FRA
-  - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
-  - 🇰🇷 韩国 | KOR 2
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA 11
+  - 🇩🇪 德国 | DEU 7
+  - 🇫🇷 法国 | FRA 2
+  - 🇫🇷 法国 | FRA 3
 - name: 🍎 苹果服务
   type: select
   proxies:
@@ -913,18 +831,15 @@ proxy-groups:
   - 'github.com/*********-******/**... #1'
   - '@KAFING_2'
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇵🇱201491 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201487 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201470 | ⚡️Telegram = t.me/S...
+  - 🇪🇪201602 | ⚡️Telegram = t.me/S...
   - 🇳🇱201577 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket'
-  - 🇫🇮FI-🚀@VPNine1
   - '@Begoo_VPN ²⁹⁰'
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
   - Telegram 🆔@Cnetvpn 🇺🇲
+  - '@v2ray_configs_pools 🌍 ⚡️'
   - 🩵+@Azarakhsh_Proxy+🩷
-  - '@FarazV2ray'
   - Telegram@vpnjey
   - 'Telegram@vpnjey #1'
   - 'Telegram@vpnjey #2'
@@ -935,9 +850,7 @@ proxy-groups:
   - 'Telegram@vpnjey #7'
   - 🇳🇱 - NL - @FreeOnlineVPN
   - '@KAFING_2 #2'
-  - 🇫🇷201543 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket #1'
-  - 🇳🇱201505 | ⚡️Telegram = t.me/S...
   - '@vmess_ir'
   - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
   - 'Telegram 🆔@Cnetvpn 🇺🇲 #1'
@@ -947,16 +860,14 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #8'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇫🇷 法国 | FRA #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾 BY_01 #1'
+  - '🇩🇪 德国 | DEU #7'
+  - '🇫🇷 法国 | FRA #2'
+  - '🇫🇷 法国 | FRA #3'
   - 🇧🇾 BY_01
-  - 🇫🇷 法国 | FRA
-  - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
-  - 🇰🇷 韩国 | KOR 2
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA 11
+  - 🇩🇪 德国 | DEU 7
+  - 🇫🇷 法国 | FRA 2
+  - 🇫🇷 法国 | FRA 3
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -969,11 +880,6 @@ proxy-groups:
   - REJECT
   - DIRECT
 - name: 🍃 应用净化
-  type: select
-  proxies:
-  - REJECT
-  - DIRECT
-- name: 🆎 AdBlock
   type: select
   proxies:
   - REJECT
@@ -998,18 +904,15 @@ proxy-groups:
   - 'github.com/*********-******/**... #1'
   - '@KAFING_2'
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
-  - 🇵🇱201491 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201487 | ⚡️Telegram = t.me/S...
-  - 🇫🇮201470 | ⚡️Telegram = t.me/S...
+  - 🇪🇪201602 | ⚡️Telegram = t.me/S...
   - 🇳🇱201577 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket'
-  - 🇫🇮FI-🚀@VPNine1
   - '@Begoo_VPN ²⁹⁰'
   - Telegram:@v2rayng3
   - 🇫🇮@Azaranv2ray
   - Telegram 🆔@Cnetvpn 🇺🇲
+  - '@v2ray_configs_pools 🌍 ⚡️'
   - 🩵+@Azarakhsh_Proxy+🩷
-  - '@FarazV2ray'
   - Telegram@vpnjey
   - 'Telegram@vpnjey #1'
   - 'Telegram@vpnjey #2'
@@ -1020,9 +923,7 @@ proxy-groups:
   - 'Telegram@vpnjey #7'
   - 🇳🇱 - NL - @FreeOnlineVPN
   - '@KAFING_2 #2'
-  - 🇫🇷201543 | ⚡️Telegram = t.me/S...
   - '@V2rayng_mar_ket #1'
-  - 🇳🇱201505 | ⚡️Telegram = t.me/S...
   - '@vmess_ir'
   - ♾️Join->🆔️@ATLAS_V2VPN🆓️📶‎🛰️63...
   - 'Telegram 🆔@Cnetvpn 🇺🇲 #1'
@@ -1032,99 +933,103 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #8'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇫🇷 法国 | FRA #1'
-  - '🇰🇷 韩国 | KOR #1'
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾 BY_01 #1'
+  - '🇩🇪 德国 | DEU #7'
+  - '🇫🇷 法国 | FRA #2'
+  - '🇫🇷 法国 | FRA #3'
   - 🇧🇾 BY_01
-  - 🇫🇷 法国 | FRA
-  - 🇯🇵 日本 | JPN
-  - 🇯🇵 日本 | JPN 2
-  - 🇰🇷 韩国 | KOR 2
-  - 🇺🇸 美国 | USA 5
-  - 🇺🇸 美国 | USA 11
+  - 🇩🇪 德国 | DEU 7
+  - 🇫🇷 法国 | FRA 2
+  - 🇫🇷 法国 | FRA 3
 rule-providers:
   LocalAreaNetwork:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
-    path: ./rules/LocalAreaNetwork.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
   BanAD:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
-    path: ./rules/BanAD.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
   BanProgramAD:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
-    path: ./rules/BanProgramAD.yaml
-  BanEasyList:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyList.list
-    path: ./rules/BanEasyList.yaml
-  BanEasyListChina:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyListChina.list
-    path: ./rules/BanEasyListChina.yaml
-  BanEasyPrivacy:
-    type: http
-    behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyPrivacy.list
-    path: ./rules/BanEasyPrivacy.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
   GoogleCN:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
-    path: ./rules/GoogleCN.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
   SteamCN:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
-    path: ./rules/SteamCN.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
   Microsoft:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
-    path: ./rules/Microsoft.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
   Apple:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
-    path: ./rules/Apple.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
   ProxyMedia:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
-    path: ./rules/ProxyMedia.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
   Telegram:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
-    path: ./rules/Telegram.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
   ProxyLite:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
-    path: ./rules/ProxyLite.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
   ChinaDomain:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
-    path: ./rules/ChinaDomain.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
   ChinaCompanyIp:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
-    path: ./rules/ChinaCompanyIp.yaml
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
 rules:
 - RULE-SET,LocalAreaNetwork,🎯 全球直连
 - RULE-SET,BanAD,🛑 全球拦截
 - RULE-SET,BanProgramAD,🍃 应用净化
-- RULE-SET,BanEasyList,🆎 AdBlock
-- RULE-SET,BanEasyListChina,🆎 AdBlock
-- RULE-SET,BanEasyPrivacy,🆎 AdBlock
 - RULE-SET,GoogleCN,🎯 全球直连
 - RULE-SET,SteamCN,🎯 全球直连
 - RULE-SET,Microsoft,Ⓜ️ 微软服务
