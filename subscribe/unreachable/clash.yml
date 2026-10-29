@@ -37,8 +37,37 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
+- encryption: none
+  name: 🏳[www.v2nodes.com] vless-
+  network: ws
+  port: 10004
+  server: 194.36.37.59
+  tls: false
+  type: vless
+  uuid: f7376394-cd54-11f1-bb6a-bff6d0326f6a
+  ws-opts:
+    path: /vpnjantit
+- alpn:
+  - h2
+  - http/1.1
+  client-fingerprint: chrome
+  encryption: none
+  name: 🇳🇱[www.v2nodes.com] vless-NL-1...
+  network: tcp
+  port: 443
+  server: swz.proxyplankton.ru
+  servername: swz.proxyplankton.ru
+  tls: true
+  type: vless
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
+- name: '🏳[www.v2nodes.com] vless- #13'
+  port: 443
+  server: 144.31.215.196
+  tls: false
+  type: vless
+  uuid: 558b26f6-061b-4079-9b84-ca13b3e90ae3
 - client-fingerprint: chrome
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
+  name: '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
   network: ws
   port: 443
   server: 77.110.97.245
@@ -50,15 +79,25 @@ proxies:
     headers:
       Host: ccc.010304.xyz
     path: /fp=chrome
-- encryption: none
-  name: '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
-  network: tcp
-  port: 47878
-  server: 152.69.195.67
-  servername: 152.69.195.67
-  tls: false
+- client-fingerprint: ios
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  network: ws
+  port: 8443
+  server: 13.143.232.104
+  servername: nl8.pad-sservice.lat
+  tls: true
   type: vless
-  uuid: eb8613e3-8393-4cff-a3ad-6501fd4adc63
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  ws-opts:
+    headers:
+      Host: nl8.pad-service.com
+    path: /NL8W
+- name: 🇷🇺[www.v2nodes.com] vless-RU-1...
+  port: 443
+  server: swz.proxyplankton.ru
+  tls: true
+  type: vless
+  uuid: 054362fb-e485-4a3f-9568-4c5b0f60e074
 - name: 🇻🇳[www.v2nodes.com] vless-VN-1...
   network: ws
   port: 443
@@ -72,11 +111,23 @@ proxies:
       Host: ccc.010304.xyz
     path: /fp=chromefp=chrome
 - cipher: aes-256-gcm
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  password: AxIYWtskJWIIaefW
+  name: '🏳[www.v2nodes.com] ss- #1'
+  password: owVdNnQcdPgthSyX
   port: 8388
-  server: 70.34.212.124
+  server: 216.128.168.190
   type: ss
+- cipher: aes-256-gcm
+  name: 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  password: GEdoeeqLZtkJRgSa
+  port: 8388
+  server: 139.84.166.47
+  type: ss
+- name: '🏳[www.v2nodes.com] trojan- #1'
+  password: Tg3RnK7Xp8B1
+  port: 443
+  server: 64.176.96.237
+  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com
+  type: trojan
 - alterId: 2
   cipher: auto
   name: 🇭🇰 香港|@ripaojiedian
@@ -191,35 +242,33 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- name: 🇭🇰HK_1|1.1MB/s
-  password: 298c5651d3015d7cee9e8411eaa0bd72
-  port: 12010
-  server: 124.151.45.214
-  skip-cert-verify: true
-  sni: apis.99912345.xyz
-  type: trojan
-  udp: true
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: 🇵🇱 波兰 | POL
-  port: 8080
-  server: 82.40.62.170
-  skip-cert-verify: true
-  tls: false
-  type: vmess
-  udp: true
-  uuid: 68b26471-6252-49f0-9b23-0eb5191d4ea8
-- alterId: 0
-  cipher: auto
-  name: '🇵🇱 波兰 | POL #1'
+- client-fingerprint: chrome
+  encryption: none
+  name: 🇹🇭TH_1|2.2MB/s
   network: tcp
-  port: 8080
-  server: 82.40.62.170
+  port: 22222
+  server: th001.zestapp778.com
+  servername: th001.zestapp778.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+  xudp: true
+- http-opts:
+    headers:
+      Host:
+      - play.googleapis.com
+    method: GET
+    path:
+    - /
+  name: '🇸🇪 瑞典 | SWE #1'
+  network: http
+  port: 443
+  server: 51.20.192.255
   tls: false
-  type: vmess
-  uuid: 68b26471-6252-49f0-9b23-0eb5191d4ea8
+  type: vless
+  udp: true
+  uuid: 7060231d-b9ba-495f-a218-bf427940cf3e
 - client-fingerprint: firefox
   name: AT_speednode_0002
   network: ws
@@ -260,34 +309,13 @@ proxies:
   type: vless
   udp: true
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: 🇷🇺 俄罗斯 | RUS
-  server: ee.h1cloud.net
-  port: 25895
-  type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
-  tls: true
-  reality-opts:
-    public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k
-    short-id: a73f0410d728c823
-  servername: www.samsung.com
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
-- name: 🇸🇪 瑞典 | SWE 2
-  server: 136.148.211.243
+- name: 🇮🇳 印度 | IND
+  server: 64.176.96.237
   port: 443
-  type: vless
-  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
-  tls: true
-  reality-opts:
-    public-key: qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo
-    short-id: 11d37dd92940329e
-  servername: se1-cl3.vless-fiberstasis.top
-  client-fingerprint: chrome
-  network: grpc
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: grpc-se-3
+  type: trojan
+  password: Tg3RnK7Xp8B1
+  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com
+  skip-cert-verify: true
   udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -295,10 +323,16 @@ proxy-groups:
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -312,21 +346,25 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|1.1MB/s
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱 波兰 | POL #1'
+  - 🇹🇭TH_1|2.2MB/s
+  - '🇸🇪 瑞典 | SWE #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇮🇳 印度 | IND
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -340,14 +378,12 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|1.1MB/s
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱 波兰 | POL #1'
+  - 🇹🇭TH_1|2.2MB/s
+  - '🇸🇪 瑞典 | SWE #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇮🇳 印度 | IND
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -357,10 +393,16 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -374,23 +416,27 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|1.1MB/s
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱 波兰 | POL #1'
+  - 🇹🇭TH_1|2.2MB/s
+  - '🇸🇪 瑞典 | SWE #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇮🇳 印度 | IND
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -404,23 +450,27 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|1.1MB/s
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱 波兰 | POL #1'
+  - 🇹🇭TH_1|2.2MB/s
+  - '🇸🇪 瑞典 | SWE #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇮🇳 印度 | IND
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -434,23 +484,27 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|1.1MB/s
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱 波兰 | POL #1'
+  - 🇹🇭TH_1|2.2MB/s
+  - '🇸🇪 瑞典 | SWE #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇮🇳 印度 | IND
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -464,14 +518,12 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|1.1MB/s
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱 波兰 | POL #1'
+  - 🇹🇭TH_1|2.2MB/s
+  - '🇸🇪 瑞典 | SWE #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇮🇳 印度 | IND
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -494,10 +546,16 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #2'
-  - '🇯🇵[www.v2nodes.com] vless-JP-1... #6'
+  - 🏳[www.v2nodes.com] vless-
+  - 🇳🇱[www.v2nodes.com] vless-NL-1...
+  - '🏳[www.v2nodes.com] vless- #13'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #3'
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #5'
+  - 🇷🇺[www.v2nodes.com] vless-RU-1...
   - 🇻🇳[www.v2nodes.com] vless-VN-1...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - '🏳[www.v2nodes.com] ss- #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - '🏳[www.v2nodes.com] trojan- #1'
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -511,14 +569,12 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - 🇭🇰HK_1|1.1MB/s
-  - 🇵🇱 波兰 | POL
-  - '🇵🇱 波兰 | POL #1'
+  - 🇹🇭TH_1|2.2MB/s
+  - '🇸🇪 瑞典 | SWE #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
-  - 🇷🇺 俄罗斯 | RUS
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇮🇳 印度 | IND
 rule-providers:
   LocalAreaNetwork:
     type: http
