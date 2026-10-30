@@ -1,82 +1,177 @@
 mixed-port: 7890
 allow-lan: false
 mode: rule
-log-level: warning
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
 dns:
   enable: true
   listen: 127.0.0.1:1053
   ipv6: false
-  prefer-h3: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
-  fake-ip-filter-mode: blacklist
-  fake-ip-filter:
-  - localhost
-  - +.localhost
-  - +.lan
-  - +.local
-  - +.home.arpa
-  use-hosts: true
-  use-system-hosts: true
-  respect-rules: true
   default-nameserver:
-  - https://223.5.5.5/dns-query#DIRECT
-  - https://223.6.6.6/dns-query#DIRECT
-  proxy-server-nameserver:
-  - https://223.5.5.5/dns-query#DIRECT
-  - https://223.6.6.6/dns-query#DIRECT
-  direct-nameserver:
-  - https://223.5.5.5/dns-query#DIRECT
-  - https://doh.pub/dns-query#DIRECT
-  direct-nameserver-follow-policy: false
-  nameserver-policy:
-    geosite:cn:
-    - https://223.5.5.5/dns-query#DIRECT
-    - https://doh.pub/dns-query#DIRECT
+  - 223.5.5.5
+  - 119.29.29.29
   nameserver:
-  - https://1.1.1.1/dns-query
-  - https://1.0.0.1/dns-query
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  proxy-server-nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  nameserver-policy:
+    geosite:geolocation-!cn:
+    - https://1.1.1.1/dns-query#🚀 节点选择
+    - https://8.8.8.8/dns-query#🚀 节点选择
 proxies:
-- name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  network: ws
-  port: 22573
-  server: 84.235.244.108
-  servername: uae.unixzone.us
-  tls: false
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国
   type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  ws-opts:
-    headers:
-      Host: uae.unixzone.us
-    path: /
+  server: us22.sofast.live
+  port: 58011
+  uuid: 0afc6426-606c-48e7-bd70-3c424a416842
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇩🇪_DE_德国
+  type: vless
+  server: 5.175.205.190
+  port: 27774
+  uuid: 653137c6-474e-4a3d-9a20-5a5afb3d4a4f
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  type: vmess
+  server: v24.hdacd.com
+  port: 30824
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇳🇱_NL_荷兰
+  type: vmess
+  server: v29.hdacd.com
+  port: 30829
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  type: vless
+  server: jp.sofast.live
+  port: 52683
+  uuid: 399b6b23-cc40-4831-a494-61948e2df133
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇫🇷_FR_法国
+  type: vmess
+  server: v35.hdacd.com
+  port: 30835
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
+  type: vmess
+  server: 45.144.48.32
+  port: 56080
+  uuid: f4daaec7-0e1e-4c8e-97e8-cff5347c2dae
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇯🇵_JP_日本
+  type: vmess
+  server: v6.hdacd.com
+  port: 30806
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
+- name: 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+  type: vmess
+  server: v4.hdacd.com
+  port: 30804
+  uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484
+  alterId: 2
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  udp: true
 - client-fingerprint: chrome
-  name: 🇫🇷[www.v2nodes.com] vless-FR-1...
-  port: 28484
-  server: fr001.zestapp778.com
-  servername: fr001.zestapp778.com
+  name: 🇻🇳[www.v2nodes.com] vless-VN-1...
+  network: ws
+  port: 443
+  server: 77.110.97.245
+  servername: ccc.010304.xyz
   tls: true
   type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- cipher: aes-256-gcm
-  name: 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  password: xBStBEVqvGwHPocc
-  port: 8388
-  server: 64.176.2.21
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #8'
-  password: qpSevKaUXYQKvSjp
-  port: 8388
-  server: 139.180.220.175
-  type: ss
-- name: '🇮🇳 印度 | IND #1'
-  password: Tg3RnK7Xp8B1
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chrome
+- name: '🏳[www.v2nodes.com] vless- #11'
   port: 443
-  server: 64.176.96.237
+  server: 94.228.167.12
+  tls: false
+  type: vless
+  uuid: 37ca5f34-2531-4fda-a781-20f3845fea88
+- name: '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  network: ws
+  port: 443
+  server: 77.110.97.245
+  servername: ccc.010304.xyz
+  tls: true
+  type: vless
+  uuid: d342d11e-d224-4463-b982-532309285094
+  ws-opts:
+    headers:
+      Host: ccc.010304.xyz
+    path: /fp=chromefp=chrome
+- alpn:
+  - h2
+  - http/1.1
+  encryption: none
+  grpc-opts:
+    grpc-service-name: beru-uk
+  name: 🇬🇧[www.v2nodes.com] vless-GB-1...
+  network: grpc
+  port: 8444
+  server: ru3.radiolumens.uk
+  servername: ru3.radiolumens.uk
+  tls: true
+  type: vless
+  uuid: 36cf792c-f07d-4500-97ea-a395e5178deb
+- cipher: aes-256-gcm
+  name: 🇷🇺[www.v2nodes.com] ss-RU-1607...
+  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+  port: 18443
+  server: 195.58.49.167
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  password: tfAcRikawhNoZAhu
+  port: 8388
+  server: 139.84.247.164
+  type: ss
+- name: 🇩🇪[www.v2nodes.com] trojan-DE-...
+  password: happybirthdaydaniel
+  port: 25267
+  server: de-bots4.h1cloud.net
   skip-cert-verify: true
-  sni: ash.d50f6225-23b4-3a7b-9f15-a0fb2fc16803.kailib.com
+  sni: t.me/FuckTheWall
   type: trojan
-  udp: true
 - alterId: 2
   cipher: auto
   name: 🇭🇰 香港|@ripaojiedian
@@ -191,45 +286,21 @@ proxies:
   skip-cert-verify: true
   sni: m.ctrip.com
   type: trojan
-- alpn:
-  - h2
-  client-fingerprint: firefox
-  name: '🇩🇪 德国 | DEU #5'
-  network: xhttp
-  port: 6003
-  server: 87.242.95.193
-  servername: fin1.centermass.net
+- alterId: 0
+  cipher: auto
+  name: '🇺🇸 美国 | USA #4'
+  network: ws
+  port: 31414
+  server: sg-transit-3.nebulacloud.win
+  skip-cert-verify: true
   tls: true
-  type: vless
+  type: vmess
   udp: true
-  uuid: ddc27ad2-631e-4431-b380-0045547acef4
-  xhttp-opts:
-    mode: packet-up
-    path: /media/playback/v1/SessionGateway
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: 3s7f80c9431676f3
-  name: 🇷🇺 俄罗斯 | RUS 3
-  network: grpc
-  port: 443
-  server: 176.108.246.197
-  servername: 410de54b680dfba26b85.cdn.cachefleet.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
-- client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇷🇺 俄罗斯 | RUS #3'
-  network: grpc
-  port: 443
-  server: 176.108.246.197
-  servername: 410de54b680dfba26b85.cdn.cachefleet.com
-  tls: true
-  type: vless
-  uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984
+  uuid: dfa9f875-3805-49d9-8636-46b6899be24e
+  ws-opts:
+    headers:
+      Host: sg-transit-3.nebulacloud.win
+    path: /getData/us
 - client-fingerprint: firefox
   name: AT_speednode_0002
   network: ws
@@ -276,11 +347,22 @@ proxy-groups:
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🇮🇳 印度 | IND #1'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国
+  - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - 🇷🇺[www.v2nodes.com] ss-RU-1607...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  - 🇩🇪[www.v2nodes.com] trojan-DE-...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -294,20 +376,29 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #5'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇺🇸 美国 | USA #4'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🇮🇳 印度 | IND #1'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国
+  - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - 🇷🇺[www.v2nodes.com] ss-RU-1607...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  - 🇩🇪[www.v2nodes.com] trojan-DE-...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -321,9 +412,7 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #5'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇺🇸 美国 | USA #4'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
@@ -336,11 +425,22 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🇮🇳 印度 | IND #1'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国
+  - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - 🇷🇺[www.v2nodes.com] ss-RU-1607...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  - 🇩🇪[www.v2nodes.com] trojan-DE-...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -354,9 +454,7 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #5'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇺🇸 美国 | USA #4'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
@@ -365,11 +463,22 @@ proxy-groups:
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🇮🇳 印度 | IND #1'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国
+  - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - 🇷🇺[www.v2nodes.com] ss-RU-1607...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  - 🇩🇪[www.v2nodes.com] trojan-DE-...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -383,9 +492,7 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #5'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇺🇸 美国 | USA #4'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
@@ -394,11 +501,22 @@ proxy-groups:
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🇮🇳 印度 | IND #1'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国
+  - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - 🇷🇺[www.v2nodes.com] ss-RU-1607...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  - 🇩🇪[www.v2nodes.com] trojan-DE-...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -412,9 +530,7 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #5'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇺🇸 美国 | USA #4'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
@@ -423,11 +539,22 @@ proxy-groups:
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🇮🇳 印度 | IND #1'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国
+  - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - 🇷🇺[www.v2nodes.com] ss-RU-1607...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  - 🇩🇪[www.v2nodes.com] trojan-DE-...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -441,9 +568,7 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #5'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇺🇸 美国 | USA #4'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
@@ -463,17 +588,33 @@ proxy-groups:
   proxies:
   - REJECT
   - DIRECT
+- name: 🆎 AdBlock
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
 - name: 🐟 漏网之鱼
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇫🇷[www.v2nodes.com] vless-FR-1...
-  - 🇨🇱[www.v2nodes.com] ss-CL-1564...
-  - '🏳[www.v2nodes.com] ss- #8'
-  - '🇮🇳 印度 | IND #1'
+  - 🇨🇳_CN_中国->🇺🇸_US_美国
+  - 🇩🇪_DE_德国
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_1
+  - 🇨🇳_CN_中国->🇳🇱_NL_荷兰
+  - 🇨🇳_CN_中国->🇺🇸_US_美国_2
+  - 🇨🇳_CN_中国->🇫🇷_FR_法国
+  - 🇵🇱_PL_波兰->🇧🇬_BG_保加利亚
+  - 🇨🇳_CN_中国->🇯🇵_JP_日本
+  - 🇨🇳_CN_中国->🇮🇪_IE_爱尔兰
+  - 🇻🇳[www.v2nodes.com] vless-VN-1...
+  - '🏳[www.v2nodes.com] vless- #11'
+  - '🇫🇮[www.v2nodes.com] vless-FI-1... #11'
+  - 🇬🇧[www.v2nodes.com] vless-GB-1...
+  - 🇷🇺[www.v2nodes.com] ss-RU-1607...
+  - 🇿🇦[www.v2nodes.com] ss-ZA-1534...
+  - 🇩🇪[www.v2nodes.com] trojan-DE-...
   - 🇭🇰 香港|@ripaojiedian
   - 🇸🇬 新加坡2|@ripaojiedian
   - 香港|@ripaojiedian
@@ -487,9 +628,7 @@ proxy-groups:
   - 美国2|@ripaojiedian
   - 台湾|@ripaojiedian
   - 韩国|@ripaojiedian
-  - '🇩🇪 德国 | DEU #5'
-  - 🇷🇺 俄罗斯 | RUS 3
-  - '🇷🇺 俄罗斯 | RUS #3'
+  - '🇺🇸 美国 | USA #4'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0043
@@ -497,91 +636,85 @@ rule-providers:
   LocalAreaNetwork:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
-    path: ./rules/LocalAreaNetwork.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.yaml
   BanAD:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
-    path: ./rules/BanAD.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanAD.list
+    path: ./rules/BanAD.yaml
   BanProgramAD:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
-    path: ./rules/BanProgramAD.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyList.list
+    path: ./rules/BanEasyList.yaml
+  BanEasyListChina:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyListChina.list
+    path: ./rules/BanEasyListChina.yaml
+  BanEasyPrivacy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/BanEasyPrivacy.list
+    path: ./rules/BanEasyPrivacy.yaml
   GoogleCN:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
-    path: ./rules/GoogleCN.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.yaml
   SteamCN:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
-    path: ./rules/SteamCN.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.yaml
   Microsoft:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
-    path: ./rules/Microsoft.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.yaml
   Apple:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
-    path: ./rules/Apple.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Apple.list
+    path: ./rules/Apple.yaml
   ProxyMedia:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-    path: ./rules/ProxyMedia.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.yaml
   Telegram:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
-    path: ./rules/Telegram.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/Telegram.list
+    path: ./rules/Telegram.yaml
   ProxyLite:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
-    path: ./rules/ProxyLite.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.yaml
   ChinaDomain:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
-    path: ./rules/ChinaDomain.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.yaml
   ChinaCompanyIp:
     type: http
     behavior: classical
-    format: text
-    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
-    path: ./rules/ChinaCompanyIp.list
-    interval: 86400
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.yaml
 rules:
 - RULE-SET,LocalAreaNetwork,🎯 全球直连
 - RULE-SET,BanAD,🛑 全球拦截
 - RULE-SET,BanProgramAD,🍃 应用净化
+- RULE-SET,BanEasyList,🆎 AdBlock
+- RULE-SET,BanEasyListChina,🆎 AdBlock
+- RULE-SET,BanEasyPrivacy,🆎 AdBlock
 - RULE-SET,GoogleCN,🎯 全球直连
 - RULE-SET,SteamCN,🎯 全球直连
 - RULE-SET,Microsoft,Ⓜ️ 微软服务
