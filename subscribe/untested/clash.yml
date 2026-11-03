@@ -38,6 +38,15 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
+- type: hysteria2
+  name: 🇺🇸_US_美国->🇫🇮_FI_芬兰_IPV4
+  server: fl3.nexfile.net
+  port: 4444
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  tls: true
+  servername: fl3.nexfile.net
+  sni: fl3.nexfile.net
+  skip-cert-verify: true
 - type: hysteria
   name: 🇺🇸_US_美国_IPV4
   server: 137.175.82.43
@@ -87,7 +96,7 @@ proxies:
   down: '55'
   auth-str: dongtaiwang.com
 - type: hysteria
-  name: 🇩🇪_DE_德国_IPV4
+  name: 🇩🇪_DE_德国_IPV4 (3)
   server: 5.83.129.90
   port: 54177
   password: dongtaiwang.com
@@ -142,15 +151,6 @@ proxies:
   up: '11'
   down: '55'
   auth-str: dongtaiwang.com
-- type: hysteria2
-  name: 🇺🇸_US_美国_IPV4 (4)
-  server: starlink-ft.251313.xyz
-  port: 443
-  password: https://xship.best
-  tls: true
-  servername: xship.top
-  sni: xship.top
-  skip-cert-verify: true
 - alterId: 0
   cipher: auto
   name: 防范境外势力渗透
@@ -692,8 +692,17 @@ proxies:
   sni: giftcard.gateway-stream.com
   tls: false
   type: hysteria2
+- auth: 69e41e64-a832-471a-b740-94577ca85520
+  name: '🇩🇪 德国 | DEU #3'
+  password: 69e41e64-a832-471a-b740-94577ca85520
+  port: 443
+  server: forshynewh.duckdns.org
+  skip-cert-verify: true
+  sni: forshynewh.duckdns.org
+  tls: false
+  type: hysteria2
 - auth: a35c508f-4d5d-4531-842e-6e9d43c762c0
-  name: '🇩🇪 德国 | DEU #1'
+  name: '🇩🇪 德国 | DEU #5'
   password: a35c508f-4d5d-4531-842e-6e9d43c762c0
   port: 4444
   server: fl3.nexfile.net
@@ -701,63 +710,44 @@ proxies:
   sni: fl3.nexfile.net
   tls: false
   type: hysteria2
-- auth: 69e41e64-a832-471a-b740-94577ca85520
-  name: '🇩🇪 德国 | DEU #2'
-  password: 69e41e64-a832-471a-b740-94577ca85520
-  port: 443
-  server: forshynewh.duckdns.org
-  skip-cert-verify: true
-  sni: forshynewh.duckdns.org
-  tls: false
-  type: hysteria2
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
-  name: '🇸🇬 新加坡 | SGP #1'
+  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
+  name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 56.10.10.106
+  server: 54.180.135.1
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: 🇩🇪 德国 | DEU 2
-  server: forshynewh.duckdns.org
-  port: 443
-  type: hysteria2
-  password: 69e41e64-a832-471a-b740-94577ca85520
-  auth: 69e41e64-a832-471a-b740-94577ca85520
-  sni: forshynewh.duckdns.org
-  skip-cert-verify: true
-- name: 🇩🇪 德国 | DEU 10
-  server: 217.60.73.56
-  port: 443
-  type: hysteria2
-  password: 69e41e64-a832-471a-b740-94577ca85520
-  auth: 69e41e64-a832-471a-b740-94577ca85520
-  sni: forshynewh.duckdns.org
-  up: 100
-  down: 200
+- name: 🇩🇪 德国 | DEU 3
+  server: 5.83.129.90
+  port: 54177
+  type: hysteria
+  auth_str: dongtaiwang.com
+  auth-str: dongtaiwang.com
+  up: 500
+  down: 1000
+  protocol: udp
+  sni: apple.com
   skip-cert-verify: true
   alpn:
   - h3
-  udp: true
-- name: 🇰🇷 韩国 | KOR 2
-  server: 3.34.200.45
-  port: 443
+- name: 🇩🇪 德国 | DEU 4
+  server: fl3.nexfile.net
+  port: 4444
   type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  sni: www.bing.com
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  auth: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  sni: fl3.nexfile.net
   skip-cert-verify: true
-- name: 🇸🇬 新加坡 | SGP
-  server: 54.255.211.102
-  port: 443
+- name: 🇵🇱 波兰 | POL
+  server: 13.143.189.144
+  port: 4444
   type: hysteria2
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
-  sni: www.bing.com
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  auth: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  sni: pl2.nexfile.net
   skip-cert-verify: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -765,15 +755,15 @@ proxy-groups:
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
+  - 🇺🇸_US_美国->🇫🇮_FI_芬兰_IPV4
   - 🇺🇸_US_美国_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪_DE_德国_IPV4 (3)
   - 🇺🇸_US_美国_IPV4 (2)
   - 🇺🇸_US_美国_IPV4 (3)
   - 🇫🇷_FR_法国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -833,25 +823,24 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #7'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇩🇪 德国 | DEU #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇩🇪 德国 | DEU 2
-  - 🇩🇪 德国 | DEU 10
-  - 🇰🇷 韩国 | KOR 2
-  - 🇸🇬 新加坡 | SGP
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇰🇷 韩国 | KOR #1'
+  - 🇩🇪 德国 | DEU 3
+  - 🇩🇪 德国 | DEU 4
+  - 🇵🇱 波兰 | POL
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
+  - 🇺🇸_US_美国->🇫🇮_FI_芬兰_IPV4
   - 🇺🇸_US_美国_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪_DE_德国_IPV4 (3)
   - 🇺🇸_US_美国_IPV4 (2)
   - 🇺🇸_US_美国_IPV4 (3)
   - 🇫🇷_FR_法国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -911,13 +900,12 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #7'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇩🇪 德国 | DEU #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇩🇪 德国 | DEU 2
-  - 🇩🇪 德国 | DEU 10
-  - 🇰🇷 韩国 | KOR 2
-  - 🇸🇬 新加坡 | SGP
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇰🇷 韩国 | KOR #1'
+  - 🇩🇪 德国 | DEU 3
+  - 🇩🇪 德国 | DEU 4
+  - 🇵🇱 波兰 | POL
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -927,15 +915,15 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
+  - 🇺🇸_US_美国->🇫🇮_FI_芬兰_IPV4
   - 🇺🇸_US_美国_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪_DE_德国_IPV4 (3)
   - 🇺🇸_US_美国_IPV4 (2)
   - 🇺🇸_US_美国_IPV4 (3)
   - 🇫🇷_FR_法国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -995,27 +983,26 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #7'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇩🇪 德国 | DEU #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇩🇪 德国 | DEU 2
-  - 🇩🇪 德国 | DEU 10
-  - 🇰🇷 韩国 | KOR 2
-  - 🇸🇬 新加坡 | SGP
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇰🇷 韩国 | KOR #1'
+  - 🇩🇪 德国 | DEU 3
+  - 🇩🇪 德国 | DEU 4
+  - 🇵🇱 波兰 | POL
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
+  - 🇺🇸_US_美国->🇫🇮_FI_芬兰_IPV4
   - 🇺🇸_US_美国_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪_DE_德国_IPV4 (3)
   - 🇺🇸_US_美国_IPV4 (2)
   - 🇺🇸_US_美国_IPV4 (3)
   - 🇫🇷_FR_法国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1075,27 +1062,26 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #7'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇩🇪 德国 | DEU #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇩🇪 德国 | DEU 2
-  - 🇩🇪 德国 | DEU 10
-  - 🇰🇷 韩国 | KOR 2
-  - 🇸🇬 新加坡 | SGP
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇰🇷 韩国 | KOR #1'
+  - 🇩🇪 德国 | DEU 3
+  - 🇩🇪 德国 | DEU 4
+  - 🇵🇱 波兰 | POL
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
+  - 🇺🇸_US_美国->🇫🇮_FI_芬兰_IPV4
   - 🇺🇸_US_美国_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪_DE_德国_IPV4 (3)
   - 🇺🇸_US_美国_IPV4 (2)
   - 🇺🇸_US_美国_IPV4 (3)
   - 🇫🇷_FR_法国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1155,27 +1141,26 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #7'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇩🇪 德国 | DEU #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇩🇪 德国 | DEU 2
-  - 🇩🇪 德国 | DEU 10
-  - 🇰🇷 韩国 | KOR 2
-  - 🇸🇬 新加坡 | SGP
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇰🇷 韩国 | KOR #1'
+  - 🇩🇪 德国 | DEU 3
+  - 🇩🇪 德国 | DEU 4
+  - 🇵🇱 波兰 | POL
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
+  - 🇺🇸_US_美国->🇫🇮_FI_芬兰_IPV4
   - 🇺🇸_US_美国_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪_DE_德国_IPV4 (3)
   - 🇺🇸_US_美国_IPV4 (2)
   - 🇺🇸_US_美国_IPV4 (3)
   - 🇫🇷_FR_法国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1235,13 +1220,12 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #7'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇩🇪 德国 | DEU #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇩🇪 德国 | DEU 2
-  - 🇩🇪 德国 | DEU 10
-  - 🇰🇷 韩国 | KOR 2
-  - 🇸🇬 新加坡 | SGP
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇰🇷 韩国 | KOR #1'
+  - 🇩🇪 德国 | DEU 3
+  - 🇩🇪 德国 | DEU 4
+  - 🇵🇱 波兰 | POL
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1264,15 +1248,15 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
+  - 🇺🇸_US_美国->🇫🇮_FI_芬兰_IPV4
   - 🇺🇸_US_美国_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4
   - 🇦🇪_AE_阿拉伯联合酋长国->🇫🇮_FI_芬兰_IPV4 (2)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4
+  - 🇩🇪_DE_德国_IPV4 (3)
   - 🇺🇸_US_美国_IPV4 (2)
   - 🇺🇸_US_美国_IPV4 (3)
   - 🇫🇷_FR_法国_IPV4 (2)
-  - 🇺🇸_US_美国_IPV4 (4)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -1332,13 +1316,12 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #7'
   - Telegram 🆔@cnetvpn 🇸🇪
-  - '🇩🇪 德国 | DEU #1'
-  - '🇩🇪 德国 | DEU #2'
-  - '🇸🇬 新加坡 | SGP #1'
-  - 🇩🇪 德国 | DEU 2
-  - 🇩🇪 德国 | DEU 10
-  - 🇰🇷 韩国 | KOR 2
-  - 🇸🇬 新加坡 | SGP
+  - '🇩🇪 德国 | DEU #3'
+  - '🇩🇪 德国 | DEU #5'
+  - '🇰🇷 韩国 | KOR #1'
+  - 🇩🇪 德国 | DEU 3
+  - 🇩🇪 德国 | DEU 4
+  - 🇵🇱 波兰 | POL
 rule-providers:
   LocalAreaNetwork:
     type: http
