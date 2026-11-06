@@ -38,33 +38,106 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- name: 🇩🇪[www.v2nodes.com] trojan-DE-...
-  password: happybirthdaydaniel
-  port: 25267
-  server: de-bots4.h1cloud.net
+- client-fingerprint: chrome
+  name: 🇲🇽[www.v2nodes.com] vless-MX-7...
+  network: ws
+  port: 443
+  server: 131.196.253.141
+  servername: kclx.eu.org
+  tls: true
+  type: vless
+  uuid: 0575005f-0ba9-4d6d-85e0-4a6a8cbafc1b
+  ws-opts:
+    headers:
+      Host: kclx.eu.org
+    path: /154.16.10.34-8080
+- name: '🏳[www.v2nodes.com] vless- #31'
+  network: ws
+  port: 14430
+  server: 193.188.21.253
+  tls: false
+  type: vless
+  uuid: 57f7772d-f5d6-4d8f-992d-5fa5e0d6da55
+  ws-opts:
+    headers:
+      Host: 193.188.21.253
+    path: /vless
+- cipher: aes-256-gcm
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  password: Y6R9pAtvxxzmGC
+  port: 9090
+  server: 141.164.45.187
+  type: ss
+- name: '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  port: 20086
+  server: sclass-c1.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
   type: trojan
 - alpn:
   - h2
   client-fingerprint: firefox
-  name: '🇨🇿 捷克 | CZE #1'
-  network: xhttp
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: glush.de1.v1
+  name: 🇩🇪 德国 | DEU 4
+  network: grpc
   port: 443
-  server: 31.76.7.233
-  servername: e2865c20.con.rasterparcel.tech
+  server: falmero.store
+  servername: falmero.store
   tls: true
   type: vless
   udp: true
-  uuid: f8bdf363-ff05-4fe6-a013-a5605266657e
+  uuid: 8fb19a9e-ca2b-433a-8469-e4c7796033b2
+- client-fingerprint: chrome
+  encryption: mlkem768x25519plus.native.0rtt.woF94Ad5-2zSxgXgjcNStC2CeHOpje_TUapVXAcEIVM
+  name: '🇫🇷 法国 | FRA #2'
+  network: xhttp
+  port: 2053
+  server: uk.zarqivo.ir
+  servername: Filano.zarqivo.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: c25c2329-3038-4193-9b0c-2e115630c723
   xhttp-opts:
+    host: uk.zarqivo.ir
     mode: auto
-    path: /conv4/stream/d34366ecdd31367d0fc76955c6b8d77c
+    path: /
+- alterId: 0
+  cipher: auto
+  name: '🇭🇰 香港 | HKG #3'
+  network: ws
+  port: 36703
+  server: 47.244.120.197
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: 45b83519-9c4f-4052-a11b-02e017b636d4
+  ws-opts:
+    path: /arki
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #1'
+  name: '🇸🇬 新加坡 | SGP #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 54.180.236.157
+  server: 13.212.205.194
   type: ss
   udp: true
+- alpn:
+  - h2
+  client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: ''
+  name: '🇩🇪 德国 | DEU #3'
+  network: grpc
+  port: 443
+  server: falmero.store
+  servername: falmero.store
+  tls: true
+  type: vless
+  uuid: 8fb19a9e-ca2b-433a-8469-e4c7796033b2
 - client-fingerprint: firefox
   name: AT_speednode_0002
   network: ws
@@ -115,22 +188,33 @@ proxies:
   type: vless
   udp: true
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: 🇸🇪 瑞典 | SWE 2
-  server: se-2.pythonsetupbib.online
-  port: 61374
+- name: 🇰🇷 韩国 | KOR 2
+  server: 3.36.90.103
+  port: 443
   type: vless
-  uuid: f8d52ece-fad4-478d-875d-df6eed3befa7
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
   tls: true
+  flow: xtls-rprx-vision
   reality-opts:
-    public-key: QrNs0ew7snHqLfpVXS9RAhlRzgAzzGZK9fXmDcx9xHI
-  servername: se-2.pythonsetupbib.online
+    public-key: DHOrfoin7TeRpnIoU3d6qT5Yrq3QPVFp49kApATA4iE
+    short-id: e04a526b0b09c765
+  servername: kct.goodcat.top
   client-fingerprint: chrome
-  network: xhttp
-  xhttp-opts:
-    path: /
-    host: se-2.pythonsetupbib.online
-    mode: packet-up
-    x-padding-bytes: 100-500
+  network: tcp
+  udp: true
+- name: 🇸🇬 新加坡 | SGP 3
+  server: 13.212.205.194
+  port: 443
+  type: vless
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: x8aCD8cJtkDvAjcRrcMG05MNiwh11LaKg70KIRvfN0g
+    short-id: 819a87bf1651bf44
+  servername: bgac.co.th
+  client-fingerprint: chrome
+  network: tcp
   udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -138,25 +222,39 @@ proxy-groups:
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
-  - '🇨🇿 捷克 | CZE #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇲🇽[www.v2nodes.com] vless-MX-7...
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪 德国 | DEU 4
+  - '🇫🇷 法国 | FRA #2'
+  - '🇭🇰 香港 | HKG #3'
+  - '🇸🇬 新加坡 | SGP #2'
+  - '🇩🇪 德国 | DEU #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇰🇷 韩国 | KOR 2
+  - 🇸🇬 新加坡 | SGP 3
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
-  - '🇨🇿 捷克 | CZE #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇲🇽[www.v2nodes.com] vless-MX-7...
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪 德国 | DEU 4
+  - '🇫🇷 法国 | FRA #2'
+  - '🇭🇰 香港 | HKG #3'
+  - '🇸🇬 新加坡 | SGP #2'
+  - '🇩🇪 德国 | DEU #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇰🇷 韩国 | KOR 2
+  - 🇸🇬 新加坡 | SGP 3
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -166,53 +264,81 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
-  - '🇨🇿 捷克 | CZE #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇲🇽[www.v2nodes.com] vless-MX-7...
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪 德国 | DEU 4
+  - '🇫🇷 法国 | FRA #2'
+  - '🇭🇰 香港 | HKG #3'
+  - '🇸🇬 新加坡 | SGP #2'
+  - '🇩🇪 德国 | DEU #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇰🇷 韩国 | KOR 2
+  - 🇸🇬 新加坡 | SGP 3
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
-  - '🇨🇿 捷克 | CZE #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇲🇽[www.v2nodes.com] vless-MX-7...
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪 德国 | DEU 4
+  - '🇫🇷 法国 | FRA #2'
+  - '🇭🇰 香港 | HKG #3'
+  - '🇸🇬 新加坡 | SGP #2'
+  - '🇩🇪 德国 | DEU #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇰🇷 韩国 | KOR 2
+  - 🇸🇬 新加坡 | SGP 3
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
-  - '🇨🇿 捷克 | CZE #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇲🇽[www.v2nodes.com] vless-MX-7...
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪 德国 | DEU 4
+  - '🇫🇷 法国 | FRA #2'
+  - '🇭🇰 香港 | HKG #3'
+  - '🇸🇬 新加坡 | SGP #2'
+  - '🇩🇪 德国 | DEU #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇰🇷 韩国 | KOR 2
+  - 🇸🇬 新加坡 | SGP 3
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
-  - '🇨🇿 捷克 | CZE #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇲🇽[www.v2nodes.com] vless-MX-7...
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪 德国 | DEU 4
+  - '🇫🇷 法国 | FRA #2'
+  - '🇭🇰 香港 | HKG #3'
+  - '🇸🇬 新加坡 | SGP #2'
+  - '🇩🇪 德国 | DEU #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇰🇷 韩国 | KOR 2
+  - 🇸🇬 新加坡 | SGP 3
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -235,14 +361,21 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇩🇪[www.v2nodes.com] trojan-DE-...
-  - '🇨🇿 捷克 | CZE #1'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇲🇽[www.v2nodes.com] vless-MX-7...
+  - '🏳[www.v2nodes.com] vless- #31'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1185...
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪 德国 | DEU 4
+  - '🇫🇷 法国 | FRA #2'
+  - '🇭🇰 香港 | HKG #3'
+  - '🇸🇬 新加坡 | SGP #2'
+  - '🇩🇪 德国 | DEU #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇸🇪 瑞典 | SWE 2
+  - 🇰🇷 韩国 | KOR 2
+  - 🇸🇬 新加坡 | SGP 3
 rule-providers:
   LocalAreaNetwork:
     type: http
