@@ -38,107 +38,71 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- client-fingerprint: firefox
-  name: 🇮🇩[www.v2nodes.com] vless-ID-1...
-  network: tcp
-  port: 57353
-  server: 130.94.95.198
-  servername: in001.zestapp778.com
-  skip-cert-verify: true
-  tls: true
-  type: vless
-  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- client-fingerprint: firefox
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  network: ws
-  port: 8443
-  server: lte-v2-ws.gacvpn.site
-  servername: lte-v2-ws.gacvpn.site
-  tls: true
-  type: vless
-  uuid: 981c7ccc-2b17-473c-8358-7fd1d6eec1b4
-  ws-opts:
-    headers:
-      Host: lte-v2-ws.gacvpn.site
-    path: /static/js/runtime.9d03c7.js
-- client-fingerprint: firefox
-  encryption: none
-  name: '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  network: ws
-  port: 8444
-  server: 145.63.143.205
-  servername: pl1.meshbeat.online
-  tls: true
-  type: vless
-  uuid: 35c9f200-7520-4005-b78e-f8a2fb9f68f7
-  ws-opts:
-    headers:
-      Host: pl1.meshbeat.online
-    path: /api/v1/devices/10be32b380/telemetry
-- name: 🇧🇷[www.v2nodes.com] trojan-BR-...
-  network: tcp
-  password: 5t6i121em5lkmsmk
-  port: 39533
-  server: br001.zestapp778.com
-  sni: br001.zestapp778.com
-  type: trojan
-- name: 🇩🇪DE_9|2.0MB/s
-  port: 12345
-  server: 141.147.19.47
-  skip-cert-verify: true
-  type: http
-- client-fingerprint: firefox
-  name: '🇬🇧 英国 | GBR #1'
-  network: xhttp
-  port: 8444
-  server: 82.148.251.245
-  servername: at-86-10.cdn-lab.online
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5fa16fdf-5b3c-4f57-988d-b24c6722c91a
-  xhttp-opts:
-    host: at-86-10.cdn-lab.online
-    mode: auto
-    path: /xh
 - alpn:
   - h2
   - http/1.1
-  client-fingerprint: firefox
-  name: '🇬🇧 英国 | GBR #2'
-  network: xhttp
-  port: 8444
-  server: at-86-10.cdn-lab.online
-  servername: at-86-10.cdn-lab.online
+  client-fingerprint: chrome
+  name: '🇱🇰[www.v2nodes.com] vless-LK-6... #1'
+  port: 443
+  server: free.vkehi.store
+  servername: zoom.com
   tls: true
   type: vless
-  udp: true
-  uuid: 5fa16fdf-5b3c-4f57-988d-b24c6722c91a
-  xhttp-opts:
-    host: at-86-10.cdn-lab.online
-    mode: auto
-    path: /xh
+  uuid: e4d1298a-1f21-42e2-a53e-1b22c0645c48
 - client-fingerprint: firefox
-  name: '🇮🇪 爱尔兰 | IRL #1'
-  network: xhttp
-  port: 8444
-  server: fi-94-10.cdn-lab.online
-  servername: fi-94-10.cdn-lab.online
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  network: tcp
+  port: 56984
+  server: 140.235.11.243
+  servername: sg1.zestapp778.com
   tls: true
   type: vless
-  udp: true
-  uuid: 5fa16fdf-5b3c-4f57-988d-b24c6722c91a
-  xhttp-opts:
-    host: fi-94-10.cdn-lab.online
-    mode: auto
-    path: /xh
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #2'
+  name: '🇸🇬 新加坡 | SGP #3'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 13.125.82.209
+  server: 54.169.134.178
   type: ss
   udp: true
+- alpn:
+  - h2
+  grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 🇨🇳 台湾 | TWN 2
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- grpc-opts:
+    grpc-service-name: db
+  name: 🇹🇼 🇨🇳 台湾 | TWN 3
+  network: grpc
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.46
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+  udp: true
+- name: '🇹🇼 🇨🇳 台湾 | TWN #2'
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.45
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
+- name: '🇹🇼 🇨🇳 台湾 | TWN #3'
+  password: 0a9f1f5a397bd427
+  port: 443
+  server: 125.227.86.46
+  skip-cert-verify: true
+  sni: TG.freecodes
+  type: trojan
 - client-fingerprint: firefox
   name: AT_speednode_0002
   network: ws
@@ -189,41 +153,151 @@ proxies:
   type: vless
   udp: true
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+- name: 🇩🇪 德国 | DEU 8
+  server: 204.168.135.161
+  port: 8443
+  type: vless
+  uuid: 8e665b34-32ee-4d2f-a240-4f80a74751cc
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: OQtjO7JAJZLjmTb7QBpEODeX6Vhzs20XTgFUAyrR1BQ
+    short-id: 7366b647f51921e0
+  servername: 360.yandex.ru
+  client-fingerprint: firefox
+  network: tcp
+  udp: true
+- name: 🇰🇷 韩国 | KOR 2
+  server: 3.35.140.85
+  port: 443
+  type: vless
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: DHOrfoin7TeRpnIoU3d6qT5Yrq3QPVFp49kApATA4iE
+    short-id: e04a526b0b09c765
+  servername: gtg.senko.co.kr
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+- name: 🇱🇰 LK_30
+  server: free.vkehi.store
+  port: 443
+  type: vless
+  uuid: e4d1298a-1f21-42e2-a53e-1b22c0645c48
+  tls: true
+  alpn:
+  - h2
+  - http/1.1
+  servername: zoom.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+- name: 🇳🇱 荷兰 | NLD 2
+  server: 204.168.135.161
+  port: 8444
+  type: vless
+  uuid: 8e665b34-32ee-4d2f-a240-4f80a74751cc
+  tls: true
+  reality-opts:
+    public-key: OQtjO7JAJZLjmTb7QBpEODeX6Vhzs20XTgFUAyrR1BQ
+    short-id: 7366b647f51921e0
+  servername: 360.yandex.ru
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc-reality
+  udp: true
+- name: 🇳🇱 荷兰 | NLD 3
+  server: 204.168.135.161
+  port: 443
+  type: vless
+  uuid: 8e665b34-32ee-4d2f-a240-4f80a74751cc
+  tls: true
+  reality-opts:
+    public-key: OQtjO7JAJZLjmTb7QBpEODeX6Vhzs20XTgFUAyrR1BQ
+    short-id: 7366b647f51921e0
+  servername: 360.yandex.ru
+  client-fingerprint: firefox
+  network: xhttp
+  xhttp-opts:
+    path: /vless-xhttp
+    host: 360.yandex.ru
+    mode: auto
+  udp: true
+- name: 🇵🇱 波兰 | POL 4
+  server: d58daft.plp1.h1cloud.net
+  port: 443
+  type: vless
+  uuid: 13e6bdfd-d51b-4e57-a40e-b88784cba8bd
+  tls: true
+  reality-opts:
+    public-key: ixnCbdlT5sAVd-ilp2nG11CvnNsBCf9xPD56TlXxlR4
+    short-id: a91531ad58c8611c
+  servername: d58daft.plp1.h1cloud.net
+  client-fingerprint: chrome
+  network: tcp
+- name: 🇸🇬 新加坡 | SGP 2
+  server: 56.10.68.204
+  port: 443
+  type: vless
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: x8aCD8cJtkDvAjcRrcMG05MNiwh11LaKg70KIRvfN0g
+    short-id: 819a87bf1651bf44
+  servername: comet-e.top
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
-  - 🇩🇪DE_9|2.0MB/s
-  - '🇬🇧 英国 | GBR #1'
-  - '🇬🇧 英国 | GBR #2'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇰🇷 韩国 | KOR #2'
+  - '🇱🇰[www.v2nodes.com] vless-LK-6... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
+  - 🇹🇼 🇨🇳 台湾 | TWN 3
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
+  - 🇩🇪 德国 | DEU 8
+  - 🇰🇷 韩国 | KOR 2
+  - 🇱🇰 LK_30
+  - 🇳🇱 荷兰 | NLD 2
+  - 🇳🇱 荷兰 | NLD 3
+  - 🇵🇱 波兰 | POL 4
+  - 🇸🇬 新加坡 | SGP 2
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
-  - 🇩🇪DE_9|2.0MB/s
-  - '🇬🇧 英国 | GBR #1'
-  - '🇬🇧 英国 | GBR #2'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇰🇷 韩国 | KOR #2'
+  - '🇱🇰[www.v2nodes.com] vless-LK-6... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
+  - 🇹🇼 🇨🇳 台湾 | TWN 3
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
+  - 🇩🇪 德国 | DEU 8
+  - 🇰🇷 韩国 | KOR 2
+  - 🇱🇰 LK_30
+  - 🇳🇱 荷兰 | NLD 2
+  - 🇳🇱 荷兰 | NLD 3
+  - 🇵🇱 波兰 | POL 4
+  - 🇸🇬 新加坡 | SGP 2
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -233,73 +307,93 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
-  - 🇩🇪DE_9|2.0MB/s
-  - '🇬🇧 英国 | GBR #1'
-  - '🇬🇧 英国 | GBR #2'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇰🇷 韩国 | KOR #2'
+  - '🇱🇰[www.v2nodes.com] vless-LK-6... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
+  - 🇹🇼 🇨🇳 台湾 | TWN 3
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
+  - 🇩🇪 德国 | DEU 8
+  - 🇰🇷 韩国 | KOR 2
+  - 🇱🇰 LK_30
+  - 🇳🇱 荷兰 | NLD 2
+  - 🇳🇱 荷兰 | NLD 3
+  - 🇵🇱 波兰 | POL 4
+  - 🇸🇬 新加坡 | SGP 2
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
-  - 🇩🇪DE_9|2.0MB/s
-  - '🇬🇧 英国 | GBR #1'
-  - '🇬🇧 英国 | GBR #2'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇰🇷 韩国 | KOR #2'
+  - '🇱🇰[www.v2nodes.com] vless-LK-6... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
+  - 🇹🇼 🇨🇳 台湾 | TWN 3
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
+  - 🇩🇪 德国 | DEU 8
+  - 🇰🇷 韩国 | KOR 2
+  - 🇱🇰 LK_30
+  - 🇳🇱 荷兰 | NLD 2
+  - 🇳🇱 荷兰 | NLD 3
+  - 🇵🇱 波兰 | POL 4
+  - 🇸🇬 新加坡 | SGP 2
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
-  - 🇩🇪DE_9|2.0MB/s
-  - '🇬🇧 英国 | GBR #1'
-  - '🇬🇧 英国 | GBR #2'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇰🇷 韩国 | KOR #2'
+  - '🇱🇰[www.v2nodes.com] vless-LK-6... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
+  - 🇹🇼 🇨🇳 台湾 | TWN 3
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
+  - 🇩🇪 德国 | DEU 8
+  - 🇰🇷 韩国 | KOR 2
+  - 🇱🇰 LK_30
+  - 🇳🇱 荷兰 | NLD 2
+  - 🇳🇱 荷兰 | NLD 3
+  - 🇵🇱 波兰 | POL 4
+  - 🇸🇬 新加坡 | SGP 2
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
-  - 🇩🇪DE_9|2.0MB/s
-  - '🇬🇧 英国 | GBR #1'
-  - '🇬🇧 英国 | GBR #2'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇰🇷 韩国 | KOR #2'
+  - '🇱🇰[www.v2nodes.com] vless-LK-6... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
+  - 🇹🇼 🇨🇳 台湾 | TWN 3
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
+  - 🇩🇪 德国 | DEU 8
+  - 🇰🇷 韩国 | KOR 2
+  - 🇱🇰 LK_30
+  - 🇳🇱 荷兰 | NLD 2
+  - 🇳🇱 荷兰 | NLD 3
+  - 🇵🇱 波兰 | POL 4
+  - 🇸🇬 新加坡 | SGP 2
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -322,19 +416,24 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇮🇩[www.v2nodes.com] vless-ID-1...
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #1'
-  - '🇵🇱[www.v2nodes.com] vless-PL-1... #2'
-  - 🇧🇷[www.v2nodes.com] trojan-BR-...
-  - 🇩🇪DE_9|2.0MB/s
-  - '🇬🇧 英国 | GBR #1'
-  - '🇬🇧 英国 | GBR #2'
-  - '🇮🇪 爱尔兰 | IRL #1'
-  - '🇰🇷 韩国 | KOR #2'
+  - '🇱🇰[www.v2nodes.com] vless-LK-6... #1'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #2'
+  - '🇸🇬 新加坡 | SGP #3'
+  - 🇹🇼 🇨🇳 台湾 | TWN 2
+  - 🇹🇼 🇨🇳 台湾 | TWN 3
+  - '🇹🇼 🇨🇳 台湾 | TWN #2'
+  - '🇹🇼 🇨🇳 台湾 | TWN #3'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
+  - 🇩🇪 德国 | DEU 8
+  - 🇰🇷 韩国 | KOR 2
+  - 🇱🇰 LK_30
+  - 🇳🇱 荷兰 | NLD 2
+  - 🇳🇱 荷兰 | NLD 3
+  - 🇵🇱 波兰 | POL 4
+  - 🇸🇬 新加坡 | SGP 2
 rule-providers:
   LocalAreaNetwork:
     type: http
