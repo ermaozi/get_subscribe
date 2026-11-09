@@ -1,0 +1,407 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: true
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - localhost
+  - +.localhost
+  - +.lan
+  - +.local
+  - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  proxy-server-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    geosite:cn:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  nameserver:
+  - https://1.1.1.1/dns-query
+  - https://1.0.0.1/dns-query
+proxies:
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  network: ws
+  port: 8444
+  server: 95.142.32.42
+  servername: nl18.meshbeat.online
+  tls: true
+  type: vless
+  uuid: a8321cfe-39a2-48a0-a918-f01f7d9006ed
+  ws-opts:
+    headers:
+      Host: nl18.meshbeat.online
+    path: /api/v1/devices/86f81c4330/telemetry
+- client-fingerprint: firefox
+  encryption: none
+  name: '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  network: tcp
+  port: 56984
+  server: 140.235.11.243
+  servername: sg1.zestapp778.com
+  tls: true
+  type: vless
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+- cipher: aes-256-gcm
+  name: 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  password: GEdoeeqLZtkJRgSa
+  port: 8388
+  server: 139.84.166.47
+  type: ss
+- cipher: aes-256-gcm
+  name: 🏳[www.v2nodes.com] ss-
+  password: dongtaiwang.com
+  port: 35678
+  server: 137.175.73.178
+  type: ss
+- name: 🇧🇬 保加利亚 | BGR
+  network: ws
+  password: 46d221fa-e9b4-748c-4eae-019a88e42991
+  port: 443
+  server: 191.44.112.170.sslip.io
+  skip-cert-verify: true
+  sni: orbylume.my.to
+  type: trojan
+  udp: true
+  ws-opts:
+    headers:
+      Host: orbylume.my.to
+    path: /tvpn-trojan/bg
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #2'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 52.78.103.20
+  type: ss
+  udp: true
+- name: '🇧🇬 保加利亚 | BGR #1'
+  password: 46d221fa-e9b4-748c-4eae-019a88e42991
+  port: 443
+  server: 191.44.112.170.sslip.io
+  skip-cert-verify: true
+  sni: orbylume.my.to
+  type: trojan
+- client-fingerprint: firefox
+  name: AT_speednode_0002
+  network: ws
+  port: 8443
+  server: 152.53.31.46
+  servername: usa3.pad-sservice.lat
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  ws-opts:
+    headers:
+      Host: usa3.pad-service.com
+    path: /U1SA
+- client-fingerprint: chrome
+  name: ES_speednode_0007
+  network: ws
+  port: 8443
+  server: au5.pad-sservice.lat
+  servername: au5.pad-sservice.lat
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  ws-opts:
+    headers:
+      Host: au5.pad-sservice.lat
+    path: /AU5W
+- client-fingerprint: chrome
+  name: US_speednode_0042
+  port: 19167
+  server: mx001.zestapp778.com
+  servername: mx001.zestapp778.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+- client-fingerprint: firefox
+  name: US_speednode_0043
+  port: 54857
+  server: 130.94.18.208
+  servername: us001.zestapp778.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+- name: 🇨🇭 瑞士 | CHE
+  server: 62.109.1.5
+  port: 2058
+  type: vless
+  uuid: 4ad9f982-b56a-444a-9684-35ce51307a36
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s
+    short-id: 937255313d6ce673
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+proxy-groups:
+- name: ermao.net | 🚀 节点选择
+  type: select
+  proxies:
+  - ermao.net | ♻️ 自动选择
+  - DIRECT
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇧🇬 保加利亚 | BGR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇧🇬 保加利亚 | BGR #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇨🇭 瑞士 | CHE
+- name: ermao.net | ♻️ 自动选择
+  type: url-test
+  proxies:
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇧🇬 保加利亚 | BGR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇧🇬 保加利亚 | BGR #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇨🇭 瑞士 | CHE
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🌍 国外媒体
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+  - 🎯 全球直连
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇧🇬 保加利亚 | BGR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇧🇬 保加利亚 | BGR #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇨🇭 瑞士 | CHE
+- name: 📲 电报信息
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇧🇬 保加利亚 | BGR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇧🇬 保加利亚 | BGR #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇨🇭 瑞士 | CHE
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - 🎯 全球直连
+  - ermao.net | 🚀 节点选择
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇧🇬 保加利亚 | BGR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇧🇬 保加利亚 | BGR #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇨🇭 瑞士 | CHE
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇧🇬 保加利亚 | BGR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇧🇬 保加利亚 | BGR #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇨🇭 瑞士 | CHE
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+- name: 🛑 全球拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🍃 应用净化
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - ermao.net | ♻️ 自动选择
+  - '🇳🇱[www.v2nodes.com] vless-NL-1... #2'
+  - '🇸🇬[www.v2nodes.com] vless-SG-1... #1'
+  - 🇮🇳[www.v2nodes.com] ss-IN-1561...
+  - 🏳[www.v2nodes.com] ss-
+  - 🇧🇬 保加利亚 | BGR
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇧🇬 保加利亚 | BGR #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇨🇭 瑞士 | CHE
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
+rules:
+- RULE-SET,LocalAreaNetwork,🎯 全球直连
+- RULE-SET,BanAD,🛑 全球拦截
+- RULE-SET,BanProgramAD,🍃 应用净化
+- RULE-SET,GoogleCN,🎯 全球直连
+- RULE-SET,SteamCN,🎯 全球直连
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- RULE-SET,Apple,🍎 苹果服务
+- RULE-SET,ProxyMedia,🌍 国外媒体
+- RULE-SET,Telegram,📲 电报信息
+- RULE-SET,ProxyLite,ermao.net | 🚀 节点选择
+- RULE-SET,ChinaDomain,🎯 全球直连
+- RULE-SET,ChinaCompanyIp,🎯 全球直连
+- GEOIP,CN,🎯 全球直连
+- MATCH,🐟 漏网之鱼

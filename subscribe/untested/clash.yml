@@ -1,0 +1,1332 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: true
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - localhost
+  - +.localhost
+  - +.lan
+  - +.local
+  - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  proxy-server-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    geosite:cn:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  nameserver:
+  - https://1.1.1.1/dns-query
+  - https://1.0.0.1/dns-query
+proxies:
+- type: hysteria
+  name: 🇫🇷_FR_法国_IPV4
+  server: 62.210.28.175
+  port: 24667
+  password: dongtaiwang.com
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+- type: hysteria
+  name: 🇩🇪_DE_德国_IPV4
+  server: 5.83.129.90
+  port: 54177
+  password: dongtaiwang.com
+  tls: true
+  servername: apple.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+- type: hysteria
+  name: 🇺🇸_US_美国_IPV4 (3)
+  server: 198.200.57.142
+  port: 22335
+  password: github.com/Alvin9999-newpac/fanqiang
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+- type: hysteria
+  name: 🇫🇷_FR_法国_IPV4 (2)
+  server: 163.172.117.163
+  port: 36699
+  password: dongtaiwang.com
+  tls: true
+  servername: bing.com
+  sni: bing.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
+- type: hysteria2
+  name: 🇺🇸_US_美国_IPV4 (4)
+  server: starlink-ft.251313.xyz
+  port: 443
+  password: https://xship.best
+  tls: true
+  servername: xship.top
+  sni: xship.top
+  skip-cert-verify: true
+- alterId: 0
+  cipher: auto
+  name: 防范境外势力渗透
+  network: tcp
+  port: 80
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #1'
+  network: tcp
+  port: 81
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #2'
+  network: tcp
+  port: 82
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #3'
+  network: tcp
+  port: 83
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #4'
+  network: tcp
+  port: 84
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #5'
+  network: tcp
+  port: 85
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #6'
+  network: tcp
+  port: 86
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #7'
+  network: tcp
+  port: 87
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #8'
+  network: tcp
+  port: 88
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alterId: 0
+  cipher: auto
+  name: '防范境外势力渗透 #9'
+  network: tcp
+  port: 89
+  server: 127.0.0.53
+  tls: false
+  type: vmess
+  uuid: 88888888-8888-8888-8888-888888888888
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  down: 55 Mbps
+  name: https://github.com/*********-*...
+  port: 24667
+  protocol: udp
+  server: 62.210.28.175
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+- alpn:
+  - h3
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+  down: 55 Mbps
+  name: 'github.com/*********-******/**... #1'
+  port: 23556
+  protocol: udp
+  server: 62.210.70.191
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11 Mbps
+- name: 🇺🇸 7@exclavevpn
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  port: 443
+  server: fi1.obxodvpn.us
+  sni: fi1.obxodvpn.us
+  tls: false
+  type: hysteria2
+- name: 🇸🇬210346 | ⚡️Telegram = t.me/L...
+  password: 4fa0ca1b-0742-419d-8fd2-3f698e06b206
+  port: 20443
+  server: 84.32.23.62
+  skip-cert-verify: false
+  sni: hy530899-3.w-mebel.pro
+  tls: false
+  type: hysteria2
+- name: '@V2ray_confiig'
+  obfs: salamander
+  obfs-password: qkdqum5rllpyup7h
+  password: dq6rfcyex30h1b6z
+  port: 22357
+  server: ll5xoe8j.easyiran.org
+  sni: ll5xoe8j.easyiran.org
+  tls: false
+  type: hysteria2
+- name: 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  port: 443
+  server: 54.213.89.22
+  skip-cert-verify: true
+  sni: vk.com
+  tls: false
+  type: hysteria2
+- name: 🇯🇵@FreakConfig
+  obfs: salamander
+  obfs-password: MeJA9qgoYMH4UMunHowisrbd
+  password: 02df03e3-3029-4c95-bffe-8f211b480672
+  port: 443
+  server: edge.hankli1214.xyz
+  skip-cert-verify: false
+  sni: hank.hankli1214.xyz
+  tls: false
+  type: hysteria2
+- name: 💫35@oneclickvpnkeys
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  port: 443
+  server: 177.202.75.56
+  sni: fi1.obxodvpn.us
+  tls: false
+  type: hysteria2
+- name: 🚩2@oneclickvpnkeys
+  password: 23c82941-70f4-4381-90db-bd28e9a902e9
+  port: 443
+  server: 201.8.71.59
+  sni: steel7.hadsvpn.com
+  tls: false
+  type: hysteria2
+- name: 💫9@oneclickvpnkeys
+  password: 4fa0ca1b-0742-419d-8fd2-3f698e06b206
+  port: 20443
+  server: 84.32.102.145
+  sni: auto.w-mebel.pro
+  tls: false
+  type: hysteria2
+- name: 💫32@oneclickvpnkeys
+  password: 4fa0ca1b-0742-419d-8fd2-3f698e06b206
+  port: 20443
+  server: 84.32.98.84
+  sni: hy6b373d.w-mebel.pro
+  tls: false
+  type: hysteria2
+- name: 🇺🇸210305 | ⚡️Telegram = t.me/L...
+  password: 4fa0ca1b-0742-419d-8fd2-3f698e06b206
+  port: 20445
+  server: 88.216.183.164
+  skip-cert-verify: false
+  sni: hy51290d-3.w-mebel.pro
+  tls: false
+  type: hysteria2
+- name: 💫42@oneclickvpnkeys
+  password: 4fa0ca1b-0742-419d-8fd2-3f698e06b206
+  port: 20444
+  server: 88.216.60.117
+  sni: hy60c117-2.w-mebel.pro
+  tls: false
+  type: hysteria2
+- name: '@Begoo_VPN ²⁹⁰'
+  obfs: salamander
+  obfs-password: dzcb7hv6i2kx2zze
+  password: 5bcodmhjtyfyyrqh
+  port: 36758
+  server: 91.142.73.159
+  skip-cert-verify: true
+  sni: cdn77.dmtr.ru
+  tls: false
+  type: hysteria2
+- name: 🇩🇪210343 | ⚡️Telegram = t.me/L...
+  obfs: salamander
+  obfs-password: 7922smqtd5qm70fu
+  password: 5icixgawam84vgrp
+  port: 2098
+  server: 109.70.74.213
+  skip-cert-verify: false
+  sni: 109.70.74.213
+  tls: false
+  type: hysteria2
+- name: 🇩🇪210216 | ⚡️Telegram = t.me/L...
+  obfs: salamander
+  obfs-password: 7922smqtd5qm70fu
+  password: 5ictxgawam84vgrp
+  port: 2098
+  server: 109.70.74.213
+  skip-cert-verify: false
+  sni: 109.70.74.213
+  tls: false
+  type: hysteria2
+- name: 🇩🇪210420 | ⚡️Telegram = t.me/L...
+  obfs: salamander
+  obfs-password: 7922smqtd5qm70fu
+  password: 5ictxgawam84vgrp
+  port: 2098
+  server: arsalanvpn.trapxan.ir
+  sni: arsalanvpn.trapxan.ir
+  tls: false
+  type: hysteria2
+- name: Telegram:@v2rayng3
+  obfs: salamander
+  obfs-password: uw9b2qq5rx
+  password: 6aab8efdf13945829ae3699c342be406
+  port: 443
+  server: 31.76.80.69
+  skip-cert-verify: false
+  sni: fiproxy1.lockdwn.com
+  tls: false
+  type: hysteria2
+- name: 🇫🇮6@exclavevpn
+  password: 95c61940-2823-4665-a033-d4f2218329b6
+  port: 443
+  server: 46.8.210.209
+  skip-cert-verify: true
+  sni: ru3.kinotorg.net
+  tls: false
+  type: hysteria2
+- name: 🩵+@Azarakhsh_Proxy+🩷
+  obfs: salamander
+  obfs-password: KevinZakarian
+  password: KevinZakarian
+  port: 8443
+  server: 179.61.132.96
+  skip-cert-verify: true
+  sni: 179.61.132.96
+  tls: false
+  type: hysteria2
+- name: '@v2ray313 کانالمون 😀'
+  password: Telegram--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X-
+  port: 26503
+  server: ir.config7x.site
+  skip-cert-verify: false
+  sni: hy.config7x.site
+  tls: false
+  type: hysteria2
+- name: Telegram@vpnjey
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: Telegram-Vpnjey
+  port: 54759
+  server: 179.61.138.145
+  skip-cert-verify: true
+  tls: false
+  type: hysteria2
+- name: 'Telegram@vpnjey #1'
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: Telegram-vpnjey
+  port: 36264
+  server: 179.61.138.145
+  skip-cert-verify: true
+  sni: de2.jey.cc.cd
+  tls: false
+  type: hysteria2
+- name: 'Telegram@vpnjey #2'
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: Telegram
+  port: 443
+  server: 179.61.138.145
+  skip-cert-verify: true
+  sni: de2.jey.cc.cd
+  tls: false
+  type: hysteria2
+- name: 'Telegram@vpnjey #3'
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: Telegram@vpnjey
+  port: 54759
+  server: 179.61.138.145
+  skip-cert-verify: true
+  tls: false
+  type: hysteria2
+- name: 'Telegram@vpnjey #4'
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: VPNJEY
+  port: 36264
+  server: 179.61.138.145
+  skip-cert-verify: true
+  sni: de2.jey.cc.cd
+  tls: false
+  type: hysteria2
+- name: 💫61@oneclickvpnkeys
+  obfs: salamander
+  obfs-password: ZuPf4OcXKvotJdDxlTus
+  password: YV1sd3tfCZngTtnvRmy7
+  port: 443
+  server: 206.189.229.48
+  skip-cert-verify: true
+  sni: www.microsoft.com
+  tls: false
+  type: hysteria2
+- name: برای اتصال دائمی جوین شو🍥 Tele...
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.188.143
+  skip-cert-verify: false
+  sni: bl1.nexfile.net
+  tls: false
+  type: hysteria2
+- name: '@V2rayNGVPN > کانفیگ رایگان'
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.101
+  skip-cert-verify: false
+  sni: pl1.nexfile.net
+  tls: false
+  type: hysteria2
+- name: برای اتصال دائمی جوین شو☄️ Tel...
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.106
+  skip-cert-verify: false
+  sni: pl2.nexfile.net
+  tls: false
+  type: hysteria2
+- name: 'برای اتصال دائمی جوین شو☄️ Tel... #1'
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.142
+  skip-cert-verify: false
+  sni: pl3.nexfile.net
+  tls: false
+  type: hysteria2
+- name: 'برای اتصال دائمی جوین شو☄️ Tel... #2'
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.149
+  skip-cert-verify: false
+  sni: pl2.nexfile.net
+  tls: false
+  type: hysteria2
+- name: 🚩45@oneclickvpnkeys
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 2.27.210.6
+  skip-cert-verify: true
+  sni: lv2.nexfile.net
+  tls: false
+  type: hysteria2
+- name: '@KAFING_2'
+  obfs: salamander
+  obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
+  password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+  port: 35000
+  server: 181.214.99.162
+  skip-cert-verify: true
+  sni: api.kermanshahi.org
+  tls: false
+  type: hysteria2
+- name: '@KAFING_2 #2'
+  obfs: salamander
+  obfs-password: '@JavidnamanIran-Javid-SHAH-KingRezaPahlavi'
+  password: b4bd0613-ff7c-4f2f-954d-185915e6ddad
+  port: 35000
+  server: 5.175.249.174
+  skip-cert-verify: true
+  sni: api.kermanshahi.org
+  tls: false
+  type: hysteria2
+- name: 💫31@oneclickvpnkeys
+  password: ba3aeb91-2ed0-45d3-8dcf-81e5ed45168b
+  port: 8443
+  server: 89.105.218.106
+  sni: speedtestmark.com
+  tls: false
+  type: hysteria2
+- name: 🇭🇰210323 | ⚡️Telegram = t.me/L...
+  obfs: salamander
+  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
+  port: 5010
+  server: 152.32.254.68
+  skip-cert-verify: false
+  sni: nas.aizhzo.com
+  tls: false
+  type: hysteria2
+- name: '@Selinc'
+  obfs: salamander
+  obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9
+  password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ
+  port: 5010
+  server: nas.aizhzo.com
+  skip-cert-verify: false
+  sni: nas.aizhzo.com
+  tls: false
+  type: hysteria2
+- name: 'Channel : @Daily_Configs'
+  obfs: salamander
+  obfs-password: 7922smqtd5qm70fu
+  password: h05ff7mbgbj6dhwy
+  port: 2098
+  server: vip.trapxan.ir
+  skip-cert-verify: false
+  sni: vip.trapxan.ir
+  tls: false
+  type: hysteria2
+- name: '@vpnbaz'
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  port: 443
+  server: 130.49.161.70
+  skip-cert-verify: false
+  sni: hy2.aspidnet.xyz
+  tls: false
+  type: hysteria2
+- alpn:
+  - h3
+  client-fingerprint: chrome
+  name: 🇱🇻hysteria
+  obfs: salamander
+  obfs-password: 2gg0tx9d2etug8n9
+  password: rjj39jg8iphgd06h
+  port: 44100
+  server: pro2.riziro.ir
+  sni: pro2.riziro.ir
+  tls: false
+  type: hysteria2
+- name: '@fastkanfig کانال تلگرام'
+  obfs: salamander
+  obfs-password: b6d1f3888ab1d90dd11aac1dce427b81
+  password: tnnls
+  port: 443
+  server: bwdf2fnt.xn--e1aatfr8bwa.online
+  skip-cert-verify: false
+  sni: bwdf2fnt.xn--e1aatfr8bwa.online
+  tls: false
+  type: hysteria2
+- name: 'Telegram@vpnjey #5'
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: vpnJey
+  port: 36264
+  server: 179.61.138.145
+  skip-cert-verify: true
+  sni: de2.jey.cc.cd
+  tls: false
+  type: hysteria2
+- name: 'Telegram@vpnjey #6'
+  obfs: salamander
+  obfs-password: Telegram@vpnjey
+  password: vpnjey
+  port: 36264
+  server: 179.61.138.145
+  skip-cert-verify: true
+  sni: de2.jey.cc.cd
+  tls: false
+  type: hysteria2
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  auth_str: dongtaiwang.com
+  down: 1000
+  name: 🇩🇪 德国 | DEU
+  port: 54177
+  protocol: udp
+  server: 5.83.129.90
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
+  up: 500
+- auth: gf1:gfhysteria2024
+  name: 🇫🇷 法国 | FRA
+  password: gf1:gfhysteria2024
+  port: 443
+  server: 173.212.201.85
+  skip-cert-verify: true
+  sni: www.docker.com
+  type: hysteria2
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  auth_str: dongtaiwang.com
+  down: 55
+  name: 🇫🇷 法国 | FRA 2
+  port: 36699
+  protocol: none
+  server: 163.172.117.163
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11
+- auth: b0917015b656b3dd2286b5633af0c5c1
+  name: '🇭🇰 香港 | HKG #1'
+  password: b0917015b656b3dd2286b5633af0c5c1
+  port: 50160
+  server: 31.57.248.176
+  skip-cert-verify: true
+  sni: www.bing.com%23%e9%a6%83%e5%9a%9f%e9%a6%83%e5%9a%a2%7chk%7c%40wxgqlfx%7c147
+  tls: false
+  type: hysteria2
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
+  name: '🇰🇷 韩国 | KOR #1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 52.78.103.20
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
+  name: '🇸🇬 新加坡 | SGP #1'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 443
+  server: 47.128.253.100
+  skip-cert-verify: true
+  sni: www.bing.com
+  tls: false
+  type: hysteria2
+- alpn:
+  - h3
+  auth-str: github.com/Alvin9999-newpac/fanqiang
+  auth_str: github.com/Alvin9999-newpac/fanqiang
+  down: 55
+  name: 🇺🇸 美国 | USA
+  port: 22335
+  protocol: none
+  server: 198.200.57.142
+  skip-cert-verify: true
+  sni: bing.com
+  type: hysteria
+  up: 11
+- name: '🇫🇷 法国 | FRA #1'
+  password: gf1
+  port: 443
+  server: 173.212.201.85
+  skip-cert-verify: true
+  sni: www.docker.com
+  tls: false
+  type: hysteria2
+- name: 🇰🇷 韩国 | KOR
+  server: 150-230-252-217.liao.kdns.fr
+  port: 50160
+  type: hysteria2
+  password: 9cfc9458e48c028ec03ff86ebc71c744
+  auth: 9cfc9458e48c028ec03ff86ebc71c744
+  skip-cert-verify: true
+- name: 🇰🇷 韩国 | KOR 2
+  server: 43.203.254.159
+  port: 443
+  type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
+  sni: www.bing.com
+  skip-cert-verify: true
+proxy-groups:
+- name: ermao.net | 🚀 节点选择
+  type: select
+  proxies:
+  - ermao.net | ♻️ 自动选择
+  - DIRECT
+  - 🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇫🇷_FR_法国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 防范境外势力渗透
+  - '防范境外势力渗透 #1'
+  - '防范境外势力渗透 #2'
+  - '防范境外势力渗透 #3'
+  - '防范境外势力渗透 #4'
+  - '防范境外势力渗透 #5'
+  - '防范境外势力渗透 #6'
+  - '防范境外势力渗透 #7'
+  - '防范境外势力渗透 #8'
+  - '防范境外势力渗透 #9'
+  - https://github.com/*********-*...
+  - 'github.com/*********-******/**... #1'
+  - 🇺🇸 7@exclavevpn
+  - 🇸🇬210346 | ⚡️Telegram = t.me/L...
+  - '@V2ray_confiig'
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - 🇯🇵@FreakConfig
+  - 💫35@oneclickvpnkeys
+  - 🚩2@oneclickvpnkeys
+  - 💫9@oneclickvpnkeys
+  - 💫32@oneclickvpnkeys
+  - 🇺🇸210305 | ⚡️Telegram = t.me/L...
+  - 💫42@oneclickvpnkeys
+  - '@Begoo_VPN ²⁹⁰'
+  - 🇩🇪210343 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210216 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210420 | ⚡️Telegram = t.me/L...
+  - Telegram:@v2rayng3
+  - 🇫🇮6@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - '@v2ray313 کانالمون 😀'
+  - Telegram@vpnjey
+  - 'Telegram@vpnjey #1'
+  - 'Telegram@vpnjey #2'
+  - 'Telegram@vpnjey #3'
+  - 'Telegram@vpnjey #4'
+  - 💫61@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🍥 Tele...
+  - '@V2rayNGVPN > کانفیگ رایگان'
+  - برای اتصال دائمی جوین شو☄️ Tel...
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #1'
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #2'
+  - 🚩45@oneclickvpnkeys
+  - '@KAFING_2'
+  - '@KAFING_2 #2'
+  - 💫31@oneclickvpnkeys
+  - 🇭🇰210323 | ⚡️Telegram = t.me/L...
+  - '@Selinc'
+  - 'Channel : @Daily_Configs'
+  - '@vpnbaz'
+  - 🇱🇻hysteria
+  - '@fastkanfig کانال تلگرام'
+  - 'Telegram@vpnjey #5'
+  - 'Telegram@vpnjey #6'
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
+  - '🇭🇰 香港 | HKG #1'
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇸🇬 新加坡 | SGP #1'
+  - 🇺🇸 美国 | USA
+  - '🇫🇷 法国 | FRA #1'
+  - 🇰🇷 韩国 | KOR
+  - 🇰🇷 韩国 | KOR 2
+- name: ermao.net | ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇫🇷_FR_法国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 防范境外势力渗透
+  - '防范境外势力渗透 #1'
+  - '防范境外势力渗透 #2'
+  - '防范境外势力渗透 #3'
+  - '防范境外势力渗透 #4'
+  - '防范境外势力渗透 #5'
+  - '防范境外势力渗透 #6'
+  - '防范境外势力渗透 #7'
+  - '防范境外势力渗透 #8'
+  - '防范境外势力渗透 #9'
+  - https://github.com/*********-*...
+  - 'github.com/*********-******/**... #1'
+  - 🇺🇸 7@exclavevpn
+  - 🇸🇬210346 | ⚡️Telegram = t.me/L...
+  - '@V2ray_confiig'
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - 🇯🇵@FreakConfig
+  - 💫35@oneclickvpnkeys
+  - 🚩2@oneclickvpnkeys
+  - 💫9@oneclickvpnkeys
+  - 💫32@oneclickvpnkeys
+  - 🇺🇸210305 | ⚡️Telegram = t.me/L...
+  - 💫42@oneclickvpnkeys
+  - '@Begoo_VPN ²⁹⁰'
+  - 🇩🇪210343 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210216 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210420 | ⚡️Telegram = t.me/L...
+  - Telegram:@v2rayng3
+  - 🇫🇮6@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - '@v2ray313 کانالمون 😀'
+  - Telegram@vpnjey
+  - 'Telegram@vpnjey #1'
+  - 'Telegram@vpnjey #2'
+  - 'Telegram@vpnjey #3'
+  - 'Telegram@vpnjey #4'
+  - 💫61@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🍥 Tele...
+  - '@V2rayNGVPN > کانفیگ رایگان'
+  - برای اتصال دائمی جوین شو☄️ Tel...
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #1'
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #2'
+  - 🚩45@oneclickvpnkeys
+  - '@KAFING_2'
+  - '@KAFING_2 #2'
+  - 💫31@oneclickvpnkeys
+  - 🇭🇰210323 | ⚡️Telegram = t.me/L...
+  - '@Selinc'
+  - 'Channel : @Daily_Configs'
+  - '@vpnbaz'
+  - 🇱🇻hysteria
+  - '@fastkanfig کانال تلگرام'
+  - 'Telegram@vpnjey #5'
+  - 'Telegram@vpnjey #6'
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
+  - '🇭🇰 香港 | HKG #1'
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇸🇬 新加坡 | SGP #1'
+  - 🇺🇸 美国 | USA
+  - '🇫🇷 法国 | FRA #1'
+  - 🇰🇷 韩国 | KOR
+  - 🇰🇷 韩国 | KOR 2
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🌍 国外媒体
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+  - 🎯 全球直连
+  - 🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇫🇷_FR_法国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 防范境外势力渗透
+  - '防范境外势力渗透 #1'
+  - '防范境外势力渗透 #2'
+  - '防范境外势力渗透 #3'
+  - '防范境外势力渗透 #4'
+  - '防范境外势力渗透 #5'
+  - '防范境外势力渗透 #6'
+  - '防范境外势力渗透 #7'
+  - '防范境外势力渗透 #8'
+  - '防范境外势力渗透 #9'
+  - https://github.com/*********-*...
+  - 'github.com/*********-******/**... #1'
+  - 🇺🇸 7@exclavevpn
+  - 🇸🇬210346 | ⚡️Telegram = t.me/L...
+  - '@V2ray_confiig'
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - 🇯🇵@FreakConfig
+  - 💫35@oneclickvpnkeys
+  - 🚩2@oneclickvpnkeys
+  - 💫9@oneclickvpnkeys
+  - 💫32@oneclickvpnkeys
+  - 🇺🇸210305 | ⚡️Telegram = t.me/L...
+  - 💫42@oneclickvpnkeys
+  - '@Begoo_VPN ²⁹⁰'
+  - 🇩🇪210343 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210216 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210420 | ⚡️Telegram = t.me/L...
+  - Telegram:@v2rayng3
+  - 🇫🇮6@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - '@v2ray313 کانالمون 😀'
+  - Telegram@vpnjey
+  - 'Telegram@vpnjey #1'
+  - 'Telegram@vpnjey #2'
+  - 'Telegram@vpnjey #3'
+  - 'Telegram@vpnjey #4'
+  - 💫61@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🍥 Tele...
+  - '@V2rayNGVPN > کانفیگ رایگان'
+  - برای اتصال دائمی جوین شو☄️ Tel...
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #1'
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #2'
+  - 🚩45@oneclickvpnkeys
+  - '@KAFING_2'
+  - '@KAFING_2 #2'
+  - 💫31@oneclickvpnkeys
+  - 🇭🇰210323 | ⚡️Telegram = t.me/L...
+  - '@Selinc'
+  - 'Channel : @Daily_Configs'
+  - '@vpnbaz'
+  - 🇱🇻hysteria
+  - '@fastkanfig کانال تلگرام'
+  - 'Telegram@vpnjey #5'
+  - 'Telegram@vpnjey #6'
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
+  - '🇭🇰 香港 | HKG #1'
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇸🇬 新加坡 | SGP #1'
+  - 🇺🇸 美国 | USA
+  - '🇫🇷 法国 | FRA #1'
+  - 🇰🇷 韩国 | KOR
+  - 🇰🇷 韩国 | KOR 2
+- name: 📲 电报信息
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - 🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇫🇷_FR_法国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 防范境外势力渗透
+  - '防范境外势力渗透 #1'
+  - '防范境外势力渗透 #2'
+  - '防范境外势力渗透 #3'
+  - '防范境外势力渗透 #4'
+  - '防范境外势力渗透 #5'
+  - '防范境外势力渗透 #6'
+  - '防范境外势力渗透 #7'
+  - '防范境外势力渗透 #8'
+  - '防范境外势力渗透 #9'
+  - https://github.com/*********-*...
+  - 'github.com/*********-******/**... #1'
+  - 🇺🇸 7@exclavevpn
+  - 🇸🇬210346 | ⚡️Telegram = t.me/L...
+  - '@V2ray_confiig'
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - 🇯🇵@FreakConfig
+  - 💫35@oneclickvpnkeys
+  - 🚩2@oneclickvpnkeys
+  - 💫9@oneclickvpnkeys
+  - 💫32@oneclickvpnkeys
+  - 🇺🇸210305 | ⚡️Telegram = t.me/L...
+  - 💫42@oneclickvpnkeys
+  - '@Begoo_VPN ²⁹⁰'
+  - 🇩🇪210343 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210216 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210420 | ⚡️Telegram = t.me/L...
+  - Telegram:@v2rayng3
+  - 🇫🇮6@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - '@v2ray313 کانالمون 😀'
+  - Telegram@vpnjey
+  - 'Telegram@vpnjey #1'
+  - 'Telegram@vpnjey #2'
+  - 'Telegram@vpnjey #3'
+  - 'Telegram@vpnjey #4'
+  - 💫61@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🍥 Tele...
+  - '@V2rayNGVPN > کانفیگ رایگان'
+  - برای اتصال دائمی جوین شو☄️ Tel...
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #1'
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #2'
+  - 🚩45@oneclickvpnkeys
+  - '@KAFING_2'
+  - '@KAFING_2 #2'
+  - 💫31@oneclickvpnkeys
+  - 🇭🇰210323 | ⚡️Telegram = t.me/L...
+  - '@Selinc'
+  - 'Channel : @Daily_Configs'
+  - '@vpnbaz'
+  - 🇱🇻hysteria
+  - '@fastkanfig کانال تلگرام'
+  - 'Telegram@vpnjey #5'
+  - 'Telegram@vpnjey #6'
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
+  - '🇭🇰 香港 | HKG #1'
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇸🇬 新加坡 | SGP #1'
+  - 🇺🇸 美国 | USA
+  - '🇫🇷 法国 | FRA #1'
+  - 🇰🇷 韩国 | KOR
+  - 🇰🇷 韩国 | KOR 2
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - 🎯 全球直连
+  - ermao.net | 🚀 节点选择
+  - 🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇫🇷_FR_法国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 防范境外势力渗透
+  - '防范境外势力渗透 #1'
+  - '防范境外势力渗透 #2'
+  - '防范境外势力渗透 #3'
+  - '防范境外势力渗透 #4'
+  - '防范境外势力渗透 #5'
+  - '防范境外势力渗透 #6'
+  - '防范境外势力渗透 #7'
+  - '防范境外势力渗透 #8'
+  - '防范境外势力渗透 #9'
+  - https://github.com/*********-*...
+  - 'github.com/*********-******/**... #1'
+  - 🇺🇸 7@exclavevpn
+  - 🇸🇬210346 | ⚡️Telegram = t.me/L...
+  - '@V2ray_confiig'
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - 🇯🇵@FreakConfig
+  - 💫35@oneclickvpnkeys
+  - 🚩2@oneclickvpnkeys
+  - 💫9@oneclickvpnkeys
+  - 💫32@oneclickvpnkeys
+  - 🇺🇸210305 | ⚡️Telegram = t.me/L...
+  - 💫42@oneclickvpnkeys
+  - '@Begoo_VPN ²⁹⁰'
+  - 🇩🇪210343 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210216 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210420 | ⚡️Telegram = t.me/L...
+  - Telegram:@v2rayng3
+  - 🇫🇮6@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - '@v2ray313 کانالمون 😀'
+  - Telegram@vpnjey
+  - 'Telegram@vpnjey #1'
+  - 'Telegram@vpnjey #2'
+  - 'Telegram@vpnjey #3'
+  - 'Telegram@vpnjey #4'
+  - 💫61@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🍥 Tele...
+  - '@V2rayNGVPN > کانفیگ رایگان'
+  - برای اتصال دائمی جوین شو☄️ Tel...
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #1'
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #2'
+  - 🚩45@oneclickvpnkeys
+  - '@KAFING_2'
+  - '@KAFING_2 #2'
+  - 💫31@oneclickvpnkeys
+  - 🇭🇰210323 | ⚡️Telegram = t.me/L...
+  - '@Selinc'
+  - 'Channel : @Daily_Configs'
+  - '@vpnbaz'
+  - 🇱🇻hysteria
+  - '@fastkanfig کانال تلگرام'
+  - 'Telegram@vpnjey #5'
+  - 'Telegram@vpnjey #6'
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
+  - '🇭🇰 香港 | HKG #1'
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇸🇬 新加坡 | SGP #1'
+  - 🇺🇸 美国 | USA
+  - '🇫🇷 法国 | FRA #1'
+  - 🇰🇷 韩国 | KOR
+  - 🇰🇷 韩国 | KOR 2
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - 🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇫🇷_FR_法国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 防范境外势力渗透
+  - '防范境外势力渗透 #1'
+  - '防范境外势力渗透 #2'
+  - '防范境外势力渗透 #3'
+  - '防范境外势力渗透 #4'
+  - '防范境外势力渗透 #5'
+  - '防范境外势力渗透 #6'
+  - '防范境外势力渗透 #7'
+  - '防范境外势力渗透 #8'
+  - '防范境外势力渗透 #9'
+  - https://github.com/*********-*...
+  - 'github.com/*********-******/**... #1'
+  - 🇺🇸 7@exclavevpn
+  - 🇸🇬210346 | ⚡️Telegram = t.me/L...
+  - '@V2ray_confiig'
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - 🇯🇵@FreakConfig
+  - 💫35@oneclickvpnkeys
+  - 🚩2@oneclickvpnkeys
+  - 💫9@oneclickvpnkeys
+  - 💫32@oneclickvpnkeys
+  - 🇺🇸210305 | ⚡️Telegram = t.me/L...
+  - 💫42@oneclickvpnkeys
+  - '@Begoo_VPN ²⁹⁰'
+  - 🇩🇪210343 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210216 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210420 | ⚡️Telegram = t.me/L...
+  - Telegram:@v2rayng3
+  - 🇫🇮6@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - '@v2ray313 کانالمون 😀'
+  - Telegram@vpnjey
+  - 'Telegram@vpnjey #1'
+  - 'Telegram@vpnjey #2'
+  - 'Telegram@vpnjey #3'
+  - 'Telegram@vpnjey #4'
+  - 💫61@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🍥 Tele...
+  - '@V2rayNGVPN > کانفیگ رایگان'
+  - برای اتصال دائمی جوین شو☄️ Tel...
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #1'
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #2'
+  - 🚩45@oneclickvpnkeys
+  - '@KAFING_2'
+  - '@KAFING_2 #2'
+  - 💫31@oneclickvpnkeys
+  - 🇭🇰210323 | ⚡️Telegram = t.me/L...
+  - '@Selinc'
+  - 'Channel : @Daily_Configs'
+  - '@vpnbaz'
+  - 🇱🇻hysteria
+  - '@fastkanfig کانال تلگرام'
+  - 'Telegram@vpnjey #5'
+  - 'Telegram@vpnjey #6'
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
+  - '🇭🇰 香港 | HKG #1'
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇸🇬 新加坡 | SGP #1'
+  - 🇺🇸 美国 | USA
+  - '🇫🇷 法国 | FRA #1'
+  - 🇰🇷 韩国 | KOR
+  - 🇰🇷 韩国 | KOR 2
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+- name: 🛑 全球拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🍃 应用净化
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - ermao.net | ♻️ 自动选择
+  - 🇫🇷_FR_法国_IPV4
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇫🇷_FR_法国_IPV4 (2)
+  - 🇺🇸_US_美国_IPV4 (4)
+  - 防范境外势力渗透
+  - '防范境外势力渗透 #1'
+  - '防范境外势力渗透 #2'
+  - '防范境外势力渗透 #3'
+  - '防范境外势力渗透 #4'
+  - '防范境外势力渗透 #5'
+  - '防范境外势力渗透 #6'
+  - '防范境外势力渗透 #7'
+  - '防范境外势力渗透 #8'
+  - '防范境外势力渗透 #9'
+  - https://github.com/*********-*...
+  - 'github.com/*********-******/**... #1'
+  - 🇺🇸 7@exclavevpn
+  - 🇸🇬210346 | ⚡️Telegram = t.me/L...
+  - '@V2ray_confiig'
+  - 🇺🇸139909 | ⚡️Telegram = t.me/S...
+  - 🇯🇵@FreakConfig
+  - 💫35@oneclickvpnkeys
+  - 🚩2@oneclickvpnkeys
+  - 💫9@oneclickvpnkeys
+  - 💫32@oneclickvpnkeys
+  - 🇺🇸210305 | ⚡️Telegram = t.me/L...
+  - 💫42@oneclickvpnkeys
+  - '@Begoo_VPN ²⁹⁰'
+  - 🇩🇪210343 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210216 | ⚡️Telegram = t.me/L...
+  - 🇩🇪210420 | ⚡️Telegram = t.me/L...
+  - Telegram:@v2rayng3
+  - 🇫🇮6@exclavevpn
+  - 🩵+@Azarakhsh_Proxy+🩷
+  - '@v2ray313 کانالمون 😀'
+  - Telegram@vpnjey
+  - 'Telegram@vpnjey #1'
+  - 'Telegram@vpnjey #2'
+  - 'Telegram@vpnjey #3'
+  - 'Telegram@vpnjey #4'
+  - 💫61@oneclickvpnkeys
+  - برای اتصال دائمی جوین شو🍥 Tele...
+  - '@V2rayNGVPN > کانفیگ رایگان'
+  - برای اتصال دائمی جوین شو☄️ Tel...
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #1'
+  - 'برای اتصال دائمی جوین شو☄️ Tel... #2'
+  - 🚩45@oneclickvpnkeys
+  - '@KAFING_2'
+  - '@KAFING_2 #2'
+  - 💫31@oneclickvpnkeys
+  - 🇭🇰210323 | ⚡️Telegram = t.me/L...
+  - '@Selinc'
+  - 'Channel : @Daily_Configs'
+  - '@vpnbaz'
+  - 🇱🇻hysteria
+  - '@fastkanfig کانال تلگرام'
+  - 'Telegram@vpnjey #5'
+  - 'Telegram@vpnjey #6'
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA
+  - 🇫🇷 法国 | FRA 2
+  - '🇭🇰 香港 | HKG #1'
+  - '🇰🇷 韩国 | KOR #1'
+  - '🇸🇬 新加坡 | SGP #1'
+  - 🇺🇸 美国 | USA
+  - '🇫🇷 法国 | FRA #1'
+  - 🇰🇷 韩国 | KOR
+  - 🇰🇷 韩国 | KOR 2
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
+rules:
+- RULE-SET,LocalAreaNetwork,🎯 全球直连
+- RULE-SET,BanAD,🛑 全球拦截
+- RULE-SET,BanProgramAD,🍃 应用净化
+- RULE-SET,GoogleCN,🎯 全球直连
+- RULE-SET,SteamCN,🎯 全球直连
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- RULE-SET,Apple,🍎 苹果服务
+- RULE-SET,ProxyMedia,🌍 国外媒体
+- RULE-SET,Telegram,📲 电报信息
+- RULE-SET,ProxyLite,ermao.net | 🚀 节点选择
+- RULE-SET,ChinaDomain,🎯 全球直连
+- RULE-SET,ChinaCompanyIp,🎯 全球直连
+- GEOIP,CN,🎯 全球直连
+- MATCH,🐟 漏网之鱼
