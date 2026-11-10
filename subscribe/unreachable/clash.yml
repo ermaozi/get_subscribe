@@ -38,6 +38,28 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
+- type: vmess
+  name: 🇺🇸_US_美国_IPV4 (3)
+  server: 23.94.83.37
+  port: 52080
+  uuid: 355c1760-9bde-4b77-916b-5191e7f704a3
+  cipher: auto
+  alterId: 0
+  tls: false
+  servername: down-cdn.dingtalk.com
+  sni: down-cdn.dingtalk.com
+  network: http
+  http-opts:
+    path:
+    - /QQqun-737805443
+    headers:
+      Host:
+      - down-cdn.dingtalk.com
+- name: '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  port: 443
+  server: 66.163.127.154
+  type: trojan
 - alpn:
   - http/1.1
   client-fingerprint: firefox
@@ -56,322 +78,79 @@ proxies:
     headers:
       Host: speedtest.danfengno1.kdns.fr
     path: /danfeng-public-ng3zjr-qba1sq-5pqc-59s5q5st
+- cipher: chacha20-ietf-poly1305
+  name: '🇨🇿 捷克 | CZE #1'
+  password: KKmi4xBN5s0-9Oz49g7zkH4l0LWq6Uaq
+  port: 8044
+  server: 86.54.82.116
+  type: ss
+  udp: true
+- client-fingerprint: chrome
+  name: '🇩🇪 德国 | DEU #3'
+  network: ws
+  port: 8443
+  server: 142.111.77.179
+  servername: fs.qicai99.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  ws-opts:
+    headers:
+      Host: fs.qicai99.com
+    path: /
+- client-fingerprint: random
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc-ru
+  name: 🇷🇺 俄罗斯 | RUS
+  network: grpc
+  port: 443
+  server: xsru1.ddnsfree.com
+  servername: xsru1.ddnsfree.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
 - alpn:
   - h2
   client-fingerprint: ios
   grpc-opts:
     grpc-mode: gun
-    grpc-service-name: api.v1.FeedService
-  name: 🇳🇱 荷兰 | NLD
+    grpc-service-name: mobile.api.Event
+  name: 🇷🇺 俄罗斯 | RUS 2
   network: grpc
   port: 443
-  server: fetch.mediacorphub.org
-  servername: fetch.mediacorphub.org
+  server: vps2.nemnogogo.com
+  servername: vps2.nemnogogo.com
   tls: true
   type: vless
   udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: edge
+  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
+- client-fingerprint: random
   grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: api.v1.FeedService
-  name: 🇳🇱 荷兰 | NLD 2
+    grpc-service-name: ''
+  name: '🇷🇺 俄罗斯 | RUS #1'
   network: grpc
   port: 443
-  server: rpc.mediacorphub.org
-  servername: rpc.mediacorphub.org
+  server: xsru1.ddnsfree.com
+  servername: xsru1.ddnsfree.com
   tls: true
   type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: edge
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: api.v1.FeedService
-  name: 🇳🇱 荷兰 | NLD 3
-  network: grpc
-  port: 443
-  server: relay.mediacorphub.org
-  servername: relay.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: edge
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: home.v2.MetricsService
-  name: 🇳🇱 荷兰 | NLD 5
-  network: grpc
-  port: 443
-  server: img.mediacorphub.org
-  servername: img.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: ios
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: stats.v2.StreamService
-  name: 🇳🇱 荷兰 | NLD 7
-  network: grpc
-  port: 443
-  server: images.mediacorphub.org
-  servername: images.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: hub.v1.ObjectService
-  name: 🇳🇱 荷兰 | NLD 8
-  network: grpc
-  port: 443
-  server: edge.mediacorphub.org
-  servername: edge.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: hub.v1.ObjectService
-  name: 🇳🇱 荷兰 | NLD 9
-  network: grpc
-  port: 443
-  server: 89.105.195.151
-  servername: assets.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: home.v2.MetricsService
-  name: 🇳🇱 荷兰 | NLD 10
-  network: grpc
-  port: 443
-  server: net.mediacorphub.org
-  servername: net.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: stats.v2.StreamService
-  name: 🇳🇱 荷兰 | NLD 12
-  network: grpc
-  port: 443
-  server: cdn.mediacorphub.org
-  servername: cdn.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: home.v2.MetricsService
-  name: 🇳🇱 荷兰 | NLD 14
-  network: grpc
-  port: 443
-  server: 89.105.195.149
-  servername: data.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: edge
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: hub.v1.ObjectService
-  name: 🇳🇱 荷兰 | NLD 16
-  network: grpc
-  port: 443
-  server: assets.mediacorphub.org
-  servername: assets.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: gw.v2.PushService
-  name: 🇳🇱 荷兰 | NLD 18
-  network: grpc
-  port: 443
-  server: 89.105.195.148
-  servername: api.mediacorphub.org
-  tls: true
-  type: vless
-  udp: true
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
 - alpn:
   - h2
   client-fingerprint: ios
   grpc-opts:
     grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #1'
+  name: '🇷🇺 俄罗斯 | RUS #2'
   network: grpc
   port: 443
-  server: fetch.mediacorphub.org
-  servername: fetch.mediacorphub.org
+  server: vps2.nemnogogo.com
+  servername: vps2.nemnogogo.com
   tls: true
   type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #2'
-  network: grpc
-  port: 443
-  server: rpc.mediacorphub.org
-  servername: rpc.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #3'
-  network: grpc
-  port: 443
-  server: relay.mediacorphub.org
-  servername: relay.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #5'
-  network: grpc
-  port: 443
-  server: img.mediacorphub.org
-  servername: img.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #7'
-  network: grpc
-  port: 443
-  server: images.mediacorphub.org
-  servername: images.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #8'
-  network: grpc
-  port: 443
-  server: edge.mediacorphub.org
-  servername: edge.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #9'
-  network: grpc
-  port: 443
-  server: 89.105.195.151
-  servername: assets.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #10'
-  network: grpc
-  port: 443
-  server: net.mediacorphub.org
-  servername: net.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #12'
-  network: grpc
-  port: 443
-  server: cdn.mediacorphub.org
-  servername: cdn.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #14'
-  network: grpc
-  port: 443
-  server: 89.105.195.149
-  servername: data.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- alpn:
-  - h2
-  client-fingerprint: edge
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #16'
-  network: grpc
-  port: 443
-  server: assets.mediacorphub.org
-  servername: assets.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
-- client-fingerprint: firefox
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇳🇱 荷兰 | NLD #18'
-  network: grpc
-  port: 443
-  server: 89.105.195.148
-  servername: api.mediacorphub.org
-  tls: true
-  type: vless
-  uuid: 1653818d-532e-46be-b825-384107fb7c3a
+  uuid: 95f85937-7b95-45c4-8d69-95da6a978569
 - client-fingerprint: firefox
   name: AT_speednode_0002
   network: ws
@@ -422,89 +201,41 @@ proxies:
   type: vless
   udp: true
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: 🇮🇹 意大利 | ITA 7
-  server: msk13.gacvpn.site
-  port: 443
-  type: vless
-  uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: 8POqoppCCmjPFqoCsXzaH-kEdYTDXczdTUXxoGfKO0k
-    short-id: 44e85040332f54
-  servername: it-edge.gacvpn.site
-  client-fingerprint: firefox
-  network: tcp
-  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
+  - 🇺🇸_US_美国_IPV4 (3)
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - 🇺🇸 US1@ripaojiedian
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 5
-  - 🇳🇱 荷兰 | NLD 7
-  - 🇳🇱 荷兰 | NLD 8
-  - 🇳🇱 荷兰 | NLD 9
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇳🇱 荷兰 | NLD 12
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱 荷兰 | NLD 16
-  - 🇳🇱 荷兰 | NLD 18
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #2'
-  - '🇳🇱 荷兰 | NLD #3'
-  - '🇳🇱 荷兰 | NLD #5'
-  - '🇳🇱 荷兰 | NLD #7'
-  - '🇳🇱 荷兰 | NLD #8'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱 荷兰 | NLD #10'
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇳🇱 荷兰 | NLD #14'
-  - '🇳🇱 荷兰 | NLD #16'
-  - '🇳🇱 荷兰 | NLD #18'
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇷🇺 俄罗斯 | RUS
+  - 🇷🇺 俄罗斯 | RUS 2
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇷🇺 俄罗斯 | RUS #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇮🇹 意大利 | ITA 7
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
+  - 🇺🇸_US_美国_IPV4 (3)
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - 🇺🇸 US1@ripaojiedian
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 5
-  - 🇳🇱 荷兰 | NLD 7
-  - 🇳🇱 荷兰 | NLD 8
-  - 🇳🇱 荷兰 | NLD 9
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇳🇱 荷兰 | NLD 12
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱 荷兰 | NLD 16
-  - 🇳🇱 荷兰 | NLD 18
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #2'
-  - '🇳🇱 荷兰 | NLD #3'
-  - '🇳🇱 荷兰 | NLD #5'
-  - '🇳🇱 荷兰 | NLD #7'
-  - '🇳🇱 荷兰 | NLD #8'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱 荷兰 | NLD #10'
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇳🇱 荷兰 | NLD #14'
-  - '🇳🇱 荷兰 | NLD #16'
-  - '🇳🇱 荷兰 | NLD #18'
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇷🇺 俄罗斯 | RUS
+  - 🇷🇺 俄罗斯 | RUS 2
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇷🇺 俄罗斯 | RUS #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇮🇹 意大利 | ITA 7
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -514,141 +245,73 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
+  - 🇺🇸_US_美国_IPV4 (3)
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - 🇺🇸 US1@ripaojiedian
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 5
-  - 🇳🇱 荷兰 | NLD 7
-  - 🇳🇱 荷兰 | NLD 8
-  - 🇳🇱 荷兰 | NLD 9
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇳🇱 荷兰 | NLD 12
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱 荷兰 | NLD 16
-  - 🇳🇱 荷兰 | NLD 18
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #2'
-  - '🇳🇱 荷兰 | NLD #3'
-  - '🇳🇱 荷兰 | NLD #5'
-  - '🇳🇱 荷兰 | NLD #7'
-  - '🇳🇱 荷兰 | NLD #8'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱 荷兰 | NLD #10'
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇳🇱 荷兰 | NLD #14'
-  - '🇳🇱 荷兰 | NLD #16'
-  - '🇳🇱 荷兰 | NLD #18'
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇷🇺 俄罗斯 | RUS
+  - 🇷🇺 俄罗斯 | RUS 2
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇷🇺 俄罗斯 | RUS #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇮🇹 意大利 | ITA 7
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
+  - 🇺🇸_US_美国_IPV4 (3)
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - 🇺🇸 US1@ripaojiedian
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 5
-  - 🇳🇱 荷兰 | NLD 7
-  - 🇳🇱 荷兰 | NLD 8
-  - 🇳🇱 荷兰 | NLD 9
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇳🇱 荷兰 | NLD 12
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱 荷兰 | NLD 16
-  - 🇳🇱 荷兰 | NLD 18
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #2'
-  - '🇳🇱 荷兰 | NLD #3'
-  - '🇳🇱 荷兰 | NLD #5'
-  - '🇳🇱 荷兰 | NLD #7'
-  - '🇳🇱 荷兰 | NLD #8'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱 荷兰 | NLD #10'
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇳🇱 荷兰 | NLD #14'
-  - '🇳🇱 荷兰 | NLD #16'
-  - '🇳🇱 荷兰 | NLD #18'
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇷🇺 俄罗斯 | RUS
+  - 🇷🇺 俄罗斯 | RUS 2
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇷🇺 俄罗斯 | RUS #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇮🇹 意大利 | ITA 7
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
+  - 🇺🇸_US_美国_IPV4 (3)
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - 🇺🇸 US1@ripaojiedian
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 5
-  - 🇳🇱 荷兰 | NLD 7
-  - 🇳🇱 荷兰 | NLD 8
-  - 🇳🇱 荷兰 | NLD 9
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇳🇱 荷兰 | NLD 12
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱 荷兰 | NLD 16
-  - 🇳🇱 荷兰 | NLD 18
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #2'
-  - '🇳🇱 荷兰 | NLD #3'
-  - '🇳🇱 荷兰 | NLD #5'
-  - '🇳🇱 荷兰 | NLD #7'
-  - '🇳🇱 荷兰 | NLD #8'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱 荷兰 | NLD #10'
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇳🇱 荷兰 | NLD #14'
-  - '🇳🇱 荷兰 | NLD #16'
-  - '🇳🇱 荷兰 | NLD #18'
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇷🇺 俄罗斯 | RUS
+  - 🇷🇺 俄罗斯 | RUS 2
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇷🇺 俄罗斯 | RUS #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇮🇹 意大利 | ITA 7
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
+  - 🇺🇸_US_美国_IPV4 (3)
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - 🇺🇸 US1@ripaojiedian
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 5
-  - 🇳🇱 荷兰 | NLD 7
-  - 🇳🇱 荷兰 | NLD 8
-  - 🇳🇱 荷兰 | NLD 9
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇳🇱 荷兰 | NLD 12
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱 荷兰 | NLD 16
-  - 🇳🇱 荷兰 | NLD 18
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #2'
-  - '🇳🇱 荷兰 | NLD #3'
-  - '🇳🇱 荷兰 | NLD #5'
-  - '🇳🇱 荷兰 | NLD #7'
-  - '🇳🇱 荷兰 | NLD #8'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱 荷兰 | NLD #10'
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇳🇱 荷兰 | NLD #14'
-  - '🇳🇱 荷兰 | NLD #16'
-  - '🇳🇱 荷兰 | NLD #18'
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇷🇺 俄罗斯 | RUS
+  - 🇷🇺 俄罗斯 | RUS 2
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇷🇺 俄罗斯 | RUS #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇮🇹 意大利 | ITA 7
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -671,36 +334,19 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
+  - 🇺🇸_US_美国_IPV4 (3)
+  - '🇳🇱[www.v2nodes.com] trojan-NL-... #2'
   - 🇺🇸 US1@ripaojiedian
-  - 🇳🇱 荷兰 | NLD
-  - 🇳🇱 荷兰 | NLD 2
-  - 🇳🇱 荷兰 | NLD 3
-  - 🇳🇱 荷兰 | NLD 5
-  - 🇳🇱 荷兰 | NLD 7
-  - 🇳🇱 荷兰 | NLD 8
-  - 🇳🇱 荷兰 | NLD 9
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇳🇱 荷兰 | NLD 12
-  - 🇳🇱 荷兰 | NLD 14
-  - 🇳🇱 荷兰 | NLD 16
-  - 🇳🇱 荷兰 | NLD 18
-  - '🇳🇱 荷兰 | NLD #1'
-  - '🇳🇱 荷兰 | NLD #2'
-  - '🇳🇱 荷兰 | NLD #3'
-  - '🇳🇱 荷兰 | NLD #5'
-  - '🇳🇱 荷兰 | NLD #7'
-  - '🇳🇱 荷兰 | NLD #8'
-  - '🇳🇱 荷兰 | NLD #9'
-  - '🇳🇱 荷兰 | NLD #10'
-  - '🇳🇱 荷兰 | NLD #12'
-  - '🇳🇱 荷兰 | NLD #14'
-  - '🇳🇱 荷兰 | NLD #16'
-  - '🇳🇱 荷兰 | NLD #18'
+  - '🇨🇿 捷克 | CZE #1'
+  - '🇩🇪 德国 | DEU #3'
+  - 🇷🇺 俄罗斯 | RUS
+  - 🇷🇺 俄罗斯 | RUS 2
+  - '🇷🇺 俄罗斯 | RUS #1'
+  - '🇷🇺 俄罗斯 | RUS #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0042
   - US_speednode_0043
-  - 🇮🇹 意大利 | ITA 7
 rule-providers:
   LocalAreaNetwork:
     type: http
