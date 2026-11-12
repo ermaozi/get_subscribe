@@ -39,7 +39,7 @@ dns:
   - https://1.0.0.1/dns-query
 proxies:
 - type: hysteria
-  name: 🇺🇸_US_美国_IPV4 (5)
+  name: 🇺🇸_US_美国_IPV4 (3)
   server: 137.175.82.43
   port: 20022
   password: dongtaiwang.com
@@ -53,7 +53,7 @@ proxies:
   down: '20'
   auth-str: dongtaiwang.com
 - type: hysteria
-  name: 🇺🇸_US_美国_IPV4 (6)
+  name: 🇺🇸_US_美国_IPV4 (4)
   server: 137.175.82.44
   port: 20022
   password: dongtaiwang.com
@@ -81,7 +81,7 @@ proxies:
   down: '55'
   auth-str: dongtaiwang.com
 - type: hysteria
-  name: 🇩🇪_DE_德国_IPV4 (3)
+  name: 🇩🇪_DE_德国_IPV4
   server: 5.83.129.90
   port: 54177
   password: dongtaiwang.com
@@ -95,7 +95,7 @@ proxies:
   down: '55'
   auth-str: dongtaiwang.com
 - type: hysteria
-  name: 🇺🇸_US_美国_IPV4 (7)
+  name: 🇺🇸_US_美国_IPV4 (5)
   server: 198.200.57.142
   port: 22335
   password: github.com/Alvin9999-newpac/fanqiang
@@ -526,26 +526,49 @@ proxies:
   sni: de2.jey.cc.cd
   tls: false
   type: hysteria2
-- alpn:
-  - h3
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  auth_str: github.com/Alvin9999-newpac/fanqiang
-  down: 55
-  name: 🇺🇸 美国 | USA 10
-  port: 22335
-  protocol: none
-  server: 198.200.57.142
+- mport: 20000-50000
+  name: 🇭🇰HK_2|1.1MB/s
+  password: e0379de1-6712-4644-b41b-afde5fa30ad7
+  port: 20000
+  ports: 20000-50000
+  server: 209.9.200.122
   skip-cert-verify: true
-  sni: bing.com
-  type: hysteria
-  up: 11
+  sni: www.shopify.com
+  type: hysteria2
+  udp: true
   x-toolall-mihomo: true
+- down: ''
+  fingerprint: ''
+  name: 🇵🇱PL_5|1.2MB/s
+  obfs: ''
+  obfs-password: ''
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.143
+  skip-cert-verify: false
+  sni: pl3.nexfile.net
+  type: hysteria2
+  up: ''
 - alpn:
   - h3
   auth-str: dongtaiwang.com
   auth_str: dongtaiwang.com
   down: 55
-  name: 🇫🇷 法国 | FRA 2
+  name: 🇩🇪 德国 | DEU
+  port: 54177
+  protocol: none
+  server: 5.83.129.90
+  skip-cert-verify: true
+  sni: apple.com
+  type: hysteria
+  udp: true
+  up: 11
+- alpn:
+  - h3
+  auth-str: dongtaiwang.com
+  auth_str: dongtaiwang.com
+  down: 55
+  name: 🇫🇷 法国 | FRA 5
   port: 36699
   protocol: none
   server: 163.172.117.163
@@ -553,103 +576,16 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11
-  x-toolall-mihomo: true
-- ip: 172.16.0.2/32
-  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
-  mtu: 1280
-  name: 🇨🇳CN_1|1.3MB/s
-  port: 955
-  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 0
-  - 0
-  - 0
-  server: 8.6.112.100
-  type: wireguard
-  udp: true
-- ip: 172.16.0.2/32
-  mtu: 1380
-  name: 🇨🇳CN_2|2.1MB/s
-  port: 3581
-  presharedkey: ''
-  private-key: 2FaqTm+aXdVK00dvbeuMW/t741BWYu9lNOOVtMI4R3Y=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 80
-  - 103
-  - 64
-  server: 162.159.192.11
-  type: wireguard
-  udp: true
-- ip: 172.16.0.2/32
-  keepalive: '5'
-  mtu: 1280
-  name: 🇨🇳CN_3|2.4MB/s
-  persistent-keepalive: '5'
-  port: 500
-  private-key: mHj04J164X9hgzAVq4BlB0hc/SK3QPbgl7JF+/anXU0=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 99
-  - 166
-  - 252
-  server: 162.159.192.6
-  type: wireguard
-  udp: true
-  wnoise: quic
-  wnoisecount: '5'
-  wnoisedelay: '5'
-  wpayloadsize: 40-90
-- ip: 172.16.0.2/32
-  keepalive: '5'
-  mtu: 1280
-  name: 🇨🇳CN_4|3.3MB/s
-  persistent-keepalive: '5'
-  port: 4500
-  private-key: QB+xyMCK7DvH59ditStC1knU3bhSVJfbzpgvbSj/plI=
-  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
-  reserved:
-  - 111
-  - 85
-  - 82
-  server: 162.159.192.5
-  type: wireguard
-  udp: true
-  wnoise: quic
-  wnoisecount: '5'
-  wnoisedelay: '5'
-  wpayloadsize: 40-90
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #5'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 443
-  server: 3.36.109.202
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
+- auth: 8VPFWgN7mbwHWxTC
   name: '🇸🇬 新加坡 | SGP #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  password: 8VPFWgN7mbwHWxTC
   port: 443
-  server: 13.229.219.105
+  server: singapore.062888.xyz
   skip-cert-verify: true
-  sni: www.bing.com
+  sni: www.microsoft.com
   tls: false
   type: hysteria2
-- auth: 68a93e46-d251-45a8-8148-cf3601451021
-  name: '🇸🇬 新加坡 | SGP #5'
-  password: 68a93e46-d251-45a8-8148-cf3601451021
-  port: 21396
-  server: a6.mhlnf.cn
-  skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
-  type: hysteria2
-- name: ProxyPool | 🇫🇷 法国 | FRA 2
+- name: 🇫🇷 法国 | FRA 2
   server: 62.210.28.175
   port: 24667
   type: hysteria
@@ -663,43 +599,17 @@ proxies:
   alpn:
   - h3
   udp: true
-- name: 🇳🇱 荷兰 | NLD 10
-  server: 212.34.137.105
-  port: 443
-  type: hysteria2
-  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  auth: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-  sni: shorts.blog-forme.ru
-  up: 100
-  down: 200
-  skip-cert-verify: true
-  alpn:
-  - h3
-  udp: true
-- name: 🇺🇸 美国 | USA 4
-  server: 198.200.57.142
-  port: 22335
-  type: hysteria
-  auth_str: github.com/Alvin9999-newpac/fanqiang
-  auth-str: github.com/Alvin9999-newpac/fanqiang
-  up: 11
-  down: 55
-  protocol: none
-  sni: bing.com
-  skip-cert-verify: true
-  alpn:
-  - h3
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (4)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4 (3)
-  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (5)
   - 🇫🇷_FR_法国_IPV4 (2)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
@@ -745,26 +655,20 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #6'
   - 'Telegram@vpnjey #7'
-  - 🇺🇸 美国 | USA 10
-  - 🇫🇷 法国 | FRA 2
-  - 🇨🇳CN_1|1.3MB/s
-  - 🇨🇳CN_2|2.1MB/s
-  - 🇨🇳CN_3|2.4MB/s
-  - 🇨🇳CN_4|3.3MB/s
-  - '🇰🇷 韩国 | KOR #5'
+  - 🇭🇰HK_2|1.1MB/s
+  - 🇵🇱PL_5|1.2MB/s
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA 5
   - '🇸🇬 新加坡 | SGP #2'
-  - '🇸🇬 新加坡 | SGP #5'
-  - ProxyPool | 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇺🇸 美国 | USA 4
+  - 🇫🇷 法国 | FRA 2
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (4)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4 (3)
-  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (5)
   - 🇫🇷_FR_法国_IPV4 (2)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
@@ -810,18 +714,12 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #6'
   - 'Telegram@vpnjey #7'
-  - 🇺🇸 美国 | USA 10
-  - 🇫🇷 法国 | FRA 2
-  - 🇨🇳CN_1|1.3MB/s
-  - 🇨🇳CN_2|2.1MB/s
-  - 🇨🇳CN_3|2.4MB/s
-  - 🇨🇳CN_4|3.3MB/s
-  - '🇰🇷 韩国 | KOR #5'
+  - 🇭🇰HK_2|1.1MB/s
+  - 🇵🇱PL_5|1.2MB/s
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA 5
   - '🇸🇬 新加坡 | SGP #2'
-  - '🇸🇬 新加坡 | SGP #5'
-  - ProxyPool | 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇺🇸 美国 | USA 4
+  - 🇫🇷 法国 | FRA 2
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -831,11 +729,11 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (4)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4 (3)
-  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (5)
   - 🇫🇷_FR_法国_IPV4 (2)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
@@ -881,28 +779,22 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #6'
   - 'Telegram@vpnjey #7'
-  - 🇺🇸 美国 | USA 10
-  - 🇫🇷 法国 | FRA 2
-  - 🇨🇳CN_1|1.3MB/s
-  - 🇨🇳CN_2|2.1MB/s
-  - 🇨🇳CN_3|2.4MB/s
-  - 🇨🇳CN_4|3.3MB/s
-  - '🇰🇷 韩国 | KOR #5'
+  - 🇭🇰HK_2|1.1MB/s
+  - 🇵🇱PL_5|1.2MB/s
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA 5
   - '🇸🇬 新加坡 | SGP #2'
-  - '🇸🇬 新加坡 | SGP #5'
-  - ProxyPool | 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇺🇸 美国 | USA 4
+  - 🇫🇷 法国 | FRA 2
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (4)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4 (3)
-  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (5)
   - 🇫🇷_FR_法国_IPV4 (2)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
@@ -948,28 +840,22 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #6'
   - 'Telegram@vpnjey #7'
-  - 🇺🇸 美国 | USA 10
-  - 🇫🇷 法国 | FRA 2
-  - 🇨🇳CN_1|1.3MB/s
-  - 🇨🇳CN_2|2.1MB/s
-  - 🇨🇳CN_3|2.4MB/s
-  - 🇨🇳CN_4|3.3MB/s
-  - '🇰🇷 韩国 | KOR #5'
+  - 🇭🇰HK_2|1.1MB/s
+  - 🇵🇱PL_5|1.2MB/s
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA 5
   - '🇸🇬 新加坡 | SGP #2'
-  - '🇸🇬 新加坡 | SGP #5'
-  - ProxyPool | 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇺🇸 美国 | USA 4
+  - 🇫🇷 法国 | FRA 2
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (4)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4 (3)
-  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (5)
   - 🇫🇷_FR_法国_IPV4 (2)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
@@ -1015,28 +901,22 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #6'
   - 'Telegram@vpnjey #7'
-  - 🇺🇸 美国 | USA 10
-  - 🇫🇷 法国 | FRA 2
-  - 🇨🇳CN_1|1.3MB/s
-  - 🇨🇳CN_2|2.1MB/s
-  - 🇨🇳CN_3|2.4MB/s
-  - 🇨🇳CN_4|3.3MB/s
-  - '🇰🇷 韩国 | KOR #5'
+  - 🇭🇰HK_2|1.1MB/s
+  - 🇵🇱PL_5|1.2MB/s
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA 5
   - '🇸🇬 新加坡 | SGP #2'
-  - '🇸🇬 新加坡 | SGP #5'
-  - ProxyPool | 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇺🇸 美国 | USA 4
+  - 🇫🇷 法国 | FRA 2
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (4)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4 (3)
-  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (5)
   - 🇫🇷_FR_法国_IPV4 (2)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
@@ -1082,18 +962,12 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #6'
   - 'Telegram@vpnjey #7'
-  - 🇺🇸 美国 | USA 10
-  - 🇫🇷 法国 | FRA 2
-  - 🇨🇳CN_1|1.3MB/s
-  - 🇨🇳CN_2|2.1MB/s
-  - 🇨🇳CN_3|2.4MB/s
-  - 🇨🇳CN_4|3.3MB/s
-  - '🇰🇷 韩国 | KOR #5'
+  - 🇭🇰HK_2|1.1MB/s
+  - 🇵🇱PL_5|1.2MB/s
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA 5
   - '🇸🇬 新加坡 | SGP #2'
-  - '🇸🇬 新加坡 | SGP #5'
-  - ProxyPool | 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇺🇸 美国 | USA 4
+  - 🇫🇷 法国 | FRA 2
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -1116,11 +990,11 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇺🇸_US_美国_IPV4 (5)
-  - 🇺🇸_US_美国_IPV4 (6)
+  - 🇺🇸_US_美国_IPV4 (3)
+  - 🇺🇸_US_美国_IPV4 (4)
   - 🇫🇷_FR_法国_IPV4
-  - 🇩🇪_DE_德国_IPV4 (3)
-  - 🇺🇸_US_美国_IPV4 (7)
+  - 🇩🇪_DE_德国_IPV4
+  - 🇺🇸_US_美国_IPV4 (5)
   - 🇫🇷_FR_法国_IPV4 (2)
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
@@ -1166,18 +1040,12 @@ proxy-groups:
   - '@fastkanfig کانال تلگرام'
   - 'Telegram@vpnjey #6'
   - 'Telegram@vpnjey #7'
-  - 🇺🇸 美国 | USA 10
-  - 🇫🇷 法国 | FRA 2
-  - 🇨🇳CN_1|1.3MB/s
-  - 🇨🇳CN_2|2.1MB/s
-  - 🇨🇳CN_3|2.4MB/s
-  - 🇨🇳CN_4|3.3MB/s
-  - '🇰🇷 韩国 | KOR #5'
+  - 🇭🇰HK_2|1.1MB/s
+  - 🇵🇱PL_5|1.2MB/s
+  - 🇩🇪 德国 | DEU
+  - 🇫🇷 法国 | FRA 5
   - '🇸🇬 新加坡 | SGP #2'
-  - '🇸🇬 新加坡 | SGP #5'
-  - ProxyPool | 🇫🇷 法国 | FRA 2
-  - 🇳🇱 荷兰 | NLD 10
-  - 🇺🇸 美国 | USA 4
+  - 🇫🇷 法国 | FRA 2
 rule-providers:
   LocalAreaNetwork:
     type: http
