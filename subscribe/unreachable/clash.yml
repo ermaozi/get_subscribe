@@ -1,0 +1,503 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: true
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - localhost
+  - +.localhost
+  - +.lan
+  - +.local
+  - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  proxy-server-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    geosite:cn:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  nameserver:
+  - https://1.1.1.1/dns-query
+  - https://1.0.0.1/dns-query
+proxies:
+- name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  network: ws
+  port: 22573
+  server: 84.235.244.108
+  servername: uae.unixzone.us
+  tls: false
+  type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  ws-opts:
+    headers:
+      Host: uae.unixzone.us
+    path: /
+- client-fingerprint: chrome
+  name: '🇷🇺 俄罗斯 | RUS #4'
+  network: tcp
+  port: 443
+  server: 84.54.57.122
+  servername: minjd-ru-61sb.my-fade.cloud
+  tls: true
+  type: vless
+  udp: true
+  uuid: 7b3150b4-7581-0001-8131-6f94fe3fd206
+  ws-opts:
+    path: /
+- client-fingerprint: chrome
+  name: '🇷🇺 俄罗斯 | RUS #8'
+  network: tcp
+  port: 443
+  server: 84.54.57.122
+  servername: minjd-ru-61sb.my-fade.cloud
+  tls: true
+  type: vless
+  udp: true
+  uuid: f87e553a-009d-0001-9aa3-4e737a4d0192
+  ws-opts:
+    path: /
+- cipher: chacha20-ietf-poly1305
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  password: zZMNTGpPl38ASlbI1EKOBJ
+  port: 46303
+  server: 135.220.178.46
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
+  password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
+  port: 1352
+  server: dns24.m3hrzd.ir
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: 🇬🇧[www.v2nodes.com] ss-GB-1622...
+  password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
+  port: 1353
+  server: 185.194.191.35
+  type: ss
+- cipher: aes-128-gcm
+  name: '🏳[www.v2nodes.com] ss- #7'
+  password: shadowsocks
+  port: 443
+  server: 141.98.101.178
+  type: ss
+- cipher: chacha20-ietf-poly1305
+  name: '🇮🇹[www.v2nodes.com] ss-IT-1621... #3'
+  password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB
+  port: 1349
+  server: dns24.m3hrzd.ir
+  type: ss
+- cipher: aes-256-gcm
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  password: AxIYWtskJWIIaefW
+  port: 8388
+  server: 70.34.212.124
+  type: ss
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: wn-adaptcloud
+  name: 🇵🇱 波兰 | POL
+  network: grpc
+  port: 59715
+  server: 46.243.233.165
+  servername: wn-pl4.static-s3.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5
+- client-fingerprint: chrome
+  name: '🇵🇱 波兰 | POL #2'
+  network: tcp
+  port: 443
+  server: 84.54.57.122
+  servername: minjd-ru-61sb.my-fade.cloud
+  tls: true
+  type: vless
+  udp: true
+  uuid: aea7b0f0-c7bd-0001-a2d9-79683eba69ef
+  ws-opts:
+    path: /
+- cipher: 2022-blake3-aes-256-gcm
+  name: '🇺🇸 美国 | USA #2'
+  password: f2Nq5YLnyclPaWR8my7/Vdd3ZX8URncXZNly5+HcUSs=:dQ6WYcPpGX5xIxUVPAR8w1A9eY6kEVoKKW3HleJ6o8Y=
+  port: 8086
+  server: frr.drwrdoh.org
+  type: ss
+  udp: true
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: ''
+  name: '🇵🇱 波兰 | POL #1'
+  network: grpc
+  port: 59715
+  server: 46.243.233.165
+  servername: wn-pl4.static-s3.org
+  tls: true
+  type: vless
+  uuid: 3ecbd833-40d8-4ddb-b80b-a7c4628ec7e5
+- client-fingerprint: firefox
+  name: AT_speednode_0002
+  network: ws
+  port: 8443
+  server: 152.53.31.46
+  servername: usa3.pad-sservice.lat
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  ws-opts:
+    headers:
+      Host: usa3.pad-service.com
+    path: /U1SA
+- client-fingerprint: chrome
+  name: ES_speednode_0007
+  network: ws
+  port: 8443
+  server: au5.pad-sservice.lat
+  servername: au5.pad-sservice.lat
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e
+  ws-opts:
+    headers:
+      Host: au5.pad-sservice.lat
+    path: /AU5W
+- client-fingerprint: chrome
+  name: US_speednode_0042
+  port: 19167
+  server: mx001.zestapp778.com
+  servername: mx001.zestapp778.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+- client-fingerprint: firefox
+  name: US_speednode_0043
+  port: 54857
+  server: 130.94.18.208
+  servername: us001.zestapp778.com
+  skip-cert-verify: false
+  tls: true
+  type: vless
+  udp: true
+  uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
+- name: 🇩🇪 德国 | DEU 3
+  server: inexall.cloudvipgamefall.ir
+  port: 8080
+  type: vless
+  uuid: 01f93877-3307-4e73-ba4c-592d4489a9ea
+  tls: true
+  servername: newnexip1.nexvpnfun.com
+  client-fingerprint: chrome
+  network: http
+  http-opts:
+    method: GET
+    path:
+    - /
+    headers:
+      Host:
+      - inexall.cloudvipgamefall.ir
+  udp: true
+proxy-groups:
+- name: ermao.net | 🚀 节点选择
+  type: select
+  proxies:
+  - ermao.net | ♻️ 自动选择
+  - DIRECT
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - '🇷🇺 俄罗斯 | RUS #8'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1622...
+  - '🏳[www.v2nodes.com] ss- #7'
+  - '🇮🇹[www.v2nodes.com] ss-IT-1621... #3'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 🇵🇱 波兰 | POL
+  - '🇵🇱 波兰 | POL #2'
+  - '🇺🇸 美国 | USA #2'
+  - '🇵🇱 波兰 | POL #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇩🇪 德国 | DEU 3
+- name: ermao.net | ♻️ 自动选择
+  type: url-test
+  proxies:
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - '🇷🇺 俄罗斯 | RUS #8'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1622...
+  - '🏳[www.v2nodes.com] ss- #7'
+  - '🇮🇹[www.v2nodes.com] ss-IT-1621... #3'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 🇵🇱 波兰 | POL
+  - '🇵🇱 波兰 | POL #2'
+  - '🇺🇸 美国 | USA #2'
+  - '🇵🇱 波兰 | POL #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇩🇪 德国 | DEU 3
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🌍 国外媒体
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+  - 🎯 全球直连
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - '🇷🇺 俄罗斯 | RUS #8'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1622...
+  - '🏳[www.v2nodes.com] ss- #7'
+  - '🇮🇹[www.v2nodes.com] ss-IT-1621... #3'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 🇵🇱 波兰 | POL
+  - '🇵🇱 波兰 | POL #2'
+  - '🇺🇸 美国 | USA #2'
+  - '🇵🇱 波兰 | POL #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇩🇪 德国 | DEU 3
+- name: 📲 电报信息
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - '🇷🇺 俄罗斯 | RUS #8'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1622...
+  - '🏳[www.v2nodes.com] ss- #7'
+  - '🇮🇹[www.v2nodes.com] ss-IT-1621... #3'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 🇵🇱 波兰 | POL
+  - '🇵🇱 波兰 | POL #2'
+  - '🇺🇸 美国 | USA #2'
+  - '🇵🇱 波兰 | POL #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇩🇪 德国 | DEU 3
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - 🎯 全球直连
+  - ermao.net | 🚀 节点选择
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - '🇷🇺 俄罗斯 | RUS #8'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1622...
+  - '🏳[www.v2nodes.com] ss- #7'
+  - '🇮🇹[www.v2nodes.com] ss-IT-1621... #3'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 🇵🇱 波兰 | POL
+  - '🇵🇱 波兰 | POL #2'
+  - '🇺🇸 美国 | USA #2'
+  - '🇵🇱 波兰 | POL #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇩🇪 德国 | DEU 3
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - '🇷🇺 俄罗斯 | RUS #8'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1622...
+  - '🏳[www.v2nodes.com] ss- #7'
+  - '🇮🇹[www.v2nodes.com] ss-IT-1621... #3'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 🇵🇱 波兰 | POL
+  - '🇵🇱 波兰 | POL #2'
+  - '🇺🇸 美国 | USA #2'
+  - '🇵🇱 波兰 | POL #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇩🇪 德国 | DEU 3
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+- name: 🛑 全球拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🍃 应用净化
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - ermao.net | ♻️ 自动选择
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - '🇷🇺 俄罗斯 | RUS #4'
+  - '🇷🇺 俄罗斯 | RUS #8'
+  - 🇩🇪[www.v2nodes.com] ss-DE-1621...
+  - '🇫🇷[www.v2nodes.com] ss-FR-1621... #4'
+  - 🇬🇧[www.v2nodes.com] ss-GB-1622...
+  - '🏳[www.v2nodes.com] ss- #7'
+  - '🇮🇹[www.v2nodes.com] ss-IT-1621... #3'
+  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
+  - 🇵🇱 波兰 | POL
+  - '🇵🇱 波兰 | POL #2'
+  - '🇺🇸 美国 | USA #2'
+  - '🇵🇱 波兰 | POL #1'
+  - AT_speednode_0002
+  - ES_speednode_0007
+  - US_speednode_0042
+  - US_speednode_0043
+  - 🇩🇪 德国 | DEU 3
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
+rules:
+- RULE-SET,LocalAreaNetwork,🎯 全球直连
+- RULE-SET,BanAD,🛑 全球拦截
+- RULE-SET,BanProgramAD,🍃 应用净化
+- RULE-SET,GoogleCN,🎯 全球直连
+- RULE-SET,SteamCN,🎯 全球直连
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- RULE-SET,Apple,🍎 苹果服务
+- RULE-SET,ProxyMedia,🌍 国外媒体
+- RULE-SET,Telegram,📲 电报信息
+- RULE-SET,ProxyLite,ermao.net | 🚀 节点选择
+- RULE-SET,ChinaDomain,🎯 全球直连
+- RULE-SET,ChinaCompanyIp,🎯 全球直连
+- GEOIP,CN,🎯 全球直连
+- MATCH,🐟 漏网之鱼
