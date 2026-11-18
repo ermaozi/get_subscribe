@@ -38,18 +38,6 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- type: hysteria
-  name: 🇺🇸_US_美国_IPV4
-  server: 137.175.82.44
-  port: 20022
-  password: dongtaiwang.com
-  tls: true
-  skip-cert-verify: true
-  alpn:
-  - h3
-  up: '11'
-  down: '55'
-  auth-str: dongtaiwang.com
 - type: hysteria2
   name: 🇫🇷_FR_法国_IPV6
   server: 2001:bc8:32d7:17b::3
@@ -59,6 +47,29 @@ proxies:
   servername: www.microsoft.com
   sni: www.microsoft.com
   skip-cert-verify: true
+- type: hysteria2
+  name: 🇺🇸_US_美国_IPV4 (12)
+  server: starlink-ft.251313.xyz
+  port: 443
+  password: https://xship.2fa.cat
+  tls: true
+  servername: xship.top
+  sni: xship.top
+  skip-cert-verify: true
+- type: hysteria
+  name: 🇩🇪_DE_德国_IPV4
+  server: 5.83.129.90
+  port: 54177
+  password: dongtaiwang.com
+  tls: true
+  servername: apple.com
+  sni: apple.com
+  skip-cert-verify: true
+  alpn:
+  - h3
+  up: '11'
+  down: '55'
+  auth-str: dongtaiwang.com
 - alterId: 0
   cipher: auto
   name: 防范境外势力渗透
@@ -153,10 +164,10 @@ proxies:
   - h3
   auth-str: dongtaiwang.com
   down: 55 Mbps
-  name: https://github.com/*********-*...
+  name: https://alvin9999.com
   port: 24667
   protocol: udp
-  server: 62.210.28.175
+  server: 62.210.124.132
   skip-cert-verify: true
   sni: bing.com
   type: hysteria
@@ -173,6 +184,14 @@ proxies:
   sni: bing.com
   type: hysteria
   up: 11 Mbps
+- name: 🇷🇺218228 | ⚡️Telegram = t.me/L...
+  password: 41edb44c8e
+  port: 11592
+  server: 103.88.243.142
+  skip-cert-verify: true
+  sni: srv-17e124.21freedom.net
+  tls: false
+  type: hysteria2
 - name: 🇺🇲16@exclavevpn
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   port: 443
@@ -185,14 +204,6 @@ proxies:
   port: 25318
   server: 179.254.127.219
   sni: 775c8bt.lt4.h1clayd.click
-  tls: false
-  type: hysteria2
-- name: 🇸🇬217490 | ⚡️Telegram = t.me/L...
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  port: 443
-  server: 54.179.113.70
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
   tls: false
   type: hysteria2
 - name: 🇺🇸139909 | ⚡️Telegram = t.me/S...
@@ -211,14 +222,6 @@ proxies:
   sni: 192.255.152.147
   tls: false
   type: hysteria2
-- name: ⚕️15@oneclickvpnkeys
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  port: 443
-  server: 177.202.66.212
-  skip-cert-verify: true
-  sni: de1.obxodvpn.us
-  tls: false
-  type: hysteria2
 - name: '@OutlineReleasedKey'
   password: 23c82941-70f4-4381-90db-bd28e9a902e9
   port: 443
@@ -232,27 +235,33 @@ proxies:
   server: steel7.hadsvpn.com
   tls: false
   type: hysteria2
-- name: '@OutlineReleasedKey #2'
-  password: 23c82941-70f4-4381-90db-bd28e9a902e9
-  port: 443
-  server: steel7.hadsvpn.com
-  skip-cert-verify: false
-  sni: steel7.hadsvpn.com
+- name: 🔹9@oneclickvpnkeys
+  password: 2d399e38-245c-4f07-abf2-cfce7397ba9c
+  port: 8443
+  server: 31.76.106.92
+  sni: va.stream-room.com
   tls: false
   type: hysteria2
 - name: '@OutlineReleasedKey #3'
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
   port: 443
   server: 212.34.137.105
+  skip-cert-verify: true
   sni: shorts.blog-forme.ru
   tls: false
   type: hysteria2
 - client-fingerprint: chrome
-  name: '@OutlineReleasedKey #5'
+  name: '@OutlineReleasedKey #4'
   password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
   port: 24433
   server: 94.183.164.119
   sni: lakes.blog-forme.ru
+  tls: false
+  type: hysteria2
+- name: '@OutlineReleasedKey #5'
+  password: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+  port: 443
+  server: guide.blog-forme.ru
   tls: false
   type: hysteria2
 - name: '@vpnsal'
@@ -290,12 +299,16 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: '@OutlineReleasedKey #6'
-  password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
-  port: 443
-  server: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
-  skip-cert-verify: true
-  sni: 88f7008b-tmm5c0-tonrqx-1khwf.nw4.hyhuawei.com
+- alpn:
+  - h3
+  name: '@ConfigV2RayNG'
+  obfs: salamander
+  obfs-password: 7wjvepshx5g115x4
+  password: 99a271e85dbc4aa8950f9c7beee06b19
+  port: 30746
+  server: ide.vipvirtualnet.eu
+  skip-cert-verify: false
+  sni: del.vipvirtualnet.eu
   tls: false
   type: hysteria2
 - name: 🩵+@Azarakhsh_Proxy+🩷
@@ -386,7 +399,47 @@ proxies:
   sni: de2.jey.cc.cd
   tls: false
   type: hysteria2
-- name: '@OutlineReleasedKey #7'
+- name: 🇵🇱218385 | ⚡️Telegram = t.me/L...
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.105
+  skip-cert-verify: false
+  sni: pl2.nexfile.net
+  tls: false
+  type: hysteria2
+- name: 🇵🇱218381 | ⚡️Telegram = t.me/L...
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.106
+  skip-cert-verify: false
+  sni: pl2.nexfile.net
+  tls: false
+  type: hysteria2
+- name: 🇵🇱218384 | ⚡️Telegram = t.me/L...
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.142
+  skip-cert-verify: false
+  sni: pl3.nexfile.net
+  tls: false
+  type: hysteria2
+- name: 🇵🇱218383 | ⚡️Telegram = t.me/L...
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.147
+  skip-cert-verify: false
+  sni: pl2.nexfile.net
+  tls: false
+  type: hysteria2
+- name: 🇵🇱218380 | ⚡️Telegram = t.me/L...
+  password: a35c508f-4d5d-4531-842e-6e9d43c762c0
+  port: 4444
+  server: 13.143.189.149
+  skip-cert-verify: false
+  sni: pl2.nexfile.net
+  tls: false
+  type: hysteria2
+- name: '@OutlineReleasedKey #6'
   password: a35c508f-4d5d-4531-842e-6e9d43c762c0
   port: 4444
   server: 2.27.210.6
@@ -394,7 +447,7 @@ proxies:
   sni: lv2.nexfile.net
   tls: false
   type: hysteria2
-- name: '@OutlineReleasedKey #8'
+- name: '@OutlineReleasedKey #7'
   password: b36a14f8-fc3f-4142-968f-48031cf5f330
   port: 443
   server: hy2-eee-1.aloranode.top
@@ -432,7 +485,7 @@ proxies:
   sni: panel.autonetshop.ir
   tls: false
   type: hysteria2
-- name: '@OutlineReleasedKey #9'
+- name: '@OutlineReleasedKey #8'
   password: d4ca9415f0eac7897472e1e5b86d2e96
   port: 443
   server: 50.7.38.243
@@ -457,11 +510,11 @@ proxies:
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: ⚕️35@oneclickvpnkeys
+- name: 🔹13@oneclickvpnkeys
   password: fa937345-6d3e-4ff4-8127-1a836987a0db
   port: 10444
-  server: 195.63.128.21
-  sni: germany.cloudhouse1.ru
+  server: 195.63.138.212
+  sni: cloudehouse24.ru
   tls: false
   type: hysteria2
 - name: '@confiig_hub #1'
@@ -494,45 +547,92 @@ proxies:
   sni: de2.jey.cc.cd
   tls: false
   type: hysteria2
-- auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  fingerprint: 89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69
-  name: '🇰🇷 韩国 | KOR #1'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+- down: ''
+  fingerprint: ''
+  name: 🇭🇰HK_1|1.3MB/s
+  obfs: ''
+  obfs-password: ''
+  password: 92bd8c68-6434-11ee-b644-f23c91cfbbc9
   port: 443
-  server: 3.38.149.130
+  server: 3de2432e-tmm5c0-tonrqx-1khwf.hk3.hyhuawei.com
   skip-cert-verify: true
-  sni: www.bing.com
-  tls: false
+  sni: 3de2432e-tmm5c0-tonrqx-1khwf.hk3.hyhuawei.com
+  type: hysteria2
+  up: ''
+- ip: 172.16.0.2/32
+  ipv6: 2606:4700:110:8e4e:939b:b987:39aa:c46c/128
+  mtu: 1280
+  name: ❓Other_1|1.0MB/s
+  port: 1180
+  private-key: OEysS/3kryZt7O/RobQFlmPatDWuUl9bwef0IoMX/Uo=
+  public-key: bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
+  reserved:
+  - 0
+  - 0
+  - 0
+  server: 8.6.112.246
+  type: wireguard
+  udp: true
+- down: ''
+  fingerprint: ''
+  name: 🇺🇸US_1|2.2MB/s
+  obfs: ''
+  obfs-password: ''
+  password: 3a17ce52-4547-45aa-9820-a7d03ad5faca
+  port: 443
+  server: 45.86.74.193
+  skip-cert-verify: false
+  sni: media.embrofree.org
+  type: hysteria2
+  up: ''
+- auth: HATATEAYA
+  name: 🇩🇪 德国 | DEU 2
+  obfs: salamander
+  obfs-password: HATATEAYA
+  password: HATATEAYA
+  port: 8964
+  server: 77.90.15.183
+  skip-cert-verify: true
+  sni: ganlanc.at
   type: hysteria2
 - auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
   fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
   name: '🇸🇬 新加坡 | SGP #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 443
-  server: 54.151.179.216
+  server: 56.10.146.231
   skip-cert-verify: true
   sni: www.bing.com
   tls: false
   type: hysteria2
-- name: 🇫🇷 法国 | FRA
-  server: 62.210.70.191
-  port: 24667
-  type: hysteria
-  auth_str: dongtaiwang.com
-  auth-str: dongtaiwang.com
-  up: 10
-  down: 50
+- name: '🇩🇪 德国 | DEU #2'
+  obfs: salamander
+  obfs-password: salamander
+  password: HATATEAYA
+  port: 8964
+  server: 77.90.15.183
   skip-cert-verify: true
-  alpn:
-  - h3
+  sni: ganlanc.at
+  tls: false
+  type: hysteria2
+- name: 🇸🇬 新加坡 | SGP 2
+  server: 56.10.146.231
+  port: 443
+  type: hysteria2
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  auth: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  fingerprint: C1:FD:40:94:1F:91:9B:5C:78:96:24:40:97:F2:2D:9D:95:8E:62:5C:D9:58:B7:5F:34:CC:FA:42:18:1F:50:B2
+  sni: www.bing.com
+  skip-cert-verify: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇺🇸_US_美国_IPV4
   - 🇫🇷_FR_法国_IPV6
+  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇩🇪_DE_德国_IPV4
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -543,24 +643,24 @@ proxy-groups:
   - '防范境外势力渗透 #7'
   - '防范境外势力渗透 #8'
   - '防范境外势力渗透 #9'
-  - https://github.com/*********-*...
+  - https://alvin9999.com
   - 'github.com/*********-******/**... #1'
+  - 🇷🇺218228 | ⚡️Telegram = t.me/L...
   - 🇺🇲16@exclavevpn
   - 🇱🇹 15@exclavevpn
-  - 🇸🇬217490 | ⚡️Telegram = t.me/L...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - ' 🇺🇸 15@exclavevpn'
-  - ⚕️15@oneclickvpnkeys
   - '@OutlineReleasedKey'
   - '@OutlineReleasedKey #1'
-  - '@OutlineReleasedKey #2'
+  - 🔹9@oneclickvpnkeys
   - '@OutlineReleasedKey #3'
+  - '@OutlineReleasedKey #4'
   - '@OutlineReleasedKey #5'
   - '@vpnsal'
   - Telegram  ⚜️Join -> @tik7net_v...
   - Telegram:@v2rayng3
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
-  - '@OutlineReleasedKey #6'
+  - '@ConfigV2RayNG'
   - 🩵+@Azarakhsh_Proxy+🩷
   - '@v2ray313 کانالمون 😀'
   - Telegram@vpnjey
@@ -570,26 +670,36 @@ proxy-groups:
   - 'Telegram@vpnjey #4'
   - 'Telegram@vpnjey #5'
   - 'Telegram@vpnjey #6'
+  - 🇵🇱218385 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218381 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218384 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218383 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218380 | ⚡️Telegram = t.me/L...
+  - '@OutlineReleasedKey #6'
   - '@OutlineReleasedKey #7'
-  - '@OutlineReleasedKey #8'
   - '@KAFING_2'
   - '@KAFING_2 #2'
   - 'Channel : @Daily_Configs'
-  - '@OutlineReleasedKey #9'
+  - '@OutlineReleasedKey #8'
   - '@Nexus_Panell چنل تلگرام #1'
   - ♻️93@oneclickvpnkeys
-  - ⚕️35@oneclickvpnkeys
+  - 🔹13@oneclickvpnkeys
   - '@confiig_hub #1'
   - 'Telegram@vpnjey #7'
   - 'Telegram@vpnjey #8'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇭🇰HK_1|1.3MB/s
+  - ❓Other_1|1.0MB/s
+  - 🇺🇸US_1|2.2MB/s
+  - 🇩🇪 德国 | DEU 2
   - '🇸🇬 新加坡 | SGP #2'
-  - 🇫🇷 法国 | FRA
+  - '🇩🇪 德国 | DEU #2'
+  - 🇸🇬 新加坡 | SGP 2
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇺🇸_US_美国_IPV4
   - 🇫🇷_FR_法国_IPV6
+  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇩🇪_DE_德国_IPV4
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -600,24 +710,24 @@ proxy-groups:
   - '防范境外势力渗透 #7'
   - '防范境外势力渗透 #8'
   - '防范境外势力渗透 #9'
-  - https://github.com/*********-*...
+  - https://alvin9999.com
   - 'github.com/*********-******/**... #1'
+  - 🇷🇺218228 | ⚡️Telegram = t.me/L...
   - 🇺🇲16@exclavevpn
   - 🇱🇹 15@exclavevpn
-  - 🇸🇬217490 | ⚡️Telegram = t.me/L...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - ' 🇺🇸 15@exclavevpn'
-  - ⚕️15@oneclickvpnkeys
   - '@OutlineReleasedKey'
   - '@OutlineReleasedKey #1'
-  - '@OutlineReleasedKey #2'
+  - 🔹9@oneclickvpnkeys
   - '@OutlineReleasedKey #3'
+  - '@OutlineReleasedKey #4'
   - '@OutlineReleasedKey #5'
   - '@vpnsal'
   - Telegram  ⚜️Join -> @tik7net_v...
   - Telegram:@v2rayng3
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
-  - '@OutlineReleasedKey #6'
+  - '@ConfigV2RayNG'
   - 🩵+@Azarakhsh_Proxy+🩷
   - '@v2ray313 کانالمون 😀'
   - Telegram@vpnjey
@@ -627,21 +737,30 @@ proxy-groups:
   - 'Telegram@vpnjey #4'
   - 'Telegram@vpnjey #5'
   - 'Telegram@vpnjey #6'
+  - 🇵🇱218385 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218381 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218384 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218383 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218380 | ⚡️Telegram = t.me/L...
+  - '@OutlineReleasedKey #6'
   - '@OutlineReleasedKey #7'
-  - '@OutlineReleasedKey #8'
   - '@KAFING_2'
   - '@KAFING_2 #2'
   - 'Channel : @Daily_Configs'
-  - '@OutlineReleasedKey #9'
+  - '@OutlineReleasedKey #8'
   - '@Nexus_Panell چنل تلگرام #1'
   - ♻️93@oneclickvpnkeys
-  - ⚕️35@oneclickvpnkeys
+  - 🔹13@oneclickvpnkeys
   - '@confiig_hub #1'
   - 'Telegram@vpnjey #7'
   - 'Telegram@vpnjey #8'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇭🇰HK_1|1.3MB/s
+  - ❓Other_1|1.0MB/s
+  - 🇺🇸US_1|2.2MB/s
+  - 🇩🇪 德国 | DEU 2
   - '🇸🇬 新加坡 | SGP #2'
-  - 🇫🇷 法国 | FRA
+  - '🇩🇪 德国 | DEU #2'
+  - 🇸🇬 新加坡 | SGP 2
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -651,8 +770,9 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_IPV4
   - 🇫🇷_FR_法国_IPV6
+  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇩🇪_DE_德国_IPV4
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -663,24 +783,24 @@ proxy-groups:
   - '防范境外势力渗透 #7'
   - '防范境外势力渗透 #8'
   - '防范境外势力渗透 #9'
-  - https://github.com/*********-*...
+  - https://alvin9999.com
   - 'github.com/*********-******/**... #1'
+  - 🇷🇺218228 | ⚡️Telegram = t.me/L...
   - 🇺🇲16@exclavevpn
   - 🇱🇹 15@exclavevpn
-  - 🇸🇬217490 | ⚡️Telegram = t.me/L...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - ' 🇺🇸 15@exclavevpn'
-  - ⚕️15@oneclickvpnkeys
   - '@OutlineReleasedKey'
   - '@OutlineReleasedKey #1'
-  - '@OutlineReleasedKey #2'
+  - 🔹9@oneclickvpnkeys
   - '@OutlineReleasedKey #3'
+  - '@OutlineReleasedKey #4'
   - '@OutlineReleasedKey #5'
   - '@vpnsal'
   - Telegram  ⚜️Join -> @tik7net_v...
   - Telegram:@v2rayng3
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
-  - '@OutlineReleasedKey #6'
+  - '@ConfigV2RayNG'
   - 🩵+@Azarakhsh_Proxy+🩷
   - '@v2ray313 کانالمون 😀'
   - Telegram@vpnjey
@@ -690,28 +810,38 @@ proxy-groups:
   - 'Telegram@vpnjey #4'
   - 'Telegram@vpnjey #5'
   - 'Telegram@vpnjey #6'
+  - 🇵🇱218385 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218381 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218384 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218383 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218380 | ⚡️Telegram = t.me/L...
+  - '@OutlineReleasedKey #6'
   - '@OutlineReleasedKey #7'
-  - '@OutlineReleasedKey #8'
   - '@KAFING_2'
   - '@KAFING_2 #2'
   - 'Channel : @Daily_Configs'
-  - '@OutlineReleasedKey #9'
+  - '@OutlineReleasedKey #8'
   - '@Nexus_Panell چنل تلگرام #1'
   - ♻️93@oneclickvpnkeys
-  - ⚕️35@oneclickvpnkeys
+  - 🔹13@oneclickvpnkeys
   - '@confiig_hub #1'
   - 'Telegram@vpnjey #7'
   - 'Telegram@vpnjey #8'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇭🇰HK_1|1.3MB/s
+  - ❓Other_1|1.0MB/s
+  - 🇺🇸US_1|2.2MB/s
+  - 🇩🇪 德国 | DEU 2
   - '🇸🇬 新加坡 | SGP #2'
-  - 🇫🇷 法国 | FRA
+  - '🇩🇪 德国 | DEU #2'
+  - 🇸🇬 新加坡 | SGP 2
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_IPV4
   - 🇫🇷_FR_法国_IPV6
+  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇩🇪_DE_德国_IPV4
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -722,24 +852,24 @@ proxy-groups:
   - '防范境外势力渗透 #7'
   - '防范境外势力渗透 #8'
   - '防范境外势力渗透 #9'
-  - https://github.com/*********-*...
+  - https://alvin9999.com
   - 'github.com/*********-******/**... #1'
+  - 🇷🇺218228 | ⚡️Telegram = t.me/L...
   - 🇺🇲16@exclavevpn
   - 🇱🇹 15@exclavevpn
-  - 🇸🇬217490 | ⚡️Telegram = t.me/L...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - ' 🇺🇸 15@exclavevpn'
-  - ⚕️15@oneclickvpnkeys
   - '@OutlineReleasedKey'
   - '@OutlineReleasedKey #1'
-  - '@OutlineReleasedKey #2'
+  - 🔹9@oneclickvpnkeys
   - '@OutlineReleasedKey #3'
+  - '@OutlineReleasedKey #4'
   - '@OutlineReleasedKey #5'
   - '@vpnsal'
   - Telegram  ⚜️Join -> @tik7net_v...
   - Telegram:@v2rayng3
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
-  - '@OutlineReleasedKey #6'
+  - '@ConfigV2RayNG'
   - 🩵+@Azarakhsh_Proxy+🩷
   - '@v2ray313 کانالمون 😀'
   - Telegram@vpnjey
@@ -749,28 +879,38 @@ proxy-groups:
   - 'Telegram@vpnjey #4'
   - 'Telegram@vpnjey #5'
   - 'Telegram@vpnjey #6'
+  - 🇵🇱218385 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218381 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218384 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218383 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218380 | ⚡️Telegram = t.me/L...
+  - '@OutlineReleasedKey #6'
   - '@OutlineReleasedKey #7'
-  - '@OutlineReleasedKey #8'
   - '@KAFING_2'
   - '@KAFING_2 #2'
   - 'Channel : @Daily_Configs'
-  - '@OutlineReleasedKey #9'
+  - '@OutlineReleasedKey #8'
   - '@Nexus_Panell چنل تلگرام #1'
   - ♻️93@oneclickvpnkeys
-  - ⚕️35@oneclickvpnkeys
+  - 🔹13@oneclickvpnkeys
   - '@confiig_hub #1'
   - 'Telegram@vpnjey #7'
   - 'Telegram@vpnjey #8'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇭🇰HK_1|1.3MB/s
+  - ❓Other_1|1.0MB/s
+  - 🇺🇸US_1|2.2MB/s
+  - 🇩🇪 德国 | DEU 2
   - '🇸🇬 新加坡 | SGP #2'
-  - 🇫🇷 法国 | FRA
+  - '🇩🇪 德国 | DEU #2'
+  - 🇸🇬 新加坡 | SGP 2
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇺🇸_US_美国_IPV4
   - 🇫🇷_FR_法国_IPV6
+  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇩🇪_DE_德国_IPV4
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -781,24 +921,24 @@ proxy-groups:
   - '防范境外势力渗透 #7'
   - '防范境外势力渗透 #8'
   - '防范境外势力渗透 #9'
-  - https://github.com/*********-*...
+  - https://alvin9999.com
   - 'github.com/*********-******/**... #1'
+  - 🇷🇺218228 | ⚡️Telegram = t.me/L...
   - 🇺🇲16@exclavevpn
   - 🇱🇹 15@exclavevpn
-  - 🇸🇬217490 | ⚡️Telegram = t.me/L...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - ' 🇺🇸 15@exclavevpn'
-  - ⚕️15@oneclickvpnkeys
   - '@OutlineReleasedKey'
   - '@OutlineReleasedKey #1'
-  - '@OutlineReleasedKey #2'
+  - 🔹9@oneclickvpnkeys
   - '@OutlineReleasedKey #3'
+  - '@OutlineReleasedKey #4'
   - '@OutlineReleasedKey #5'
   - '@vpnsal'
   - Telegram  ⚜️Join -> @tik7net_v...
   - Telegram:@v2rayng3
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
-  - '@OutlineReleasedKey #6'
+  - '@ConfigV2RayNG'
   - 🩵+@Azarakhsh_Proxy+🩷
   - '@v2ray313 کانالمون 😀'
   - Telegram@vpnjey
@@ -808,28 +948,38 @@ proxy-groups:
   - 'Telegram@vpnjey #4'
   - 'Telegram@vpnjey #5'
   - 'Telegram@vpnjey #6'
+  - 🇵🇱218385 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218381 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218384 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218383 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218380 | ⚡️Telegram = t.me/L...
+  - '@OutlineReleasedKey #6'
   - '@OutlineReleasedKey #7'
-  - '@OutlineReleasedKey #8'
   - '@KAFING_2'
   - '@KAFING_2 #2'
   - 'Channel : @Daily_Configs'
-  - '@OutlineReleasedKey #9'
+  - '@OutlineReleasedKey #8'
   - '@Nexus_Panell چنل تلگرام #1'
   - ♻️93@oneclickvpnkeys
-  - ⚕️35@oneclickvpnkeys
+  - 🔹13@oneclickvpnkeys
   - '@confiig_hub #1'
   - 'Telegram@vpnjey #7'
   - 'Telegram@vpnjey #8'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇭🇰HK_1|1.3MB/s
+  - ❓Other_1|1.0MB/s
+  - 🇺🇸US_1|2.2MB/s
+  - 🇩🇪 德国 | DEU 2
   - '🇸🇬 新加坡 | SGP #2'
-  - 🇫🇷 法国 | FRA
+  - '🇩🇪 德国 | DEU #2'
+  - 🇸🇬 新加坡 | SGP 2
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇺🇸_US_美国_IPV4
   - 🇫🇷_FR_法国_IPV6
+  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇩🇪_DE_德国_IPV4
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -840,24 +990,24 @@ proxy-groups:
   - '防范境外势力渗透 #7'
   - '防范境外势力渗透 #8'
   - '防范境外势力渗透 #9'
-  - https://github.com/*********-*...
+  - https://alvin9999.com
   - 'github.com/*********-******/**... #1'
+  - 🇷🇺218228 | ⚡️Telegram = t.me/L...
   - 🇺🇲16@exclavevpn
   - 🇱🇹 15@exclavevpn
-  - 🇸🇬217490 | ⚡️Telegram = t.me/L...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - ' 🇺🇸 15@exclavevpn'
-  - ⚕️15@oneclickvpnkeys
   - '@OutlineReleasedKey'
   - '@OutlineReleasedKey #1'
-  - '@OutlineReleasedKey #2'
+  - 🔹9@oneclickvpnkeys
   - '@OutlineReleasedKey #3'
+  - '@OutlineReleasedKey #4'
   - '@OutlineReleasedKey #5'
   - '@vpnsal'
   - Telegram  ⚜️Join -> @tik7net_v...
   - Telegram:@v2rayng3
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
-  - '@OutlineReleasedKey #6'
+  - '@ConfigV2RayNG'
   - 🩵+@Azarakhsh_Proxy+🩷
   - '@v2ray313 کانالمون 😀'
   - Telegram@vpnjey
@@ -867,21 +1017,30 @@ proxy-groups:
   - 'Telegram@vpnjey #4'
   - 'Telegram@vpnjey #5'
   - 'Telegram@vpnjey #6'
+  - 🇵🇱218385 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218381 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218384 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218383 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218380 | ⚡️Telegram = t.me/L...
+  - '@OutlineReleasedKey #6'
   - '@OutlineReleasedKey #7'
-  - '@OutlineReleasedKey #8'
   - '@KAFING_2'
   - '@KAFING_2 #2'
   - 'Channel : @Daily_Configs'
-  - '@OutlineReleasedKey #9'
+  - '@OutlineReleasedKey #8'
   - '@Nexus_Panell چنل تلگرام #1'
   - ♻️93@oneclickvpnkeys
-  - ⚕️35@oneclickvpnkeys
+  - 🔹13@oneclickvpnkeys
   - '@confiig_hub #1'
   - 'Telegram@vpnjey #7'
   - 'Telegram@vpnjey #8'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇭🇰HK_1|1.3MB/s
+  - ❓Other_1|1.0MB/s
+  - 🇺🇸US_1|2.2MB/s
+  - 🇩🇪 德国 | DEU 2
   - '🇸🇬 新加坡 | SGP #2'
-  - 🇫🇷 法国 | FRA
+  - '🇩🇪 德国 | DEU #2'
+  - 🇸🇬 新加坡 | SGP 2
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -904,8 +1063,9 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇺🇸_US_美国_IPV4
   - 🇫🇷_FR_法国_IPV6
+  - 🇺🇸_US_美国_IPV4 (12)
+  - 🇩🇪_DE_德国_IPV4
   - 防范境外势力渗透
   - '防范境外势力渗透 #1'
   - '防范境外势力渗透 #2'
@@ -916,24 +1076,24 @@ proxy-groups:
   - '防范境外势力渗透 #7'
   - '防范境外势力渗透 #8'
   - '防范境外势力渗透 #9'
-  - https://github.com/*********-*...
+  - https://alvin9999.com
   - 'github.com/*********-******/**... #1'
+  - 🇷🇺218228 | ⚡️Telegram = t.me/L...
   - 🇺🇲16@exclavevpn
   - 🇱🇹 15@exclavevpn
-  - 🇸🇬217490 | ⚡️Telegram = t.me/L...
   - 🇺🇸139909 | ⚡️Telegram = t.me/S...
   - ' 🇺🇸 15@exclavevpn'
-  - ⚕️15@oneclickvpnkeys
   - '@OutlineReleasedKey'
   - '@OutlineReleasedKey #1'
-  - '@OutlineReleasedKey #2'
+  - 🔹9@oneclickvpnkeys
   - '@OutlineReleasedKey #3'
+  - '@OutlineReleasedKey #4'
   - '@OutlineReleasedKey #5'
   - '@vpnsal'
   - Telegram  ⚜️Join -> @tik7net_v...
   - Telegram:@v2rayng3
   - 🇸🇬214601 | ⚡️Telegram = t.me/v...
-  - '@OutlineReleasedKey #6'
+  - '@ConfigV2RayNG'
   - 🩵+@Azarakhsh_Proxy+🩷
   - '@v2ray313 کانالمون 😀'
   - Telegram@vpnjey
@@ -943,21 +1103,30 @@ proxy-groups:
   - 'Telegram@vpnjey #4'
   - 'Telegram@vpnjey #5'
   - 'Telegram@vpnjey #6'
+  - 🇵🇱218385 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218381 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218384 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218383 | ⚡️Telegram = t.me/L...
+  - 🇵🇱218380 | ⚡️Telegram = t.me/L...
+  - '@OutlineReleasedKey #6'
   - '@OutlineReleasedKey #7'
-  - '@OutlineReleasedKey #8'
   - '@KAFING_2'
   - '@KAFING_2 #2'
   - 'Channel : @Daily_Configs'
-  - '@OutlineReleasedKey #9'
+  - '@OutlineReleasedKey #8'
   - '@Nexus_Panell چنل تلگرام #1'
   - ♻️93@oneclickvpnkeys
-  - ⚕️35@oneclickvpnkeys
+  - 🔹13@oneclickvpnkeys
   - '@confiig_hub #1'
   - 'Telegram@vpnjey #7'
   - 'Telegram@vpnjey #8'
-  - '🇰🇷 韩国 | KOR #1'
+  - 🇭🇰HK_1|1.3MB/s
+  - ❓Other_1|1.0MB/s
+  - 🇺🇸US_1|2.2MB/s
+  - 🇩🇪 德国 | DEU 2
   - '🇸🇬 新加坡 | SGP #2'
-  - 🇫🇷 法国 | FRA
+  - '🇩🇪 德国 | DEU #2'
+  - 🇸🇬 新加坡 | SGP 2
 rule-providers:
   LocalAreaNetwork:
     type: http
