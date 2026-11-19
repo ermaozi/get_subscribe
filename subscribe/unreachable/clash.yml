@@ -38,60 +38,50 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  network: ws
-  port: 14430
-  server: 95.128.71.79
+- type: ss
+  name: 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
+  server: 48.103.218.241
+  port: 18443
+  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
+  cipher: aes-256-gcm
   tls: false
-  type: vless
-  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
-  ws-opts:
-    headers:
-      Host: 95.128.71.79
-    path: /vless
+  skip-cert-verify: false
 - client-fingerprint: firefox
-  name: '🇹🇷 土耳其 | TUR #1'
+  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
   network: ws
-  port: 8443
-  server: 186.243.218.221
-  servername: cloudehouse24.ru
+  port: 443
+  server: 37.18.14.177
+  servername: owj5svd907.deshevayashaurma.icu
   tls: true
   type: vless
-  udp: true
-  uuid: fa937345-6d3e-4ff4-8127-1a836987a0db
+  uuid: 7955bf18-35c4-412d-aabd-c0b36c793063
   ws-opts:
     headers:
-      Host: cloudehouse24.ru
-    path: /v1/assets/7c3f9a2e6b4d8f10/us.js
-- cipher: chacha20-ietf-poly1305
-  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  password: '12242'
-  port: 10099
-  server: 115.161.136.145
+      Host: owj5svd907.deshevayashaurma.icu
+    path: /static/collect/037b5c44e12a/
+- name: 🇪🇪[www.v2nodes.com] vless-EE-1...
+  port: 16443
+  server: 45.86.60.174
+  tls: false
+  type: vless
+  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+- cipher: 2022-blake3-chacha20-poly1305
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  password: uou5NTq+xna9PBIG+8jtSSyQ6idxiXZgeK+Uw52qopY=
+  port: 59924
+  server: 130.61.145.251
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  password: 2e555e46dbc421452416834962fd014f
-  port: 8388
-  server: 62.182.193.228
+  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  password: U83u9OGpvSatIUW7LsWffr
+  port: 64546
+  server: 194.68.44.42
   type: ss
-- name: 🇺🇸US_9|2.7MB/s
-  port: 18080
-  server: 52.128.238.98
-  skip-cert-verify: true
-  type: http
 - cipher: chacha20-ietf-poly1305
-  name: '🇰🇷 韩国 | KOR #2'
+  name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 3.38.150.98
-  type: ss
-  udp: true
-- cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #2'
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  port: 8443
-  server: 13.212.48.8
+  server: 43.201.150.9
   type: ss
   udp: true
 - client-fingerprint: firefox
@@ -151,19 +141,19 @@ proxies:
   type: vless
   udp: true
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: 🇰🇷 韩国 | KOR
-  server: 3.36.48.199
-  port: 8443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
-  udp: true
-- name: 🇸🇬 新加坡 | SGP
-  server: 52.221.227.252
-  port: 8443
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+- name: 🇪🇪 爱沙尼亚 | EST
+  server: 5.129.202.80
+  port: 443
+  type: vless
+  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8
+    short-id: 2ef2b10d5143d798
+  servername: mirror-50.topp-con.xyz
+  client-fingerprint: chrome
+  network: tcp
   udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -171,37 +161,33 @@ proxy-groups:
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  - 🇺🇸US_9|2.7MB/s
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇸🇬 新加坡 | SGP #2'
+  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇰🇷 韩国 | KOR #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇰🇷 韩国 | KOR
-  - 🇸🇬 新加坡 | SGP
+  - 🇪🇪 爱沙尼亚 | EST
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  - 🇺🇸US_9|2.7MB/s
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇸🇬 新加坡 | SGP #2'
+  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇰🇷 韩国 | KOR #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇰🇷 韩国 | KOR
-  - 🇸🇬 新加坡 | SGP
+  - 🇪🇪 爱沙尼亚 | EST
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -211,77 +197,69 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  - 🇺🇸US_9|2.7MB/s
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇸🇬 新加坡 | SGP #2'
+  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇰🇷 韩国 | KOR #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇰🇷 韩国 | KOR
-  - 🇸🇬 新加坡 | SGP
+  - 🇪🇪 爱沙尼亚 | EST
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  - 🇺🇸US_9|2.7MB/s
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇸🇬 新加坡 | SGP #2'
+  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇰🇷 韩国 | KOR #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇰🇷 韩国 | KOR
-  - 🇸🇬 新加坡 | SGP
+  - 🇪🇪 爱沙尼亚 | EST
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  - 🇺🇸US_9|2.7MB/s
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇸🇬 新加坡 | SGP #2'
+  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇰🇷 韩国 | KOR #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇰🇷 韩国 | KOR
-  - 🇸🇬 新加坡 | SGP
+  - 🇪🇪 爱沙尼亚 | EST
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  - 🇺🇸US_9|2.7MB/s
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇸🇬 新加坡 | SGP #2'
+  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇰🇷 韩国 | KOR #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇰🇷 韩国 | KOR
-  - 🇸🇬 新加坡 | SGP
+  - 🇪🇪 爱沙尼亚 | EST
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -304,20 +282,18 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
-  - '🇹🇷 土耳其 | TUR #1'
-  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
-  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
-  - 🇺🇸US_9|2.7MB/s
-  - '🇰🇷 韩国 | KOR #2'
-  - '🇸🇬 新加坡 | SGP #2'
+  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
+  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
+  - 🇪🇪[www.v2nodes.com] vless-EE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
+  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇰🇷 韩国 | KOR #1'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇰🇷 韩国 | KOR
-  - 🇸🇬 新加坡 | SGP
+  - 🇪🇪 爱沙尼亚 | EST
 rule-providers:
   LocalAreaNetwork:
     type: http
