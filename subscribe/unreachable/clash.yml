@@ -38,33 +38,60 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- type: vless
-  name: 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  server: 196.196.148.63
-  port: 443
-  uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+- name: '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  network: ws
+  port: 14430
+  server: 95.128.71.79
+  tls: false
+  type: vless
+  uuid: 8cef7621-c6f0-486e-b51d-59c30c5b0b25
+  ws-opts:
+    headers:
+      Host: 95.128.71.79
+    path: /vless
+- client-fingerprint: firefox
+  name: '🇹🇷 土耳其 | TUR #1'
+  network: ws
+  port: 8443
+  server: 186.243.218.221
+  servername: cloudehouse24.ru
   tls: true
-  servername: 717252g.nl8.h1clayd.click
-  sni: 717252g.nl8.h1clayd.click
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  reality-opts:
-    public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
-    short-id: d3bd772514c87d28
-  network: grpc
-  grpc-opts:
-    grpc-service-name: 204adda7e3da
-- cipher: aes-256-gcm
-  name: 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  password: AxIYWtskJWIIaefW
-  port: 8388
-  server: 70.34.212.124
+  type: vless
+  udp: true
+  uuid: fa937345-6d3e-4ff4-8127-1a836987a0db
+  ws-opts:
+    headers:
+      Host: cloudehouse24.ru
+    path: /v1/assets/7c3f9a2e6b4d8f10/us.js
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  password: '12242'
+  port: 10099
+  server: 115.161.136.145
   type: ss
 - cipher: chacha20-ietf-poly1305
-  name: '🇸🇬 新加坡 | SGP #1'
+  name: 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  password: 2e555e46dbc421452416834962fd014f
+  port: 8388
+  server: 62.182.193.228
+  type: ss
+- name: 🇺🇸US_9|2.7MB/s
+  port: 18080
+  server: 52.128.238.98
+  skip-cert-verify: true
+  type: http
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 56.10.146.231
+  server: 3.38.150.98
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇬 新加坡 | SGP #2'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 13.212.48.8
   type: ss
   udp: true
 - client-fingerprint: firefox
@@ -97,6 +124,13 @@ proxies:
     headers:
       Host: au5.pad-sservice.lat
     path: /AU5W
+- name: US_speednode_0039
+  port: 8443
+  server: 44.248.167.117
+  skip-cert-verify: true
+  tls: true
+  type: http
+  udp: true
 - client-fingerprint: chrome
   name: US_speednode_0042
   port: 19167
@@ -117,36 +151,19 @@ proxies:
   type: vless
   udp: true
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: 🇪🇪 爱沙尼亚 | EST
-  server: 5.129.202.80
-  port: 443
-  type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
-  tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8
-    short-id: 2ef2b10d5143d798
-  servername: mirror-50.topp-con.xyz
-  client-fingerprint: chrome
-  network: tcp
+- name: 🇰🇷 韩国 | KOR
+  server: 3.36.48.199
+  port: 8443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   udp: true
-- name: 🇷🇺 俄罗斯 | RUS 2
-  server: 171.22.133.5
-  port: 7443
-  type: vless
-  uuid: 0b22812b-4a79-42b1-93ec-5b157b0f2f7f
-  tls: true
-  reality-opts:
-    public-key: NmMggGv5jmohnMmZytnLdenxmpNwa4P9E2PZW1EV8go
-    short-id: 5e25bf4462660ed8
-  servername: pl-origin.krabvpn.pro
-  client-fingerprint: firefox
-  network: xhttp
-  xhttp-opts:
-    path: /assets/7ae15be966a6bce1f00fa96a
-    host: pl-origin.krabvpn.pro
-    mode: auto
+- name: 🇸🇬 新加坡 | SGP
+  server: 52.221.227.252
+  port: 8443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -154,27 +171,37 @@ proxy-groups:
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇹🇷 土耳其 | TUR #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇺🇸US_9|2.7MB/s
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇸🇬 新加坡 | SGP #2'
   - AT_speednode_0002
   - ES_speednode_0007
+  - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇰🇷 韩国 | KOR
+  - 🇸🇬 新加坡 | SGP
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇹🇷 土耳其 | TUR #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇺🇸US_9|2.7MB/s
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇸🇬 新加坡 | SGP #2'
   - AT_speednode_0002
   - ES_speednode_0007
+  - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇰🇷 韩国 | KOR
+  - 🇸🇬 新加坡 | SGP
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -184,57 +211,77 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇹🇷 土耳其 | TUR #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇺🇸US_9|2.7MB/s
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇸🇬 新加坡 | SGP #2'
   - AT_speednode_0002
   - ES_speednode_0007
+  - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇰🇷 韩国 | KOR
+  - 🇸🇬 新加坡 | SGP
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇹🇷 土耳其 | TUR #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇺🇸US_9|2.7MB/s
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇸🇬 新加坡 | SGP #2'
   - AT_speednode_0002
   - ES_speednode_0007
+  - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇰🇷 韩国 | KOR
+  - 🇸🇬 新加坡 | SGP
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇹🇷 土耳其 | TUR #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇺🇸US_9|2.7MB/s
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇸🇬 新加坡 | SGP #2'
   - AT_speednode_0002
   - ES_speednode_0007
+  - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇰🇷 韩国 | KOR
+  - 🇸🇬 新加坡 | SGP
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇹🇷 土耳其 | TUR #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇺🇸US_9|2.7MB/s
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇸🇬 新加坡 | SGP #2'
   - AT_speednode_0002
   - ES_speednode_0007
+  - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇰🇷 韩国 | KOR
+  - 🇸🇬 新加坡 | SGP
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -257,15 +304,20 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇸🇨_SC_塞舌尔->🇳🇱_NL_荷兰_IPV4
-  - 🇸🇪[www.v2nodes.com] ss-SE-1560...
-  - '🇸🇬 新加坡 | SGP #1'
+  - '🇧🇾[www.v2nodes.com] vless-BY-1... #2'
+  - '🇹🇷 土耳其 | TUR #1'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - 🇸🇪[www.v2nodes.com] ss-SE-1620...
+  - 🇺🇸US_9|2.7MB/s
+  - '🇰🇷 韩国 | KOR #2'
+  - '🇸🇬 新加坡 | SGP #2'
   - AT_speednode_0002
   - ES_speednode_0007
+  - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
-  - 🇷🇺 俄罗斯 | RUS 2
+  - 🇰🇷 韩国 | KOR
+  - 🇸🇬 新加坡 | SGP
 rule-providers:
   LocalAreaNetwork:
     type: http
