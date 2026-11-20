@@ -38,52 +38,186 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- type: ss
-  name: 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
-  server: 48.103.218.241
-  port: 18443
-  password: Lpq5UPVHtQYiuB9jEUNc2WkeIYCUH9DE
-  cipher: aes-256-gcm
-  tls: false
-  skip-cert-verify: false
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇩🇪 德国 | DEU #10'
+  password: cz6f+UAA+0gyS85rpBJzzitys/mNOPWVG84Ba4FZSaw=
+  port: 59924
+  server: 150.230.159.102
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇩🇪 德国 | DEU #9'
+  password: wWdQLZS5jWNT9FjKPBA15TdXtH7ABPXqFaHHQojZmnw=
+  port: 59924
+  server: 89.168.104.141
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇩🇪 德国 | DEU #3'
+  password: oQirp3av7ALs6ICJj5Qf2U8wBxlAxnCk1yk6aoAAN3A=
+  port: 59924
+  server: 92.5.21.171
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇬🇧 英国 | GBR #3'
+  password: zES55biUj1J3casdvf3wd5HqUccPRCc8wk0MlETzYxQ=
+  port: 61312
+  server: 134.65.59.80
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇬🇧 英国 | GBR #2'
+  password: smCw9x19ebFItolXtF8O5BphmiXaFqdeenIDcB5tLAU=
+  port: 61312
+  server: 129.151.93.114
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  password: '12242'
+  port: 10099
+  server: 115.161.136.145
+  type: ss
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇳🇱 荷兰 | NLD #1'
+  password: ucQ0o3YYeedEb6oFUnlOPKrE/wqxTNJkUlQX0LExMO4=
+  port: 45819
+  server: 158.178.144.201
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇺🇸 美国 | USA #8'
+  password: FQwWid/yN8BbtdyXcViI+ijKYMtWgeMg+o/OCChCbVc=
+  port: 56927
+  server: 129.221.181.20
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇺🇸 美国 | USA #6'
+  password: C34+ziWxv8UL1K4m74bSIqKgUWN3R5XkSDf+3vOj9RE=
+  port: 56927
+  server: 129.221.253.23
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇸🇬 新加坡 | SGP #5'
+  password: RWtTKETUy87lj9TFubxPxfkWDx/JhYaQQwDjZv2Tgg0=
+  port: 56927
+  server: 161.118.221.20
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇺🇸 美国 | USA #9'
+  password: Cghhl0Oo+c50qNSrYzkonAM4ieaWVPo0uW8eC/nR7XM=
+  port: 50356
+  server: 129.146.118.209
+  type: ss
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇺🇸 美国 | USA #5'
+  password: lj5rXlwpypP0Ku0nzWOl8haA6R98vLoCsY8vmdGmfl4=
+  port: 50356
+  server: 129.146.38.236
+  type: ss
+  udp: true
+- name: '🇦🇪[www.v2nodes.com] trojan-AE-... #2'
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  port: 20123
+  server: sclass-00.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- name: '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  port: 20086
+  server: sclass-c1.catcat321.com
+  skip-cert-verify: true
+  sni: hk.catxstar.com
+  type: trojan
+- name: 🇩🇪DE_4|3.2MB/s
+  port: 12345
+  server: 141.147.19.47
+  skip-cert-verify: true
+  type: http
 - client-fingerprint: firefox
-  name: '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  network: ws
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: glush.de1.v1
+  name: 🇩🇪 德国 | DEU 8
+  network: grpc
   port: 443
-  server: 37.18.14.177
-  servername: owj5svd907.deshevayashaurma.icu
+  server: 129.101.100.49
+  servername: fernglade.gerqix.online
   tls: true
   type: vless
-  uuid: 7955bf18-35c4-412d-aabd-c0b36c793063
-  ws-opts:
-    headers:
-      Host: owj5svd907.deshevayashaurma.icu
-    path: /static/collect/037b5c44e12a/
-- name: 🇪🇪[www.v2nodes.com] vless-EE-1...
-  port: 16443
-  server: 45.86.60.174
-  tls: false
-  type: vless
-  uuid: 13e541f3-d09d-4633-89df-8513db0ced20
+  udp: true
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
 - cipher: 2022-blake3-chacha20-poly1305
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  password: uou5NTq+xna9PBIG+8jtSSyQ6idxiXZgeK+Uw52qopY=
-  port: 59924
-  server: 130.61.145.251
+  name: '🇬🇧 英国 | GBR #1'
+  password: 88tWkBUC/ZgtLt/8HDYvCNybz7krEsoITaSHbSc6z5g=
+  port: 61312
+  server: 129.151.83.7
   type: ss
-- cipher: chacha20-ietf-poly1305
-  name: 🇷🇴[www.v2nodes.com] ss-RO-1595...
-  password: U83u9OGpvSatIUW7LsWffr
-  port: 64546
-  server: 194.68.44.42
+  udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇬🇧 英国 | GBR #4'
+  password: 0KjokXPI9HxPlkgc3ahg2W861kIezVbApareYWcFZG4=
+  port: 61312
+  server: 129.151.84.106
   type: ss
+  udp: true
+- alterId: 1
+  cipher: auto
+  name: 🇯🇵 日本 | JPN 2
+  port: 28788
+  server: op715tj-g06.jp06-jz-vm0.entry.fr0528.art
+  skip-cert-verify: true
+  tls: true
+  type: vmess
+  udp: true
+  uuid: 72a52b12-fbd2-3fa3-9964-df23590dc0bb
 - cipher: chacha20-ietf-poly1305
   name: '🇰🇷 韩国 | KOR #1'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 43.201.150.9
+  server: 43.203.123.202
   type: ss
   udp: true
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🇳🇱 荷兰 | NLD #7'
+  password: PkcHhmxhWLzglIGwddGUrJ16NckuN7Zi4GThVg+7kSg=
+  port: 45819
+  server: 92.5.201.121
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇬 新加坡 | SGP #3'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 13.229.87.193
+  type: ss
+  udp: true
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: ''
+  name: '🇩🇪 德国 | DEU #8'
+  network: grpc
+  port: 443
+  server: 129.101.100.49
+  servername: fernglade.gerqix.online
+  tls: true
+  type: vless
+  uuid: 25ac78e7-6d1d-4c9a-a450-c01a4871769f
+- alterId: 1
+  cipher: auto
+  name: '🇯🇵 日本 | JPN #2'
+  network: tcp
+  port: 28788
+  server: op715tj-g06.jp06-jz-vm0.entry.fr0528.art
+  tls: true
+  type: vmess
+  uuid: 72a52b12-fbd2-3fa3-9964-df23590dc0bb
 - client-fingerprint: firefox
   name: AT_speednode_0002
   network: ws
@@ -141,19 +275,38 @@ proxies:
   type: vless
   udp: true
   uuid: e9a8144e-5237-488a-afb1-9ca3d8d54c80
-- name: 🇪🇪 爱沙尼亚 | EST
-  server: 5.129.202.80
+- name: 🇭🇰 香港 | HKG
+  server: sclass-c1.catcat321.com
+  port: 20051
+  type: trojan
+  password: d9064589-74af-432a-9390-5d8a9da281bf
+  sni: hk.catxstar.com
+  skip-cert-verify: true
+  udp: true
+- name: 🇭🇰 香港 | HKG 4
+  server: proceed-entered-tomato-ctrl.trycloudflare.com
   port: 443
-  type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  type: vmess
+  uuid: 2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea
+  alterId: 0
+  cipher: auto
   tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8
-    short-id: 2ef2b10d5143d798
-  servername: mirror-50.topp-con.xyz
-  client-fingerprint: chrome
-  network: tcp
+  alpn:
+  - ''
+  skip-cert-verify: true
+  servername: proceed-entered-tomato-ctrl.trycloudflare.com
+  network: ws
+  ws-opts:
+    path: /2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea-vm
+    headers:
+      Host: proceed-entered-tomato-ctrl.trycloudflare.com
+  udp: true
+- name: 🇸🇬 新加坡 | SGP
+  server: 175.41.188.76
+  port: 8443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
@@ -161,33 +314,73 @@ proxy-groups:
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇩🇪 德国 | DEU #10'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇩🇪 德国 | DEU #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🇳🇱 荷兰 | NLD #1'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #6'
+  - '🇸🇬 新加坡 | SGP #5'
+  - '🇺🇸 美国 | USA #9'
+  - '🇺🇸 美国 | USA #5'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #2'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪DE_4|3.2MB/s
+  - 🇩🇪 德国 | DEU 8
+  - '🇬🇧 英国 | GBR #1'
+  - '🇬🇧 英国 | GBR #4'
+  - 🇯🇵 日本 | JPN 2
   - '🇰🇷 韩国 | KOR #1'
+  - '🇳🇱 荷兰 | NLD #7'
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇩🇪 德国 | DEU #8'
+  - '🇯🇵 日本 | JPN #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰 香港 | HKG 4
+  - 🇸🇬 新加坡 | SGP
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇩🇪 德国 | DEU #10'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇩🇪 德国 | DEU #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🇳🇱 荷兰 | NLD #1'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #6'
+  - '🇸🇬 新加坡 | SGP #5'
+  - '🇺🇸 美国 | USA #9'
+  - '🇺🇸 美国 | USA #5'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #2'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪DE_4|3.2MB/s
+  - 🇩🇪 德国 | DEU 8
+  - '🇬🇧 英国 | GBR #1'
+  - '🇬🇧 英国 | GBR #4'
+  - 🇯🇵 日本 | JPN 2
   - '🇰🇷 韩国 | KOR #1'
+  - '🇳🇱 荷兰 | NLD #7'
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇩🇪 德国 | DEU #8'
+  - '🇯🇵 日本 | JPN #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰 香港 | HKG 4
+  - 🇸🇬 新加坡 | SGP
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -197,69 +390,149 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇩🇪 德国 | DEU #10'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇩🇪 德国 | DEU #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🇳🇱 荷兰 | NLD #1'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #6'
+  - '🇸🇬 新加坡 | SGP #5'
+  - '🇺🇸 美国 | USA #9'
+  - '🇺🇸 美国 | USA #5'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #2'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪DE_4|3.2MB/s
+  - 🇩🇪 德国 | DEU 8
+  - '🇬🇧 英国 | GBR #1'
+  - '🇬🇧 英国 | GBR #4'
+  - 🇯🇵 日本 | JPN 2
   - '🇰🇷 韩国 | KOR #1'
+  - '🇳🇱 荷兰 | NLD #7'
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇩🇪 德国 | DEU #8'
+  - '🇯🇵 日本 | JPN #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰 香港 | HKG 4
+  - 🇸🇬 新加坡 | SGP
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇩🇪 德国 | DEU #10'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇩🇪 德国 | DEU #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🇳🇱 荷兰 | NLD #1'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #6'
+  - '🇸🇬 新加坡 | SGP #5'
+  - '🇺🇸 美国 | USA #9'
+  - '🇺🇸 美国 | USA #5'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #2'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪DE_4|3.2MB/s
+  - 🇩🇪 德国 | DEU 8
+  - '🇬🇧 英国 | GBR #1'
+  - '🇬🇧 英国 | GBR #4'
+  - 🇯🇵 日本 | JPN 2
   - '🇰🇷 韩国 | KOR #1'
+  - '🇳🇱 荷兰 | NLD #7'
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇩🇪 德国 | DEU #8'
+  - '🇯🇵 日本 | JPN #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰 香港 | HKG 4
+  - 🇸🇬 新加坡 | SGP
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇩🇪 德国 | DEU #10'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇩🇪 德国 | DEU #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🇳🇱 荷兰 | NLD #1'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #6'
+  - '🇸🇬 新加坡 | SGP #5'
+  - '🇺🇸 美国 | USA #9'
+  - '🇺🇸 美国 | USA #5'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #2'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪DE_4|3.2MB/s
+  - 🇩🇪 德国 | DEU 8
+  - '🇬🇧 英国 | GBR #1'
+  - '🇬🇧 英国 | GBR #4'
+  - 🇯🇵 日本 | JPN 2
   - '🇰🇷 韩国 | KOR #1'
+  - '🇳🇱 荷兰 | NLD #7'
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇩🇪 德国 | DEU #8'
+  - '🇯🇵 日本 | JPN #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰 香港 | HKG 4
+  - 🇸🇬 新加坡 | SGP
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇩🇪 德国 | DEU #10'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇩🇪 德国 | DEU #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🇳🇱 荷兰 | NLD #1'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #6'
+  - '🇸🇬 新加坡 | SGP #5'
+  - '🇺🇸 美国 | USA #9'
+  - '🇺🇸 美国 | USA #5'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #2'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪DE_4|3.2MB/s
+  - 🇩🇪 德国 | DEU 8
+  - '🇬🇧 英国 | GBR #1'
+  - '🇬🇧 英国 | GBR #4'
+  - 🇯🇵 日本 | JPN 2
   - '🇰🇷 韩国 | KOR #1'
+  - '🇳🇱 荷兰 | NLD #7'
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇩🇪 德国 | DEU #8'
+  - '🇯🇵 日本 | JPN #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰 香港 | HKG 4
+  - 🇸🇬 新加坡 | SGP
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -282,18 +555,38 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇷🇺_RU_俄罗斯->🇺🇸_US_美国_IPV4
-  - '🇩🇪[www.v2nodes.com] vless-DE-1... #5'
-  - 🇪🇪[www.v2nodes.com] vless-EE-1...
-  - 🇩🇪[www.v2nodes.com] ss-DE-1623...
-  - 🇷🇴[www.v2nodes.com] ss-RO-1595...
+  - '🇩🇪 德国 | DEU #10'
+  - '🇩🇪 德国 | DEU #9'
+  - '🇩🇪 德国 | DEU #3'
+  - '🇬🇧 英国 | GBR #3'
+  - '🇬🇧 英国 | GBR #2'
+  - 🇰🇷[www.v2nodes.com] ss-KR-1126...
+  - '🇳🇱 荷兰 | NLD #1'
+  - '🇺🇸 美国 | USA #8'
+  - '🇺🇸 美国 | USA #6'
+  - '🇸🇬 新加坡 | SGP #5'
+  - '🇺🇸 美国 | USA #9'
+  - '🇺🇸 美国 | USA #5'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #2'
+  - '🇦🇪[www.v2nodes.com] trojan-AE-... #3'
+  - 🇩🇪DE_4|3.2MB/s
+  - 🇩🇪 德国 | DEU 8
+  - '🇬🇧 英国 | GBR #1'
+  - '🇬🇧 英国 | GBR #4'
+  - 🇯🇵 日本 | JPN 2
   - '🇰🇷 韩国 | KOR #1'
+  - '🇳🇱 荷兰 | NLD #7'
+  - '🇸🇬 新加坡 | SGP #3'
+  - '🇩🇪 德国 | DEU #8'
+  - '🇯🇵 日本 | JPN #2'
   - AT_speednode_0002
   - ES_speednode_0007
   - US_speednode_0039
   - US_speednode_0042
   - US_speednode_0043
-  - 🇪🇪 爱沙尼亚 | EST
+  - 🇭🇰 香港 | HKG
+  - 🇭🇰 香港 | HKG 4
+  - 🇸🇬 新加坡 | SGP
 rule-providers:
   LocalAreaNetwork:
     type: http
