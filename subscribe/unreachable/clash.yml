@@ -1,0 +1,340 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+ipv6: true
+dns:
+  enable: true
+  listen: 127.0.0.1:1053
+  ipv6: true
+  prefer-h3: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - localhost
+  - +.localhost
+  - +.lan
+  - +.local
+  - +.home.arpa
+  use-hosts: true
+  use-system-hosts: true
+  respect-rules: true
+  default-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  proxy-server-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://223.6.6.6/dns-query#DIRECT
+  direct-nameserver:
+  - https://223.5.5.5/dns-query#DIRECT
+  - https://doh.pub/dns-query#DIRECT
+  direct-nameserver-follow-policy: false
+  nameserver-policy:
+    geosite:cn:
+    - https://223.5.5.5/dns-query#DIRECT
+    - https://doh.pub/dns-query#DIRECT
+  nameserver:
+  - https://1.1.1.1/dns-query
+  - https://1.0.0.1/dns-query
+proxies:
+- cipher: 2022-blake3-chacha20-poly1305
+  name: 🇳🇱[www.v2nodes.com] ss-NL-1623...
+  password: Lqb/eLDa4LnfF6j965FkZEXTWkH65B083ivjy0xFpiI=
+  port: 45819
+  server: 158.178.157.15
+  type: ss
+- cipher: 2022-blake3-chacha20-poly1305
+  name: '🏳[www.v2nodes.com] ss- #17'
+  password: EP/0kIjk18c43tfkqeJqdVQm8lGArteYkhhwgBJ3q70=
+  port: 50356
+  server: 161.153.38.61
+  type: ss
+- name: 🇯🇵 日本 | JPN 2
+  password: czxPueuXQB1wUfMU
+  port: 36835
+  server: 45.192.203.110
+  skip-cert-verify: true
+  sni: www.bing.com
+  type: anytls
+  udp: true
+- client-fingerprint: chrome
+  name: 🇯🇵JP_2|5.2MB/s
+  network: tcp
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 34745
+  server: win2loxfde0303.gggrelay.org
+  skip-cert-verify: true
+  sni: nu3rb.supertoolify.com
+  type: trojan
+  udp: true
+- name: 🇰🇷KR_1|4.1MB/s
+  port: 1090
+  server: 121.169.46.116
+  skip-cert-verify: true
+  type: socks5
+  username: T2clM0QlM0Q6
+- name: 🇸🇬SG_2|3.0MB/s
+  port: 9090
+  server: 128.199.254.13
+  skip-cert-verify: true
+  type: http
+- name: 🇫🇷FR_6|1.7MB/s
+  port: 3128
+  server: 54.36.150.233
+  skip-cert-verify: true
+  type: http
+- client-fingerprint: chrome
+  encryption: mlkem768x25519plus.native.0rtt.F5LiR4Hs6W_x17I2LmxdFA8MUGvpHSaVuZ4zxTCAkmI
+  name: '🇩🇪 德国 | DEU #15'
+  network: ws
+  port: 27181
+  server: du5g.altheora.ir
+  servername: login.zanjanphone.ir
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5c683113-0abe-4d0b-aad9-0f198186b45a
+  ws-opts:
+    headers:
+      Host: login.zanjanphone.ir
+    path: /user
+- cipher: chacha20-ietf-poly1305
+  name: '🇰🇷 韩国 | KOR #3'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 3.35.138.10
+  type: ss
+  udp: true
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇬 新加坡 | SGP #3'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 54.179.142.35
+  type: ss
+  udp: true
+proxy-groups:
+- name: ermao.net | 🚀 节点选择
+  type: select
+  proxies:
+  - ermao.net | ♻️ 自动选择
+  - DIRECT
+  - 🇳🇱[www.v2nodes.com] ss-NL-1623...
+  - '🏳[www.v2nodes.com] ss- #17'
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵JP_2|5.2MB/s
+  - 🇰🇷KR_1|4.1MB/s
+  - 🇸🇬SG_2|3.0MB/s
+  - 🇫🇷FR_6|1.7MB/s
+  - '🇩🇪 德国 | DEU #15'
+  - '🇰🇷 韩国 | KOR #3'
+  - '🇸🇬 新加坡 | SGP #3'
+- name: ermao.net | ♻️ 自动选择
+  type: url-test
+  proxies:
+  - 🇳🇱[www.v2nodes.com] ss-NL-1623...
+  - '🏳[www.v2nodes.com] ss- #17'
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵JP_2|5.2MB/s
+  - 🇰🇷KR_1|4.1MB/s
+  - 🇸🇬SG_2|3.0MB/s
+  - 🇫🇷FR_6|1.7MB/s
+  - '🇩🇪 德国 | DEU #15'
+  - '🇰🇷 韩国 | KOR #3'
+  - '🇸🇬 新加坡 | SGP #3'
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 🌍 国外媒体
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+  - 🎯 全球直连
+  - 🇳🇱[www.v2nodes.com] ss-NL-1623...
+  - '🏳[www.v2nodes.com] ss- #17'
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵JP_2|5.2MB/s
+  - 🇰🇷KR_1|4.1MB/s
+  - 🇸🇬SG_2|3.0MB/s
+  - 🇫🇷FR_6|1.7MB/s
+  - '🇩🇪 德国 | DEU #15'
+  - '🇰🇷 韩国 | KOR #3'
+  - '🇸🇬 新加坡 | SGP #3'
+- name: 📲 电报信息
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - 🇳🇱[www.v2nodes.com] ss-NL-1623...
+  - '🏳[www.v2nodes.com] ss- #17'
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵JP_2|5.2MB/s
+  - 🇰🇷KR_1|4.1MB/s
+  - 🇸🇬SG_2|3.0MB/s
+  - 🇫🇷FR_6|1.7MB/s
+  - '🇩🇪 德国 | DEU #15'
+  - '🇰🇷 韩国 | KOR #3'
+  - '🇸🇬 新加坡 | SGP #3'
+- name: Ⓜ️ 微软服务
+  type: select
+  proxies:
+  - 🎯 全球直连
+  - ermao.net | 🚀 节点选择
+  - 🇳🇱[www.v2nodes.com] ss-NL-1623...
+  - '🏳[www.v2nodes.com] ss- #17'
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵JP_2|5.2MB/s
+  - 🇰🇷KR_1|4.1MB/s
+  - 🇸🇬SG_2|3.0MB/s
+  - 🇫🇷FR_6|1.7MB/s
+  - '🇩🇪 德国 | DEU #15'
+  - '🇰🇷 韩国 | KOR #3'
+  - '🇸🇬 新加坡 | SGP #3'
+- name: 🍎 苹果服务
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - 🇳🇱[www.v2nodes.com] ss-NL-1623...
+  - '🏳[www.v2nodes.com] ss- #17'
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵JP_2|5.2MB/s
+  - 🇰🇷KR_1|4.1MB/s
+  - 🇸🇬SG_2|3.0MB/s
+  - 🇫🇷FR_6|1.7MB/s
+  - '🇩🇪 德国 | DEU #15'
+  - '🇰🇷 韩国 | KOR #3'
+  - '🇸🇬 新加坡 | SGP #3'
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - ermao.net | 🚀 节点选择
+  - ermao.net | ♻️ 自动选择
+- name: 🛑 全球拦截
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🍃 应用净化
+  type: select
+  proxies:
+  - REJECT
+  - DIRECT
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - ermao.net | 🚀 节点选择
+  - 🎯 全球直连
+  - ermao.net | ♻️ 自动选择
+  - 🇳🇱[www.v2nodes.com] ss-NL-1623...
+  - '🏳[www.v2nodes.com] ss- #17'
+  - 🇯🇵 日本 | JPN 2
+  - 🇯🇵JP_2|5.2MB/s
+  - 🇰🇷KR_1|4.1MB/s
+  - 🇸🇬SG_2|3.0MB/s
+  - 🇫🇷FR_6|1.7MB/s
+  - '🇩🇪 德国 | DEU #15'
+  - '🇰🇷 韩国 | KOR #3'
+  - '🇸🇬 新加坡 | SGP #3'
+rule-providers:
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./rules/LocalAreaNetwork.list
+    interval: 86400
+  BanAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list
+    path: ./rules/BanAD.list
+    interval: 86400
+  BanProgramAD:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list
+    path: ./rules/BanProgramAD.list
+    interval: 86400
+  GoogleCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./rules/GoogleCN.list
+    interval: 86400
+  SteamCN:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./rules/SteamCN.list
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./rules/Microsoft.list
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./rules/Apple.list
+    interval: 86400
+  ProxyMedia:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./rules/ProxyMedia.list
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+    path: ./rules/Telegram.list
+    interval: 86400
+  ProxyLite:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list
+    path: ./rules/ProxyLite.list
+    interval: 86400
+  ChinaDomain:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./rules/ChinaDomain.list
+    interval: 86400
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./rules/ChinaCompanyIp.list
+    interval: 86400
+rules:
+- RULE-SET,LocalAreaNetwork,🎯 全球直连
+- RULE-SET,BanAD,🛑 全球拦截
+- RULE-SET,BanProgramAD,🍃 应用净化
+- RULE-SET,GoogleCN,🎯 全球直连
+- RULE-SET,SteamCN,🎯 全球直连
+- RULE-SET,Microsoft,Ⓜ️ 微软服务
+- RULE-SET,Apple,🍎 苹果服务
+- RULE-SET,ProxyMedia,🌍 国外媒体
+- RULE-SET,Telegram,📲 电报信息
+- RULE-SET,ProxyLite,ermao.net | 🚀 节点选择
+- RULE-SET,ChinaDomain,🎯 全球直连
+- RULE-SET,ChinaCompanyIp,🎯 全球直连
+- GEOIP,CN,🎯 全球直连
+- MATCH,🐟 漏网之鱼
