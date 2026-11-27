@@ -38,97 +38,100 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- client-fingerprint: firefox
-  name: '🇩🇪 德国 | DEU #1'
-  network: xhttp
-  port: 443
-  server: 193.160.208.240
-  servername: 193.160.208.240
-  tls: true
-  type: vless
-  udp: true
-  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
-  xhttp-opts:
-    mode: auto
-    path: /assets/twru01/
-- alpn:
-  - ''
-  alterId: 0
-  cipher: auto
-  name: 🇩🇪 德国 | DEU 3
-  port: 28059
-  server: 194.110.210.41
-  skip-cert-verify: true
+- name: '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  network: ws
+  port: 2083
+  server: 54.36.102.152
   tls: false
-  type: vmess
-  udp: true
-  uuid: c38605a8-89ae-4e57-b9b0-35606df2e1a3
-- name: '🇭🇰 香港 | HKG #1'
-  password: '12012'
-  port: 12012
-  server: 47.242.93.89
+  type: vless
+  uuid: 51a6ab93-e805-4b8b-89d1-d3ab85a118ce
+  ws-opts:
+    path: /vless-kulo
+- name: 🇻🇳[www.v2nodes.com] trojan-VN-...
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  port: 443
+  server: xvxn1hkzf.mateflora.com
   skip-cert-verify: true
-  sni: ali-hk.b-gfw.cfd
+  sni: xvxn1hkzf.mateflora.com
   type: trojan
-  udp: true
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-mode: gun
-    grpc-service-name: mobile.api.Event
-  name: 🇷🇺 俄罗斯 | RUS 5
-  network: grpc
-  port: 443
-  server: leviko-ru4448.shopingggg.ir
-  servername: vps3.nemnogogo.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-- alterId: 0
-  cipher: auto
-  name: '🇩🇪 德国 | DEU #3'
+- name: 🇺🇸US_23|2.5MB/s
+  port: 18080
+  server: 52.128.238.98
+  skip-cert-verify: true
+  type: http
+- encryption: mlkem768x25519plus.native.0rtt.F4L-tzF4xZP8_exCC-za3YLuTJ7Jiya3scz-WVRnWjU
+  name: 🇩🇪 德国 | DEU 2
   network: tcp
-  port: 28059
-  server: 194.110.210.41
-  tls: false
-  type: vmess
-  uuid: c38605a8-89ae-4e57-b9b0-35606df2e1a3
-- alpn:
-  - h2
-  client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: ''
-  name: '🇷🇺 俄罗斯 | RUS #5'
-  network: grpc
   port: 443
-  server: leviko-ru4448.shopingggg.ir
-  servername: vps3.nemnogogo.com
-  tls: true
+  server: Karen.shahankhan.ir
+  tls: false
   type: vless
-  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+  udp: true
+  uuid: a6eed628-ef46-4eb1-b1c9-e13853e082c3
+- name: '🇩🇪 德国 | DEU #2'
+  network: tcp
+  port: 443
+  server: karen.shahankhan.ir
+  tls: false
+  type: vless
+  uuid: a6eed628-ef46-4eb1-b1c9-e13853e082c3
+  ws-opts:
+    headers:
+      Host: Karen.shahankhan.ir
+    path: /
+- name: 🇰🇷 韩国 | KOR 4
+  server: 3.35.175.163
+  port: 8443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  udp: true
+- name: 🇸🇬 新加坡 | SGP
+  server: 13.229.56.229
+  port: 443
+  type: vless
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: x8aCD8cJtkDvAjcRrcMG05MNiwh11LaKg70KIRvfN0g
+    short-id: 819a87bf1651bf44
+  servername: fleetguard-filtrum.com
+  client-fingerprint: chrome
+  network: tcp
+  udp: true
+- name: 🇸🇬 新加坡 | SGP 4
+  server: 13.229.56.229
+  port: 8443
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU 3
-  - '🇭🇰 香港 | HKG #1'
-  - 🇷🇺 俄罗斯 | RUS 5
-  - '🇩🇪 德国 | DEU #3'
-  - '🇷🇺 俄罗斯 | RUS #5'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇻🇳[www.v2nodes.com] trojan-VN-...
+  - 🇺🇸US_23|2.5MB/s
+  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #2'
+  - 🇰🇷 韩国 | KOR 4
+  - 🇸🇬 新加坡 | SGP
+  - 🇸🇬 新加坡 | SGP 4
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU 3
-  - '🇭🇰 香港 | HKG #1'
-  - 🇷🇺 俄罗斯 | RUS 5
-  - '🇩🇪 德国 | DEU #3'
-  - '🇷🇺 俄罗斯 | RUS #5'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇻🇳[www.v2nodes.com] trojan-VN-...
+  - 🇺🇸US_23|2.5MB/s
+  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #2'
+  - 🇰🇷 韩国 | KOR 4
+  - 🇸🇬 新加坡 | SGP
+  - 🇸🇬 新加坡 | SGP 4
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -138,45 +141,53 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU 3
-  - '🇭🇰 香港 | HKG #1'
-  - 🇷🇺 俄罗斯 | RUS 5
-  - '🇩🇪 德国 | DEU #3'
-  - '🇷🇺 俄罗斯 | RUS #5'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇻🇳[www.v2nodes.com] trojan-VN-...
+  - 🇺🇸US_23|2.5MB/s
+  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #2'
+  - 🇰🇷 韩国 | KOR 4
+  - 🇸🇬 新加坡 | SGP
+  - 🇸🇬 新加坡 | SGP 4
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU 3
-  - '🇭🇰 香港 | HKG #1'
-  - 🇷🇺 俄罗斯 | RUS 5
-  - '🇩🇪 德国 | DEU #3'
-  - '🇷🇺 俄罗斯 | RUS #5'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇻🇳[www.v2nodes.com] trojan-VN-...
+  - 🇺🇸US_23|2.5MB/s
+  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #2'
+  - 🇰🇷 韩国 | KOR 4
+  - 🇸🇬 新加坡 | SGP
+  - 🇸🇬 新加坡 | SGP 4
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU 3
-  - '🇭🇰 香港 | HKG #1'
-  - 🇷🇺 俄罗斯 | RUS 5
-  - '🇩🇪 德国 | DEU #3'
-  - '🇷🇺 俄罗斯 | RUS #5'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇻🇳[www.v2nodes.com] trojan-VN-...
+  - 🇺🇸US_23|2.5MB/s
+  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #2'
+  - 🇰🇷 韩国 | KOR 4
+  - 🇸🇬 新加坡 | SGP
+  - 🇸🇬 新加坡 | SGP 4
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU 3
-  - '🇭🇰 香港 | HKG #1'
-  - 🇷🇺 俄罗斯 | RUS 5
-  - '🇩🇪 德国 | DEU #3'
-  - '🇷🇺 俄罗斯 | RUS #5'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇻🇳[www.v2nodes.com] trojan-VN-...
+  - 🇺🇸US_23|2.5MB/s
+  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #2'
+  - 🇰🇷 韩国 | KOR 4
+  - 🇸🇬 新加坡 | SGP
+  - 🇸🇬 新加坡 | SGP 4
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -199,12 +210,14 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - '🇩🇪 德国 | DEU #1'
-  - 🇩🇪 德国 | DEU 3
-  - '🇭🇰 香港 | HKG #1'
-  - 🇷🇺 俄罗斯 | RUS 5
-  - '🇩🇪 德国 | DEU #3'
-  - '🇷🇺 俄罗斯 | RUS #5'
+  - '🇫🇷[www.v2nodes.com] vless-FR-1... #1'
+  - 🇻🇳[www.v2nodes.com] trojan-VN-...
+  - 🇺🇸US_23|2.5MB/s
+  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #2'
+  - 🇰🇷 韩国 | KOR 4
+  - 🇸🇬 新加坡 | SGP
+  - 🇸🇬 新加坡 | SGP 4
 rule-providers:
   LocalAreaNetwork:
     type: http
