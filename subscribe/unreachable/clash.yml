@@ -38,45 +38,97 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  network: ws
-  port: 22573
-  server: 84.235.244.108
-  servername: uae.unixzone.us
-  tls: false
-  type: vless
-  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
-  ws-opts:
-    headers:
-      Host: uae.unixzone.us
-    path: /
-- name: 🇩🇪 德国 | DEU 2
-  server: f309e0t.fi4.h1clayd.click
+- client-fingerprint: firefox
+  name: '🇩🇪 德国 | DEU #1'
+  network: xhttp
   port: 443
-  type: vless
-  uuid: e894c08a-fecc-46f5-bf03-c95d0274c79d
+  server: 193.160.208.240
+  servername: 193.160.208.240
   tls: true
-  flow: xtls-rprx-vision
-  reality-opts:
-    public-key: tZoiwNSZeaVBoLJJcXe9A-GzCtbvU95fKkAJLc0vrgU
-    short-id: 6fddab1e1e358290
-  servername: f309e0t.fi4.h1clayd.click
-  client-fingerprint: firefox
-  network: tcp
+  type: vless
   udp: true
+  uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
+  xhttp-opts:
+    mode: auto
+    path: /assets/twru01/
+- alpn:
+  - ''
+  alterId: 0
+  cipher: auto
+  name: 🇩🇪 德国 | DEU 3
+  port: 28059
+  server: 194.110.210.41
+  skip-cert-verify: true
+  tls: false
+  type: vmess
+  udp: true
+  uuid: c38605a8-89ae-4e57-b9b0-35606df2e1a3
+- name: '🇭🇰 香港 | HKG #1'
+  password: '12012'
+  port: 12012
+  server: 47.242.93.89
+  skip-cert-verify: true
+  sni: ali-hk.b-gfw.cfd
+  type: trojan
+  udp: true
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: mobile.api.Event
+  name: 🇷🇺 俄罗斯 | RUS 5
+  network: grpc
+  port: 443
+  server: leviko-ru4448.shopingggg.ir
+  servername: vps3.nemnogogo.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
+- alterId: 0
+  cipher: auto
+  name: '🇩🇪 德国 | DEU #3'
+  network: tcp
+  port: 28059
+  server: 194.110.210.41
+  tls: false
+  type: vmess
+  uuid: c38605a8-89ae-4e57-b9b0-35606df2e1a3
+- alpn:
+  - h2
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: ''
+  name: '🇷🇺 俄罗斯 | RUS #5'
+  network: grpc
+  port: 443
+  server: leviko-ru4448.shopingggg.ir
+  servername: vps3.nemnogogo.com
+  tls: true
+  type: vless
+  uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU 3
+  - '🇭🇰 香港 | HKG #1'
+  - 🇷🇺 俄罗斯 | RUS 5
+  - '🇩🇪 德国 | DEU #3'
+  - '🇷🇺 俄罗斯 | RUS #5'
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU 3
+  - '🇭🇰 香港 | HKG #1'
+  - 🇷🇺 俄罗斯 | RUS 5
+  - '🇩🇪 德国 | DEU #3'
+  - '🇷🇺 俄罗斯 | RUS #5'
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -86,29 +138,45 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU 3
+  - '🇭🇰 香港 | HKG #1'
+  - 🇷🇺 俄罗斯 | RUS 5
+  - '🇩🇪 德国 | DEU #3'
+  - '🇷🇺 俄罗斯 | RUS #5'
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU 3
+  - '🇭🇰 香港 | HKG #1'
+  - 🇷🇺 俄罗斯 | RUS 5
+  - '🇩🇪 德国 | DEU #3'
+  - '🇷🇺 俄罗斯 | RUS #5'
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU 3
+  - '🇭🇰 香港 | HKG #1'
+  - 🇷🇺 俄罗斯 | RUS 5
+  - '🇩🇪 德国 | DEU #3'
+  - '🇷🇺 俄罗斯 | RUS #5'
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU 3
+  - '🇭🇰 香港 | HKG #1'
+  - 🇷🇺 俄罗斯 | RUS 5
+  - '🇩🇪 德国 | DEU #3'
+  - '🇷🇺 俄罗斯 | RUS #5'
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -131,8 +199,12 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
-  - 🇩🇪 德国 | DEU 2
+  - '🇩🇪 德国 | DEU #1'
+  - 🇩🇪 德国 | DEU 3
+  - '🇭🇰 香港 | HKG #1'
+  - 🇷🇺 俄罗斯 | RUS 5
+  - '🇩🇪 德国 | DEU #3'
+  - '🇷🇺 俄罗斯 | RUS #5'
 rule-providers:
   LocalAreaNetwork:
     type: http
