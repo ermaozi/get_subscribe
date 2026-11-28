@@ -38,102 +38,104 @@ dns:
   - https://1.1.1.1/dns-query
   - https://1.0.0.1/dns-query
 proxies:
-- cipher: aes-256-gcm
-  name: 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 57.129.83.85
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 79.127.139.242
-  type: ss
-- cipher: aes-256-gcm
-  name: '🏳[www.v2nodes.com] ss- #13'
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 15.235.182.183
-  type: ss
-- cipher: aes-256-gcm
-  name: 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  port: 19999
-  server: 15.235.164.133
-  type: ss
-- alterId: 1
-  cipher: auto
-  name: 🇯🇵 日本 | JPN 3
-  port: 21585
-  server: 2kgw7p9-g05.jp03-j7-vm0.entry.fr0528.art
-  skip-cert-verify: true
-  tls: true
-  type: vmess
-  udp: true
-  uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
-- alterId: 1
-  cipher: auto
-  name: 🇯🇵 日本 | JPN 4
-  port: 448
-  server: l32fw4z-g05.jp04-1d-vm0.entry.fr0528.art
-  skip-cert-verify: true
+- name: '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  network: ws
+  port: 22573
+  server: 84.235.244.108
+  servername: uae.unixzone.us
   tls: false
-  type: vmess
-  udp: true
-  uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
+  type: vless
+  uuid: 39947382-3212-41c9-bc3a-589574ac8b23
+  ws-opts:
+    headers:
+      Host: uae.unixzone.us
+    path: /
+- alpn:
+  - http/1.1
+  client-fingerprint: firefox
+  name: 🇩🇪[www.v2nodes.com] vless-DE-1...
+  network: ws
+  port: 443
+  server: 188.225.33.67
+  servername: e2.cdnwh.icu
+  tls: true
+  type: vless
+  uuid: b432a23a-acff-425c-bf69-70480cd6ed09
+  ws-opts:
+    headers:
+      Host: e2.cdnwh.icu
+    path: /stream/segment/3078a41dd7eb/
+- cipher: 2022-blake3-chacha20-poly1305
+  name: 🇩🇪[www.v2nodes.com] ss-DE-1624...
+  password: Cg2Dw4OhdBZhqbeO9ZTA3g/Gk/AvsrYZGhAJeGnQIx4=
+  port: 443
+  server: 18.135.5.220
+  type: ss
 - cipher: chacha20-ietf-poly1305
   name: '🇰🇷 韩国 | KOR #2'
   password: 7e68e32f-8015-4f37-9082-70e8b0b58043
   port: 8443
-  server: 3.35.174.64
+  server: 54.180.146.22
   type: ss
   udp: true
-- alterId: 1
-  cipher: auto
-  name: '🇯🇵 日本 | JPN #3'
-  network: tcp
-  port: 21585
-  server: 2kgw7p9-g05.jp03-j7-vm0.entry.fr0528.art
+- client-fingerprint: chrome
+  name: '🇳🇱 荷兰 | NLD #5'
+  network: ws
+  port: 8443
+  server: xinnusvpn.duckdns.org
+  servername: xinnusvpn.duckdns.org
   tls: true
-  type: vmess
-  uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
-- alterId: 1
-  cipher: auto
-  name: '🇯🇵 日本 | JPN #4'
+  type: vless
+  udp: true
+  uuid: c90395e6-2140-47ad-a54d-9b166729d3ef
+  ws-opts:
+    headers:
+      Host: xinnusvpn.duckdns.org
+    path: /wsnl
+- cipher: chacha20-ietf-poly1305
+  name: '🇸🇬 新加坡 | SGP #2'
+  password: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  port: 8443
+  server: 13.212.90.94
+  type: ss
+  udp: true
+- name: 🇸🇬 新加坡 | SGP
+  server: 13.212.90.94
+  port: 443
+  type: vless
+  uuid: 7e68e32f-8015-4f37-9082-70e8b0b58043
+  tls: true
+  flow: xtls-rprx-vision
+  reality-opts:
+    public-key: x8aCD8cJtkDvAjcRrcMG05MNiwh11LaKg70KIRvfN0g
+    short-id: 819a87bf1651bf44
+  servername: greenfieldsdairy.com
+  client-fingerprint: chrome
   network: tcp
-  port: 448
-  server: l32fw4z-g05.jp04-1d-vm0.entry.fr0528.art
-  tls: false
-  type: vmess
-  uuid: 8ba17b4b-600f-34d1-b082-548a7bc05d1e
+  udp: true
 proxy-groups:
 - name: ermao.net | 🚀 节点选择
   type: select
   proxies:
   - ermao.net | ♻️ 自动选择
   - DIRECT
-  - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🏳[www.v2nodes.com] ss- #13'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - 🇯🇵 日本 | JPN 3
-  - 🇯🇵 日本 | JPN 4
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1624...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇯🇵 日本 | JPN #3'
-  - '🇯🇵 日本 | JPN #4'
+  - '🇳🇱 荷兰 | NLD #5'
+  - '🇸🇬 新加坡 | SGP #2'
+  - 🇸🇬 新加坡 | SGP
 - name: ermao.net | ♻️ 自动选择
   type: url-test
   proxies:
-  - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🏳[www.v2nodes.com] ss- #13'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - 🇯🇵 日本 | JPN 3
-  - 🇯🇵 日本 | JPN 4
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1624...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇯🇵 日本 | JPN #3'
-  - '🇯🇵 日本 | JPN #4'
+  - '🇳🇱 荷兰 | NLD #5'
+  - '🇸🇬 新加坡 | SGP #2'
+  - 🇸🇬 新加坡 | SGP
   url: http://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
@@ -143,57 +145,49 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - ermao.net | ♻️ 自动选择
   - 🎯 全球直连
-  - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🏳[www.v2nodes.com] ss- #13'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - 🇯🇵 日本 | JPN 3
-  - 🇯🇵 日本 | JPN 4
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1624...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇯🇵 日本 | JPN #3'
-  - '🇯🇵 日本 | JPN #4'
+  - '🇳🇱 荷兰 | NLD #5'
+  - '🇸🇬 新加坡 | SGP #2'
+  - 🇸🇬 新加坡 | SGP
 - name: 📲 电报信息
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🏳[www.v2nodes.com] ss- #13'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - 🇯🇵 日本 | JPN 3
-  - 🇯🇵 日本 | JPN 4
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1624...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇯🇵 日本 | JPN #3'
-  - '🇯🇵 日本 | JPN #4'
+  - '🇳🇱 荷兰 | NLD #5'
+  - '🇸🇬 新加坡 | SGP #2'
+  - 🇸🇬 新加坡 | SGP
 - name: Ⓜ️ 微软服务
   type: select
   proxies:
   - 🎯 全球直连
   - ermao.net | 🚀 节点选择
-  - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🏳[www.v2nodes.com] ss- #13'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - 🇯🇵 日本 | JPN 3
-  - 🇯🇵 日本 | JPN 4
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1624...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇯🇵 日本 | JPN #3'
-  - '🇯🇵 日本 | JPN #4'
+  - '🇳🇱 荷兰 | NLD #5'
+  - '🇸🇬 新加坡 | SGP #2'
+  - 🇸🇬 新加坡 | SGP
 - name: 🍎 苹果服务
   type: select
   proxies:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
-  - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🏳[www.v2nodes.com] ss- #13'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - 🇯🇵 日本 | JPN 3
-  - 🇯🇵 日本 | JPN 4
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1624...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇯🇵 日本 | JPN #3'
-  - '🇯🇵 日本 | JPN #4'
+  - '🇳🇱 荷兰 | NLD #5'
+  - '🇸🇬 新加坡 | SGP #2'
+  - 🇸🇬 新加坡 | SGP
 - name: 🎯 全球直连
   type: select
   proxies:
@@ -216,15 +210,13 @@ proxy-groups:
   - ermao.net | 🚀 节点选择
   - 🎯 全球直连
   - ermao.net | ♻️ 自动选择
-  - 🇩🇪[www.v2nodes.com] ss-DE-1616...
-  - 🇪🇸[www.v2nodes.com] ss-ES-1615...
-  - '🏳[www.v2nodes.com] ss- #13'
-  - 🇸🇬[www.v2nodes.com] ss-SG-1615...
-  - 🇯🇵 日本 | JPN 3
-  - 🇯🇵 日本 | JPN 4
+  - '🇦🇪[www.v2nodes.com] vless-AE-1... #1'
+  - 🇩🇪[www.v2nodes.com] vless-DE-1...
+  - 🇩🇪[www.v2nodes.com] ss-DE-1624...
   - '🇰🇷 韩国 | KOR #2'
-  - '🇯🇵 日本 | JPN #3'
-  - '🇯🇵 日本 | JPN #4'
+  - '🇳🇱 荷兰 | NLD #5'
+  - '🇸🇬 新加坡 | SGP #2'
+  - 🇸🇬 新加坡 | SGP
 rule-providers:
   LocalAreaNetwork:
     type: http
